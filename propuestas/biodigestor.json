@@ -1,0 +1,100 @@
+[
+  {
+    "id": "biodigestor",
+    "recurso": "Estiércol",
+    "titulo": "El biodigestor: biogás y abono líquido",
+    "categoria": "experimentacion",
+    "descripcion": "Construimos un biodigestor con un bidón de plástico cerrado: dentro ponemos estiércol de vaca, agua, leche y azúcar (o melaza), y lo dejamos fermentar sin aire. Por un tubo que acaba sumergido en una botella con agua veremos salir burbujas: son los gases que producen los microorganismos al descomponer la mezcla (biogás). Cuando deja de burbujear, el líquido que queda (el «biol») es un abono que, bien diluido, usamos para fertilizar el huerto.",
+    "objetivos": [
+      "Comprobar que los microorganismos descomponen la materia orgánica y que, sin aire, producen gases.",
+      "Diseñar y construir un montaje sencillo (bidón, tubo y sello de agua) y entender para qué sirve cada parte.",
+      "Observar y registrar durante semanas cómo cambia el proceso: burbujas, olor, color, temperatura.",
+      "Relacionar el biogás con las energías renovables y el biol con el aprovechamiento de residuos.",
+      "Preparar diluciones a partir de una proporción y usar el abono en el huerto."
+    ],
+    "materiales": [
+      "Un bidón de plástico con tapa que cierre bien (los azules de 200 L sirven; uno de 50-60 L o una garrafa de 25 L es más manejable). Que no haya contenido productos tóxicos.",
+      "Un tubo o manguera transparente de 1-1,5 m y un racor o pasamuros para la tapa, y silicona o masilla para sellar.",
+      "Una botella o un cubo con agua (el «sello de agua»).",
+      "Para 200 L: unos 50 kg de estiércol fresco de vaca, 1-2 L de leche (o suero), 1-2 L de melaza (o 1-2 kg de azúcar moreno disuelto en agua tibia) y agua sin cloro (de lluvia o reposada un día). Opcional: 1-2 kg de ceniza de madera tamizada.",
+      "Para un bidón más pequeño, las mismas proporciones: por cada 50 L, unos 12 kg de estiércol, 0,25-0,5 L de leche y 0,25-0,5 L de melaza.",
+      "Un palo largo para remover, embudo, cubos y una balanza.",
+      "Termómetro, cuaderno de registro y cámara.",
+      "Un colador o tela para filtrar y garrafas con tapón para guardar el biol.",
+      "Guantes, mascarilla y agua y jabón."
+    ],
+    "desarrollo": [
+      "Preparar la tapa. Hacemos un agujero del tamaño del tubo, colocamos el racor o metemos el tubo bien ajustado y sellamos alrededor con silicona o masilla por dentro y por fuera. Dejamos secar. El otro extremo del tubo irá sumergido unos centímetros en la botella o el cubo con agua: así los gases pueden salir, pero no entra aire.",
+      "Preparar la mezcla. En el bidón, deshacemos el estiércol en agua y removemos bien. Aparte, disolvemos el azúcar o la melaza en agua tibia y lo añadimos con la leche (y la ceniza, si la usamos). Completamos con agua hasta llenar unas tres cuartas partes del bidón: hay que dejar espacio para el gas.",
+      "Cerrar y colocar. Cerramos la tapa (comprobamos que no hay fugas) y ponemos el extremo del tubo en el agua. Dejamos el bidón en un lugar exterior, ventilado, soleado o templado y lejos de las ventanas de las aulas: la fermentación es más rápida con calor.",
+      "Predecir. Antes de esperar, cada grupo apunta qué cree que pasará: ¿saldrán burbujas?, ¿cuándo?, ¿olerá?, ¿qué gases serán?",
+      "Observar y registrar. Durante las semanas siguientes miramos la botella: al cabo de unos días empiezan a salir burbujas. Apuntamos en una tabla la fecha, la temperatura y cuántas burbujas salen en un minuto, y hacemos una gráfica. Las burbujas huelen mal: además de dióxido de carbono y metano, llevan un poco de sulfuro de hidrógeno (el olor a huevo podrido).",
+      "Hablar del biogás. Ese gas, sobre todo el metano, arde y se puede usar para cocinar o calentar, como el gas de las bombonas. Para aprovecharlo hace falta otro montaje (una bolsa para almacenarlo, un filtro para el olor y un quemador). Lo comentamos y buscamos ejemplos de granjas que lo usan, pero no lo quemamos con el alumnado.",
+      "Saber cuándo está listo. Cuando ya no salen burbujas (en tiempo cálido, unas 4-6 semanas; con frío, 2-3 meses o más), el biol está listo. Abrimos el bidón al aire libre: debe oler a fermentado, no a podrido.",
+      "Filtrar y guardar. Colamos el líquido con un colador o una tela y lo guardamos en garrafas cerradas, a la sombra. Los restos sólidos van al compostador.",
+      "Abonar el huerto. El biol siempre se usa diluido en agua. Calculamos las proporciones: para regar al pie de las plantas, 1 parte de biol por 4 a 10 partes de agua (por ejemplo, 1 L de biol en una regadera de 10 L); sobre las hojas, más diluido (1 parte por 10 a 20 de agua). Probamos primero en unas pocas plantas y comparamos con otras sin abonar.",
+      "Recoger, lavar todo el material y lavarse bien las manos."
+    ],
+    "notas": [
+      "El estiércol lleva microorganismos que pueden causar enfermedades: guantes para manipularlo, nada de tocarse la cara y lavarse bien las manos al acabar. La mezcla la prepara o supervisa una persona adulta.",
+      "El biogás es inflamable (metano) y el sulfuro de hidrógeno es tóxico en cantidad: el bidón va siempre al aire libre, nada de fuego ni chispas cerca y no se respira el gas directamente de la botella. No quemamos el gas con el alumnado.",
+      "No abrimos el bidón mientras burbujea: entra aire, se para la fermentación anaerobia y sale el olor.",
+      "Si el bidón se hincha, el tubo está obstruido o doblado: hay que revisarlo enseguida.",
+      "En las hortalizas que se comen crudas (lechugas, rábanos…), el biol se echa al suelo, nunca sobre las hojas, y no se usa en las últimas semanas antes de cosechar.",
+      "Las cantidades de la receta varían mucho entre unas guías y otras; las de esta ficha siguen la guía del INIA (Chile) para un bidón de 200 L. Lo importante es la proporción de estiércol y agua, dejar espacio para el gas y que no entre aire.",
+      "Si conseguimos estiércol de una granja cercana, la visita puede formar parte de la actividad."
+    ],
+    "duracion": "1 sesión para el montaje, observaciones cortas durante 1-3 meses y 1 sesión para filtrar y abonar.",
+    "estaciones": [
+      "Otoño",
+      "Primavera"
+    ],
+    "epoca": "Necesita calor: con frío casi no fermenta. Mejor montarlo en septiembre o a principios de octubre, o en abril, para tener el biol antes de las vacaciones.",
+    "etapas": [
+      {
+        "etapa": "Infantil",
+        "saberes": [
+          "Descubrimiento y Exploración del Entorno (B): Estrategias y técnicas de investigación: ensayo-error, observación, experimentación, formulación y comprobación de hipótesis, realización de preguntas, manejo y búsqueda en distintas fuentes de información.",
+          "Descubrimiento y Exploración del Entorno (C): Elementos naturales (agua, tierra, aire). Características y comportamiento (longitud, superficie, masa, capacidad, volumen, mezclas o transvases).",
+          "Descubrimiento y Exploración del Entorno (C): Sostenibilidad, energías limpias y naturales.",
+          "Descubrimiento y Exploración del Entorno (C): Influencia de las acciones de las personas en el medio físico y natural y en el cambio climático."
+        ],
+        "adaptacion": "La persona adulta prepara la mezcla y monta el bidón delante del grupo. Los niños y niñas miran las burbujas de la botella, las cuentan y las dibujan, comparan cómo huele y qué color tiene antes y después, y ayudan a regar con el biol ya diluido."
+      },
+      {
+        "etapa": "Primaria · 1.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Procedimientos adecuados a las necesidades de la investigación escolar (observación en el tiempo, identificación y clasificación, búsqueda de patrones...).",
+          "Ciencias de la Naturaleza (A.1): Estilos de vida sostenible e importancia del cuidado del planeta a través de acciones presentes en la vida cotidiana basadas en el conocimiento científico.",
+          "Ciencias de la Naturaleza (A.3): Otras formas de energía. Fuentes y uso en la vida cotidiana.",
+          "Ciencias de la Naturaleza (A.3): Las mezclas y sus componentes. Identificación de mezclas homogéneas y heterogéneas. Separación de mezclas heterogéneas y algunas homogéneas mediante distintos métodos físicos sencillos.",
+          "Ciencias Sociales (B.4): Estilos de vida sostenible. El uso responsable del agua, la movilidad segura, saludable y sostenible, y la prevención y gestión de los residuos.",
+          "Matemáticas (B.1): Unidades convencionales (metro, kilo y litro) y no convencionales en situaciones de la vida cotidiana."
+        ],
+        "adaptacion": "Ayudan a medir los ingredientes con jarras y cubos (litros) y una balanza (kilos), con guantes. Llevan un diario de observación con dibujos (hay burbujas o no, cuántas en un minuto). Al final, filtran el biol con un colador (separar una mezcla) y riegan con la dilución que prepara la persona adulta."
+      },
+      {
+        "etapa": "Primaria · 2.º ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Procedimientos adecuados a las necesidades de la investigación escolar (observación en el tiempo, identificación y clasificación, búsqueda de patrones, creación de modelos, investigación a través de búsqueda de información, diseño y puesta en marcha de experimentos con control de variables...).",
+          "Ciencias de la Naturaleza (A.3): Los cambios que experimentan determinados materiales en situaciones de la vida cotidiana (físicos o químicos, reversibles o irreversibles…) para reconocer procesos y transformaciones observando la situación inicial y final.",
+          "Ciencias Sociales (B.4): Estilos de vida sostenible. El consumo responsable, el uso del agua y la energía, la movilidad sostenible y la gestión de los residuos.",
+          "Matemáticas (A.4): Razón entre magnitudes: introducción a su cálculo e interpretación.",
+          "Matemáticas (B.1): Unidades convencionales (km, m, cm, mm; kg, g; l y ml) y no convencionales en situaciones de la vida cotidiana."
+        ],
+        "adaptacion": "Montan el biodigestor en grupos con ayuda (sellar el tubo, preparar el sello de agua) y explican para qué sirve cada parte. Registran en una tabla la temperatura y las burbujas por minuto y hacen una gráfica. Comparan la mezcla al principio y al final (cambio químico, irreversible). Preparan las diluciones del biol a partir de la razón «1 de biol por cada 10 de agua»."
+      },
+      {
+        "etapa": "Primaria · 3.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Prácticas científicas (observación, formulación de preguntas y predicciones, planificación y realización de experimentos, recogida y análisis de información y datos, comunicación de resultados y conclusiones...).",
+          "Ciencias de la Naturaleza (A.3): Las fuentes de energías renovables y no renovables y su influencia en la contribución al desarrollo sostenible de la sociedad.",
+          "Ciencias Sociales (B.4): Estilos de vida sostenible. El consumo responsable, el uso del agua y la energía, la movilidad sostenible y la gestión de los residuos.",
+          "Matemáticas (A.4): Situaciones proporcionales y no proporcionales en problemas de la vida cotidiana: identificación como relación multiplicativa entre magnitudes."
+        ],
+        "adaptacion": "Plantean un experimento con control de variables: dos biodigestores pequeños (garrafas de 5-8 L) iguales salvo en una cosa (uno al sol y otro a la sombra, o con y sin azúcar) y comparan cuántas burbujas producen. Investigan el biogás como energía renovable y su uso en granjas. Calculan las cantidades de la receta para el tamaño de su bidón y las diluciones, y comparan el crecimiento de plantas abonadas y sin abonar."
+      }
+    ],
+    "imagenes": []
+  }
+]

@@ -129,9 +129,10 @@ function pintar() {
     const aviso = lista.total === 0 ? 'Todavía no hay ninguna actividad.' : 'No hay ninguna actividad con esa búsqueda.';
     cuerpo.innerHTML = `<tr><td colspan="5" class="vacio">${aviso}</td></tr>`;
   }
+  const actividades = (n) => (n === 1 ? '1 actividad' : `${n} actividades`);
   resultado.textContent = texto.trim() || etapa || estacion || categoriaElegida
-    ? `${encontradas.length} de ${lista.total} actividades`
-    : `${lista.total} actividades`;
+    ? `${encontradas.length} de ${actividades(lista.total)}`
+    : actividades(lista.total);
 
   guardarEnDireccion(texto, campo, etapa, estacion, categoriaElegida);
 }
