@@ -19,6 +19,10 @@
       "Medimos las huellas con palmos y dedos."
     ],
     "duracion": "1 sesión de 45 min",
+    "estaciones": [
+      "Otoño",
+      "Primavera"
+    ],
     "epoca": "Después de llover, cuando la tierra está blanda",
     "imagenes": [],
     "etapas": [
@@ -30,14 +34,6 @@
         ],
         "adaptacion": ""
       }
-    ],
-    "meses": [
-      9,
-      10,
-      11,
-      3,
-      4,
-      5
     ]
   },
   {
@@ -61,6 +57,12 @@
       "Esperamos 30 minutos y la sacamos con cuidado."
     ],
     "duracion": "2 sesiones",
+    "estaciones": [
+      "Otoño",
+      "Invierno",
+      "Primavera",
+      "Verano"
+    ],
     "epoca": "Todo el año",
     "imagenes": [],
     "etapas": [
@@ -72,20 +74,6 @@
         ],
         "adaptacion": ""
       }
-    ],
-    "meses": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12
     ]
   },
   {
@@ -108,6 +96,10 @@
       "Calculamos filas × columnas y lo comprobamos plantando."
     ],
     "duracion": "1 sesión de 50 min",
+    "estaciones": [
+      "Otoño",
+      "Primavera"
+    ],
     "epoca": "Otoño o primavera",
     "imagenes": [],
     "etapas": [
@@ -119,12 +111,6 @@
         ],
         "adaptacion": ""
       }
-    ],
-    "meses": [
-      9,
-      10,
-      3,
-      4
     ]
   },
   {
@@ -148,6 +134,12 @@
       "Medimos la temperatura cada semana y hacemos una gráfica."
     ],
     "duracion": "Varias sesiones a lo largo de un mes",
+    "estaciones": [
+      "Otoño",
+      "Invierno",
+      "Primavera",
+      "Verano"
+    ],
     "epoca": "Todo el año",
     "imagenes": [],
     "etapas": [
@@ -159,20 +151,6 @@
         ],
         "adaptacion": ""
       }
-    ],
-    "meses": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12
     ]
   }
 ]

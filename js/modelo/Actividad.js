@@ -16,15 +16,15 @@
  *   desarrollo  pasos de la actividad, en orden (lista de textos)
  *   notas       notas y precauciones (lista de textos)
  *   duracion    texto libre ("2 sesiones de 50 min")
- *   meses       meses en que se puede hacer (1 = enero … 12 = diciembre)
- *   epoca       nota sobre la época (texto libre: "mejor después de llover")
+ *   estaciones  estaciones en que se puede hacer, en el orden de ESTACIONES
+ *   epoca       nota sobre la época (texto libre: "sembrar en la luna menguante de diciembre")
  *   imagenes    hasta 10, en orden: { id, texto } (colección 'imagenes')
  *               o { ruta, texto } (fichero en datos/, solo los ejemplos)
  *   modificada  { por: correo, el: fecha ISO } del último cambio
  */
 
 import { areaCorta, partirSaber } from './saber.js';
-import { posicionEnCurso, textoMeses } from './calendario.js';
+import { ESTACIONES, estacionesDeMeses, posicionEstacion, textoEstaciones } from './estaciones.js';
 
 export const MAXIMO_IMAGENES = 10;
 
@@ -48,7 +48,7 @@ export class Actividad {
     this.desarrollo = datos.desarrollo ?? [];
     this.notas = datos.notas ?? [];
     this.duracion = datos.duracion ?? '';
-    this.meses = [...new Set(datos.meses ?? [])].filter((m) => m >= 1 && m <= 12).sort((a, b) => a - b);
+    this.estaciones = Actividad.leerEstaciones(datos);
     this.epoca = datos.epoca ?? '';
     this.imagenes = datos.imagenes ?? [];
     this.modificada = datos.modificada ?? null;
@@ -74,6 +74,15 @@ export class Actividad {
     return posicion >= 0 ? posicion : ETAPAS.length;
   }
 
+  /**
+   * Las estaciones de un documento, sin repetir y en orden. Admite también
+   * el formato anterior, con meses (1 a 12).
+   */
+  static leerEstaciones(datos) {
+    const estaciones = datos.estaciones ?? estacionesDeMeses(datos.meses ?? []);
+    return ESTACIONES.filter((estacion) => estaciones.includes(estacion));
+  }
+
   static desdeDocumento(documento) {
     return new Actividad(documento);
   }
@@ -96,7 +105,7 @@ export class Actividad {
       desarrollo: this.desarrollo,
       notas: this.notas,
       duracion: this.duracion,
-      meses: this.meses,
+      estaciones: this.estaciones,
       epoca: this.epoca,
       imagenes: this.imagenes,
       modificada: this.modificada,
@@ -136,19 +145,19 @@ export class Actividad {
     return [...new Set(this.saberesDe(etapa).map((s) => areaCorta(partirSaber(s).area)).filter(Boolean))];
   }
 
-  /** ¿Se puede hacer en ese mes (1 a 12)? */
-  esDelMes(mes) {
-    return this.meses.includes(mes);
+  /** ¿Se puede hacer en esa estación? */
+  esDeEstacion(estacion) {
+    return this.estaciones.includes(estacion);
   }
 
-  /** Los meses en texto ("Todo el año", "noviembre – enero"…). */
-  get mesesEnTexto() {
-    return textoMeses(this.meses);
+  /** Las estaciones en texto ("Todo el año", "Otoño y primavera"…). */
+  get estacionesEnTexto() {
+    return textoEstaciones(this.estaciones);
   }
 
-  /** Para ordenar por época: el primer mes dentro del curso (septiembre primero). */
-  get primerMesDelCurso() {
-    return this.meses.length ? Math.min(...this.meses.map(posicionEnCurso)) : null;
+  /** Para ordenar por época: la primera estación dentro del curso (otoño primero). */
+  get primeraEstacion() {
+    return this.estaciones.length ? posicionEstacion(this.estaciones[0]) : null;
   }
 
   /** Los saberes en un solo texto, para buscar y ordenar. */

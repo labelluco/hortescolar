@@ -453,33 +453,33 @@ th[aria-sort="descending"] .orden-flecha::after { content: "↓"; opacity: 1; }
 .bloque-etapa legend label { cursor: pointer; }
 .bloque-etapa-campos { padding-top: 8px; }
 
-/* ---------- Época (calendarioHtml.js) ---------- */
+/* ---------- Época (estacionesHtml.js) ---------- */
 
-.calendario {
+.estaciones {
   display: inline-flex;
-  gap: 2px;
+  gap: 3px;
   vertical-align: middle;
 }
 
-.calendario-mes {
-  width: 16px;
-  height: 20px;
+.estacion {
+  width: 22px;
+  height: 22px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.65rem;
-  border-radius: 3px;
+  font-size: 0.75rem;
+  border-radius: 4px;
   background: var(--color-fondo);
   color: #9aa0a6;
 }
 
-.calendario-mes.activo {
+.estacion.activa {
   background: var(--color-principal);
   color: #fff;
   font-weight: 500;
 }
 
-.calendario-texto { margin-left: 8px; }
+.estaciones-texto { margin-left: 8px; }
 .nota-epoca { color: var(--color-texto-secundario); font-size: 0.9rem; margin-top: 4px; }
 .sin-dato { color: var(--color-texto-secundario); }
 
@@ -491,13 +491,13 @@ th[aria-sort="descending"] .orden-flecha::after { content: "↓"; opacity: 1; }
 
 .lista-saberes { margin-top: 6px; }
 
-/* Casillas de los meses en el formulario */
-.selector-meses {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: 4px 12px;
+/* Casillas de las estaciones en el formulario */
+.selector-estaciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
   margin-bottom: 8px;
 }
 
-.casilla-mes { cursor: pointer; text-transform: capitalize; }
-.acciones-meses { display: flex; gap: 8px; margin: 0 0 16px; }
+.casilla-estacion { cursor: pointer; }
+.acciones-estaciones { display: flex; gap: 8px; margin: 0 0 16px; }

@@ -9,7 +9,7 @@
 import { BaseDatos } from '../datos/BaseDatos.js';
 import { Actividad } from '../modelo/Actividad.js';
 import { Barra } from './Barra.js';
-import { calendarioHtml } from './calendarioHtml.js';
+import { estacionesHtml } from './estacionesHtml.js';
 import { escaparHtml, listaHtml } from './ayudas.js';
 
 const ficha = document.getElementById('ficha');
@@ -49,8 +49,8 @@ function pintar(actividad) {
       <div><dt>Recurso</dt><dd>${escaparHtml(actividad.recurso)}</dd></div>
       <div><dt>Etapas</dt><dd>${actividad.nombresEtapas.map((e) => `<span class="etiqueta">${escaparHtml(e)}</span>`).join(' ')}</dd></div>
       ${actividad.duracion ? `<div><dt>Duración</dt><dd>${escaparHtml(actividad.duracion)}</dd></div>` : ''}
-      ${actividad.meses.length || actividad.epoca ? `<div class="datos-ancho"><dt>Época</dt><dd>
-        ${actividad.meses.length ? `${calendarioHtml(actividad.meses)} <span class="calendario-texto">${escaparHtml(actividad.mesesEnTexto)}</span>` : ''}
+      ${actividad.estaciones.length || actividad.epoca ? `<div class="datos-ancho"><dt>Época</dt><dd>
+        ${actividad.estaciones.length ? `${estacionesHtml(actividad.estaciones)} <span class="estaciones-texto">${escaparHtml(actividad.estacionesEnTexto)}</span>` : ''}
         ${actividad.epoca ? `<div class="nota-epoca">${escaparHtml(actividad.epoca)}</div>` : ''}
       </dd></div>` : ''}
     </dl>

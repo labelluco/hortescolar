@@ -9,7 +9,7 @@ Publicada en GitHub Pages (rama `main`, carpeta raíz): https://labelluco.github
 - **Acceso profesorado** (`acceso.html`) y **edición** (`editar.html`, `editar.html?id=…`): con sesión iniciada se pueden crear, modificar y borrar actividades y subir hasta 10 imágenes por actividad. Consultar no necesita sesión.
 - **Importar** (`importar.html`): con sesión, sube de una vez actividades preparadas en ficheros JSON (los borradores están en `propuestas/`). Si la actividad ya existe, se sustituye conservando sus imágenes.
 
-Cada actividad puede servir para varias etapas (Infantil y los tres ciclos de Primaria). En cada etapa tiene sus **saberes básicos**, copiados literalmente del currículo de Aragón (Orden ECD/853/2022 de Infantil y anexos de la Orden ECD/1112/2022 de Primaria), y una **adaptación**. En la portada se puede filtrar por etapa y por época (mes). Para no saturar la tabla, la columna de saberes muestra solo las áreas; si se busca un texto, aparecen debajo los saberes que coinciden. Los saberes completos están en la ficha.
+Cada actividad puede servir para varias etapas (Infantil y los tres ciclos de Primaria). En cada etapa tiene sus **saberes básicos**, copiados literalmente del currículo de Aragón (Orden ECD/853/2022 de Infantil y anexos de la Orden ECD/1112/2022 de Primaria), y una **adaptación**. En la portada se puede filtrar por etapa y por época (estación). Para no saturar la tabla, la columna de saberes muestra solo las áreas; si se busca un texto, aparecen debajo los saberes que coinciden. Los saberes completos están en la ficha.
 
 HTML + CSS + JavaScript puro (módulos ES), sin frameworks ni paso de compilación. La web no se indexa (`robots.txt` y `noindex`).
 
@@ -32,7 +32,7 @@ y abrir http://localhost:8000. También sirve la extensión Live Server de VS Co
 
 Colecciones de Firestore:
 
-- `actividades`: `recurso`, `titulo`, `etapas[]` (cada una `{ etapa, saberes[], adaptacion }`, con `etapa` = `Infantil`, `Primaria · 1.er ciclo`, `Primaria · 2.º ciclo` o `Primaria · 3.er ciclo`), `descripcion`, `objetivos[]`, `materiales[]`, `desarrollo[]` (pasos), `notas[]` (notas y precauciones), `duracion`, `meses[]` (1 = enero … 12 = diciembre, en que se puede hacer), `epoca` (nota libre sobre la época), `imagenes[]` (máx. 10, cada una `{ id, texto }`) y `modificada` (`{ por, el }`).
+- `actividades`: `recurso`, `titulo`, `etapas[]` (cada una `{ etapa, saberes[], adaptacion }`, con `etapa` = `Infantil`, `Primaria · 1.er ciclo`, `Primaria · 2.º ciclo` o `Primaria · 3.er ciclo`), `descripcion`, `objetivos[]`, `materiales[]`, `desarrollo[]` (pasos), `notas[]` (notas y precauciones), `duracion`, `estaciones[]` (`Otoño`, `Invierno`, `Primavera`, `Verano`: cuándo se puede hacer), `epoca` (nota libre con el momento exacto, por ejemplo «sembrar en la luna menguante de diciembre»), `imagenes[]` (máx. 10, cada una `{ id, texto }`) y `modificada` (`{ por, el }`).
 - `imagenes`: una por imagen, `{ actividadId, datos }`, con la imagen ya reducida en el navegador (máx. 1280 px, JPEG, menos de 1 MB) como texto `data:image/jpeg;base64,…`. Así no hace falta Firebase Storage ni el plan de pago.
 
 ## Profesorado
