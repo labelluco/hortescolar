@@ -34,7 +34,8 @@
         ],
         "adaptacion": ""
       }
-    ]
+    ],
+    "categoria": "naturaleza"
   },
   {
     "id": "act-002",
@@ -74,7 +75,8 @@
         ],
         "adaptacion": ""
       }
-    ]
+    ],
+    "categoria": "experimentacion"
   },
   {
     "id": "act-003",
@@ -111,7 +113,8 @@
         ],
         "adaptacion": ""
       }
-    ]
+    ],
+    "categoria": "cultivo"
   },
   {
     "id": "act-004",
@@ -151,6 +154,7 @@
         ],
         "adaptacion": ""
       }
-    ]
+    ],
+    "categoria": "sostenibilidad"
   }
 ]

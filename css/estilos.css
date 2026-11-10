@@ -19,6 +19,16 @@
   --color-fila-encima: #f1f6f1;
   --color-error: #c5221f;
 
+  /* Categorías de las actividades (js/modelo/categorias.js).
+     Paleta que se distingue también con daltonismo. */
+  --cat-cultivo: #008300;          /* verde */
+  --cat-experimentacion: #2a78d6;  /* azul */
+  --cat-naturaleza: #1baf7a;       /* aguamarina */
+  --cat-sostenibilidad: #eb6834;   /* naranja */
+  --cat-arte: #e87ba4;             /* magenta */
+  --cat-cocina: #eda100;           /* amarillo */
+  --cat-ninguna: transparent;
+
   --radio: 8px;
   --sombra: 0 1px 2px rgba(60, 64, 67, 0.15), 0 1px 3px 1px rgba(60, 64, 67, 0.08);
   --alto-barra: 60px;
@@ -510,3 +520,58 @@ th[aria-sort="descending"] .orden-flecha::after { content: "↓"; opacity: 1; }
 
 .casilla-estacion { cursor: pointer; }
 .acciones-estaciones { display: flex; gap: 8px; margin: 0 0 16px; }
+
+/* ---------- Categorías (categoriaHtml.js) ---------- */
+
+.categoria {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--color-texto-secundario);
+  white-space: nowrap;
+}
+
+.categoria-punto {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-categoria);
+  flex-shrink: 0;
+}
+
+/* Franja del color de la categoría a la izquierda de cada fila */
+.tabla tbody tr.fila-enlace td:first-child {
+  box-shadow: inset 4px 0 0 var(--color-categoria, transparent);
+}
+
+.ficha-categoria { margin: -4px 0 8px; }
+.ficha-categoria .categoria { font-size: 0.9rem; }
+
+/* Leyenda de la portada, que también filtra */
+.leyenda {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 4px 0 12px;
+}
+
+.leyenda-boton {
+  font: inherit;
+  padding: 4px 10px;
+  border: 1px solid var(--color-borde);
+  border-radius: 16px;
+  background: var(--color-superficie);
+  cursor: pointer;
+}
+
+.leyenda-boton:hover { background: var(--color-fondo); }
+.leyenda-boton[aria-pressed="true"] { border-color: var(--color-texto); background: var(--color-fondo); }
+.leyenda-boton[aria-pressed="true"] .categoria { color: var(--color-texto); font-weight: 500; }
+.leyenda.con-filtro .leyenda-boton[aria-pressed="false"] { opacity: 0.55; }
+
+/* En el móvil, la franja va en el borde de la tarjeta */
+@media (max-width: 640px) {
+  .tabla tbody tr.fila-enlace { box-shadow: inset 4px 0 0 var(--color-categoria, transparent); }
+  .tabla tbody tr.fila-enlace td:first-child { box-shadow: none; }
+}

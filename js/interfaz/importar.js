@@ -63,10 +63,11 @@ document.getElementById('ficheros').addEventListener('change', async (evento) =>
 
     vistaPrevia.innerHTML = `
       <table class="tabla">
-        <thead><tr><th>Actividad</th><th>Etapas</th><th>Qué se hará</th></tr></thead>
+        <thead><tr><th>Actividad</th><th>Categoría</th><th>Etapas</th><th>Qué se hará</th></tr></thead>
         <tbody>${filas.map(({ actividad, errores, existe }) => `
           <tr>
             <td>${escaparHtml(actividad.titulo || actividad.id || '(sin nombre)')}</td>
+            <td>${escaparHtml(actividad.nombreCategoria)}</td>
             <td>${escaparHtml(actividad.etapasEnTexto)}</td>
             <td>${errores.length
               ? `<span class="error">No se subirá: ${escaparHtml(errores.join(' '))}</span>`

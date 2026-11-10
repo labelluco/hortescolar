@@ -14,6 +14,7 @@ import { BaseDatos } from '../datos/BaseDatos.js';
 import { Actividad, ETAPAS, MAXIMO_IMAGENES } from '../modelo/Actividad.js';
 import { ListaActividades } from '../modelo/ListaActividades.js';
 import { ESTACIONES } from '../modelo/estaciones.js';
+import { CATEGORIAS } from '../modelo/categorias.js';
 import { Sesion } from './Sesion.js';
 import { Barra } from './Barra.js';
 import { escaparHtml } from './ayudas.js';
@@ -29,8 +30,12 @@ const contenedorImagenes = document.getElementById('imagenes');
 
 // Campos de texto que en la actividad son listas (una línea = un elemento)
 const CAMPOS_LISTA = ['objetivos', 'materiales', 'desarrollo', 'notas'];
-const CAMPOS_TEXTO = ['titulo', 'recurso', 'descripcion', 'duracion', 'epoca'];
+const CAMPOS_TEXTO = ['titulo', 'categoria', 'recurso', 'descripcion', 'duracion', 'epoca'];
 const contenedorEtapas = document.getElementById('etapas');
+
+// Opciones de la categoría (la primera, vacía, obliga a elegir una)
+document.getElementById('categoria').innerHTML = '<option value="">Elige una categoría…</option>'
+  + CATEGORIAS.map((c) => `<option value="${c.id}">${escaparHtml(c.nombre)}</option>`).join('');
 
 let actividad = new Actividad();
 // Imágenes tal como se ven en el formulario, en orden:

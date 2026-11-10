@@ -6,6 +6,7 @@
  *   id          identificador
  *   recurso     lo que hay en el huerto y da pie a la actividad ("Huellas de animales")
  *   titulo      nombre de la actividad ("Trampas de huellas")
+ *   categoria   id de su categoría principal (ver categorias.js)
  *   etapas      etapas para las que sirve, en el orden de ETAPAS. Cada una:
  *                 { etapa, saberes: [textos], adaptacion: texto }
  *               Los saberes básicos son los del currículo de Aragón para
@@ -24,6 +25,7 @@
  */
 
 import { areaCorta, partirSaber } from './saber.js';
+import { categoriaPorId, posicionCategoria } from './categorias.js';
 import { ESTACIONES, estacionesDeMeses, posicionEstacion, textoEstaciones } from './estaciones.js';
 
 export const MAXIMO_IMAGENES = 10;
@@ -41,6 +43,7 @@ export class Actividad {
     this.id = datos.id ?? null;
     this.recurso = datos.recurso ?? '';
     this.titulo = datos.titulo ?? '';
+    this.categoria = datos.categoria ?? '';
     this.etapas = Actividad.leerEtapas(datos);
     this.descripcion = datos.descripcion ?? '';
     this.objetivos = datos.objetivos ?? [];
@@ -98,6 +101,7 @@ export class Actividad {
     return {
       recurso: this.recurso,
       titulo: this.titulo,
+      categoria: this.categoria,
       etapas: this.etapas,
       descripcion: this.descripcion,
       objetivos: this.objetivos,
@@ -117,9 +121,20 @@ export class Actividad {
     const errores = [];
     if (!this.titulo) errores.push('Falta el nombre de la actividad.');
     if (!this.recurso) errores.push('Falta el recurso.');
+    if (!categoriaPorId(this.categoria)) errores.push('Falta la categoría.');
     if (this.etapas.length === 0) errores.push('Marca al menos una etapa.');
     if (this.imagenes.length > MAXIMO_IMAGENES) errores.push(`Como mucho, ${MAXIMO_IMAGENES} imágenes.`);
     return errores;
+  }
+
+  /** Nombre de su categoría ('' si no tiene). */
+  get nombreCategoria() {
+    return categoriaPorId(this.categoria)?.nombre ?? '';
+  }
+
+  /** Para ordenar por categoría, en el orden de CATEGORIAS. */
+  get posicionCategoria() {
+    return posicionCategoria(this.categoria);
   }
 
   /** Nombres de las etapas, en orden. */

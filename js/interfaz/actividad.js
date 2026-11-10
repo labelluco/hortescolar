@@ -10,6 +10,7 @@ import { BaseDatos } from '../datos/BaseDatos.js';
 import { Actividad } from '../modelo/Actividad.js';
 import { Barra } from './Barra.js';
 import { estacionesHtml } from './estacionesHtml.js';
+import { categoriaHtml } from './categoriaHtml.js';
 import { escaparHtml, listaHtml } from './ayudas.js';
 
 const ficha = document.getElementById('ficha');
@@ -45,6 +46,7 @@ function pintar(actividad) {
 
   ficha.innerHTML = `
     <h1>${escaparHtml(actividad.titulo)}</h1>
+    <p class="ficha-categoria">${categoriaHtml(actividad.categoria)}</p>
     <dl class="datos tarjeta">
       <div><dt>Recurso</dt><dd>${escaparHtml(actividad.recurso)}</dd></div>
       <div><dt>Etapas</dt><dd>${actividad.nombresEtapas.map((e) => `<span class="etiqueta">${escaparHtml(e)}</span>`).join(' ')}</dd></div>

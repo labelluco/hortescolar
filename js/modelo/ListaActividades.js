@@ -16,9 +16,9 @@ import { coincide } from './texto.js';
 // Qué textos de una actividad mira cada opción de "Buscar en".
 // Si se ha elegido una etapa, los saberes son solo los de esa etapa.
 export const CAMPOS_BUSQUEDA = {
-  todo: (a, etapa) => [a.recurso, a.titulo, ...a.saberesDe(etapa), a.etapasEnTexto, a.estacionesEnTexto],
+  todo: (a, etapa) => [a.recurso, a.titulo, a.nombreCategoria, ...a.saberesDe(etapa), a.etapasEnTexto, a.estacionesEnTexto],
   recurso: (a) => [a.recurso],
-  titulo: (a) => [a.titulo],
+  titulo: (a) => [a.titulo, a.nombreCategoria],
   saberes: (a, etapa) => a.saberesDe(etapa),
   etapa: (a) => a.nombresEtapas,
   epoca: (a) => [a.estacionesEnTexto, a.epoca],
@@ -43,14 +43,16 @@ export class ListaActividades {
    * Si el texto lleva varias palabras, tienen que aparecer todas, aunque
    * sea en columnas distintas ("huellas infantil").
    * Con etapa, solo las actividades que sirven para esa etapa; con
-   * estación, solo las que se pueden hacer en ella.
+   * estación, solo las que se pueden hacer en ella; con categoría (id),
+   * solo las de esa categoría.
    */
-  buscar(texto, campo = 'todo', etapa = null, estacion = null) {
+  buscar(texto, campo = 'todo', etapa = null, estacion = null, categoria = null) {
     const camposDe = CAMPOS_BUSQUEDA[campo] ?? CAMPOS_BUSQUEDA.todo;
     const palabras = String(texto ?? '').split(/\s+/).filter(Boolean);
     return this.actividades.filter((actividad) =>
       (!etapa || actividad.tieneEtapa(etapa))
       && (!estacion || actividad.esDeEstacion(estacion))
+      && (!categoria || actividad.categoria === categoria)
       && palabras.every((palabra) => coincide(palabra, camposDe(actividad, etapa))),
     );
   }
