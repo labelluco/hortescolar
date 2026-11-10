@@ -11,7 +11,10 @@
 import { BaseDatos } from '../datos/BaseDatos.js';
 import { ListaActividades } from '../modelo/ListaActividades.js';
 import { OrdenTabla } from './OrdenTabla.js';
+import { Barra } from './Barra.js';
 import { escaparHtml } from './ayudas.js';
+
+Barra.pintar();
 
 const campoBusqueda = document.getElementById('busqueda');
 const campoBuscarEn = document.getElementById('buscarEn');
@@ -41,7 +44,8 @@ function pintar() {
     </tr>`).join('');
 
   if (encontradas.length === 0) {
-    cuerpo.innerHTML = '<tr><td colspan="4" class="vacio">No hay ninguna actividad con esa búsqueda.</td></tr>';
+    const aviso = lista.total === 0 ? 'Todavía no hay ninguna actividad.' : 'No hay ninguna actividad con esa búsqueda.';
+    cuerpo.innerHTML = `<tr><td colspan="4" class="vacio">${aviso}</td></tr>`;
   }
   resultado.textContent = texto.trim()
     ? `${encontradas.length} de ${lista.total} actividades`

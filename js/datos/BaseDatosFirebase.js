@@ -1,52 +1,43 @@
 /*
  * BaseDatosFirebase
  * -----------------
- * Modo 'firebase': lee las colecciones de Firestore. Cada documento de
- * Firestore se devuelve como un objeto normal con su "id".
+ * Modo 'firebase': lee y escribe en Firestore. Cada documento de Firestore
+ * se devuelve como un objeto normal con su "id".
  *
- * El SDK de Firebase se carga desde gstatic (sin npm) y solo en este modo.
+ * Leer puede cualquiera; escribir, solo el profesorado con sesión iniciada
+ * (lo comprueban las reglas de seguridad, ver firestore.rules).
  */
 
-import { CONFIG_FIREBASE, VERSION_SDK } from './configFirebase.js';
-
-let conexion = null; // promesa, para no abrir Firebase dos veces
-
-async function abrirFirestore() {
-  if (!CONFIG_FIREBASE) {
-    throw new Error('Falta rellenar js/datos/configFirebase.js');
-  }
-  const base = `https://www.gstatic.com/firebasejs/${VERSION_SDK}`;
-  const [aplicacion, firestore] = await Promise.all([
-    import(`${base}/firebase-app.js`),
-    import(`${base}/firebase-firestore.js`),
-  ]);
-  const app = aplicacion.initializeApp(CONFIG_FIREBASE);
-  return { bd: firestore.getFirestore(app), fn: firestore };
-}
+import { obtenerFirebase } from './conexionFirebase.js';
 
 export class BaseDatosFirebase {
-  conectar() {
-    if (!conexion) {
-      conexion = abrirFirestore();
-    }
-    return conexion;
-  }
-
   async leerColeccion(nombre) {
-    const { bd, fn } = await this.conectar();
-    const resultado = await fn.getDocs(fn.collection(bd, nombre));
+    const { bd, firestore } = await obtenerFirebase();
+    const resultado = await firestore.getDocs(firestore.collection(bd, nombre));
     return resultado.docs.map((documento) => ({ id: documento.id, ...documento.data() }));
   }
 
   async leerDocumento(coleccion, id) {
-    const { bd, fn } = await this.conectar();
-    const documento = await fn.getDoc(fn.doc(bd, coleccion, id));
+    const { bd, firestore } = await obtenerFirebase();
+    const documento = await firestore.getDoc(firestore.doc(bd, coleccion, id));
     return documento.exists() ? { id: documento.id, ...documento.data() } : null;
   }
 
-  direccionImagen(ruta) {
-    // Mientras las imágenes no estén en Firebase Storage, se sirven
-    // desde la carpeta datos/ de la propia web.
-    return `datos/${ruta}`;
+  /**
+   * Aplica varios cambios de una vez: o se guardan todos o ninguno.
+   * Cada operación es { tipo: 'guardar' | 'borrar', coleccion, id, datos }.
+   */
+  async aplicarCambios(operaciones) {
+    const { bd, firestore } = await obtenerFirebase();
+    const lote = firestore.writeBatch(bd);
+    for (const operacion of operaciones) {
+      const referencia = firestore.doc(bd, operacion.coleccion, operacion.id);
+      if (operacion.tipo === 'borrar') {
+        lote.delete(referencia);
+      } else {
+        lote.set(referencia, operacion.datos);
+      }
+    }
+    await lote.commit();
   }
 }

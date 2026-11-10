@@ -2,11 +2,16 @@
  * BaseDatos
  * ---------
  * Única puerta de la aplicación al almacenamiento. El modelo y las páginas
- * solo usan sus métodos de lectura y no saben dónde están los datos.
+ * solo usan sus métodos y no saben dónde están los datos.
  *
  * Según configuracion.js, por dentro usa:
- *   - BaseDatosLocal    (modo 'local': ficheros datos/*.json)
+ *   - BaseDatosLocal    (modo 'local': ficheros datos/*.json, cambios en memoria)
  *   - BaseDatosFirebase (modo 'firebase': Firestore)
+ *
+ * Colecciones:
+ *   actividades  una por actividad (ver modelo/Actividad.js)
+ *   imagenes     una por imagen: { actividadId, datos } con la imagen ya
+ *                reducida, como texto "data:image/jpeg;base64,…"
  *
  * Uso:
  *   const baseDatos = BaseDatos.preparar();
@@ -41,15 +46,29 @@ export class BaseDatos {
   }
 
   /**
-   * Dirección completa de una imagen a partir de su ruta guardada
-   * (por ejemplo "imagenes/act-001/huella.jpg").
+   * Guarda y borra varios documentos a la vez (todos o ninguno).
+   * Cada operación: { tipo: 'guardar' | 'borrar', coleccion, id, datos }.
+   * 'guardar' sustituye el documento entero.
    */
-  direccionImagen(ruta) {
-    return this.almacen.direccionImagen(ruta);
+  aplicarCambios(operaciones) {
+    return this.almacen.aplicarCambios(operaciones);
   }
 
-  // Previsto para más adelante (cuando el profesorado pueda editar):
-  //   crearDocumento(coleccion, documento)
-  //   modificarDocumento(coleccion, id, cambios)
-  //   borrarDocumento(coleccion, id)
+  /** Un identificador nuevo para un documento (20 caracteres). */
+  nuevoId() {
+    return crypto.randomUUID().replaceAll('-', '').slice(0, 20);
+  }
+
+  /**
+   * Dirección para mostrar una imagen de una actividad:
+   *   { id }   → imagen guardada en la colección 'imagenes'
+   *   { ruta } → fichero dentro de datos/ (las actividades de ejemplo)
+   */
+  async direccionImagen(imagen) {
+    if (imagen.ruta) {
+      return `datos/${imagen.ruta}`;
+    }
+    const documento = await this.leerDocumento('imagenes', imagen.id);
+    return documento?.datos ?? '';
+  }
 }

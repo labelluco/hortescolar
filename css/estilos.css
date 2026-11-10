@@ -17,6 +17,7 @@
   --color-texto-secundario: #5f6368;
   --color-borde: #e0e3e7;
   --color-fila-encima: #f1f6f1;
+  --color-error: #c5221f;
 
   --radio: 8px;
   --sombra: 0 1px 2px rgba(60, 64, 67, 0.15), 0 1px 3px 1px rgba(60, 64, 67, 0.08);
@@ -65,6 +66,35 @@ h2 { font-size: 1.1rem; font-weight: 500; margin: 0 0 0.75rem; }
   font-size: 1.25rem;
   font-weight: 500;
   text-decoration: none;
+  margin-right: auto;
+}
+
+.barra-enlaces {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.9rem;
+}
+
+.barra-enlaces a,
+.barra-enlaces button {
+  color: #fff;
+  font: inherit;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.barra-enlaces a:hover,
+.barra-enlaces button:hover { text-decoration: underline; }
+
+.barra-usuario { color: rgba(255, 255, 255, 0.8); }
+
+@media (max-width: 640px) {
+  .barra { padding: 0 16px; }
+  .barra-usuario { display: none; }
 }
 
 /* ---------- Contenido ---------- */
@@ -237,3 +267,140 @@ th[aria-sort="descending"] .orden-flecha::after { content: "↓"; opacity: 1; }
   border: none;
   cursor: pointer;
 }
+
+/* ---------- Botones ---------- */
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font: inherit;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: var(--radio);
+  border: 1px solid var(--color-borde);
+  background: var(--color-superficie);
+  color: var(--color-principal);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton:hover { background: var(--color-principal-suave); }
+.boton:disabled { opacity: 0.5; cursor: default; }
+.boton[hidden] { display: none; }
+
+.boton-principal {
+  background: var(--color-principal);
+  border-color: var(--color-principal);
+  color: #fff;
+}
+
+.boton-principal:hover { background: var(--color-principal-oscuro); }
+
+.boton-peligro { color: var(--color-error); margin-left: auto; }
+.boton-peligro:hover { background: #fce8e6; }
+
+.boton-icono {
+  font: inherit;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  background: var(--color-superficie);
+  cursor: pointer;
+}
+
+.boton-icono:disabled { opacity: 0.35; cursor: default; }
+
+.ficha-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ---------- Formularios (acceso y edición) ---------- */
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.campo > span { font-weight: 500; font-size: 0.9rem; }
+.campo small, .seccion small { color: var(--color-texto-secundario); font-weight: normal; }
+
+.campo input,
+.campo textarea {
+  font: inherit;
+  padding: 10px 12px;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  background: var(--color-superficie);
+  width: 100%;
+}
+
+.campo textarea { resize: vertical; }
+
+.campo input:focus,
+.campo textarea:focus,
+.editor-imagen input:focus {
+  outline: 2px solid var(--color-principal);
+  outline-offset: -1px;
+}
+
+.campos-en-linea {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0 16px;
+}
+
+.error { color: var(--color-error); min-height: 1.5em; margin: 0 0 8px; }
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.acceso {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 32px;
+}
+
+.acceso .boton { width: 100%; justify-content: center; }
+
+/* Editor de imágenes (editar.html) */
+.editor-imagenes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.editor-imagen {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.editor-imagen img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radio);
+  background: var(--color-fondo);
+}
+
+.editor-imagen input {
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 6px 8px;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+}
+
+.editor-imagen-botones { display: flex; gap: 4px; }
+.editor-imagen-botones [data-quitar] { margin-left: auto; color: var(--color-error); }

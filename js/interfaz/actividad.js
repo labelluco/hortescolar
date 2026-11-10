@@ -3,15 +3,25 @@
  * ------------
  * Ficha de una actividad (actividad.html?id=…): recurso, etapa, saberes,
  * descripción, objetivos, materiales, desarrollo e imágenes (con ampliación
- * al hacer clic).
+ * al hacer clic). Con sesión iniciada aparece el botón «Editar».
  */
 
 import { BaseDatos } from '../datos/BaseDatos.js';
 import { Actividad } from '../modelo/Actividad.js';
+import { Barra } from './Barra.js';
 import { escaparHtml, listaHtml } from './ayudas.js';
 
 const ficha = document.getElementById('ficha');
 const baseDatos = BaseDatos.preparar();
+const id = new URLSearchParams(location.search).get('id');
+
+Barra.pintar().then((usuario) => {
+  if (usuario && id) {
+    const botonEditar = document.getElementById('botonEditar');
+    botonEditar.href = `editar.html?id=${encodeURIComponent(id)}`;
+    botonEditar.hidden = false;
+  }
+});
 
 // Si venimos de la tabla, "Volver" regresa a ella con la búsqueda que había.
 const anterior = document.referrer ? new URL(document.referrer) : null;
@@ -26,9 +36,10 @@ function seccion(titulo, contenido) {
 function pintar(actividad) {
   document.title = `${actividad.titulo} · Huerto escolar`;
 
+  // Las imágenes se cargan después, cada una cuando llega (ver pintarImagenes)
   const imagenes = actividad.imagenes.map((imagen, posicion) => `
-    <button type="button" class="miniatura" data-posicion="${posicion}">
-      <img src="${escaparHtml(baseDatos.direccionImagen(imagen.ruta))}" alt="${escaparHtml(imagen.texto)}" loading="lazy">
+    <button type="button" class="miniatura" data-posicion="${posicion}" aria-label="Ampliar imagen ${posicion + 1}">
+      <img alt="${escaparHtml(imagen.texto)}">
     </button>`).join('');
 
   ficha.innerHTML = `
@@ -47,19 +58,25 @@ function pintar(actividad) {
     ${seccion('Imágenes', imagenes && `<div class="galeria">${imagenes}</div>`)}
   `;
 
-  ficha.querySelectorAll('.miniatura').forEach((boton) => {
-    boton.addEventListener('click', () => ampliar(actividad.imagenes[boton.dataset.posicion]));
+  pintarImagenes(actividad);
+}
+
+function pintarImagenes(actividad) {
+  ficha.querySelectorAll('.miniatura').forEach(async (boton) => {
+    const imagen = actividad.imagenes[boton.dataset.posicion];
+    const direccion = await baseDatos.direccionImagen(imagen);
+    boton.querySelector('img').src = direccion;
+    boton.addEventListener('click', () => ampliar(direccion, imagen.texto));
   });
 }
 
-function ampliar(imagen) {
-  document.getElementById('ampliacionImagen').src = baseDatos.direccionImagen(imagen.ruta);
-  document.getElementById('ampliacionImagen').alt = imagen.texto ?? '';
-  document.getElementById('ampliacionTexto').textContent = imagen.texto ?? '';
+function ampliar(direccion, texto) {
+  document.getElementById('ampliacionImagen').src = direccion;
+  document.getElementById('ampliacionImagen').alt = texto ?? '';
+  document.getElementById('ampliacionTexto').textContent = texto ?? '';
   document.getElementById('ampliacion').showModal();
 }
 
-const id = new URLSearchParams(location.search).get('id');
 try {
   const actividad = id ? await Actividad.leer(id, baseDatos) : null;
   if (actividad) {

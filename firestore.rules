@@ -1,0 +1,27 @@
+// Reglas de seguridad de Firestore del proyecto «huerto-escolar-66b3d».
+//
+// Se copian a mano en la consola de Firebase (Firestore Database → Reglas)
+// cada vez que cambian aquí.
+//
+//   - Leer: cualquiera (la web es pública, aunque no esté indexada).
+//   - Escribir: solo el profesorado con sesión iniciada. Las cuentas se
+//     crean en la consola (Authentication) y el registro libre está
+//     desactivado, así que nadie más puede tener sesión.
+//   - Cualquier otra colección: cerrada.
+
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /actividades/{id} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    match /imagenes/{id} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+  }
+}

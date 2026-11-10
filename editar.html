@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Editar actividad · Huerto escolar</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="barra">
+    <a class="barra-titulo" href="index.html">Huerto escolar</a>
+    <nav class="barra-enlaces" id="barraEnlaces"></nav>
+  </header>
+
+  <main class="contenido">
+    <p><a class="volver" href="index.html" id="volver">← Volver</a></p>
+    <h1 id="tituloPagina">Nueva actividad</h1>
+
+    <form id="formulario" class="formulario" hidden>
+      <section class="tarjeta seccion">
+        <h2>Datos de la tabla</h2>
+        <label class="campo">
+          <span>Actividad (nombre) *</span>
+          <input type="text" name="titulo" required>
+        </label>
+        <label class="campo">
+          <span>Recurso *</span>
+          <input type="text" name="recurso" list="listaRecursos" required>
+          <small>Lo que hay en el huerto y da pie a la actividad: «Huellas de animales», «Compostador»…</small>
+        </label>
+        <label class="campo">
+          <span>Etapa *</span>
+          <input type="text" name="etapa" list="listaEtapas" required>
+        </label>
+        <label class="campo">
+          <span>Saberes básicos</span>
+          <textarea name="saberes" rows="3"></textarea>
+          <small>Uno por línea.</small>
+        </label>
+      </section>
+
+      <section class="tarjeta seccion">
+        <h2>Detalles</h2>
+        <label class="campo">
+          <span>Descripción</span>
+          <textarea name="descripcion" rows="4"></textarea>
+        </label>
+        <label class="campo">
+          <span>Objetivos</span>
+          <textarea name="objetivos" rows="3"></textarea>
+          <small>Uno por línea.</small>
+        </label>
+        <label class="campo">
+          <span>Materiales</span>
+          <textarea name="materiales" rows="3"></textarea>
+          <small>Uno por línea.</small>
+        </label>
+        <label class="campo">
+          <span>Desarrollo</span>
+          <textarea name="desarrollo" rows="5"></textarea>
+          <small>Un paso por línea, en orden.</small>
+        </label>
+        <div class="campos-en-linea">
+          <label class="campo">
+            <span>Duración</span>
+            <input type="text" name="duracion" placeholder="1 sesión de 50 min">
+          </label>
+          <label class="campo">
+            <span>Época del año</span>
+            <input type="text" name="epoca" placeholder="Otoño o primavera">
+          </label>
+        </div>
+      </section>
+
+      <section class="tarjeta seccion">
+        <h2>Imágenes <small id="contadorImagenes"></small></h2>
+        <div class="editor-imagenes" id="imagenes"></div>
+        <label class="boton" id="botonAnadirImagenes">
+          + Añadir imágenes
+          <input type="file" id="ficheroImagenes" accept="image/*" multiple hidden>
+        </label>
+        <small>Se reducen automáticamente antes de guardarlas.</small>
+      </section>
+
+      <p class="error" id="error" role="alert"></p>
+
+      <div class="acciones">
+        <button type="submit" class="boton boton-principal" id="botonGuardar">Guardar</button>
+        <a class="boton" href="index.html" id="botonCancelar">Cancelar</a>
+        <button type="button" class="boton boton-peligro" id="botonBorrar" hidden>Borrar actividad</button>
+      </div>
+    </form>
+
+    <datalist id="listaRecursos"></datalist>
+    <datalist id="listaEtapas"></datalist>
+  </main>
+
+  <script type="module" src="js/interfaz/editar.js"></script>
+</body>
+</html>

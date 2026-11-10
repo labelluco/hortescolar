@@ -12,12 +12,15 @@ Web para que el profesorado del colegio (unas 6 personas) organice actividades d
 
 ## Datos
 
-- `ALMACEN` en `js/datos/configuracion.js`: `'local'` (lee `datos/*.json`) o `'firebase'` (Firestore; `configFirebase.js` aún sin rellenar).
-- `BaseDatos` es la única puerta al almacenamiento: `leerColeccion`, `leerDocumento`, `direccionImagen`. Crear/modificar/borrar, previsto para más adelante.
-- Colección `actividades`. Campos en `js/modelo/Actividad.js`.
-- Las imágenes van en `datos/imagenes/{idActividad}/` (reducidas, máx. 1280 px) hasta decidir si se pasan a Firebase Storage.
+- `ALMACEN` en `js/datos/configuracion.js`: `'firebase'` (Firestore del proyecto `huerto-escolar-66b3d`, `europe-southwest1`, plan Spark) o `'local'` (lee `datos/*.json`, usuario `admin`/`admin`, cambios en `sessionStorage`).
+- `BaseDatos` es la única puerta al almacenamiento: `leerColeccion`, `leerDocumento`, `aplicarCambios` (lote de guardar/borrar, todo o nada), `nuevoId`, `direccionImagen`.
+- Colecciones: `actividades` (campos en `js/modelo/Actividad.js`) e `imagenes` (`{ actividadId, datos }`, imagen reducida a 1280 px como data URL, < 1 MB). **Sin Firebase Storage**, para no necesitar el plan Blaze.
+- Seguridad (`firestore.rules`, se copian a mano a la consola): leer, cualquiera; escribir, con sesión. Cuentas del profesorado creadas en la consola; registro libre desactivado.
+- `Sesion` (Firebase Authentication o usuario fijo en local); `Sesion.proteger()` en las páginas de edición.
 
 ## Páginas
 
 1. `index.html`: tabla Recurso · Actividad · Saberes básicos · Etapa, con buscador (todas las columnas o una) y orden por columnas. La búsqueda queda en la dirección (`?q=…&en=…`).
-2. `actividad.html?id=…`: ficha de la actividad con galería.
+2. `actividad.html?id=…`: ficha de la actividad con galería; botón «Editar» con sesión.
+3. `acceso.html`: acceso del profesorado (`?volver=` para regresar).
+4. `editar.html` / `editar.html?id=…`: crear, modificar y borrar, con editor de imágenes (máx. 10, ordenar, pie de foto).
