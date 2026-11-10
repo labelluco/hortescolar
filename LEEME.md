@@ -7,6 +7,9 @@ Publicada en GitHub Pages (rama `main`, carpeta raíz): https://labelluco.github
 - **Portada** (`index.html`): tabla con las columnas *Recurso*, *Actividad*, *Saberes básicos* y *Etapa*. Se puede buscar en todas las columnas o solo en una (selector «en»), y ordenar haciendo clic en la cabecera. Al pulsar una fila se abre la ficha de la actividad.
 - **Ficha** (`actividad.html?id=…`): todos los detalles de la actividad e imágenes (se amplían al hacer clic).
 - **Acceso profesorado** (`acceso.html`) y **edición** (`editar.html`, `editar.html?id=…`): con sesión iniciada se pueden crear, modificar y borrar actividades y subir hasta 10 imágenes por actividad. Consultar no necesita sesión.
+- **Importar** (`importar.html`): con sesión, sube de una vez actividades preparadas en ficheros JSON (los borradores están en `propuestas/`). Si la actividad ya existe, se sustituye conservando sus imágenes.
+
+Cada actividad puede servir para varias etapas (Infantil y los tres ciclos de Primaria). En cada etapa tiene sus **saberes básicos**, copiados literalmente del currículo de Aragón (Orden ECD/853/2022 de Infantil y anexos de la Orden ECD/1112/2022 de Primaria), y una **adaptación**. En la portada se puede filtrar por etapa y entonces se ven solo sus saberes.
 
 HTML + CSS + JavaScript puro (módulos ES), sin frameworks ni paso de compilación. La web no se indexa (`robots.txt` y `noindex`).
 
@@ -29,7 +32,7 @@ y abrir http://localhost:8000. También sirve la extensión Live Server de VS Co
 
 Colecciones de Firestore:
 
-- `actividades`: `recurso`, `titulo`, `saberes[]`, `etapa`, `descripcion`, `objetivos[]`, `materiales[]`, `desarrollo[]` (pasos), `duracion`, `epoca`, `imagenes[]` (máx. 10, cada una `{ id, texto }`) y `modificada` (`{ por, el }`).
+- `actividades`: `recurso`, `titulo`, `etapas[]` (cada una `{ etapa, saberes[], adaptacion }`, con `etapa` = `Infantil`, `Primaria · 1.er ciclo`, `Primaria · 2.º ciclo` o `Primaria · 3.er ciclo`), `descripcion`, `objetivos[]`, `materiales[]`, `desarrollo[]` (pasos), `notas[]` (notas y precauciones), `duracion`, `epoca`, `imagenes[]` (máx. 10, cada una `{ id, texto }`) y `modificada` (`{ por, el }`).
 - `imagenes`: una por imagen, `{ actividadId, datos }`, con la imagen ya reducida en el navegador (máx. 1280 px, JPEG, menos de 1 MB) como texto `data:image/jpeg;base64,…`. Así no hace falta Firebase Storage ni el plan de pago.
 
 ## Profesorado

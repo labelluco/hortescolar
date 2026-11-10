@@ -14,6 +14,8 @@ Web para que el profesorado del colegio (unas 6 personas) organice actividades d
 
 - `ALMACEN` en `js/datos/configuracion.js`: `'firebase'` (Firestore del proyecto `huerto-escolar-66b3d`, `europe-southwest1`, plan Spark) o `'local'` (lee `datos/*.json`, usuario `admin`/`admin`, cambios en `sessionStorage`).
 - `BaseDatos` es la única puerta al almacenamiento: `leerColeccion`, `leerDocumento`, `aplicarCambios` (lote de guardar/borrar, todo o nada), `nuevoId`, `direccionImagen`.
+- **Etapas:** `ETAPAS` en `js/modelo/Actividad.js` (Infantil y los tres ciclos de Primaria). Cada actividad tiene `etapas[]` con `{ etapa, saberes[], adaptacion }`. Los saberes básicos se copian **literalmente** del currículo de Aragón, precedidos del área y el bloque: «Ciencias de la Naturaleza (A.2): …». Infantil: Orden ECD/853/2022 (BOA 17/06/2022). Primaria: anexos de la Orden ECD/1112/2022 en educa.aragon.es (en Aragón, Conocimiento del Medio está dividido en Ciencias de la Naturaleza y Ciencias Sociales).
+- **Borradores de actividades** en `propuestas/*.json` (mismo formato que la colección, con `id`); se suben con `importar.html`.
 - Colecciones: `actividades` (campos en `js/modelo/Actividad.js`) e `imagenes` (`{ actividadId, datos }`, imagen reducida a 1280 px como data URL, < 1 MB). **Sin Firebase Storage**, para no necesitar el plan Blaze.
 - Seguridad (`firestore.rules`, se copian a mano a la consola): leer, cualquiera; escribir, con sesión. Cuentas del profesorado creadas en la consola; registro libre desactivado.
 - `Sesion` (Firebase Authentication o usuario fijo en local); `Sesion.proteger()` en las páginas de edición.
@@ -23,4 +25,5 @@ Web para que el profesorado del colegio (unas 6 personas) organice actividades d
 1. `index.html`: tabla Recurso · Actividad · Saberes básicos · Etapa, con buscador (todas las columnas o una) y orden por columnas. La búsqueda queda en la dirección (`?q=…&en=…`).
 2. `actividad.html?id=…`: ficha de la actividad con galería; botón «Editar» con sesión.
 3. `acceso.html`: acceso del profesorado (`?volver=` para regresar).
-4. `editar.html` / `editar.html?id=…`: crear, modificar y borrar, con editor de imágenes (máx. 10, ordenar, pie de foto).
+4. `editar.html` / `editar.html?id=…`: crear, modificar y borrar, con un bloque por etapa (saberes y adaptación) y editor de imágenes (máx. 10, ordenar, pie de foto).
+5. `importar.html`: subir actividades desde ficheros JSON (sustituye por id y conserva las imágenes).

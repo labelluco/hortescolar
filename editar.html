@@ -29,15 +29,12 @@
           <input type="text" name="recurso" list="listaRecursos" required>
           <small>Lo que hay en el huerto y da pie a la actividad: «Huellas de animales», «Compostador»…</small>
         </label>
-        <label class="campo">
-          <span>Etapa *</span>
-          <input type="text" name="etapa" list="listaEtapas" required>
-        </label>
-        <label class="campo">
-          <span>Saberes básicos</span>
-          <textarea name="saberes" rows="3"></textarea>
-          <small>Uno por línea.</small>
-        </label>
+      </section>
+
+      <section class="tarjeta seccion">
+        <h2>Etapas *</h2>
+        <p><small>Marca las etapas para las que sirve. En cada una, los saberes básicos del currículo de Aragón (uno por línea) y qué cambia respecto a la actividad general.</small></p>
+        <div id="etapas"></div>
       </section>
 
       <section class="tarjeta seccion">
@@ -60,6 +57,11 @@
           <span>Desarrollo</span>
           <textarea name="desarrollo" rows="5"></textarea>
           <small>Un paso por línea, en orden.</small>
+        </label>
+        <label class="campo">
+          <span>Notas y precauciones</span>
+          <textarea name="notas" rows="3"></textarea>
+          <small>Una por línea.</small>
         </label>
         <div class="campos-en-linea">
           <label class="campo">
@@ -93,7 +95,6 @@
     </form>
 
     <datalist id="listaRecursos"></datalist>
-    <datalist id="listaEtapas"></datalist>
   </main>
 
   <script type="module" src="js/interfaz/editar.js"></script>

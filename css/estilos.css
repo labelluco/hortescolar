@@ -404,3 +404,51 @@ th[aria-sort="descending"] .orden-flecha::after { content: "↓"; opacity: 1; }
 
 .editor-imagen-botones { display: flex; gap: 4px; }
 .editor-imagen-botones [data-quitar] { margin-left: auto; color: var(--color-error); }
+
+/* ---------- Etapas ---------- */
+
+/* Saberes en la tabla de la portada: cada uno, como mucho en dos líneas */
+.lista-saberes {
+  margin: 0;
+  padding-left: 1.1em;
+  font-size: 0.85rem;
+  color: var(--color-texto-secundario);
+}
+
+.lista-saberes li {
+  overflow: hidden;
+  max-height: 2.9em;
+}
+
+.lista-saberes li + li { margin-top: 2px; }
+
+.mas { font-size: 0.8rem; color: var(--color-texto-secundario); font-style: italic; }
+
+/* Desplegables de la ficha */
+.etapa {
+  border-top: 1px solid var(--color-borde);
+  padding: 10px 0;
+}
+
+.etapa:first-of-type { border-top: none; padding-top: 0; }
+
+.etapa summary {
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--color-principal-oscuro);
+}
+
+.etapa p { margin: 8px 0 4px; }
+.etapa ul { margin: 0 0 4px; }
+
+/* Bloques del formulario de edición */
+.bloque-etapa {
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  padding: 8px 16px 0;
+  margin: 0 0 12px;
+}
+
+.bloque-etapa legend { padding: 0 6px; font-weight: 500; }
+.bloque-etapa legend label { cursor: pointer; }
+.bloque-etapa-campos { padding-top: 8px; }

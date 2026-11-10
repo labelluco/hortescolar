@@ -11,7 +11,7 @@
  */
 
 import { BaseDatos } from '../datos/BaseDatos.js';
-import { Actividad, MAXIMO_IMAGENES } from '../modelo/Actividad.js';
+import { Actividad, ETAPAS, MAXIMO_IMAGENES } from '../modelo/Actividad.js';
 import { ListaActividades } from '../modelo/ListaActividades.js';
 import { Sesion } from './Sesion.js';
 import { Barra } from './Barra.js';
@@ -27,8 +27,9 @@ const textoError = document.getElementById('error');
 const contenedorImagenes = document.getElementById('imagenes');
 
 // Campos de texto que en la actividad son listas (una línea = un elemento)
-const CAMPOS_LISTA = ['saberes', 'objetivos', 'materiales', 'desarrollo'];
-const CAMPOS_TEXTO = ['titulo', 'recurso', 'etapa', 'descripcion', 'duracion', 'epoca'];
+const CAMPOS_LISTA = ['objetivos', 'materiales', 'desarrollo', 'notas'];
+const CAMPOS_TEXTO = ['titulo', 'recurso', 'descripcion', 'duracion', 'epoca'];
+const contenedorEtapas = document.getElementById('etapas');
 
 let actividad = new Actividad();
 // Imágenes tal como se ven en el formulario, en orden:
@@ -58,6 +59,7 @@ async function cargar() {
       src: await baseDatos.direccionImagen(imagen),
     })));
   }
+  pintarEtapas();
   await rellenarSugerencias();
   pintarImagenes();
   formulario.hidden = false;
@@ -72,13 +74,60 @@ function rellenarFormulario() {
   }
 }
 
-/** Los recursos y etapas que ya existen, para que se escriban igual. */
+/** Los recursos que ya existen, para que se escriban igual. */
 async function rellenarSugerencias() {
   const lista = await ListaActividades.cargar(baseDatos);
-  const opciones = (valores) => [...new Set(valores.filter(Boolean))].sort()
-    .map((valor) => `<option value="${escaparHtml(valor)}">`).join('');
-  document.getElementById('listaRecursos').innerHTML = opciones(lista.actividades.map((a) => a.recurso));
-  document.getElementById('listaEtapas').innerHTML = opciones(lista.etapas());
+  document.getElementById('listaRecursos').innerHTML = lista.recursos()
+    .map((recurso) => `<option value="${escaparHtml(recurso)}">`).join('');
+}
+
+/* ---------- Etapas ---------- */
+
+/**
+ * Un bloque por cada etapa posible: casilla para marcarla y, si está
+ * marcada, sus saberes básicos y su adaptación.
+ */
+function pintarEtapas() {
+  contenedorEtapas.innerHTML = ETAPAS.map((etapa, posicion) => {
+    const datos = actividad.etapas.find((e) => e.etapa === etapa);
+    return `
+      <fieldset class="bloque-etapa" data-etapa="${escaparHtml(etapa)}">
+        <legend>
+          <label><input type="checkbox" name="etapa-${posicion}" ${datos ? 'checked' : ''}> ${escaparHtml(etapa)}</label>
+        </legend>
+        <div class="bloque-etapa-campos" ${datos ? '' : 'hidden'}>
+          <label class="campo">
+            <span>Saberes básicos</span>
+            <textarea name="saberes-${posicion}" rows="4">${escaparHtml((datos?.saberes ?? []).join('\n'))}</textarea>
+            <small>Uno por línea, con el texto del currículo.</small>
+          </label>
+          <label class="campo">
+            <span>Adaptación para esta etapa</span>
+            <textarea name="adaptacion-${posicion}" rows="3">${escaparHtml(datos?.adaptacion ?? '')}</textarea>
+          </label>
+        </div>
+      </fieldset>`;
+  }).join('');
+}
+
+// Al marcar o desmarcar una etapa, se muestran u ocultan sus campos
+contenedorEtapas.addEventListener('change', (evento) => {
+  if (evento.target.type === 'checkbox') {
+    const campos = evento.target.closest('fieldset').querySelector('.bloque-etapa-campos');
+    campos.hidden = !evento.target.checked;
+  }
+});
+
+function leerEtapas() {
+  const lineas = (texto) => texto.split('\n').map((linea) => linea.trim()).filter(Boolean);
+  return ETAPAS.flatMap((etapa, posicion) => {
+    if (!formulario.elements[`etapa-${posicion}`].checked) return [];
+    return [{
+      etapa,
+      saberes: lineas(formulario.elements[`saberes-${posicion}`].value),
+      adaptacion: formulario.elements[`adaptacion-${posicion}`].value.trim(),
+    }];
+  });
 }
 
 /* ---------- Imágenes ---------- */
@@ -152,6 +201,7 @@ function leerFormulario() {
   for (const campo of CAMPOS_LISTA) {
     nueva[campo] = formulario.elements[campo].value.split('\n').map((linea) => linea.trim()).filter(Boolean);
   }
+  nueva.etapas = leerEtapas();
   nueva.imagenes = imagenes.map(({ id, ruta, texto }) => (ruta ? { ruta, texto } : { id, texto }));
   nueva.modificada = { por: usuario.correo, el: new Date().toISOString() };
   return nueva;

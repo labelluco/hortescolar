@@ -3,56 +3,134 @@
     "id": "act-001",
     "recurso": "Huellas de animales",
     "titulo": "Detectives de huellas",
-    "saberes": ["Seres vivos: animales del entorno", "Medida: longitud con unidades no convencionales"],
-    "etapa": "Infantil",
     "descripcion": "EJEMPLO. El alumnado busca huellas en la tierra del huerto, las compara con unas fichas y averigua qué animal ha pasado por allí.",
-    "objetivos": ["Observar con atención el suelo del huerto", "Reconocer animales del entorno por sus huellas"],
-    "materiales": ["Fichas con dibujos de huellas", "Lupas", "Palitos para marcar las huellas"],
-    "desarrollo": ["Recorremos el huerto y marcamos con un palito cada huella que encontramos.", "Comparamos cada huella con las fichas.", "Medimos las huellas con palmos y dedos."],
+    "objetivos": [
+      "Observar con atención el suelo del huerto",
+      "Reconocer animales del entorno por sus huellas"
+    ],
+    "materiales": [
+      "Fichas con dibujos de huellas",
+      "Lupas",
+      "Palitos para marcar las huellas"
+    ],
+    "desarrollo": [
+      "Recorremos el huerto y marcamos con un palito cada huella que encontramos.",
+      "Comparamos cada huella con las fichas.",
+      "Medimos las huellas con palmos y dedos."
+    ],
     "duracion": "1 sesión de 45 min",
     "epoca": "Después de llover, cuando la tierra está blanda",
-    "imagenes": []
+    "imagenes": [],
+    "etapas": [
+      {
+        "etapa": "Infantil",
+        "saberes": [
+          "Seres vivos: animales del entorno",
+          "Medida: longitud con unidades no convencionales"
+        ],
+        "adaptacion": ""
+      }
+    ]
   },
   {
     "id": "act-002",
     "recurso": "Huellas de animales",
     "titulo": "Moldes de escayola",
-    "saberes": ["Seres vivos: rastros y señales de los animales", "Materiales y sus cambios: de líquido a sólido"],
-    "etapa": "Primaria · 2.º ciclo",
     "descripcion": "EJEMPLO. Hacemos un molde de escayola de las huellas más claras para llevarlas al aula y crear una colección.",
-    "objetivos": ["Conservar las huellas para estudiarlas en clase", "Observar el fraguado de la escayola"],
-    "materiales": ["Escayola", "Agua", "Tiras de cartulina", "Vaso y cuchara"],
-    "desarrollo": ["Rodeamos la huella con una tira de cartulina.", "Preparamos la escayola y la vertemos.", "Esperamos 30 minutos y la sacamos con cuidado."],
+    "objetivos": [
+      "Conservar las huellas para estudiarlas en clase",
+      "Observar el fraguado de la escayola"
+    ],
+    "materiales": [
+      "Escayola",
+      "Agua",
+      "Tiras de cartulina",
+      "Vaso y cuchara"
+    ],
+    "desarrollo": [
+      "Rodeamos la huella con una tira de cartulina.",
+      "Preparamos la escayola y la vertemos.",
+      "Esperamos 30 minutos y la sacamos con cuidado."
+    ],
     "duracion": "2 sesiones",
     "epoca": "Todo el año",
-    "imagenes": []
+    "imagenes": [],
+    "etapas": [
+      {
+        "etapa": "Primaria · 2.º ciclo",
+        "saberes": [
+          "Seres vivos: rastros y señales de los animales",
+          "Materiales y sus cambios: de líquido a sólido"
+        ],
+        "adaptacion": ""
+      }
+    ]
   },
   {
     "id": "act-003",
     "recurso": "Bancales",
     "titulo": "¿Cuántas lechugas caben?",
-    "saberes": ["Números y operaciones: multiplicación", "Medida: superficie"],
-    "etapa": "Primaria · 2.º ciclo",
     "descripcion": "EJEMPLO. Planificamos la plantación de un bancal en filas y columnas y calculamos cuántas plantas caben con multiplicaciones.",
-    "objetivos": ["Entender la multiplicación como filas × columnas", "Medir el bancal con la cinta métrica"],
-    "materiales": ["Cinta métrica", "Cuerda y estacas", "Plantel de lechuga"],
-    "desarrollo": ["Medimos el largo y el ancho del bancal.", "Decidimos la distancia entre plantas.", "Calculamos filas × columnas y lo comprobamos plantando."],
+    "objetivos": [
+      "Entender la multiplicación como filas × columnas",
+      "Medir el bancal con la cinta métrica"
+    ],
+    "materiales": [
+      "Cinta métrica",
+      "Cuerda y estacas",
+      "Plantel de lechuga"
+    ],
+    "desarrollo": [
+      "Medimos el largo y el ancho del bancal.",
+      "Decidimos la distancia entre plantas.",
+      "Calculamos filas × columnas y lo comprobamos plantando."
+    ],
     "duracion": "1 sesión de 50 min",
     "epoca": "Otoño o primavera",
-    "imagenes": []
+    "imagenes": [],
+    "etapas": [
+      {
+        "etapa": "Primaria · 2.º ciclo",
+        "saberes": [
+          "Números y operaciones: multiplicación",
+          "Medida: superficie"
+        ],
+        "adaptacion": ""
+      }
+    ]
   },
   {
     "id": "act-004",
     "recurso": "Compostador",
     "titulo": "La vida dentro del compost",
-    "saberes": ["Ecosistemas: descomponedores", "Sostenibilidad: reducir y reciclar residuos"],
-    "etapa": "Primaria · 3.er ciclo",
     "descripcion": "EJEMPLO. Estudiamos los seres vivos que transforman los restos orgánicos en compost y medimos la temperatura del montón.",
-    "objetivos": ["Conocer el papel de los descomponedores", "Registrar datos de temperatura en una tabla"],
-    "materiales": ["Termómetro de compost", "Lupas", "Bandejas blancas", "Cuaderno de campo"],
-    "desarrollo": ["Tomamos una muestra de compost y la extendemos en la bandeja.", "Identificamos los bichos con la lupa.", "Medimos la temperatura cada semana y hacemos una gráfica."],
+    "objetivos": [
+      "Conocer el papel de los descomponedores",
+      "Registrar datos de temperatura en una tabla"
+    ],
+    "materiales": [
+      "Termómetro de compost",
+      "Lupas",
+      "Bandejas blancas",
+      "Cuaderno de campo"
+    ],
+    "desarrollo": [
+      "Tomamos una muestra de compost y la extendemos en la bandeja.",
+      "Identificamos los bichos con la lupa.",
+      "Medimos la temperatura cada semana y hacemos una gráfica."
+    ],
     "duracion": "Varias sesiones a lo largo de un mes",
     "epoca": "Todo el año",
-    "imagenes": []
+    "imagenes": [],
+    "etapas": [
+      {
+        "etapa": "Primaria · 3.er ciclo",
+        "saberes": [
+          "Ecosistemas: descomponedores",
+          "Sostenibilidad: reducir y reciclar residuos"
+        ],
+        "adaptacion": ""
+      }
+    ]
   }
 ]

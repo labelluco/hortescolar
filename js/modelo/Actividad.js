@@ -1,19 +1,21 @@
 /*
  * Actividad
  * ---------
- * Una actividad del huerto escolar. Las cuatro primeras propiedades son las
- * columnas de la tabla de la portada; el resto se ve en la ficha.
+ * Una actividad del huerto escolar.
  *
  *   id          identificador
  *   recurso     lo que hay en el huerto y da pie a la actividad ("Huellas de animales")
- *   titulo      nombre de la actividad ("Detectives de huellas")
- *   saberes     saberes básicos que se trabajan (lista de textos)
- *   etapa       etapa o ciclo ("Infantil", "Primaria · 1.er ciclo"…)
+ *   titulo      nombre de la actividad ("Trampas de huellas")
+ *   etapas      etapas para las que sirve, en el orden de ETAPAS. Cada una:
+ *                 { etapa, saberes: [textos], adaptacion: texto }
+ *               Los saberes básicos son los del currículo de Aragón para
+ *               esa etapa, y la adaptación explica qué cambia en ella.
  *   descripcion resumen de la actividad
  *   objetivos   lista de textos
  *   materiales  lista de textos
  *   desarrollo  pasos de la actividad, en orden (lista de textos)
- *   duracion    texto libre ("1 sesión de 50 min")
+ *   notas       notas y precauciones (lista de textos)
+ *   duracion    texto libre ("2 sesiones de 50 min")
  *   epoca       época del año más adecuada (texto libre)
  *   imagenes    hasta 10, en orden: { id, texto } (colección 'imagenes')
  *               o { ruta, texto } (fichero en datos/, solo los ejemplos)
@@ -22,21 +24,49 @@
 
 export const MAXIMO_IMAGENES = 10;
 
+/** Las etapas posibles, en orden. */
+export const ETAPAS = [
+  'Infantil',
+  'Primaria · 1.er ciclo',
+  'Primaria · 2.º ciclo',
+  'Primaria · 3.er ciclo',
+];
+
 export class Actividad {
   constructor(datos = {}) {
     this.id = datos.id ?? null;
     this.recurso = datos.recurso ?? '';
     this.titulo = datos.titulo ?? '';
-    this.saberes = datos.saberes ?? [];
-    this.etapa = datos.etapa ?? '';
+    this.etapas = Actividad.leerEtapas(datos);
     this.descripcion = datos.descripcion ?? '';
     this.objetivos = datos.objetivos ?? [];
     this.materiales = datos.materiales ?? [];
     this.desarrollo = datos.desarrollo ?? [];
+    this.notas = datos.notas ?? [];
     this.duracion = datos.duracion ?? '';
     this.epoca = datos.epoca ?? '';
     this.imagenes = datos.imagenes ?? [];
     this.modificada = datos.modificada ?? null;
+  }
+
+  /**
+   * Las etapas de un documento, ordenadas. Admite también el formato
+   * antiguo (una sola "etapa" de texto y una lista "saberes").
+   */
+  static leerEtapas(datos) {
+    let etapas = datos.etapas;
+    if (!etapas && datos.etapa) {
+      etapas = [{ etapa: datos.etapa, saberes: datos.saberes ?? [], adaptacion: '' }];
+    }
+    return (etapas ?? [])
+      .map((e) => ({ etapa: e.etapa, saberes: e.saberes ?? [], adaptacion: e.adaptacion ?? '' }))
+      .sort((a, b) => Actividad.posicionEtapa(a.etapa) - Actividad.posicionEtapa(b.etapa));
+  }
+
+  /** Posición de una etapa en ETAPAS (las desconocidas, al final). */
+  static posicionEtapa(etapa) {
+    const posicion = ETAPAS.indexOf(etapa);
+    return posicion >= 0 ? posicion : ETAPAS.length;
   }
 
   static desdeDocumento(documento) {
@@ -54,12 +84,12 @@ export class Actividad {
     return {
       recurso: this.recurso,
       titulo: this.titulo,
-      saberes: this.saberes,
-      etapa: this.etapa,
+      etapas: this.etapas,
       descripcion: this.descripcion,
       objetivos: this.objetivos,
       materiales: this.materiales,
       desarrollo: this.desarrollo,
+      notas: this.notas,
       duracion: this.duracion,
       epoca: this.epoca,
       imagenes: this.imagenes,
@@ -72,13 +102,36 @@ export class Actividad {
     const errores = [];
     if (!this.titulo) errores.push('Falta el nombre de la actividad.');
     if (!this.recurso) errores.push('Falta el recurso.');
-    if (!this.etapa) errores.push('Falta la etapa.');
+    if (this.etapas.length === 0) errores.push('Marca al menos una etapa.');
     if (this.imagenes.length > MAXIMO_IMAGENES) errores.push(`Como mucho, ${MAXIMO_IMAGENES} imágenes.`);
     return errores;
   }
 
+  /** Nombres de las etapas, en orden. */
+  get nombresEtapas() {
+    return this.etapas.map((e) => e.etapa);
+  }
+
+  /** ¿Sirve para esa etapa? */
+  tieneEtapa(etapa) {
+    return this.nombresEtapas.includes(etapa);
+  }
+
+  /**
+   * Saberes básicos de una etapa, o de todas (sin repetir) si no se indica.
+   */
+  saberesDe(etapa = null) {
+    const elegidas = etapa ? this.etapas.filter((e) => e.etapa === etapa) : this.etapas;
+    return [...new Set(elegidas.flatMap((e) => e.saberes))];
+  }
+
   /** Los saberes en un solo texto, para buscar y ordenar. */
   get saberesEnTexto() {
-    return this.saberes.join(' · ');
+    return this.saberesDe().join(' · ');
+  }
+
+  /** Las etapas en un solo texto, para buscar. */
+  get etapasEnTexto() {
+    return this.nombresEtapas.join(' · ');
   }
 }

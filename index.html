@@ -15,7 +15,7 @@
 
   <main class="contenido">
     <h1>Actividades del huerto</h1>
-    <p class="subtitulo">Busca por lo que hay en el huerto (recurso) o por lo que quieres trabajar (saberes básicos). Haz clic en una fila para ver la actividad.</p>
+    <p class="subtitulo">Busca por lo que hay en el huerto (recurso) o por lo que quieres trabajar (saberes básicos). Si eliges una etapa, verás sus saberes. Haz clic en una fila para ver la actividad.</p>
 
     <form class="buscador" id="buscador" role="search">
       <label class="buscador-campo">
@@ -31,6 +31,10 @@
           <option value="saberes">Saberes básicos</option>
           <option value="etapa">Etapa</option>
         </select>
+      </label>
+      <label class="buscador-en">
+        <span class="oculto">Etapa</span>
+        <select id="etapa"></select>
       </label>
     </form>
 

@@ -5,7 +5,7 @@
  * tiene en su HTML un <nav id="barraEnlaces"></nav> y llama a Barra.pintar().
  *
  *   sin sesión → «Acceso profesorado»
- *   con sesión → «Nueva actividad» · correo · «Salir»
+ *   con sesión → «Nueva actividad» · «Importar» · correo · «Salir»
  *
  * Devuelve el usuario (o null) para que la página no tenga que volver a
  * preguntarlo (por ejemplo, para mostrar el botón «Editar»).
@@ -31,6 +31,7 @@ export class Barra {
 
     nav.innerHTML = `
       <a href="editar.html">+ Nueva actividad</a>
+      <a href="importar.html">Importar</a>
       <span class="barra-usuario">${escaparHtml(usuario.correo)}</span>
       <button type="button" id="botonSalir">Salir</button>`;
     document.getElementById('botonSalir').addEventListener('click', async () => {

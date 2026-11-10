@@ -46,19 +46,37 @@ function pintar(actividad) {
     <h1>${escaparHtml(actividad.titulo)}</h1>
     <dl class="datos tarjeta">
       <div><dt>Recurso</dt><dd>${escaparHtml(actividad.recurso)}</dd></div>
-      <div><dt>Etapa</dt><dd>${escaparHtml(actividad.etapa)}</dd></div>
+      <div><dt>Etapas</dt><dd>${actividad.nombresEtapas.map((e) => `<span class="etiqueta">${escaparHtml(e)}</span>`).join(' ')}</dd></div>
       ${actividad.duracion ? `<div><dt>Duración</dt><dd>${escaparHtml(actividad.duracion)}</dd></div>` : ''}
       ${actividad.epoca ? `<div><dt>Época</dt><dd>${escaparHtml(actividad.epoca)}</dd></div>` : ''}
-      <div class="datos-ancho"><dt>Saberes básicos</dt><dd>${actividad.saberes.map((s) => `<span class="etiqueta">${escaparHtml(s)}</span>`).join(' ')}</dd></div>
     </dl>
     ${seccion('Descripción', actividad.descripcion && `<p>${escaparHtml(actividad.descripcion)}</p>`)}
     ${seccion('Objetivos', actividad.objetivos.length && listaHtml(actividad.objetivos))}
     ${seccion('Materiales', actividad.materiales.length && listaHtml(actividad.materiales))}
     ${seccion('Desarrollo', actividad.desarrollo.length && listaHtml(actividad.desarrollo, 'ol'))}
+    ${seccion('Por etapas: adaptaciones y saberes básicos', htmlEtapas(actividad))}
+    ${seccion('Notas y precauciones', actividad.notas.length && listaHtml(actividad.notas))}
     ${seccion('Imágenes', imagenes && `<div class="galeria">${imagenes}</div>`)}
   `;
 
   pintarImagenes(actividad);
+}
+
+/**
+ * Un desplegable por etapa con su adaptación y sus saberes básicos. Se abre
+ * la etapa elegida en la tabla (?etapa=…), o la única si solo hay una.
+ */
+function htmlEtapas(actividad) {
+  const elegida = new URLSearchParams(location.search).get('etapa');
+  return actividad.etapas.map(({ etapa, saberes, adaptacion }) => {
+    const abierta = etapa === elegida || actividad.etapas.length === 1;
+    return `
+      <details class="etapa" ${abierta ? 'open' : ''}>
+        <summary>${escaparHtml(etapa)}</summary>
+        ${adaptacion ? `<p><strong>Adaptación:</strong> ${escaparHtml(adaptacion)}</p>` : ''}
+        ${saberes.length ? `<p><strong>Saberes básicos</strong> (currículo de Aragón):</p>${listaHtml(saberes)}` : ''}
+      </details>`;
+  }).join('');
 }
 
 function pintarImagenes(actividad) {
