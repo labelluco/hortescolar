@@ -452,3 +452,52 @@ th[aria-sort="descending"] .orden-flecha::after { content: "↓"; opacity: 1; }
 .bloque-etapa legend { padding: 0 6px; font-weight: 500; }
 .bloque-etapa legend label { cursor: pointer; }
 .bloque-etapa-campos { padding-top: 8px; }
+
+/* ---------- Época (calendarioHtml.js) ---------- */
+
+.calendario {
+  display: inline-flex;
+  gap: 2px;
+  vertical-align: middle;
+}
+
+.calendario-mes {
+  width: 16px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  border-radius: 3px;
+  background: var(--color-fondo);
+  color: #9aa0a6;
+}
+
+.calendario-mes.activo {
+  background: var(--color-principal);
+  color: #fff;
+  font-weight: 500;
+}
+
+.calendario-texto { margin-left: 8px; }
+.nota-epoca { color: var(--color-texto-secundario); font-size: 0.9rem; margin-top: 4px; }
+.sin-dato { color: var(--color-texto-secundario); }
+
+/* Áreas de los saberes en la tabla */
+.etiqueta-area {
+  background: #eef1f6;
+  color: #3c4a5c;
+}
+
+.lista-saberes { margin-top: 6px; }
+
+/* Casillas de los meses en el formulario */
+.selector-meses {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 4px 12px;
+  margin-bottom: 8px;
+}
+
+.casilla-mes { cursor: pointer; text-transform: capitalize; }
+.acciones-meses { display: flex; gap: 8px; margin: 0 0 16px; }

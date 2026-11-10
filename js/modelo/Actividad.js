@@ -16,11 +16,15 @@
  *   desarrollo  pasos de la actividad, en orden (lista de textos)
  *   notas       notas y precauciones (lista de textos)
  *   duracion    texto libre ("2 sesiones de 50 min")
- *   epoca       época del año más adecuada (texto libre)
+ *   meses       meses en que se puede hacer (1 = enero … 12 = diciembre)
+ *   epoca       nota sobre la época (texto libre: "mejor después de llover")
  *   imagenes    hasta 10, en orden: { id, texto } (colección 'imagenes')
  *               o { ruta, texto } (fichero en datos/, solo los ejemplos)
  *   modificada  { por: correo, el: fecha ISO } del último cambio
  */
+
+import { areaCorta, partirSaber } from './saber.js';
+import { posicionEnCurso, textoMeses } from './calendario.js';
 
 export const MAXIMO_IMAGENES = 10;
 
@@ -44,6 +48,7 @@ export class Actividad {
     this.desarrollo = datos.desarrollo ?? [];
     this.notas = datos.notas ?? [];
     this.duracion = datos.duracion ?? '';
+    this.meses = [...new Set(datos.meses ?? [])].filter((m) => m >= 1 && m <= 12).sort((a, b) => a - b);
     this.epoca = datos.epoca ?? '';
     this.imagenes = datos.imagenes ?? [];
     this.modificada = datos.modificada ?? null;
@@ -91,6 +96,7 @@ export class Actividad {
       desarrollo: this.desarrollo,
       notas: this.notas,
       duracion: this.duracion,
+      meses: this.meses,
       epoca: this.epoca,
       imagenes: this.imagenes,
       modificada: this.modificada,
@@ -123,6 +129,26 @@ export class Actividad {
   saberesDe(etapa = null) {
     const elegidas = etapa ? this.etapas.filter((e) => e.etapa === etapa) : this.etapas;
     return [...new Set(elegidas.flatMap((e) => e.saberes))];
+  }
+
+  /** Áreas (nombre corto) de los saberes de una etapa o de todas, sin repetir. */
+  areasDe(etapa = null) {
+    return [...new Set(this.saberesDe(etapa).map((s) => areaCorta(partirSaber(s).area)).filter(Boolean))];
+  }
+
+  /** ¿Se puede hacer en ese mes (1 a 12)? */
+  esDelMes(mes) {
+    return this.meses.includes(mes);
+  }
+
+  /** Los meses en texto ("Todo el año", "noviembre – enero"…). */
+  get mesesEnTexto() {
+    return textoMeses(this.meses);
+  }
+
+  /** Para ordenar por época: el primer mes dentro del curso (septiembre primero). */
+  get primerMesDelCurso() {
+    return this.meses.length ? Math.min(...this.meses.map(posicionEnCurso)) : null;
   }
 
   /** Los saberes en un solo texto, para buscar y ordenar. */

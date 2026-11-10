@@ -63,16 +63,24 @@
           <textarea name="notas" rows="3"></textarea>
           <small>Una por línea.</small>
         </label>
-        <div class="campos-en-linea">
-          <label class="campo">
-            <span>Duración</span>
-            <input type="text" name="duracion" placeholder="1 sesión de 50 min">
-          </label>
-          <label class="campo">
-            <span>Época del año</span>
-            <input type="text" name="epoca" placeholder="Otoño o primavera">
-          </label>
-        </div>
+        <label class="campo">
+          <span>Duración</span>
+          <input type="text" name="duracion" placeholder="1 sesión de 50 min">
+        </label>
+      </section>
+
+      <section class="tarjeta seccion">
+        <h2>Época del año</h2>
+        <p><small>Marca los meses en que se puede hacer la actividad.</small></p>
+        <div class="selector-meses" id="meses"></div>
+        <p class="acciones-meses">
+          <button type="button" class="boton" id="botonTodoElAno">Todo el año</button>
+          <button type="button" class="boton" id="botonNingunMes">Ninguno</button>
+        </p>
+        <label class="campo">
+          <span>Nota sobre la época (opcional)</span>
+          <input type="text" name="epoca" placeholder="Mejor con la tierra húmeda, después de llover">
+        </label>
       </section>
 
       <section class="tarjeta seccion">

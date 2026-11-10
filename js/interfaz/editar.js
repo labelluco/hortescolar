@@ -13,6 +13,7 @@
 import { BaseDatos } from '../datos/BaseDatos.js';
 import { Actividad, ETAPAS, MAXIMO_IMAGENES } from '../modelo/Actividad.js';
 import { ListaActividades } from '../modelo/ListaActividades.js';
+import { MESES_CURSO, nombreMes } from '../modelo/calendario.js';
 import { Sesion } from './Sesion.js';
 import { Barra } from './Barra.js';
 import { escaparHtml } from './ayudas.js';
@@ -60,6 +61,7 @@ async function cargar() {
     })));
   }
   pintarEtapas();
+  pintarMeses();
   await rellenarSugerencias();
   pintarImagenes();
   formulario.hidden = false;
@@ -79,6 +81,29 @@ async function rellenarSugerencias() {
   const lista = await ListaActividades.cargar(baseDatos);
   document.getElementById('listaRecursos').innerHTML = lista.recursos()
     .map((recurso) => `<option value="${escaparHtml(recurso)}">`).join('');
+}
+
+/* ---------- Meses ---------- */
+
+/** Una casilla por mes, en el orden del curso (de septiembre a agosto). */
+function pintarMeses() {
+  document.getElementById('meses').innerHTML = MESES_CURSO.map((mes) => `
+    <label class="casilla-mes">
+      <input type="checkbox" name="mes" value="${mes}" ${actividad.meses.includes(mes) ? 'checked' : ''}>
+      ${nombreMes(mes)}
+    </label>`).join('');
+}
+
+function marcarTodosLosMeses(marcar) {
+  formulario.querySelectorAll('input[name="mes"]').forEach((casilla) => { casilla.checked = marcar; });
+  hayCambios = true;
+}
+
+document.getElementById('botonTodoElAno').addEventListener('click', () => marcarTodosLosMeses(true));
+document.getElementById('botonNingunMes').addEventListener('click', () => marcarTodosLosMeses(false));
+
+function leerMeses() {
+  return [...formulario.querySelectorAll('input[name="mes"]:checked')].map((casilla) => Number(casilla.value));
 }
 
 /* ---------- Etapas ---------- */
@@ -202,6 +227,7 @@ function leerFormulario() {
     nueva[campo] = formulario.elements[campo].value.split('\n').map((linea) => linea.trim()).filter(Boolean);
   }
   nueva.etapas = leerEtapas();
+  nueva.meses = leerMeses();
   nueva.imagenes = imagenes.map(({ id, ruta, texto }) => (ruta ? { ruta, texto } : { id, texto }));
   nueva.modificada = { por: usuario.correo, el: new Date().toISOString() };
   return nueva;

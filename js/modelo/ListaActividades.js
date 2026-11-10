@@ -7,6 +7,7 @@
  *   lista.buscar('huellas', 'recurso');                // solo en la columna Recurso
  *   lista.buscar('medida', 'saberes', 'Infantil');     // saberes de Infantil
  *   lista.buscar('compost');                           // en todas las columnas
+ *   lista.buscar('', 'todo', null, 11);                // las que se pueden hacer en noviembre
  */
 
 import { Actividad } from './Actividad.js';
@@ -15,11 +16,12 @@ import { coincide } from './texto.js';
 // Qué textos de una actividad mira cada opción de "Buscar en".
 // Si se ha elegido una etapa, los saberes son solo los de esa etapa.
 export const CAMPOS_BUSQUEDA = {
-  todo: (a, etapa) => [a.recurso, a.titulo, ...a.saberesDe(etapa), a.etapasEnTexto],
+  todo: (a, etapa) => [a.recurso, a.titulo, ...a.saberesDe(etapa), a.etapasEnTexto, a.mesesEnTexto],
   recurso: (a) => [a.recurso],
   titulo: (a) => [a.titulo],
   saberes: (a, etapa) => a.saberesDe(etapa),
   etapa: (a) => a.nombresEtapas,
+  epoca: (a) => [a.mesesEnTexto, a.epoca],
 };
 
 export class ListaActividades {
@@ -40,15 +42,29 @@ export class ListaActividades {
    * Actividades que contienen el texto (sin distinguir mayúsculas ni tildes).
    * Si el texto lleva varias palabras, tienen que aparecer todas, aunque
    * sea en columnas distintas ("huellas infantil").
-   * Con etapa, solo las actividades que sirven para esa etapa.
+   * Con etapa, solo las actividades que sirven para esa etapa; con mes
+   * (1 a 12), solo las que se pueden hacer ese mes.
    */
-  buscar(texto, campo = 'todo', etapa = null) {
+  buscar(texto, campo = 'todo', etapa = null, mes = null) {
     const camposDe = CAMPOS_BUSQUEDA[campo] ?? CAMPOS_BUSQUEDA.todo;
     const palabras = String(texto ?? '').split(/\s+/).filter(Boolean);
     return this.actividades.filter((actividad) =>
       (!etapa || actividad.tieneEtapa(etapa))
+      && (!mes || actividad.esDelMes(mes))
       && palabras.every((palabra) => coincide(palabra, camposDe(actividad, etapa))),
     );
+  }
+
+  /**
+   * Los saberes de una actividad (de la etapa, si se indica) que contienen
+   * alguna de las palabras buscadas. Sirve para enseñar en la tabla solo
+   * los saberes que explican por qué ha salido la actividad.
+   */
+  static saberesQueCoinciden(actividad, texto, etapa = null) {
+    const palabras = String(texto ?? '').split(/\s+/).filter(Boolean);
+    if (palabras.length === 0) return [];
+    return actividad.saberesDe(etapa)
+      .filter((saber) => palabras.some((palabra) => coincide(palabra, [saber])));
   }
 
   /** Los distintos recursos que hay, en orden alfabético. */
