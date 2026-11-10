@@ -4,12 +4,13 @@
     "recurso": "Estiércol",
     "titulo": "El biodigestor: biogás y abono líquido",
     "categoria": "experimentacion",
-    "descripcion": "Construimos un biodigestor con un bidón de plástico cerrado: dentro ponemos estiércol de vaca, agua, leche y azúcar (o melaza), y lo dejamos fermentar sin aire. Por un tubo que acaba sumergido en una botella con agua veremos salir burbujas: son los gases que producen los microorganismos al descomponer la mezcla (biogás). Cuando deja de burbujear, el líquido que queda (el «biol») es un abono que, bien diluido, usamos para fertilizar el huerto.",
+    "descripcion": "Construimos un biodigestor con un bidón de plástico cerrado: dentro ponemos estiércol de vaca, agua, leche y azúcar (o melaza), y lo dejamos fermentar sin aire. Por un tubo que acaba sumergido en una botella con agua veremos salir burbujas: son los gases que producen los microorganismos al descomponer la mezcla (biogás). Cuando deja de burbujear, el líquido que queda (el «biol») es un abono que, bien diluido, usamos para fertilizar el huerto. ¿Por qué hacerlo? Porque aprovechamos un residuo (el estiércol) para hacer un abono: al fermentar sin aire, parte del nitrógeno del estiércol pasa a una forma (amonio) que las plantas absorben directamente, y como es líquido actúa más rápido que el estiércol fresco o el compost. Además, lo podemos ir preparando por tandas según tengamos estiércol y guardarlo unos meses.",
     "objetivos": [
       "Comprobar que los microorganismos descomponen la materia orgánica y que, sin aire, producen gases.",
       "Diseñar y construir un montaje sencillo (bidón, tubo y sello de agua) y entender para qué sirve cada parte.",
       "Observar y registrar durante semanas cómo cambia el proceso: burbujas, olor, color, temperatura.",
       "Relacionar el biogás con las energías renovables y el biol con el aprovechamiento de residuos.",
+      "Entender por qué el biol es un buen abono: aprovecha un residuo y deja parte de los nutrientes en una forma que las plantas absorben con facilidad.",
       "Preparar diluciones a partir de una proporción y usar el abono en el huerto."
     ],
     "materiales": [
@@ -28,10 +29,10 @@
       "Preparar la mezcla. En el bidón, deshacemos el estiércol en agua y removemos bien. Aparte, disolvemos el azúcar o la melaza en agua tibia y lo añadimos con la leche (y la ceniza, si la usamos). Completamos con agua hasta llenar unas tres cuartas partes del bidón: hay que dejar espacio para el gas.",
       "Cerrar y colocar. Cerramos la tapa (comprobamos que no hay fugas) y ponemos el extremo del tubo en el agua. Dejamos el bidón en un lugar exterior, ventilado, soleado o templado y lejos de las ventanas de las aulas: la fermentación es más rápida con calor.",
       "Predecir. Antes de esperar, cada grupo apunta qué cree que pasará: ¿saldrán burbujas?, ¿cuándo?, ¿olerá?, ¿qué gases serán?",
-      "Observar y registrar. Durante las semanas siguientes miramos la botella: al cabo de unos días empiezan a salir burbujas. Apuntamos en una tabla la fecha, la temperatura y cuántas burbujas salen en un minuto, y hacemos una gráfica. Las burbujas huelen mal: además de dióxido de carbono y metano, llevan un poco de sulfuro de hidrógeno (el olor a huevo podrido).",
-      "Hablar del biogás. Ese gas, sobre todo el metano, arde y se puede usar para cocinar o calentar, como el gas de las bombonas. Para aprovecharlo hace falta otro montaje (una bolsa para almacenarlo, un filtro para el olor y un quemador). Lo comentamos y buscamos ejemplos de granjas que lo usan, pero no lo quemamos con el alumnado.",
+      "Observar y registrar. Durante las semanas siguientes miramos la botella: al cabo de unos días empiezan a salir burbujas. Apuntamos en una tabla la fecha, la temperatura y cuántas burbujas salen en un minuto, y hacemos una gráfica. Las burbujas huelen mal (a huevo podrido): en el paso siguiente vemos por qué.",
+      "Hablar del biogás. Ese gas se llama biogás. Es una mezcla de metano (la parte que arde), dióxido de carbono, un poco de sulfuro de hidrógeno (el olor) y vapor de agua. En un biodigestor de granja, más o menos la mitad o dos tercios son metano; en nuestro bidón, sobre todo al principio, hay mucho dióxido de carbono, porque los primeros microorganismos en trabajar se comen el azúcar y la leche, y los que producen metano tardan más. El metano se puede usar para cocinar o calentar, como el gas de las bombonas, pero para aprovecharlo hace falta otro montaje (una bolsa para almacenarlo, un filtro para el olor y un quemador). Lo comentamos y buscamos ejemplos de granjas que lo usan, pero no lo quemamos con el alumnado.",
       "Saber cuándo está listo. Cuando ya no salen burbujas (en tiempo cálido, unas 4-6 semanas; con frío, 2-3 meses o más), el biol está listo. Abrimos el bidón al aire libre: debe oler a fermentado, no a podrido.",
-      "Filtrar y guardar. Colamos el líquido con un colador o una tela y lo guardamos en garrafas cerradas, a la sombra. Los restos sólidos van al compostador.",
+      "Filtrar y guardar. Colamos el líquido con un colador o una tela y lo guardamos en garrafas bien cerradas, a la sombra y en un lugar fresco: así se conserva unos 4 meses. Los restos sólidos van al compostador. Si queremos tener biol durante todo el curso, podemos tener dos bidones y montar uno cuando el otro esté listo.",
       "Abonar el huerto. El biol siempre se usa diluido en agua. Calculamos las proporciones: para regar al pie de las plantas, 1 parte de biol por 4 a 10 partes de agua (por ejemplo, 1 L de biol en una regadera de 10 L); sobre las hojas, más diluido (1 parte por 10 a 20 de agua). Probamos primero en unas pocas plantas y comparamos con otras sin abonar.",
       "Recoger, lavar todo el material y lavarse bien las manos."
     ],
@@ -41,6 +42,7 @@
       "No abrimos el bidón mientras burbujea: entra aire, se para la fermentación anaerobia y sale el olor.",
       "Si el bidón se hincha, el tubo está obstruido o doblado: hay que revisarlo enseguida.",
       "En las hortalizas que se comen crudas (lechugas, rábanos…), el biol se echa al suelo, nunca sobre las hojas, y no se usa en las últimas semanas antes de cosechar.",
+      "El biol no es un abono completo ni dura para siempre: parte del nitrógeno queda en forma orgánica, que se libera más despacio, y guardado pierde calidad con el tiempo. Mejor preparar tandas pequeñas y usarlas en unos meses.",
       "Las cantidades de la receta varían mucho entre unas guías y otras; las de esta ficha siguen la guía del INIA (Chile) para un bidón de 200 L. Lo importante es la proporción de estiércol y agua, dejar espacio para el gas y que no entre aire.",
       "Si conseguimos estiércol de una granja cercana, la visita puede formar parte de la actividad."
     ],
