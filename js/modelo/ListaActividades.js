@@ -57,14 +57,24 @@ export class ListaActividades {
 
   /**
    * Los saberes de una actividad (de la etapa, si se indica) que contienen
-   * alguna de las palabras buscadas. Sirve para enseñar en la tabla solo
-   * los saberes que explican por qué ha salido la actividad.
+   * alguna de las palabras buscadas, cada uno con las etapas en que aparece:
+   *   [{ saber: 'Matemáticas (B.1): …', etapas: ['Primaria · 1.er ciclo'] }, …]
+   * Sirve para enseñar en la tabla solo los saberes que explican por qué
+   * ha salido la actividad. Si un saber está en varias etapas, sale una vez.
    */
   static saberesQueCoinciden(actividad, texto, etapa = null) {
     const palabras = String(texto ?? '').split(/\s+/).filter(Boolean);
     if (palabras.length === 0) return [];
-    return actividad.saberesDe(etapa)
-      .filter((saber) => palabras.some((palabra) => coincide(palabra, [saber])));
+    const etapasDeCadaSaber = new Map(); // saber → [etapas]
+    for (const { etapa: nombre, saberes } of actividad.etapas) {
+      if (etapa && nombre !== etapa) continue;
+      for (const saber of saberes) {
+        if (palabras.some((palabra) => coincide(palabra, [saber]))) {
+          etapasDeCadaSaber.set(saber, [...(etapasDeCadaSaber.get(saber) ?? []), nombre]);
+        }
+      }
+    }
+    return [...etapasDeCadaSaber].map(([saber, etapas]) => ({ saber, etapas }));
   }
 
   /** Los distintos recursos que hay, en orden alfabético. */

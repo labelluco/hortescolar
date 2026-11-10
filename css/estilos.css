@@ -417,7 +417,16 @@ th[aria-sort="descending"] .orden-flecha::after { content: "↓"; opacity: 1; }
 
 .lista-saberes li {
   overflow: hidden;
-  max-height: 2.9em;
+  max-height: 4.4em; /* unas tres líneas */
+}
+
+/* Etapa al lado de cada saber que coincide con la búsqueda */
+.etiqueta-etapa {
+  font-size: 0.7rem;
+  padding: 0 6px;
+  margin-right: 2px;
+  background: var(--color-principal-suave);
+  color: var(--color-principal-oscuro);
 }
 
 .lista-saberes li + li { margin-top: 2px; }

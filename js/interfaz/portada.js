@@ -59,14 +59,26 @@ function direccionFicha(actividad, etapa) {
   return `actividad.html?${parametros}`;
 }
 
-/** Áreas de la actividad y, si hay búsqueda, los saberes que coinciden. */
+/** Nombre corto de una etapa para las etiquetas: «Primaria · 2.º ciclo» → «2.º ciclo». */
+function etapaCorta(etapa) {
+  return etapa.replace(/^Primaria · /, '');
+}
+
+/**
+ * Áreas de la actividad y, si hay búsqueda, los saberes que coinciden,
+ * cada uno con la etapa o etapas (ciclos) en que aparece.
+ */
 function celdaSaberes(actividad, texto, campo, etapa) {
   const areas = actividad.areasDe(etapa)
     .map((area) => `<span class="etiqueta etiqueta-area">${escaparHtml(area)}</span>`).join(' ');
   const buscaSaberes = campo === 'todo' || campo === 'saberes';
   const coinciden = buscaSaberes ? ListaActividades.saberesQueCoinciden(actividad, texto, etapa) : [];
   const lista = coinciden.length
-    ? `<ul class="lista-saberes">${coinciden.map((saber) => `<li>${escaparHtml(partirSaber(saber).texto)}</li>`).join('')}</ul>`
+    ? `<ul class="lista-saberes">${coinciden.map(({ saber, etapas }) => `
+        <li>
+          ${etapas.map((e) => `<span class="etiqueta etiqueta-etapa">${escaparHtml(etapaCorta(e))}</span>`).join(' ')}
+          ${escaparHtml(partirSaber(saber).texto)}
+        </li>`).join('')}</ul>`
     : '';
   return areas + lista;
 }
