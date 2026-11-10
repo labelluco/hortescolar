@@ -2,6 +2,8 @@
 
 Aplicación web para que el profesorado busque y consulte actividades ligadas al huerto escolar.
 
+Publicada en GitHub Pages (rama `main`, carpeta raíz): https://labelluco.github.io/hortescolar/
+
 - **Portada** (`index.html`): tabla con las columnas *Recurso*, *Actividad*, *Saberes básicos* y *Etapa*. Se puede buscar en todas las columnas o solo en una (selector «en»), y ordenar haciendo clic en la cabecera. Al pulsar una fila se abre la ficha de la actividad.
 - **Ficha** (`actividad.html?id=…`): todos los detalles de la actividad e imágenes (se amplían al hacer clic).
 
