@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Actividad · Huerto escolar</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="barra">
+    <a class="barra-titulo" href="index.html">Huerto escolar</a>
+  </header>
+
+  <main class="contenido">
+    <p><a class="volver" href="index.html" id="volver">← Volver a las actividades</a></p>
+    <article id="ficha">
+      <p class="resultado">Cargando…</p>
+    </article>
+  </main>
+
+  <dialog class="ampliacion" id="ampliacion">
+    <form method="dialog"><button class="ampliacion-cerrar" aria-label="Cerrar">×</button></form>
+    <img id="ampliacionImagen" alt="">
+    <p id="ampliacionTexto"></p>
+  </dialog>
+
+  <script type="module" src="js/interfaz/actividad.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+/*
+ * estilos.css
+ * -----------
+ * Estilos comunes de toda la aplicación (estilo panel de control, tipo Material).
+ * Los colores están en variables al principio para cambiarlos en un solo sitio.
+ */
+
+:root {
+  --color-principal: #3f7d4a;          /* verde huerto */
+  --color-principal-oscuro: #2f5f38;
+  --color-principal-suave: #e7f1e8;
+  --color-acento: #b5523b;             /* rojo tomate de acento */
+
+  --color-fondo: #f5f6f8;
+  --color-superficie: #ffffff;
+  --color-texto: #202124;
+  --color-texto-secundario: #5f6368;
+  --color-borde: #e0e3e7;
+  --color-fila-encima: #f1f6f1;
+
+  --radio: 8px;
+  --sombra: 0 1px 2px rgba(60, 64, 67, 0.15), 0 1px 3px 1px rgba(60, 64, 67, 0.08);
+  --alto-barra: 60px;
+  --ancho-maximo: 1200px;
+
+  --tipografia: Roboto, "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ---------- Base ---------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--tipografia);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--color-texto);
+  background: var(--color-fondo);
+}
+
+a { color: var(--color-principal); }
+
+h1 { font-size: 1.6rem; font-weight: 500; margin: 0 0 0.5rem; }
+h2 { font-size: 1.1rem; font-weight: 500; margin: 0 0 0.75rem; }
+
+.oculto {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+/* ---------- Barra superior ---------- */
+
+.barra {
+  height: var(--alto-barra);
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  background: var(--color-principal);
+  box-shadow: var(--sombra);
+}
+
+.barra-titulo {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* ---------- Contenido ---------- */
+
+.contenido {
+  max-width: var(--ancho-maximo);
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.subtitulo, .resultado { color: var(--color-texto-secundario); margin: 0 0 1rem; }
+
+.tarjeta {
+  background: var(--color-superficie);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+/* ---------- Buscador ---------- */
+
+.buscador {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  align-items: center;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.buscador-campo { flex: 1 1 280px; }
+
+.buscador input,
+.buscador select {
+  font: inherit;
+  padding: 10px 14px;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  background: var(--color-superficie);
+}
+
+.buscador input { width: 100%; }
+
+.buscador input:focus,
+.buscador select:focus {
+  outline: 2px solid var(--color-principal);
+  outline-offset: -1px;
+}
+
+.buscador-en { display: flex; align-items: center; gap: 8px; color: var(--color-texto-secundario); }
+
+/* ---------- Tabla ---------- */
+
+.tabla-contenedor { overflow-x: auto; }
+
+.tabla { width: 100%; border-collapse: collapse; }
+
+.tabla th,
+.tabla td {
+  padding: 12px 16px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.tabla th {
+  font-weight: 500;
+  color: var(--color-texto-secundario);
+  white-space: nowrap;
+}
+
+.tabla tbody tr:last-child td { border-bottom: none; }
+
+.fila-enlace { cursor: pointer; }
+.fila-enlace:hover { background: var(--color-fila-encima); }
+.fila-enlace a { font-weight: 500; text-decoration: none; }
+.fila-enlace a:hover { text-decoration: underline; }
+
+.vacio { text-align: center; color: var(--color-texto-secundario); padding: 32px; }
+
+/* Botón de las cabeceras ordenables (OrdenTabla.js) */
+.orden-boton {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.orden-flecha::after { content: "↕"; opacity: 0.35; }
+th[aria-sort="ascending"] .orden-flecha::after { content: "↑"; opacity: 1; }
+th[aria-sort="descending"] .orden-flecha::after { content: "↓"; opacity: 1; }
+
+.etiqueta {
+  display: inline-block;
+  margin: 2px 0;
+  padding: 2px 10px;
+  border-radius: 12px;
+  background: var(--color-principal-suave);
+  color: var(--color-principal-oscuro);
+  font-size: 0.85rem;
+}
+
+/* En el móvil, cada fila se ve como una tarjeta con las cuatro columnas una
+   debajo de otra. */
+@media (max-width: 640px) {
+  .tabla thead { display: none; }
+  .tabla tr { display: block; padding: 12px 16px; border-bottom: 1px solid var(--color-borde); }
+  .tabla td { display: block; padding: 2px 0; border: none; }
+  .tabla td:nth-child(2) { font-size: 1.05rem; }
+  .tabla td:nth-child(4) { color: var(--color-texto-secundario); font-size: 0.9rem; }
+}
+
+/* ---------- Ficha de actividad ---------- */
+
+.volver { text-decoration: none; }
+
+.datos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px 24px;
+  margin: 1rem 0;
+  padding: 20px 24px;
+}
+
+.datos dt { color: var(--color-texto-secundario); font-size: 0.85rem; }
+.datos dd { margin: 0; }
+.datos-ancho { grid-column: 1 / -1; }
+
+.seccion { padding: 20px 24px; margin-bottom: 16px; }
+.seccion p, .seccion ul, .seccion ol { margin: 0; }
+.seccion li + li { margin-top: 4px; }
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+}
+
+.miniatura {
+  padding: 0;
+  border: none;
+  border-radius: var(--radio);
+  overflow: hidden;
+  cursor: zoom-in;
+  aspect-ratio: 1;
+}
+
+.miniatura img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.ampliacion {
+  border: none;
+  border-radius: var(--radio);
+  padding: 16px;
+  max-width: 95vw;
+  max-height: 95vh;
+}
+
+.ampliacion::backdrop { background: rgba(0, 0, 0, 0.7); }
+.ampliacion img { max-width: 100%; max-height: 80vh; display: block; margin: 0 auto; }
+.ampliacion p { margin: 8px 0 0; color: var(--color-texto-secundario); }
+
+.ampliacion-cerrar {
+  float: right;
+  font-size: 1.5rem;
+  line-height: 1;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
