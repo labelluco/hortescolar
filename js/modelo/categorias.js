@@ -13,6 +13,7 @@
 export const CATEGORIAS = [
   { id: 'cultivo', nombre: 'Cultivo' },
   { id: 'experimentacion', nombre: 'Experimentación' },
+  { id: 'tecnologia', nombre: 'Tecnología y programación' },
   { id: 'naturaleza', nombre: 'Naturaleza y biodiversidad' },
   { id: 'sostenibilidad', nombre: 'Sostenibilidad' },
   { id: 'arte', nombre: 'Arte y creatividad' },

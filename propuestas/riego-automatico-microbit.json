@@ -1,0 +1,86 @@
+[
+  {
+    "id": "riego-automatico-microbit",
+    "recurso": "Semilleros",
+    "titulo": "Riego automático del semillero con micro:bit",
+    "categoria": "tecnologia",
+    "descripcion": "Los semilleros están dentro de una bandeja con agua para que no se sequen, pero hay que estar pendientes de rellenarla, y un fin de semana o un puente sin regar puede echar a perder las plantas. Con la micro:bit y el kit de agricultura construimos un sistema de riego automático: un sensor de humedad clavado en el sustrato del semillero mide si está seco y, cuando lo está, la micro:bit pone en marcha una bomba que echa un poco de agua de un depósito en la bandeja. El semillero absorbe el agua desde abajo, como hasta ahora, pero sin que tengamos que acordarnos.",
+    "objetivos": [
+      "Identificar una necesidad real del huerto y diseñar una solución tecnológica para ella.",
+      "Conocer las partes de un sistema automático: sensor (mide), placa (decide) y actuador (actúa).",
+      "Programar con bloques un algoritmo con una condición («si el sustrato está seco, regar») y un bucle que se repite.",
+      "Calibrar un sensor: relacionar sus números con lo que observamos (seco o húmedo).",
+      "Probar, encontrar errores y mejorar el prototipo.",
+      "Relacionar el riego con las necesidades de las plantas y con el uso responsable del agua."
+    ],
+    "materiales": [
+      "Una micro:bit con su cable USB y portapilas (o un cargador USB / batería externa para dejarla funcionando varios días).",
+      "Del kit de agricultura: placa de expansión, sensor de humedad del suelo, bomba de agua sumergible con su tubo y, si el kit lo trae, relé o módulo para la bomba.",
+      "El semillero dentro de su bandeja, y un depósito de agua (una garrafa o cubeta) donde va sumergida la bomba.",
+      "Un ordenador o tableta con MakeCode (makecode.microbit.org) para programar.",
+      "Una caja de plástico o un soporte para dejar la micro:bit y la placa elevadas y protegidas del agua.",
+      "Bridas o cinta para sujetar el tubo, una regla y un cuaderno de registro."
+    ],
+    "desarrollo": [
+      "Plantear el problema. Hablamos de lo que pasa con los semilleros: ¿por qué se secan?, ¿cuánta agua necesitan?, ¿qué pasa los fines de semana? Pensamos ideas para que no nos pase y llegamos a la del riego automático.",
+      "Conocer el kit. Vemos cada pieza y para qué sirve: el sensor mide la humedad del sustrato (es como el «sentido» del sistema), la micro:bit decide qué hacer (el «cerebro») y la bomba mueve el agua (el «músculo»). Miramos en la guía de nuestro kit a qué pines se conectan el sensor y la bomba, porque cambia de un kit a otro.",
+      "Diseñar y montar. Dibujamos el montaje antes de hacerlo. La bomba va sumergida en el depósito y el tubo llega hasta la bandeja (sujeto para que no se mueva). El sensor se clava en el sustrato de una celda del semillero, no en el agua de la bandeja: lo que queremos saber es si la tierra de las plantas está seca. La micro:bit y la placa quedan en alto, dentro de una caja y lejos del agua.",
+      "Calibrar el sensor. Hacemos un programa que solo muestre en la pantalla el número que da el sensor. Lo apuntamos con el sustrato seco y con el sustrato recién mojado. Elegimos un número intermedio como límite (umbral) para decidir cuándo regar. Ojo: en unos sensores el número sube con la humedad y en otros baja.",
+      "Programar. En MakeCode, con bloques, hacemos un bucle que se repite siempre: leer la humedad; si está por debajo del umbral (seco), encender la bomba unos pocos segundos y apagarla; y esperar un buen rato (10-15 minutos) antes de volver a medir, porque el agua tarda en subir por el sustrato. Podemos añadir caritas en la pantalla: contenta si está húmedo, triste si está seco.",
+      "Probar y ajustar. Medimos cuántos segundos de bomba hacen falta para que el agua suba más o menos 1 cm en la bandeja, y ajustamos el tiempo para que no desborde. Probamos qué pasa si el umbral está demasiado alto o demasiado bajo. Si algo falla, buscamos el error: ¿conexión?, ¿pin?, ¿umbral?, ¿la bomba está sumergida?",
+      "Dejarlo funcionar y registrar. Lo dejamos en marcha varios días (también un fin de semana), con el depósito lleno. Apuntamos cada día el nivel del depósito, las lecturas y cómo están las plantas, y lo comparamos con un semillero sin el sistema.",
+      "Mejorar y comunicar. Pensamos mejoras (un máximo de riegos al día por seguridad, avisar cuando el depósito se vacía, guardar las lecturas para hacer una gráfica…) y explicamos el proyecto al resto del colegio."
+    ],
+    "notas": [
+      "La micro:bit y la placa no pueden mojarse: siempre en alto, en una caja y lejos de la bandeja y del depósito. Funcionan con poca tensión (pilas o USB), así que no hay peligro eléctrico, pero el agua las estropea.",
+      "La bomba debe estar siempre sumergida: si funciona en seco se estropea. Hay que vigilar que el depósito tenga agua, sobre todo antes de un fin de semana.",
+      "Las pilas pueden agotarse en pocos días: para dejarlo funcionando mucho tiempo, mejor un cargador USB o una batería externa.",
+      "Los sensores de humedad que tienen dos patas metálicas se corroen si están siempre encendidos. Si el kit lo permite, se alimenta el sensor solo cuando se mide, o se saca del sustrato cuando no se usa.",
+      "Los números del sensor cambian según el sustrato y el sensor: siempre hay que calibrar con nuestro propio semillero.",
+      "Un límite de riegos por día en el programa evita que, si el sensor falla, la bomba vacíe el depósito y encharque la bandeja.",
+      "La conexión de la bomba y los pines cambian según el kit (por ejemplo, unos usan relé y otros un controlador de motor): hay que seguir la guía del fabricante de nuestro kit."
+    ],
+    "duracion": "3 o 4 sesiones: problema y diseño; montaje y calibración; programación y pruebas; registro durante unos días y mejoras.",
+    "estaciones": [
+      "Invierno",
+      "Primavera"
+    ],
+    "epoca": "Cuando tenemos semilleros: sobre todo de finales de invierno a primavera. También en otoño, si se hacen semilleros de cultivos de invierno.",
+    "etapas": [
+      {
+        "etapa": "Primaria · 1.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.2): Necesidades básicas de los seres vivos y la diferencia con los objetos inertes.",
+          "Ciencias de la Naturaleza (B.2): Fases de los proyectos de diseño: de modelos analógicos y prototipos, prueba y comunicación.",
+          "Ciencias de la Naturaleza (B.2): Iniciación a la programación a través de recursos analógicos o digitales adaptados al nivel lector del alumnado (actividades desenchufadas, plataformas digitales de iniciación a la programación, robótica educativa...).",
+          "Matemáticas (D.3): Estrategias para la interpretación de algoritmos sencillos (rutinas, instrucciones con pasos ordenados…)."
+        ],
+        "adaptacion": "La persona docente monta y programa el sistema. El alumnado parte de las necesidades de las plantas (agua) y hace actividades desenchufadas: ordenar tarjetas con los pasos del algoritmo («mirar la tierra → si está seca, regar → esperar → volver a mirar») o representarlo con el cuerpo, haciendo unos de sensor y otros de bomba. Después lo ven funcionar, observan las caritas de la pantalla y registran con dibujos cómo están las plantas."
+      },
+      {
+        "etapa": "Primaria · 2.º ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.2): Características propias de las plantas que permiten su clasificación en relación con su capacidad adaptativa al medio: obtención de energía, relación con el entorno y perpetuación de la especie.",
+          "Ciencias de la Naturaleza (B.2): Fases de los proyectos de diseño: diseño, construcción de modelos y prototipos, prueba y comunicación.",
+          "Ciencias de la Naturaleza (B.2): Iniciación a la programación a través de recursos analógicos (actividades desenchufadas) o digitales (plataformas digitales de iniciación a la programación, aplicaciones de programación por bloques, robótica educativa...).",
+          "Ciencias de la Naturaleza (B.2): Técnicas cooperativas sencillas para el trabajo en equipo y estrategias para la gestión de conflictos y promoción de conductas empáticas e inclusivas.",
+          "Matemáticas (D.3): Estrategias para la interpretación y modificación de algoritmos sencillos (reglas de juegos, instrucciones secuenciales, bucles, patrones repetitivos, programación por bloques, robótica educativa...)."
+        ],
+        "adaptacion": "En grupos con roles (montaje, programación, registro), montan el sistema siguiendo un esquema y parten de un programa de bloques ya hecho: lo interpretan y lo modifican (cambiar el umbral, los segundos de bomba, las caritas). Calibran el sensor anotando los números en una tabla."
+      },
+      {
+        "etapa": "Primaria · 3.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Instrumentos y dispositivos apropiados para realizar observaciones y mediciones precisas de acuerdo con las necesidades de la investigación.",
+          "Ciencias de la Naturaleza (B.2): Fases de los proyectos de diseño: identificación de necesidades, diseño, creación de un prototipo, prueba, evaluación y comunicación.",
+          "Ciencias de la Naturaleza (B.2): Fases del pensamiento computacional (descomposición de una tarea en partes más sencillas, reconocimiento de patrones y creación de algoritmos sencillos para la resolución del problema...).",
+          "Ciencias de la Naturaleza (B.2): Materiales, herramientas, objetos, dispositivos y recursos digitales (programación por bloques, sensores, motores, simuladores, impresoras 3D, ...) seguros y adecuados a la consecución del proyecto.",
+          "Ciencias de la Naturaleza (B.2): Estrategias en situaciones de incertidumbre: adaptación y cambio de estrategia cuando sea necesario, valoración del error propio y el de los demás como oportunidad de aprendizaje.",
+          "Matemáticas (D.3): Estrategias para la interpretación, modificación y creación de algoritmos sencillos (secuencias de paso ordenados, esquemas, simulaciones, patrones repetitivos, bucles, instrucciones anidadas y condicionales, representaciones computacionales, programación por bloques, robótica educativa...)."
+        ],
+        "adaptacion": "Hacen el proyecto completo: identifican la necesidad, descomponen el problema (medir, decidir, actuar, esperar), diseñan y montan el prototipo, calibran el sensor y crean el programa desde cero. Añaden mejoras: un contador de riegos al día, un aviso de depósito vacío o el registro de las lecturas para hacer una gráfica (con la micro:bit V2). Evalúan el sistema comparándolo con un semillero sin riego automático y lo presentan."
+      }
+    ],
+    "imagenes": []
+  }
+]
