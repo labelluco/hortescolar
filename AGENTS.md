@@ -19,7 +19,7 @@ léelo antes de tocar nada.**
 
 ## Normas
 - Código sencillo, legible y hecho "a mano". Sin frameworks, sin npm, sin bundler. Sin dependencias nuevas sin preguntar.
-- Código e interfaz en **castellano**.
+- Todo en **castellano**: código, interfaz y documentación interna (AGENTS.md, DECISIONS.md, LEEME.md).
 - Si cambia `firestore.rules`, cambiar también `js/modelo/permisos.js` (y al revés).
 - Web pública pero no indexada: cada página nueva lleva `<meta name="robots" content="noindex, nofollow">` y `<script src="js/registrarServiceWorker.js" defer></script>`.
 - No toques ficheros fuera de los que pide la tarea.
