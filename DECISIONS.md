@@ -2,6 +2,7 @@
 
 Una línia per decisió, la més recent a dalt: data — decisió — perquè.
 
+- 2026-11-13 — Service worker (`sw.js`) que fa revalidar sempre els fitxers de la web — GitHub Pages deixa 10 min de memòria cau i el navegador barrejava versions després de publicar (la fitxa es quedava en «Cargando…»).
 - 2026-11-13 — Les adreces web dels textos de la fitxa es mostren com a enllaços (`textoConEnlaces`) — per poder enllaçar guies de referència.
 - 2026-11-13 — No es reprodueixen fotos de guies de tercers; s'hi enllaça i s'hi posen fotos pròpies — no tenen llicència que ho permeti.
 - 2026-11-13 — Revisió per rols: revisors a `config/roles` (Firestore); la resta deixa les activitats pendents; correus només amb sessió — control de qualitat i privacitat; ho imposen les regles de Firestore.

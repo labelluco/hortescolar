@@ -10,6 +10,7 @@ Web para que el profesorado del colegio (unas 6 personas) organice actividades d
 - **Tecnología:** HTML + CSS + JavaScript puro (módulos ES). Sin frameworks, sin bundler, sin npm.
 - **Estilo:** código sencillo y legible, hecho "a mano". Cada clase en su fichero, con comentario de cabecera.
 - **Publicación:** GitHub Pages, pública pero **no indexada** (`robots.txt` + `<meta name="robots" content="noindex, nofollow">` en cada página).
+- **Memoria caché:** `sw.js` (service worker, registrado por `js/registrarServiceWorker.js` en cada página) hace que el navegador pregunte siempre si hay versión nueva de los ficheros de la web, para que tras publicar no mezcle ficheros nuevos y viejos. Cada página nueva lleva `<script src="js/registrarServiceWorker.js" defer></script>`.
 - **Ejecutar en local:** servidor estático (`python -m http.server 8000`), ver `LEEME.md`.
 
 ## Datos
