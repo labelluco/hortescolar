@@ -17,7 +17,7 @@ import { puedeAprobar, puedeEditar } from '../modelo/permisos.js';
 import { Barra } from './Barra.js';
 import { estacionesHtml } from './estacionesHtml.js';
 import { categoriaHtml } from './categoriaHtml.js';
-import { escaparHtml, listaHtml } from './ayudas.js';
+import { escaparHtml, listaHtml, textoConEnlaces } from './ayudas.js';
 
 const ficha = document.getElementById('ficha');
 const baseDatos = BaseDatos.preparar();
@@ -63,7 +63,7 @@ function pintar(actividad) {
         ${actividad.epoca ? `<div class="nota-epoca">${escaparHtml(actividad.epoca)}</div>` : ''}
       </dd></div>` : ''}
     </dl>
-    ${seccion('Descripción', actividad.descripcion && `<p>${escaparHtml(actividad.descripcion)}</p>`)}
+    ${seccion('Descripción', actividad.descripcion && `<p>${textoConEnlaces(actividad.descripcion)}</p>`)}
     ${seccion('Objetivos', actividad.objetivos.length && listaHtml(actividad.objetivos))}
     ${seccion('Materiales', actividad.materiales.length && listaHtml(actividad.materiales))}
     ${seccion('Desarrollo', actividad.desarrollo.length && listaHtml(actividad.desarrollo, 'ol'))}
