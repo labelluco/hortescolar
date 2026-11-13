@@ -1,0 +1,92 @@
+[
+  {
+    "id": "sembrar-ajos",
+    "recurso": "Ajos",
+    "titulo": "Sembramos los ajos",
+    "categoria": "cultivo",
+    "descripcion": "Sembramos ajos en un bancal del huerto a partir de dientes de ajo. Antes, hacemos las cuentas: con el espacio que tenemos y el marco de plantación (la distancia entre ajos y entre filas), ¿cuántos dientes caben?, y si cada cabeza tiene unos cuantos dientes, ¿cuántas cabezas necesitamos? Además, conocemos un saber popular del huerto: tradicionalmente, los ajos se siembran en la última luna menguante de diciembre, porque se dice que en otra luna «se salen» de la tierra. Lo comprobamos nosotros mismos con un pequeño experimento.",
+    "objetivos": [
+      "Sembrar ajos correctamente: diente sano y grande, con la punta hacia arriba, a la profundidad y distancia adecuadas.",
+      "Usar las matemáticas para planificar un cultivo: medir el bancal, calcular cuántos ajos caben y cuántas cabezas hay que comprar.",
+      "Conocer cómo se reproduce el ajo: cada diente da una cabeza nueva.",
+      "Conocer los saberes populares del huerto (la luna) y contrastarlos con la observación.",
+      "Cuidar el cultivo hasta la cosecha."
+    ],
+    "materiales": [
+      "Cabezas de ajo para sembrar, mejor de semilla certificada o de un huerto conocido (los del supermercado a veces están tratados para que no broten).",
+      "Cinta métrica, cuerda y estacas para marcar las filas, y un listón o palo de 15 cm (o el que corresponda) para medir la distancia entre ajos.",
+      "Plantador o palo para hacer los agujeros, y rastrillo.",
+      "Regadera.",
+      "Cuaderno de campo, lápiz y, si se quiere, calculadora.",
+      "Un calendario lunar."
+    ],
+    "desarrollo": [
+      "Conocer el ajo. Abrimos una cabeza: contamos sus dientes y vemos que cada uno tiene una base plana (de donde saldrán las raíces) y una punta (de donde saldrá la planta). Cada diente que sembremos dará una cabeza nueva.",
+      "Medir el bancal. Medimos el largo y el ancho y calculamos la superficie. Ejemplo: un bancal de 2 m × 2 m tiene 4 m².",
+      "Decidir el marco de plantación. Para un huerto, unos 30 cm entre filas y unos 15 cm entre ajos de la misma fila (hay quien deja 10 cm o 20 cm; cuanto más espacio, cabezas más grandes).",
+      "Calcular cuántos dientes caben. Filas: 200 cm ÷ 30 cm ≈ 6 filas. Ajos por fila: 200 cm ÷ 15 cm ≈ 13 ajos. Total: 6 × 13 = 78 dientes. (Otra forma: cada ajo ocupa 0,30 m × 0,15 m = 0,045 m²; 4 m² ÷ 0,045 m² ≈ 89 ajos. Sale algo más porque no tiene en cuenta los bordes del bancal: ¿por qué?)",
+      "Calcular cuántas cabezas hacen falta. Contamos los dientes de varias cabezas: suelen tener entre 8 y 12, pero los pequeños del centro no se siembran. Si aprovechamos unos 8 por cabeza: 78 ÷ 8 ≈ 9,75, así que necesitamos 10 cabezas (y alguna más de reserva).",
+      "Elegir el día. Miramos en el calendario lunar cuándo es la última luna menguante de diciembre. Si ese día no hay clase, sembramos el día lectivo más cercano posible. Para el experimento, podemos sembrar una parte del bancal ese día y otra en otra fase de la luna (ver más abajo).",
+      "Preparar la tierra. Quitamos las hierbas, aflojamos la tierra con el rastrillo y marcamos las filas con la cuerda y las estacas.",
+      "Sembrar. Separamos los dientes justo antes de sembrar, sin pelarlos. Con el palo de 15 cm marcamos la distancia y enterramos cada diente con la punta hacia arriba, a unos 3-5 cm de profundidad (que la punta quede tapada por 2-3 cm de tierra). Tapamos sin apretar mucho y regamos un poco.",
+      "Experimento: ¿se salen los ajos? En una fila, sembramos la mitad de los dientes muy poco enterrados (que casi se vea la punta) y la otra mitad a la profundidad correcta. Si hemos sembrado en dos fases de la luna, señalamos qué filas son de cada una. Durante las semanas siguientes contamos cuántos ajos se han salido de la tierra en cada caso y lo apuntamos.",
+      "Cuidar y cosechar. Regamos solo si no llueve (al ajo no le gusta el encharcamiento) y quitamos las hierbas. Si algún ajo se sale, lo volvemos a enterrar. Se cosechan a principios de verano, cuando la mayoría de las hojas se han puesto amarillas: contamos las cabezas y comparamos con los dientes sembrados."
+    ],
+    "notas": [
+      "La luna: el refranero dice que los ajos se siembran en luna menguante y que, si no, «se salen». No hay estudios científicos que demuestren que la luna influya. Lo que sí hace que un ajo se salga de la tierra es sembrarlo poco enterrado (al crecer las raíces empujan el diente hacia arriba), una tierra muy apelmazada, las heladas que levantan el suelo o los pájaros que lo picotean. Por eso es un buen tema para investigar: respetamos el saber popular y lo comprobamos.",
+      "Época: en muchos sitios los ajos se siembran entre noviembre y enero. En las zonas más frías de Teruel, se pueden sembrar también a finales de invierno, cuando pasan las heladas más fuertes.",
+      "Los dientes más grandes, de la parte de fuera de la cabeza, dan las mejores cabezas. Los pequeños del centro se pueden comer o sembrar muy juntos para cosechar ajetes.",
+      "Las cuentas cambian si el bancal tiene otra medida o si se elige otro marco: es buena idea que cada grupo calcule con sus propias medidas y compare.",
+      "Si el día de la luna menguante cae en vacaciones (es habitual a finales de diciembre), se puede sembrar antes o después y aprovecharlo para el experimento."
+    ],
+    "duracion": "1 sesión para las cuentas en clase, 1 sesión para sembrar y observaciones cortas hasta la cosecha (a principios de verano).",
+    "estaciones": [
+      "Otoño",
+      "Invierno"
+    ],
+    "epoca": "Tradicionalmente, en la última luna menguante de diciembre (o el día lectivo más cercano). En general, de noviembre a enero; en las zonas más frías, también a finales de invierno.",
+    "etapas": [
+      {
+        "etapa": "Infantil",
+        "saberes": [
+          "Descubrimiento y Exploración del Entorno (A): Cuantificadores básicos contextualizados.",
+          "Descubrimiento y Exploración del Entorno (A): Funcionalidad de los números en la vida cotidiana.",
+          "Descubrimiento y Exploración del Entorno (A): Situaciones en que se hace necesario medir.",
+          "Descubrimiento y Exploración del Entorno (A): El tiempo y su organización: día-noche, estaciones, ciclos, calendario, antes, después, presente, pasado, futuro."
+        ],
+        "adaptacion": "Abren una cabeza de ajo y cuentan los dientes (muchos, pocos, cuántos). Miden la distancia entre ajos con un palito de la medida justa, siembran con ayuda «con la punta mirando al cielo» y marcan con un dibujo de la luna el día que sembramos. Siguen el crecimiento con fotos o dibujos."
+      },
+      {
+        "etapa": "Primaria · 1.er ciclo",
+        "saberes": [
+          "Matemáticas (A.2): Estrategias de cálculo mental con números naturales iniciando el trabajo con centenas.",
+          "Matemáticas (B.1): Procesos para medir mediante repetición de una unidad y mediante la utilización de instrumentos no convencionales.",
+          "Ciencias de la Naturaleza (A.2): Necesidades básicas de los seres vivos y la diferencia con los objetos inertes.",
+          "Ciencias de la Naturaleza (A4): Movimientos y dinámicas relacionados con la Tierra y el universo y sus consecuencias en la vida diaria y en el entorno. Secuencias temporales y cambios estacionales."
+        ],
+        "adaptacion": "Cuentan los dientes de varias cabezas y los suman. Miden el bancal con pasos y la distancia entre ajos con un palo, y cuentan cuántos ajos caben en una fila. Observan la luna durante unas semanas y la dibujan, y relacionan la fase con el día de siembra."
+      },
+      {
+        "etapa": "Primaria · 2.º ciclo",
+        "saberes": [
+          "Matemáticas (A.2): Estrategias de reconocimiento de qué operaciones simples (suma, resta, multiplicación, división) son útiles para resolver situaciones contextualizadas.",
+          "Matemáticas (A.2): Suma, resta, multiplicación y división de números naturales resueltas con flexibilidad y sentido: utilidad en situaciones contextualizadas, estrategias y herramientas de resolución y propiedades.",
+          "Matemáticas (B.1): Atributos mensurables de los objetos (longitud, masa, capacidad, superficie, volumen y amplitud del ángulo).",
+          "Ciencias de la Naturaleza (A.2): Características propias de las plantas que permiten su clasificación en relación con su capacidad adaptativa al medio: obtención de energía, relación con el entorno y perpetuación de la especie."
+        ],
+        "adaptacion": "Hacen el cálculo completo con números naturales y en centímetros: filas, ajos por fila (multiplicación) y cabezas necesarias (división, redondeando hacia arriba). Calculan la superficie del bancal. Relacionan el diente con la reproducción de la planta (cada diente da una planta igual). Llevan el experimento de profundidad y anotan los resultados en una tabla."
+      },
+      {
+        "etapa": "Primaria · 3.er ciclo",
+        "saberes": [
+          "Matemáticas (A.2): Estrategias de resolución de operaciones aritméticas (con números naturales, decimales y fracciones) con flexibilidad y sentido: mentalmente, de manera escrita o con calculadora; utilidad en situaciones contextualizadas y propiedades.",
+          "Matemáticas (A.4): Situaciones proporcionales y no proporcionales en problemas de la vida cotidiana: identificación como relación multiplicativa entre magnitudes.",
+          "Matemáticas (B.1): Unidades convencionales del Sistema Métrico Decimal (longitud, masa, capacidad, volumen y superficie), tiempo y grado (ángulos) en contextos de la vida cotidiana: selección y uso de las unidades adecuadas.",
+          "Ciencias de la Naturaleza (A.1): Prácticas científicas (observación, formulación de preguntas y predicciones, planificación y realización de experimentos, recogida y análisis de información y datos, comunicación de resultados y conclusiones...)."
+        ],
+        "adaptacion": "Calculan con decimales y en metros: la superficie que ocupa cada ajo (0,045 m²) y cuántos caben en el bancal, y explican por qué no coincide con el cálculo por filas (los bordes). Comparan marcos de plantación (10, 15 y 20 cm) y su efecto en el número de ajos. Diseñan el experimento sobre la luna y la profundidad, cuentan los ajos que se salen en cada grupo y presentan sus conclusiones."
+      }
+    ],
+    "imagenes": []
+  }
+]
