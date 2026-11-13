@@ -10,7 +10,7 @@
  *   lista.buscar('', 'todo', null, 'Invierno');        // las que se pueden hacer en invierno
  */
 
-import { Actividad } from './Actividad.js';
+import { Actividad, PUBLICADA } from './Actividad.js';
 import { coincide } from './texto.js';
 
 // Qué textos de una actividad mira cada opción de "Buscar en".
@@ -29,8 +29,13 @@ export class ListaActividades {
     this.actividades = actividades;
   }
 
-  static async cargar(baseDatos) {
-    const documentos = await baseDatos.leerColeccion('actividades');
+  /**
+   * Carga las actividades. Sin sesión (soloPublicadas), solo las publicadas;
+   * el profesorado con sesión ve también las pendientes de revisión.
+   */
+  static async cargar(baseDatos, soloPublicadas = true) {
+    const filtro = soloPublicadas ? { campo: 'estado', valor: PUBLICADA } : null;
+    const documentos = await baseDatos.leerColeccion('actividades', filtro);
     return new ListaActividades(documentos.map(Actividad.desdeDocumento));
   }
 
@@ -44,15 +49,16 @@ export class ListaActividades {
    * sea en columnas distintas ("huellas infantil").
    * Con etapa, solo las actividades que sirven para esa etapa; con
    * estación, solo las que se pueden hacer en ella; con categoría (id),
-   * solo las de esa categoría.
+   * solo las de esa categoría; con estado, solo las publicadas o pendientes.
    */
-  buscar(texto, campo = 'todo', etapa = null, estacion = null, categoria = null) {
+  buscar(texto, campo = 'todo', etapa = null, estacion = null, categoria = null, estado = null) {
     const camposDe = CAMPOS_BUSQUEDA[campo] ?? CAMPOS_BUSQUEDA.todo;
     const palabras = String(texto ?? '').split(/\s+/).filter(Boolean);
     return this.actividades.filter((actividad) =>
       (!etapa || actividad.tieneEtapa(etapa))
       && (!estacion || actividad.esDeEstacion(estacion))
       && (!categoria || actividad.categoria === categoria)
+      && (!estado || actividad.estado === estado)
       && palabras.every((palabra) => coincide(palabra, camposDe(actividad, etapa))),
     );
   }

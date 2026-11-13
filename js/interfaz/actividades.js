@@ -1,9 +1,12 @@
 /*
- * portada.js
- * ----------
- * Página principal (index.html): tabla de actividades con buscador, filtros
+ * actividades.js
+ * --------------
+ * Página de actividades (actividades.html): tabla con buscador, filtros
  * por etapa y por estación, y columnas ordenables. Al hacer clic en una fila se
  * abre su ficha.
+ *
+ * Sin sesión solo se ven las actividades publicadas. Con sesión se ven
+ * también las pendientes de revisión (con un aviso) y hay un filtro de estado.
  *
  * Cada fila lleva el color de su categoría. La leyenda de categorías es
  * también un filtro: al pulsar una, solo se ven las de esa categoría.
@@ -18,7 +21,7 @@
  */
 
 import { BaseDatos } from '../datos/BaseDatos.js';
-import { Actividad, ETAPAS } from '../modelo/Actividad.js';
+import { Actividad, ETAPAS, PENDIENTE, PUBLICADA } from '../modelo/Actividad.js';
 import { ListaActividades } from '../modelo/ListaActividades.js';
 import { ESTACIONES, estacionDe } from '../modelo/estaciones.js';
 import { CATEGORIAS, categoriaPorId } from '../modelo/categorias.js';
@@ -29,12 +32,16 @@ import { estacionesHtml } from './estacionesHtml.js';
 import { categoriaHtml } from './categoriaHtml.js';
 import { escaparHtml } from './ayudas.js';
 
-Barra.pintar();
+const usuario = await Barra.pintar();
 
 const campoBusqueda = document.getElementById('busqueda');
 const campoBuscarEn = document.getElementById('buscarEn');
 const campoEtapa = document.getElementById('etapa');
 const campoEstacion = document.getElementById('estacion');
+const campoEstado = document.getElementById('estado');
+
+// El filtro de estado solo tiene sentido con sesión (sin ella solo hay publicadas)
+campoEstado.closest('label').hidden = !usuario;
 const leyenda = document.getElementById('categorias');
 const cuerpo = document.getElementById('filas');
 const resultado = document.getElementById('resultado');
@@ -111,7 +118,8 @@ function pintar() {
   const campo = campoBuscarEn.value;
   const etapa = campoEtapa.value || null;
   const estacion = campoEstacion.value || null;
-  const encontradas = orden.ordenar(lista.buscar(texto, campo, etapa, estacion, categoriaElegida));
+  const estado = campoEstado.value || null;
+  const encontradas = orden.ordenar(lista.buscar(texto, campo, etapa, estacion, categoriaElegida, estado));
 
   cuerpo.innerHTML = encontradas.map((a) => `
     <tr class="fila-enlace" style="--color-categoria: var(--cat-${escaparHtml(a.categoria || 'ninguna')})">
@@ -119,6 +127,7 @@ function pintar() {
       <td>
         <a href="${direccionFicha(a, etapa)}">${escaparHtml(a.titulo)}</a>
         <div>${categoriaHtml(a.categoria)}</div>
+        ${a.estaPublicada ? '' : '<span class="aviso-pendiente">Pendiente de revisión</span>'}
       </td>
       <td>${celdaSaberes(a, texto, campo, etapa)}</td>
       <td>${a.nombresEtapas.map((e) => `<span class="etiqueta">${escaparHtml(e)}</span>`).join(' ')}</td>
@@ -130,20 +139,21 @@ function pintar() {
     cuerpo.innerHTML = `<tr><td colspan="5" class="vacio">${aviso}</td></tr>`;
   }
   const actividades = (n) => (n === 1 ? '1 actividad' : `${n} actividades`);
-  resultado.textContent = texto.trim() || etapa || estacion || categoriaElegida
+  resultado.textContent = texto.trim() || etapa || estacion || categoriaElegida || estado
     ? `${encontradas.length} de ${actividades(lista.total)}`
     : actividades(lista.total);
 
-  guardarEnDireccion(texto, campo, etapa, estacion, categoriaElegida);
+  guardarEnDireccion(texto, campo, etapa, estacion, categoriaElegida, estado);
 }
 
-function guardarEnDireccion(texto, campo, etapa, estacion, categoria) {
+function guardarEnDireccion(texto, campo, etapa, estacion, categoria, estado) {
   const parametros = new URLSearchParams();
   if (texto.trim()) parametros.set('q', texto.trim());
   if (campo !== 'todo') parametros.set('en', campo);
   if (etapa) parametros.set('etapa', etapa);
   if (estacion) parametros.set('estacion', estacion);
   if (categoria) parametros.set('categoria', categoria);
+  if (estado) parametros.set('estado', estado);
   const consulta = parametros.toString();
   history.replaceState(null, '', consulta ? `?${consulta}` : location.pathname);
 }
@@ -165,6 +175,10 @@ function leerDeDireccion() {
   }
   const categoria = parametros.get('categoria');
   categoriaElegida = categoriaPorId(categoria) ? categoria : null;
+  const estado = parametros.get('estado');
+  if (usuario && [PUBLICADA, PENDIENTE].includes(estado)) {
+    campoEstado.value = estado;
+  }
 }
 
 // Toda la fila se puede pulsar, no solo el enlace del título.
@@ -180,9 +194,10 @@ campoBusqueda.addEventListener('input', pintar);
 campoBuscarEn.addEventListener('change', pintar);
 campoEtapa.addEventListener('change', pintar);
 campoEstacion.addEventListener('change', pintar);
+campoEstado.addEventListener('change', pintar);
 
 try {
-  lista = await ListaActividades.cargar(BaseDatos.preparar());
+  lista = await ListaActividades.cargar(BaseDatos.preparar(), !usuario);
   leerDeDireccion();
   pintarLeyenda();
   pintar();

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Actividades · Huerto escolar</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="barra">
+    <a class="barra-titulo" href="index.html">Huerto escolar</a>
+    <nav class="barra-enlaces" id="barraEnlaces"></nav>
+  </header>
+
+  <main class="contenido">
+    <h1>Actividades del huerto</h1>
+    <p class="subtitulo">Busca por lo que hay en el huerto (recurso) o por lo que quieres trabajar (saberes básicos). La tabla muestra las áreas; si buscas un saber, verás los que coinciden. Haz clic en una fila para ver la actividad.</p>
+
+    <form class="buscador" id="buscador" role="search">
+      <label class="buscador-campo">
+        <span class="oculto">Buscar</span>
+        <input type="search" id="busqueda" placeholder="Buscar… (por ejemplo: huellas, multiplicación)" autocomplete="off">
+      </label>
+      <label class="buscador-en">
+        <span>en</span>
+        <select id="buscarEn">
+          <option value="todo">todas las columnas</option>
+          <option value="recurso">Recurso</option>
+          <option value="titulo">Actividad</option>
+          <option value="saberes">Saberes básicos</option>
+          <option value="etapa">Etapa</option>
+          <option value="epoca">Época</option>
+        </select>
+      </label>
+      <label class="buscador-en">
+        <span class="oculto">Etapa</span>
+        <select id="etapa"></select>
+      </label>
+      <label class="buscador-en">
+        <span class="oculto">Época</span>
+        <select id="estacion"></select>
+      </label>
+      <label class="buscador-en" hidden>
+        <span class="oculto">Estado</span>
+        <select id="estado">
+          <option value="">Publicadas y pendientes</option>
+          <option value="publicada">Solo publicadas</option>
+          <option value="pendiente">Pendientes de revisión</option>
+        </select>
+      </label>
+    </form>
+
+    <div class="leyenda" id="categorias" role="group" aria-label="Filtrar por categoría"></div>
+
+    <p class="resultado" id="resultado" aria-live="polite"></p>
+
+    <div class="tarjeta tabla-contenedor">
+      <table class="tabla" id="tabla">
+        <thead>
+          <tr>
+            <th data-orden="recurso">Recurso</th>
+            <th data-orden="titulo">Actividad</th>
+            <th data-orden="saberes">Áreas / Saberes básicos</th>
+            <th data-orden="etapa">Etapa</th>
+            <th data-orden="epoca">Época</th>
+          </tr>
+        </thead>
+        <tbody id="filas"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <script type="module" src="js/interfaz/actividades.js"></script>
+</body>
+</html>

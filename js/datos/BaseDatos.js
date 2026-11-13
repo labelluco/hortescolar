@@ -35,9 +35,12 @@ export class BaseDatos {
     return new BaseDatos(new BaseDatosLocal());
   }
 
-  /** Todos los documentos de una colección (un array de objetos). */
-  leerColeccion(nombre) {
-    return this.almacen.leerColeccion(nombre);
+  /**
+   * Todos los documentos de una colección (un array de objetos), o solo los
+   * que cumplen un filtro sencillo: { campo: 'estado', valor: 'publicada' }.
+   */
+  leerColeccion(nombre, filtro = null) {
+    return this.almacen.leerColeccion(nombre, filtro);
   }
 
   /** Un documento por su id, o null si no existe. */

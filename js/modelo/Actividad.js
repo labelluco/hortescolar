@@ -21,7 +21,13 @@
  *   epoca       nota sobre la época (texto libre: "sembrar en la luna menguante de diciembre")
  *   imagenes    hasta 10, en orden: { id, texto } (colección 'imagenes')
  *               o { ruta, texto } (fichero en datos/, solo los ejemplos)
+ *   estado      'publicada' (la ve todo el mundo) o 'pendiente' (de revisión:
+ *               solo la ve el profesorado con sesión)
+ *   creada      { por: correo, el: fecha ISO }: quién la creó
  *   modificada  { por: correo, el: fecha ISO } del último cambio
+ *   revisada    { por: correo, el: fecha ISO }: qué revisor la aprobó
+ *
+ * Los correos solo se enseñan al profesorado con sesión.
  */
 
 import { areaCorta, partirSaber } from './saber.js';
@@ -29,6 +35,10 @@ import { categoriaPorId, posicionCategoria } from './categorias.js';
 import { ESTACIONES, estacionesDeMeses, posicionEstacion, textoEstaciones } from './estaciones.js';
 
 export const MAXIMO_IMAGENES = 10;
+
+/** Estados de una actividad. */
+export const PUBLICADA = 'publicada';
+export const PENDIENTE = 'pendiente';
 
 /** Las etapas posibles, en orden. */
 export const ETAPAS = [
@@ -54,7 +64,20 @@ export class Actividad {
     this.estaciones = Actividad.leerEstaciones(datos);
     this.epoca = datos.epoca ?? '';
     this.imagenes = datos.imagenes ?? [];
+    // Las actividades de antes de haber revisión no tienen estado: estaban publicadas
+    this.estado = datos.estado === PENDIENTE ? PENDIENTE : PUBLICADA;
+    this.creada = datos.creada ?? null;
     this.modificada = datos.modificada ?? null;
+    this.revisada = datos.revisada ?? null;
+  }
+
+  get estaPublicada() {
+    return this.estado === PUBLICADA;
+  }
+
+  /** ¿La creó esa persona (correo)? */
+  esDe(correo) {
+    return Boolean(correo) && this.creada?.por === correo;
   }
 
   /**
@@ -112,7 +135,10 @@ export class Actividad {
       estaciones: this.estaciones,
       epoca: this.epoca,
       imagenes: this.imagenes,
+      estado: this.estado,
+      creada: this.creada,
       modificada: this.modificada,
+      revisada: this.revisada,
     };
   }
 

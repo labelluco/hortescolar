@@ -8,10 +8,16 @@
  * colección 'actividades' más su "id". Antes de subir se enseña qué se va a
  * hacer con cada una (nueva o sustituye) y si le falta algo. Si una
  * actividad ya existe y tiene imágenes, se conservan.
+ *
+ * Revisión (ver modelo/permisos.js): lo que sube un revisor queda publicado;
+ * lo que sube un usuario normal, pendiente de revisión. Un usuario normal no
+ * puede sustituir actividades publicadas ni las pendientes de otra persona.
+ * El estado y la autoría no se leen del fichero: los pone esta página.
  */
 
 import { BaseDatos } from '../datos/BaseDatos.js';
 import { Actividad } from '../modelo/Actividad.js';
+import { estadoAlGuardar, puedeEditar } from '../modelo/permisos.js';
 import { Sesion } from './Sesion.js';
 import { Barra } from './Barra.js';
 import { escaparHtml } from './ayudas.js';
@@ -51,12 +57,24 @@ document.getElementById('ficheros').addEventListener('change', async (evento) =>
       (await baseDatos.leerColeccion('actividades')).map((documento) => [documento.id, documento]),
     );
 
+    const ahora = new Date().toISOString();
     const filas = actividades.map((actividad) => {
       const errores = actividad.id ? actividad.errores() : ['Falta el id.'];
-      const existente = existentes.get(actividad.id);
-      if (existente && actividad.imagenes.length === 0) {
-        actividad.imagenes = existente.imagenes ?? []; // se conservan sus imágenes
+      const documento = existentes.get(actividad.id);
+      const existente = documento ? Actividad.desdeDocumento(documento) : null;
+      if (existente && !puedeEditar(usuario, existente)) {
+        errores.push('Ya existe y solo la puede sustituir una persona revisora (o quien la creó, si está pendiente).');
       }
+      if (existente && actividad.imagenes.length === 0) {
+        actividad.imagenes = existente.imagenes; // se conservan sus imágenes
+      }
+      // Estado y autoría: los decide quién sube, no el fichero
+      actividad.estado = estadoAlGuardar(usuario);
+      actividad.creada = existente?.creada ?? { por: usuario.correo, el: ahora };
+      actividad.modificada = { por: usuario.correo, el: ahora };
+      actividad.revisada = usuario.revisor && existente && !existente.estaPublicada
+        ? { por: usuario.correo, el: ahora }
+        : (existente?.revisada ?? null);
       return { actividad, errores, existe: Boolean(existente) };
     });
     preparadas = filas.filter((fila) => fila.errores.length === 0).map((fila) => fila.actividad);
@@ -71,7 +89,7 @@ document.getElementById('ficheros').addEventListener('change', async (evento) =>
             <td>${escaparHtml(actividad.etapasEnTexto)}</td>
             <td>${errores.length
               ? `<span class="error">No se subirá: ${escaparHtml(errores.join(' '))}</span>`
-              : (existe ? 'Sustituye la que ya existe' : 'Nueva')}</td>
+              : `${existe ? 'Sustituye la que ya existe' : 'Nueva'}, ${actividad.estaPublicada ? 'publicada' : 'pendiente de revisión'}`}</td>
           </tr>`).join('')}
         </tbody>
       </table>`;
@@ -86,13 +104,11 @@ document.getElementById('ficheros').addEventListener('change', async (evento) =>
 botonSubir.addEventListener('click', async () => {
   botonSubir.disabled = true;
   textoError.textContent = 'Subiendo…';
-  const ahora = new Date().toISOString();
   try {
-    await baseDatos.aplicarCambios(preparadas.map((actividad) => {
-      actividad.modificada = { por: usuario.correo, el: ahora };
-      return { tipo: 'guardar', coleccion: 'actividades', id: actividad.id, datos: actividad.aDocumento() };
-    }));
-    location.href = 'index.html';
+    await baseDatos.aplicarCambios(preparadas.map((actividad) => (
+      { tipo: 'guardar', coleccion: 'actividades', id: actividad.id, datos: actividad.aDocumento() }
+    )));
+    location.href = 'actividades.html';
   } catch (error) {
     console.error(error);
     textoError.textContent = 'No se ha podido subir. Comprueba la conexión y vuelve a probar.';

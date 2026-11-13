@@ -16,11 +16,13 @@ export class BaseDatosLocal {
     this.colecciones = new Map(); // nombre → promesa del array
   }
 
-  leerColeccion(nombre) {
+  /** Toda la colección, o solo los documentos con { campo: valor } si se indica filtro. */
+  async leerColeccion(nombre, filtro = null) {
     if (!this.colecciones.has(nombre)) {
       this.colecciones.set(nombre, this.descargar(nombre));
     }
-    return this.colecciones.get(nombre);
+    const documentos = await this.colecciones.get(nombre);
+    return filtro ? documentos.filter((d) => d[filtro.campo] === filtro.valor) : documentos;
   }
 
   async leerDocumento(coleccion, id) {

@@ -3,7 +3,7 @@
  * -----------------
  * Las cuatro estaciones en pequeño (otoño, invierno, primavera y verano),
  * con marcadas aquellas en que se puede hacer una actividad. Se usa en la
- * tabla de la portada y en la ficha.
+ * tabla de actividades y en la ficha.
  *
  *   O I P V
  *   ■ □ ■ □   → otoño y primavera

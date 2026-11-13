@@ -35,7 +35,12 @@
         "adaptacion": ""
       }
     ],
-    "categoria": "naturaleza"
+    "categoria": "naturaleza",
+    "estado": "publicada",
+    "creada": {
+      "por": "admin",
+      "el": "2026-11-10T10:00:00.000Z"
+    }
   },
   {
     "id": "act-002",
@@ -76,7 +81,12 @@
         "adaptacion": ""
       }
     ],
-    "categoria": "experimentacion"
+    "categoria": "experimentacion",
+    "estado": "publicada",
+    "creada": {
+      "por": "admin",
+      "el": "2026-11-10T10:00:00.000Z"
+    }
   },
   {
     "id": "act-003",
@@ -114,7 +124,12 @@
         "adaptacion": ""
       }
     ],
-    "categoria": "cultivo"
+    "categoria": "cultivo",
+    "estado": "publicada",
+    "creada": {
+      "por": "admin",
+      "el": "2026-11-10T10:00:00.000Z"
+    }
   },
   {
     "id": "act-004",
@@ -155,6 +170,54 @@
         "adaptacion": ""
       }
     ],
-    "categoria": "sostenibilidad"
+    "categoria": "sostenibilidad",
+    "estado": "publicada",
+    "creada": {
+      "por": "admin",
+      "el": "2026-11-10T10:00:00.000Z"
+    }
+  },
+  {
+    "id": "act-005",
+    "recurso": "Bancales",
+    "titulo": "EJEMPLO pendiente: semillero de lechugas",
+    "descripcion": "EJEMPLO de actividad pendiente de revisión creada por el usuario normal «profe».",
+    "objetivos": [
+      "Entender la multiplicación como filas × columnas",
+      "Medir el bancal con la cinta métrica"
+    ],
+    "materiales": [
+      "Cinta métrica",
+      "Cuerda y estacas",
+      "Plantel de lechuga"
+    ],
+    "desarrollo": [
+      "Medimos el largo y el ancho del bancal.",
+      "Decidimos la distancia entre plantas.",
+      "Calculamos filas × columnas y lo comprobamos plantando."
+    ],
+    "duracion": "1 sesión de 50 min",
+    "estaciones": [
+      "Otoño",
+      "Primavera"
+    ],
+    "epoca": "Otoño o primavera",
+    "imagenes": [],
+    "etapas": [
+      {
+        "etapa": "Primaria · 2.º ciclo",
+        "saberes": [
+          "Números y operaciones: multiplicación",
+          "Medida: superficie"
+        ],
+        "adaptacion": ""
+      }
+    ],
+    "categoria": "cultivo",
+    "estado": "pendiente",
+    "creada": {
+      "por": "profe",
+      "el": "2026-11-13T10:00:00.000Z"
+    }
   }
 ]

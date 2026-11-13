@@ -3,11 +3,17 @@
  * ------------
  * Ficha de una actividad (actividad.html?id=…): recurso, etapa, saberes,
  * descripción, objetivos, materiales, desarrollo e imágenes (con ampliación
- * al hacer clic). Con sesión iniciada aparece el botón «Editar».
+ * al hacer clic).
+ *
+ * Con sesión, además: quién la creó, modificó y revisó, el botón «Editar»
+ * (si se tiene permiso, ver modelo/permisos.js) y, si está pendiente de
+ * revisión, un aviso y, para los revisores, el botón «Aprobar y publicar».
+ * Sin sesión, las pendientes no se pueden ver.
  */
 
 import { BaseDatos } from '../datos/BaseDatos.js';
-import { Actividad } from '../modelo/Actividad.js';
+import { Actividad, PUBLICADA } from '../modelo/Actividad.js';
+import { puedeAprobar, puedeEditar } from '../modelo/permisos.js';
 import { Barra } from './Barra.js';
 import { estacionesHtml } from './estacionesHtml.js';
 import { categoriaHtml } from './categoriaHtml.js';
@@ -17,17 +23,11 @@ const ficha = document.getElementById('ficha');
 const baseDatos = BaseDatos.preparar();
 const id = new URLSearchParams(location.search).get('id');
 
-Barra.pintar().then((usuario) => {
-  if (usuario && id) {
-    const botonEditar = document.getElementById('botonEditar');
-    botonEditar.href = `editar.html?id=${encodeURIComponent(id)}`;
-    botonEditar.hidden = false;
-  }
-});
+const usuario = await Barra.pintar();
 
 // Si venimos de la tabla, "Volver" regresa a ella con la búsqueda que había.
 const anterior = document.referrer ? new URL(document.referrer) : null;
-if (anterior && anterior.origin === location.origin && /\/(index\.html)?$/.test(anterior.pathname)) {
+if (anterior && anterior.origin === location.origin && /\/actividades\.html$/.test(anterior.pathname)) {
   document.getElementById('volver').href = document.referrer;
 }
 
@@ -44,7 +44,14 @@ function pintar(actividad) {
       <img alt="${escaparHtml(imagen.texto)}">
     </button>`).join('');
 
+  if (puedeEditar(usuario, actividad)) {
+    const botonEditar = document.getElementById('botonEditar');
+    botonEditar.href = `editar.html?id=${encodeURIComponent(actividad.id)}`;
+    botonEditar.hidden = false;
+  }
+
   ficha.innerHTML = `
+    ${actividad.estaPublicada ? '' : htmlPendiente(actividad)}
     <h1>${escaparHtml(actividad.titulo)}</h1>
     <p class="ficha-categoria">${categoriaHtml(actividad.categoria)}</p>
     <dl class="datos tarjeta">
@@ -63,9 +70,49 @@ function pintar(actividad) {
     ${seccion('Por etapas: adaptaciones y saberes básicos', htmlEtapas(actividad))}
     ${seccion('Notas y precauciones', actividad.notas.length && listaHtml(actividad.notas))}
     ${seccion('Imágenes', imagenes && `<div class="galeria">${imagenes}</div>`)}
+    ${usuario ? htmlAutoria(actividad) : ''}
   `;
 
+  document.getElementById('botonAprobar')?.addEventListener('click', () => aprobar(actividad));
   pintarImagenes(actividad);
+}
+
+/** Aviso de actividad pendiente, con el botón de aprobar para los revisores. */
+function htmlPendiente(actividad) {
+  return `
+    <div class="aviso aviso-revision" role="status">
+      <p><strong>Pendiente de revisión.</strong> Solo la ve el profesorado con sesión hasta que una persona revisora la apruebe.</p>
+      ${puedeAprobar(usuario, actividad) ? '<button type="button" class="boton boton-principal" id="botonAprobar">Aprobar y publicar</button>' : ''}
+      <p class="error" id="errorAprobar" role="alert"></p>
+    </div>`;
+}
+
+/** Quién creó, modificó y revisó la actividad (solo para el profesorado). */
+function htmlAutoria(actividad) {
+  const fecha = (iso) => new Date(iso).toLocaleDateString('es-ES');
+  const linea = (texto, dato) => (dato ? `<li>${texto} <strong>${escaparHtml(dato.por)}</strong> el ${fecha(dato.el)}</li>` : '');
+  const lineas = linea('Creada por', actividad.creada)
+    + linea('Última modificación por', actividad.modificada)
+    + linea('Revisada por', actividad.revisada);
+  return lineas ? `<section class="autoria"><ul>${lineas}</ul><p>Solo lo ve el profesorado con sesión.</p></section>` : '';
+}
+
+/** Un revisor aprueba una actividad pendiente: pasa a publicada. */
+async function aprobar(actividad) {
+  const boton = document.getElementById('botonAprobar');
+  boton.disabled = true;
+  try {
+    actividad.estado = PUBLICADA;
+    actividad.revisada = { por: usuario.correo, el: new Date().toISOString() };
+    await baseDatos.aplicarCambios([
+      { tipo: 'guardar', coleccion: 'actividades', id: actividad.id, datos: actividad.aDocumento() },
+    ]);
+    pintar(actividad);
+  } catch (error) {
+    console.error(error);
+    document.getElementById('errorAprobar').textContent = 'No se ha podido aprobar. Vuelve a probar.';
+    boton.disabled = false;
+  }
 }
 
 /**
@@ -103,7 +150,8 @@ function ampliar(direccion, texto) {
 
 try {
   const actividad = id ? await Actividad.leer(id, baseDatos) : null;
-  if (actividad) {
+  // Sin sesión, una pendiente es como si no existiera (Firestore tampoco la deja leer)
+  if (actividad && (actividad.estaPublicada || usuario)) {
     pintar(actividad);
   } else {
     ficha.innerHTML = '<p class="resultado">No existe esa actividad.</p>';

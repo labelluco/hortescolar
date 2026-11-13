@@ -3,25 +3,72 @@
 // Se copian a mano en la consola de Firebase (Firestore Database → Reglas)
 // cada vez que cambian aquí.
 //
-//   - Leer: cualquiera (la web es pública, aunque no esté indexada).
-//   - Escribir: solo el profesorado con sesión iniciada. Las cuentas se
-//     crean en la consola (Authentication) y el registro libre está
-//     desactivado, así que nadie más puede tener sesión.
-//   - Cualquier otra colección: cerrada.
+// Quién es quién:
+//   - Sin sesión: cualquiera con el enlace.
+//   - Profesorado: cualquier cuenta con sesión. Las cuentas se crean en la
+//     consola (Authentication) y el registro libre está desactivado.
+//   - Revisores: el profesorado cuyo correo está en la lista «revisores» del
+//     documento config/roles (se edita en la consola; nadie puede cambiarlo
+//     desde la web).
+//
+// Qué puede hacer cada uno (lo mismo que js/modelo/permisos.js):
+//   - Actividades publicadas: las lee cualquiera.
+//   - Actividades pendientes: solo las lee el profesorado.
+//   - Profesorado: crea actividades pendientes a su nombre y edita o borra
+//     las suyas mientras están pendientes (siguen pendientes).
+//   - Revisores: crean, editan, aprueban y borran cualquier actividad.
+//   - Imágenes: las lee cualquiera; las sube el profesorado a su nombre; las
+//     cambia o borra quien las subió o un revisor.
 
 rules_version = '2';
 
 service cloud.firestore {
   match /databases/{database}/documents {
 
+    function conSesion() {
+      return request.auth != null;
+    }
+
+    function correo() {
+      return request.auth.token.email.lower();
+    }
+
+    function esRevisor() {
+      return conSesion()
+        && exists(/databases/$(database)/documents/config/roles)
+        && correo() in get(/databases/$(database)/documents/config/roles).data.revisores;
+    }
+
+    match /config/roles {
+      allow read: if conSesion();
+      allow write: if false;
+    }
+
     match /actividades/{id} {
-      allow read: if true;
-      allow write: if request.auth != null;
+      allow read: if conSesion() || resource.data.estado == 'publicada';
+
+      allow create: if conSesion()
+        && request.resource.data.creada.por == correo()
+        && (esRevisor() || request.resource.data.estado == 'pendiente');
+
+      allow update: if esRevisor()
+        || (conSesion()
+            && resource.data.estado == 'pendiente'
+            && resource.data.creada.por == correo()
+            && request.resource.data.estado == 'pendiente'
+            && request.resource.data.creada == resource.data.creada);
+
+      allow delete: if esRevisor()
+        || (conSesion()
+            && resource.data.estado == 'pendiente'
+            && resource.data.creada.por == correo());
     }
 
     match /imagenes/{id} {
       allow read: if true;
-      allow write: if request.auth != null;
+      allow create: if conSesion() && request.resource.data.subidaPor == correo();
+      allow update, delete: if esRevisor()
+        || (conSesion() && resource.data.subidaPor == correo());
     }
   }
 }

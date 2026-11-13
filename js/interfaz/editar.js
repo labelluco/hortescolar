@@ -8,6 +8,10 @@
  * y se guardan en la colección 'imagenes', una por documento. Al guardar,
  * la actividad, las imágenes nuevas y las quitadas se escriben de una vez:
  * o se guarda todo o nada.
+ *
+ * Revisión (ver modelo/permisos.js): lo que guarda un revisor queda
+ * publicado; lo que guarda un usuario normal queda pendiente de revisión.
+ * Un usuario normal solo puede abrir aquí sus propias actividades pendientes.
  */
 
 import { BaseDatos } from '../datos/BaseDatos.js';
@@ -15,6 +19,7 @@ import { Actividad, ETAPAS, MAXIMO_IMAGENES } from '../modelo/Actividad.js';
 import { ListaActividades } from '../modelo/ListaActividades.js';
 import { ESTACIONES } from '../modelo/estaciones.js';
 import { CATEGORIAS } from '../modelo/categorias.js';
+import { estadoAlGuardar, puedeEditar } from '../modelo/permisos.js';
 import { Sesion } from './Sesion.js';
 import { Barra } from './Barra.js';
 import { escaparHtml } from './ayudas.js';
@@ -54,6 +59,12 @@ async function cargar() {
       document.getElementById('tituloPagina').textContent = 'No existe esa actividad.';
       return;
     }
+    if (!puedeEditar(usuario, actividad)) {
+      document.getElementById('tituloPagina').textContent = actividad.estaPublicada
+        ? 'Las actividades publicadas solo las pueden editar las personas revisoras.'
+        : 'Solo puedes editar tus propias actividades pendientes de revisión.';
+      return;
+    }
     document.getElementById('tituloPagina').textContent = 'Editar actividad';
     document.getElementById('botonBorrar').hidden = false;
     const ficha = `actividad.html?id=${encodeURIComponent(id)}`;
@@ -69,6 +80,7 @@ async function cargar() {
   pintarEstaciones();
   await rellenarSugerencias();
   pintarImagenes();
+  document.getElementById('avisoRevision').hidden = usuario.revisor;
   formulario.hidden = false;
 }
 
@@ -234,7 +246,14 @@ function leerFormulario() {
   nueva.etapas = leerEtapas();
   nueva.estaciones = leerEstaciones();
   nueva.imagenes = imagenes.map(({ id, ruta, texto }) => (ruta ? { ruta, texto } : { id, texto }));
-  nueva.modificada = { por: usuario.correo, el: new Date().toISOString() };
+  const ahora = new Date().toISOString();
+  nueva.modificada = { por: usuario.correo, el: ahora };
+  nueva.creada = actividad.creada ?? { por: usuario.correo, el: ahora };
+  nueva.estado = estadoAlGuardar(usuario);
+  // Si un revisor guarda una actividad que estaba pendiente, la está aprobando
+  nueva.revisada = usuario.revisor && actividad.id && !actividad.estaPublicada
+    ? { por: usuario.correo, el: ahora }
+    : actividad.revisada;
   return nueva;
 }
 
@@ -252,7 +271,7 @@ formulario.addEventListener('submit', async (evento) => {
   const operaciones = [
     ...imagenes.filter((imagen) => imagen.datos).map((imagen) => ({
       tipo: 'guardar', coleccion: 'imagenes', id: imagen.id,
-      datos: { actividadId: nueva.id, datos: imagen.datos },
+      datos: { actividadId: nueva.id, datos: imagen.datos, subidaPor: usuario.correo },
     })),
     ...idsImagenesQuitadas.map((id) => ({ tipo: 'borrar', coleccion: 'imagenes', id })),
     { tipo: 'guardar', coleccion: 'actividades', id: nueva.id, datos: nueva.aDocumento() },
@@ -269,7 +288,7 @@ document.getElementById('botonBorrar').addEventListener('click', async () => {
       .map((imagen) => ({ tipo: 'borrar', coleccion: 'imagenes', id: imagen.id })),
     { tipo: 'borrar', coleccion: 'actividades', id: actividad.id },
   ];
-  await guardar(operaciones, 'index.html');
+  await guardar(operaciones, 'actividades.html');
 });
 
 async function guardar(operaciones, paginaSiguiente) {

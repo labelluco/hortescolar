@@ -7,8 +7,8 @@
  *   "Ciencias de la Naturaleza (A.2): Las adaptaciones de los seres vivos…"
  *   "Educación Plástica y Visual: Medios, soportes y materiales…"
  *
- * Estas funciones separan el área del texto, para que la tabla de la
- * portada pueda enseñar solo las áreas sin saturarse.
+ * Estas funciones separan el área del texto, para que la
+ * tabla de actividades pueda enseñar solo las áreas sin saturarse.
  */
 
 // Nombres cortos de las áreas con nombre largo (el resto se deja igual)

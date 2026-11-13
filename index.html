@@ -4,8 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>Huerto escolar · Actividades</title>
+  <title>Huerto escolar</title>
   <link rel="stylesheet" href="css/estilos.css">
+  <script>
+    // Los enlaces antiguos a la tabla (index.html?q=…) llevan ahora a actividades.html
+    if (/[?&](q|en|etapa|estacion|categoria|estado)=/.test(location.search)) {
+      location.replace('actividades.html' + location.search);
+    }
+  </script>
 </head>
 <body>
   <header class="barra">
@@ -14,55 +20,52 @@
   </header>
 
   <main class="contenido">
-    <h1>Actividades del huerto</h1>
-    <p class="subtitulo">Busca por lo que hay en el huerto (recurso) o por lo que quieres trabajar (saberes básicos). La tabla muestra las áreas; si buscas un saber, verás los que coinciden. Haz clic en una fila para ver la actividad.</p>
+    <h1>Actividades para el huerto escolar</h1>
+    <p class="subtitulo">Ideas para aprovechar el huerto del colegio en clase, con sus adaptaciones para cada etapa y los saberes básicos del currículo de Aragón que se trabajan.</p>
 
-    <form class="buscador" id="buscador" role="search">
-      <label class="buscador-campo">
-        <span class="oculto">Buscar</span>
-        <input type="search" id="busqueda" placeholder="Buscar… (por ejemplo: huellas, multiplicación)" autocomplete="off">
-      </label>
-      <label class="buscador-en">
-        <span>en</span>
-        <select id="buscarEn">
-          <option value="todo">todas las columnas</option>
-          <option value="recurso">Recurso</option>
-          <option value="titulo">Actividad</option>
-          <option value="saberes">Saberes básicos</option>
-          <option value="etapa">Etapa</option>
-          <option value="epoca">Época</option>
-        </select>
-      </label>
-      <label class="buscador-en">
-        <span class="oculto">Etapa</span>
-        <select id="etapa"></select>
-      </label>
-      <label class="buscador-en">
-        <span class="oculto">Época</span>
-        <select id="estacion"></select>
-      </label>
-    </form>
+    <section class="accesos" aria-label="Accesos rápidos">
+      <a class="tarjeta acceso-rapido" href="actividades.html">
+        <span class="acceso-numero" id="numeroTotal">—</span>
+        <span>Ver todas las actividades</span>
+      </a>
+      <a class="tarjeta acceso-rapido" id="enlaceEstacion" href="actividades.html">
+        <span class="acceso-numero" id="numeroEstacion">—</span>
+        <span id="textoEstacion">Para esta estación</span>
+      </a>
+    </section>
 
-    <div class="leyenda" id="categorias" role="group" aria-label="Filtrar por categoría"></div>
+    <section class="tarjeta seccion">
+      <h2>Por categorías</h2>
+      <div class="leyenda" id="categorias"></div>
+    </section>
 
-    <p class="resultado" id="resultado" aria-live="polite"></p>
+    <section class="tarjeta seccion ayuda">
+      <h2>Cómo encontrar una actividad</h2>
+      <p>En la página de <a href="actividades.html">actividades</a> hay una tabla con todas. Se puede buscar de dos maneras:</p>
+      <ul>
+        <li><strong>Desde lo que hay en el huerto.</strong> Si, por ejemplo, han aparecido huellas de animales, escribe «huellas» en el buscador y elige buscar en <em>Recurso</em>.</li>
+        <li><strong>Desde lo que quieres trabajar.</strong> Si quieres trabajar, por ejemplo, la medida o la multiplicación, escribe «medir» o «multiplic» y elige buscar en <em>Saberes básicos</em>. Debajo de cada actividad verás los saberes que coinciden y de qué etapa son.</li>
+      </ul>
+      <p>Además, puedes:</p>
+      <ul>
+        <li>Filtrar por <strong>etapa</strong> (Infantil o un ciclo de Primaria) y por <strong>época</strong> del año, con los desplegables de al lado del buscador.</li>
+        <li>Filtrar por <strong>categoría</strong> pulsando en la leyenda de colores; vuelve a pulsar para quitar el filtro.</li>
+        <li>Ordenar la tabla pulsando en el título de una columna.</li>
+      </ul>
+      <p>Pulsa en una fila para ver la actividad completa: materiales, pasos, precauciones y, en cada etapa, su adaptación y sus saberes básicos.</p>
+      <p class="consejo">Consejo: busca un trozo de palabra («plástic», «multiplic») y así encontrarás todas sus formas.</p>
+    </section>
 
-    <div class="tarjeta tabla-contenedor">
-      <table class="tabla" id="tabla">
-        <thead>
-          <tr>
-            <th data-orden="recurso">Recurso</th>
-            <th data-orden="titulo">Actividad</th>
-            <th data-orden="saberes">Áreas / Saberes básicos</th>
-            <th data-orden="etapa">Etapa</th>
-            <th data-orden="epoca">Época</th>
-          </tr>
-        </thead>
-        <tbody id="filas"></tbody>
-      </table>
-    </div>
+    <section class="tarjeta seccion ayuda">
+      <h2>Para el profesorado</h2>
+      <p>Con tu cuenta (<a href="acceso.html">Acceso profesorado</a>) puedes añadir actividades nuevas, con hasta 10 fotos cada una.</p>
+      <ul>
+        <li>Las actividades nuevas quedan <strong>pendientes de revisión</strong>: el profesorado con sesión las ve, pero el resto no, hasta que una persona revisora las aprueba. Mientras están pendientes, puedes seguir editándolas.</li>
+        <li>Las personas <strong>revisoras</strong> publican directamente, aprueban las pendientes y pueden editar cualquier actividad.</li>
+      </ul>
+    </section>
   </main>
 
-  <script type="module" src="js/interfaz/portada.js"></script>
+  <script type="module" src="js/interfaz/inicio.js"></script>
 </body>
 </html>
