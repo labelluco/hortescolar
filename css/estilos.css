@@ -106,6 +106,44 @@ h2 { font-size: 1.1rem; font-weight: 500; margin: 0 0 0.75rem; }
 
 .barra-usuario { color: rgba(255, 255, 255, 0.8); }
 
+/* Menú «Actividades» de la barra (Barra.js) */
+.menu { position: relative; }
+
+.menu summary {
+  color: #fff;
+  cursor: pointer;
+  list-style: none;
+}
+
+.menu summary::-webkit-details-marker { display: none; }
+.menu summary::after { content: " ▾"; font-size: 0.8em; }
+.menu[open] summary::after { content: " ▴"; }
+.menu summary:hover { text-decoration: underline; }
+
+.menu-opciones {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0; /* se abre hacia la izquierda, para no salirse de la pantalla */
+  z-index: 10;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  padding: 6px 0;
+  background: var(--color-superficie);
+  border-radius: var(--radio);
+  box-shadow: 0 4px 12px rgba(60, 64, 67, 0.25);
+}
+
+.barra-enlaces .menu-opciones a {
+  color: var(--color-texto);
+  padding: 8px 16px;
+}
+
+.barra-enlaces .menu-opciones a:hover {
+  background: var(--color-principal-suave);
+  text-decoration: none;
+}
+
 @media (max-width: 640px) {
   .barra { padding: 8px 16px; }
   .barra-usuario { display: none; }
