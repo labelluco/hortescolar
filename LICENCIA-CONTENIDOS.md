@@ -1,6 +1,6 @@
 # Licencias
 
-ERA (Espacio de Recursos y Actividades) · Huerto escolar es un proyecto de [L'Abelluco](https://labelluco.github.io/abelluco/). Todo es libre, y lo que se haga a partir de él también tiene que serlo.
+ERA (Espacio de Recursos y Actividades) · Huerto escolar es un proyecto de [L'Abelluco](https://labelluco.net/). Todo es libre, y lo que se haga a partir de él también tiene que serlo.
 
 ## Código: AGPL-3.0
 

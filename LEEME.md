@@ -58,4 +58,4 @@ Las cuentas se crean en la consola de Firebase: **Authentication → Users → A
 
 ## Licencias
 
-Un proyecto de [L'Abelluco](https://labelluco.github.io/abelluco/). Código: [AGPL-3.0](LICENSE). Actividades (textos y fotos): [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.es). Detalles y forma de citar en [LICENCIA-CONTENIDOS.md](LICENCIA-CONTENIDOS.md).
+Un proyecto de [L'Abelluco](https://labelluco.net/). Código: [AGPL-3.0](LICENSE). Actividades (textos y fotos): [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.es). Detalles y forma de citar en [LICENCIA-CONTENIDOS.md](LICENCIA-CONTENIDOS.md).
