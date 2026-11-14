@@ -31,7 +31,28 @@ self.addEventListener('fetch', (evento) => {
   evento.respondWith(
     // «no-cache»: usa lo guardado solo si el servidor confirma que no ha cambiado
     fetch(peticion.url, { cache: 'no-cache', credentials: 'same-origin' })
+      .then((respuesta) => (peticion.mode === 'navigate' ? respuesta : sinGuardarEnMemoria(respuesta)))
       // Sin conexión: lo que tenga guardado el navegador, como sin service worker
       .catch(() => fetch(peticion)),
   );
 });
+
+/*
+ * Al recargar con F5 en la misma pestaña, Chrome reutilizaba los módulos JS
+ * que tenía en la memoria de la página sin pasar por aquí, y se veía la
+ * versión vieja. Devolvemos la misma respuesta con «Cache-Control: no-cache»
+ * para que el navegador tenga que volver a pedírnosla cada vez.
+ * (Las páginas HTML no se tocan: pueden venir de una redirección y no hace falta.)
+ */
+function sinGuardarEnMemoria(respuesta) {
+  if (respuesta.type !== 'basic' || respuesta.redirected) {
+    return respuesta;
+  }
+  const cabeceras = new Headers(respuesta.headers);
+  cabeceras.set('Cache-Control', 'no-cache');
+  return new Response(respuesta.body, {
+    status: respuesta.status,
+    statusText: respuesta.statusText,
+    headers: cabeceras,
+  });
+}
