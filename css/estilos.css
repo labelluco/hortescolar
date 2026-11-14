@@ -95,6 +95,17 @@ h2 { font-size: 1.15rem; font-weight: 700; margin: 0 0 0.75rem; }
 
 .barra-titulo img { height: 32px; width: auto; }
 
+/* Nombre de la web (ERA) y, al lado, «Huerto escolar» más pequeño */
+.barra-nombre { letter-spacing: 0.04em; }
+
+.barra-lema {
+  padding-left: 8px;
+  border-left: 1px solid var(--color-borde);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-texto-secundario);
+}
+
 .barra-enlaces {
   display: flex;
   flex-wrap: wrap;
@@ -639,6 +650,18 @@ th[aria-sort="descending"] .orden-flecha::after { content: "↓"; opacity: 1; }
 }
 
 /* ---------- Página de inicio ---------- */
+
+/* «Huerto escolar» encima del título, y las iniciales de ERA en ocre */
+.antetitulo {
+  margin: 0 0 4px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-acento);
+}
+
+.inicial { color: var(--color-acento); }
 
 .accesos {
   display: grid;

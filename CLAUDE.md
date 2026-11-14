@@ -1,6 +1,8 @@
 @AGENTS.md
 
-# Huerto escolar — Actividades para el profesorado
+# ERA · Huerto escolar — Actividades para el profesorado
+
+La web se llama **ERA** (Espacio de Recursos y Actividades), con «Huerto escolar» como subtítulo: así sale en la barra, en los títulos de las páginas (`… · ERA`), en el pie y en la cita de la ficha.
 
 Web para que el profesorado del colegio (unas 6 personas) organice actividades del huerto escolar buscándolas en una tabla. Unas 100 actividades como mucho, cada una con hasta 10 imágenes.
 

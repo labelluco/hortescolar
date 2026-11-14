@@ -1,4 +1,4 @@
-# Huerto escolar — instrucciones para agentes
+# ERA · Huerto escolar — instrucciones para agentes
 
 ## Contexto privado
 Antes de empezar cualquier tarea: si no existe ../notes-abelluco, clona el repositorio privado

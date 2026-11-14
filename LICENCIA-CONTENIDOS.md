@@ -1,6 +1,6 @@
 # Licencias
 
-Huerto escolar es un proyecto de [L'Abelluco](https://labelluco.github.io/abelluco/). Todo es libre, y lo que se haga a partir de él también tiene que serlo.
+ERA (Espacio de Recursos y Actividades) · Huerto escolar es un proyecto de [L'Abelluco](https://labelluco.github.io/abelluco/). Todo es libre, y lo que se haga a partir de él también tiene que serlo.
 
 ## Código: AGPL-3.0
 
@@ -15,7 +15,7 @@ Las actividades (textos, fotos y pies de foto, tanto en la web como en `datos/` 
 Se pueden copiar, adaptar y compartir, también en otros colegios y materiales, con dos condiciones:
 
 1. **Reconocimiento.** Citar el origen así:
-   «*Título de la actividad*», Huerto escolar de L'Abelluco, https://labelluco.github.io/hortescolar/ (CC BY-SA 4.0).
+   «*Título de la actividad*», ERA · Huerto escolar, de L'Abelluco, https://labelluco.github.io/hortescolar/ (CC BY-SA 4.0).
    Si se ha modificado, indicarlo.
 2. **Compartir igual.** Las adaptaciones se comparten con la misma licencia.
 

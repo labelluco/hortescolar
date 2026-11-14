@@ -1,4 +1,6 @@
-# Huerto escolar
+# ERA · Huerto escolar
+
+**ERA** (Espacio de Recursos y Actividades) es el nombre de la web.
 
 Aplicación web para que el profesorado busque y consulte actividades ligadas al huerto escolar.
 

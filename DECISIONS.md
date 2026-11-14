@@ -2,6 +2,7 @@
 
 Una línea por decisión, la más reciente arriba: fecha — decisión — por qué.
 
+- 2026-11-14 — La web se llama ERA (Espacio de Recursos y Actividades), con «Huerto escolar» de subtítulo — un nombre corto y del campo (la era de trillar) que se pueda difundir; el subtítulo dice de qué va.
 - 2026-11-14 — Cada actividad nueva cita sus principales fuentes en la última nota («Fuentes: …») — que se pueda comprobar y ampliar lo que dice.
 - 2026-11-14 — Aspecto de la web de L'Abelluco: paleta de su `nucli.css` (verde pino, fondo de piedra caliza, ocre en los enlaces), barra clara con la abeja, títulos en negrita y botones redondeados — que se reconozca como un proyecto de L'Abelluco. Los colores de las categorías no cambian (son aptos para daltonismo).
 - 2026-11-14 — Código AGPL-3.0 y actividades CC BY-SA 4.0; pie con el logo de L'Abelluco y forma de citar en la ficha — libre, pero que las versiones modificadas sigan siendo libres y citen el origen (difusión de L'Abelluco).

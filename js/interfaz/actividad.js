@@ -36,7 +36,7 @@ function seccion(titulo, contenido) {
 }
 
 function pintar(actividad) {
-  document.title = `${actividad.titulo} · Huerto escolar`;
+  document.title = `${actividad.titulo} · ERA`;
 
   // Las imágenes se cargan después, cada una cuando llega (ver pintarImagenes)
   const imagenes = actividad.imagenes.map((imagen, posicion) => `
@@ -86,7 +86,7 @@ function htmlCita(actividad) {
   return `
     <p class="cita">
       Puedes usar, copiar y adaptar esta actividad. Si la compartes, cita su origen
-      («${escaparHtml(actividad.titulo)}», Huerto escolar de <a href="https://labelluco.github.io/abelluco/">L'Abelluco</a>,
+      («${escaparHtml(actividad.titulo)}», ERA · Huerto escolar, de <a href="https://labelluco.github.io/abelluco/">L'Abelluco</a>,
       ${escaparHtml(location.href)}) y comparte tu versión con la misma licencia,
       <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" rel="license">CC BY-SA 4.0</a>.
     </p>`;
