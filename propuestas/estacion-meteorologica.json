@@ -1,0 +1,106 @@
+[
+  {
+    "id": "estacion-meteorologica",
+    "recurso": "Estación meteorológica",
+    "titulo": "Nuestra estación meteorológica",
+    "categoria": "experimentacion",
+    "descripcion": "Ponemos en el huerto una estación meteorológica sencilla: una caseta de madera pintada de blanco con un termómetro de máximas y mínimas, un pluviómetro, una veleta y, si podemos, un anemómetro y un higrómetro. Cada mañana, a la misma hora, un equipo de «meteorólogos» de la clase lee los aparatos y apunta los datos en el diario del tiempo. Con los datos hacemos gráficas y, sobre todo, los usamos para decidir en el huerto: ¿ha pasado ya el peligro de heladas para plantar los tomates?, ¿ha llovido bastante esta semana o hay que regar?, ¿hace demasiado viento para tratar o sembrar? Al cabo de unos meses tenemos nuestra propia historia del tiempo del huerto, que podemos comparar con la de otros años, con la de la estación de AEMET más cercana y con lo que dicen los refranes.",
+    "objetivos": [
+      "Conocer los principales fenómenos atmosféricos (temperatura, lluvia, viento, humedad, nubes, heladas) y cómo influyen en las plantas y en la vida diaria.",
+      "Usar instrumentos de medida (termómetro, pluviómetro, veleta, anemómetro) y leerlos con cuidado, siempre de la misma manera.",
+      "Tomar datos con constancia, organizarlos en tablas y representarlos en gráficas.",
+      "Usar los datos para tomar decisiones en el huerto: cuándo sembrar o plantar, cuándo regar, cuándo proteger los cultivos.",
+      "Comparar nuestros datos con los de otras estaciones y con los saberes populares (refranes, cabañuelas), y valorar qué pueden decirnos y qué no.",
+      "Repartir responsabilidades y trabajar en equipo para mantener la estación todo el curso."
+    ],
+    "materiales": [
+      "Una caseta o garita meteorológica: una caja de madera pintada de blanco por fuera, con las paredes de lamas (o con agujeros) para que pase el aire, sin que le dé el sol ni le entre la lluvia, sobre un poste a 1,5 m del suelo y con la puerta mirando al norte. También se puede hacer un protector con platos de plástico blancos apilados y separados.",
+      "Un termómetro de máximas y mínimas (de los de tubo en forma de U o uno digital que guarde la máxima y la mínima), dentro de la caseta.",
+      "Un pluviómetro graduado en milímetros (litros por metro cuadrado), en un sitio despejado, lejos de árboles y paredes, con la boca a un metro del suelo más o menos. Se puede hacer uno con una botella de plástico de paredes rectas.",
+      "Una veleta con la rosa de los vientos (norte, sur, este, oeste) bien orientada con una brújula.",
+      "Si es posible: un anemómetro (casero, con vasitos de plástico que giran, contando vueltas en 30 segundos, o uno de mano), un higrómetro dentro de la caseta y un termómetro de suelo para saber a qué temperatura está la tierra.",
+      "Un diario del tiempo: una tabla en cuaderno o cartulina con fecha, hora, temperatura máxima, mínima y actual, lluvia, viento, cielo (con símbolos) y observaciones (heladas, rocío, granizo, niebla…).",
+      "Papel cuadriculado, lápices de colores y, para los mayores, una hoja de cálculo.",
+      "Una brújula, cinta métrica y un cuaderno de campo."
+    ],
+    "desarrollo": [
+      "Preguntarnos. ¿Por qué un día se nos helaron las lechugas? ¿Cómo sabemos si hay que regar? ¿Cómo saben en la tele el tiempo que hará? Hablamos de qué podemos medir del tiempo y con qué aparatos. Si podemos, invitamos a alguien del pueblo que apunte la lluvia o a un observador colaborador de AEMET.",
+      "Conocer los aparatos. Vemos cada instrumento y para qué sirve: el termómetro de máximas y mínimas guarda la temperatura más alta y la más baja desde la última vez que lo pusimos a cero; el pluviómetro recoge la lluvia, y cada milímetro es un litro de agua por cada metro cuadrado de huerto; la veleta dice de dónde viene el viento; el anemómetro, lo fuerte que sopla. Los mayores pueden construir algunos (pluviómetro, veleta, anemómetro) en lugar de comprarlos.",
+      "Elegir el sitio y montar la estación. Buscamos un lugar del huerto despejado, donde no dé sombra ni viento raro una pared, y lejos del asfalto. Clavamos el poste, colocamos la caseta con la puerta al norte, metemos el termómetro, ponemos el pluviómetro en un sitio abierto y orientamos la veleta con la brújula. Hacemos un plano de la estación.",
+      "Aprender a leer. Practicamos la lectura de cada aparato: los ojos a la altura del líquido, apuntar el número sin redondear, vaciar el pluviómetro después de leerlo y poner a cero el termómetro de máximas y mínimas. Hacemos una ficha con los pasos, siempre en el mismo orden.",
+      "Leer cada día. Cada semana hay un equipo responsable. Cada mañana, a la misma hora (por ejemplo, al entrar), leen los aparatos, lo apuntan en el diario del tiempo y lo cuentan en la asamblea o en el «parte meteorológico» de la clase. Los lunes, la máxima y la mínima y la lluvia son las de todo el fin de semana: lo anotamos.",
+      "Hacer gráficas. Al final de cada semana o de cada mes pasamos los datos a gráficas: líneas para las temperaturas máximas y mínimas, barras para la lluvia, una rosa de los vientos con los días que ha soplado de cada dirección y un calendario con los símbolos del cielo. Las colgamos en el pasillo junto al huerto.",
+      "Decidir en el huerto. Usamos los datos para trabajar: si las mínimas aún bajan de 0 °C, esperamos para plantar tomates y pimientos o los protegemos; si en la semana ha llovido poco y hace calor, regamos; si ha llovido mucho, no; si la tierra sigue fría, esperamos para sembrar. Apuntamos en el cuaderno del huerto qué decidimos y por qué.",
+      "Comparar. Comparamos nuestros datos con los de la estación de AEMET más cercana: ¿se parecen?, ¿por qué no son iguales? Comparamos este mes con el del año pasado, si ya tenemos datos, y ponemos a prueba los refranes del tiempo («Hasta el cuarenta de mayo no te quites el sayo», «Por san Blas, la cigüeña verás»…).",
+      "Contar lo que hemos aprendido. Al final del trimestre o del curso, cada clase presenta un resumen: el día más frío, el más caluroso, cuánto ha llovido, qué decisiones tomamos gracias a la estación. Dejamos los datos guardados para los cursos siguientes: con los años, el huerto tendrá su propia historia del clima."
+    ],
+    "notas": [
+      "Para que los datos sirvan, hay que medir siempre igual: a la misma hora, en el mismo sitio y de la misma manera. Si un día no se puede leer, se deja la casilla en blanco; no se inventa el dato.",
+      "El termómetro nunca al sol: dentro de la caseta y a la sombra. Al sol marca la temperatura de lo que calienta el sol, no la del aire, y puede dar varios grados de más.",
+      "Las heladas más fuertes se notan a ras de suelo, donde están las plantas pequeñas, y pueden ser más frías que lo que marca el termómetro a 1,5 m. Si podemos, ponemos también un termómetro de mínimas cerca del suelo.",
+      "Los termómetros de máximas y mínimas antiguos pueden llevar mercurio: si se rompe uno, que lo recoja la persona adulta y no lo toque el alumnado. Mejor comprar uno de alcohol o digital.",
+      "El pluviómetro hay que vaciarlo después de cada lectura y mirar que no tenga hojas ni bichos. En invierno, si nieva o hiela, el agua puede helarse dentro: se lleva a clase, se deja derretir y se mide. Cuidado con los de cristal.",
+      "Fines de semana y vacaciones: el termómetro de máximas y mínimas y el pluviómetro acumulan, así que el primer día de vuelta se apunta el total. Se puede completar con los datos de AEMET para esos días.",
+      "Los refranes y las cabañuelas son saberes de la gente del pueblo que vale la pena recoger y respetar; los ponemos a prueba con nuestros datos, como en «El refranero del huerto», sin burlarnos de ellos.",
+      "Se combina con «Riego automático del semillero con micro:bit» y con «Estación meteorológica con micro:bit», que convierte esta estación en una estación electrónica que también mide y guarda los datos sola.",
+      "Fuentes: el currículo de Aragón (Orden ECD/1112/2022, anexo de Ciencias de la Naturaleza), que propone construir una estación meteorológica y registrar datos con termómetro y pluviómetro durante periodos largos; la Agencia Estatal de Meteorología (AEMET), https://www.aemet.es, sus datos de observación y su red de observadores colaboradores; S. García Barros y C. Martínez Losada, «Inmersos en el aire miramos al cielo. Los fenómenos atmosféricos y astronómicos» (Graó, 2013)."
+    ],
+    "duracion": "2 o 3 sesiones para preguntarnos, conocer los aparatos y montar la estación; después, unos 10 minutos cada día para leer y apuntar, y 1 sesión al mes para hacer las gráficas y tomar decisiones.",
+    "estaciones": [
+      "Otoño",
+      "Invierno",
+      "Primavera",
+      "Verano"
+    ],
+    "epoca": "Todo el curso. Mejor montarla en otoño, al empezar, para tener datos de todo el año; en invierno y primavera es cuando más decisiones ayuda a tomar (heladas, siembras y plantaciones, riego).",
+    "etapas": [
+      {
+        "etapa": "Infantil",
+        "saberes": [
+          "Descubrimiento y Exploración del Entorno (A): El tiempo y su organización: día-noche, estaciones, ciclos, calendario, antes, después, presente, pasado, futuro.",
+          "Descubrimiento y Exploración del Entorno (A): Situaciones en que se hace necesario medir.",
+          "Descubrimiento y Exploración del Entorno (B): Estrategias y técnicas de investigación: ensayo-error, observación, experimentación, formulación y comprobación de hipótesis, realización de preguntas, manejo y búsqueda en distintas fuentes de información.",
+          "Descubrimiento y Exploración del Entorno (C): Fenómenos naturales: identificación y repercusión en la vida de las personas."
+        ],
+        "adaptacion": "Cada día, en la asamblea, el «meteorólogo» del día sale al huerto con la persona adulta, mira el cielo, nota el frío o el calor y mira si la veleta se mueve o si hay agua en el pluviómetro. En la clase pone el símbolo del tiempo en un calendario grande (sol, nubes, lluvia, viento, helada) y la persona adulta marca la temperatura en un termómetro grande de cartulina. A final de mes cuentan cuántos días de cada tipo ha habido y hacen una gráfica con gomets. Hablan de qué ropa llevamos y de qué les pasa a las plantas cuando hiela o llueve."
+      },
+      {
+        "etapa": "Primaria · 1.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Instrumentos y dispositivos apropiados para realizar observaciones y mediciones de acuerdo a las necesidades de las diferentes investigaciones escolares.",
+          "Ciencias de la Naturaleza (A.4): Movimientos y dinámicas relacionados con la Tierra y el universo y sus consecuencias en la vida diaria y en el entorno. Secuencias temporales y cambios estacionales.",
+          "Ciencias de la Naturaleza (A.4): La vida en la Tierra. Fenómenos atmosféricos y su repercusión en los ciclos biológicos y en la vida diaria. Observación y registro de datos atmosféricos",
+          "Matemáticas (B.1): Unidades convencionales (metro, kilo y litro) y no convencionales en situaciones de la vida cotidiana.",
+          "Matemáticas (E.1): Estrategias sencillas para la recogida, clasificación y recuento de datos cualitativos y cuantitativos en muestras pequeñas.",
+          "Matemáticas (E.1): Representación de datos obtenidos a través de recuentos mediante gráficos estadísticos sencillos, recursos tradicionales y tecnológicos."
+        ],
+        "adaptacion": "Leen el termómetro (la temperatura actual y, con ayuda, la máxima y la mínima) y el pluviómetro, y apuntan el cielo con símbolos. Comparan días: «hoy hace más frío que ayer». Cuentan los días de lluvia, de sol y de helada de cada mes y hacen gráficas de barras o pictogramas. Relacionan el tiempo con lo que pasa en el huerto (las plantas que se hielan, las que crecen cuando llueve) y con las estaciones. Construyen una veleta sencilla."
+      },
+      {
+        "etapa": "Primaria · 2.º ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Procedimientos adecuados a las necesidades de la investigación escolar (observación en el tiempo, identificación y clasificación, búsqueda de patrones, creación de modelos, investigación a través de búsqueda de información, diseño y puesta en marcha de experimentos con control de variables...).",
+          "Ciencias de la Naturaleza (A.3): El calor y temperatura. Cambios de estado.",
+          "Ciencias de la Naturaleza (A.4): Los fenómenos atmosféricos. Toma y registro de datos meteorológicos y su representación gráfica y visual",
+          "Matemáticas (B.1): Unidades convencionales (km, m, cm, mm; kg, g; l y ml) y no convencionales en situaciones de la vida cotidiana.",
+          "Matemáticas (E.1): Estrategias sencillas para la recogida, clasificación y organización de datos cualitativos o cuantitativos discretos en muestras pequeñas mediante calculadora y aplicaciones informáticas sencillas. Frecuencia absoluta: interpretación.",
+          "Matemáticas (E.1): Gráficos estadísticos sencillos (diagrama de barras y pictogramas) para representar datos seleccionando el más conveniente, mediante recursos tradicionales y aplicaciones informáticas sencillas."
+        ],
+        "adaptacion": "Construyen el pluviómetro y el anemómetro caseros y comprueban si miden bien. Se encargan de las lecturas diarias por equipos y del parte meteorológico. Hacen las gráficas mensuales (barras de lluvia, temperaturas) y deciden qué gráfica va mejor para cada dato. Relacionan la temperatura con los cambios de estado (heladas, escarcha, rocío, granizo) y calculan cuántos litros de agua han caído en todo el huerto multiplicando los litros por metro cuadrado por la superficie de los bancales."
+      },
+      {
+        "etapa": "Primaria · 3.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Prácticas científicas (observación, formulación de preguntas y predicciones, planificación y realización de experimentos, recogida y análisis de información y datos, comunicación de resultados y conclusiones...).",
+          "Ciencias de la Naturaleza (A.1): Instrumentos y dispositivos apropiados para realizar observaciones y mediciones precisas de acuerdo con las necesidades de la investigación.",
+          "Ciencias de la Naturaleza (A.4): Fenómenos atmosféricos",
+          "Ciencias Sociales (B.1): El clima y el planeta. Introducción a la dinámica atmosférica y a las grandes áreas climáticas del mundo. Los principales ecosistemas y sus paisajes.",
+          "Matemáticas (E.1): Estrategias para la realización de un estudio estadístico sencillo: formulación de preguntas, recogida, registro y organización de datos cualitativos y cuantitativos procedentes de diferentes experimentos (encuestas, mediciones, observaciones…). Tablas de frecuencias absolutas y relativas: interpretación.",
+          "Matemáticas (E.1): Medidas de centralización (media, mediana y moda): interpretación, cálculo y aplicación."
+        ],
+        "adaptacion": "Diseñan y construyen la caseta y deciden dónde ponerla (y por qué). Pasan los datos a una hoja de cálculo, calculan la temperatura media de cada mes, la lluvia total y la dirección del viento más frecuente (moda), y hacen un climograma del huerto. Comparan sus datos con los de AEMET y con el clima de otros lugares. Preparan un informe para el profesorado con recomendaciones de siembra y riego basadas en los datos, y ponen a prueba un refrán del tiempo."
+      }
+    ],
+    "imagenes": []
+  }
+]

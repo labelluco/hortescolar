@@ -1,0 +1,85 @@
+[
+  {
+    "id": "estacion-meteorologica-microbit",
+    "recurso": "Estación meteorológica",
+    "titulo": "Estación meteorológica con micro:bit",
+    "categoria": "tecnologia",
+    "descripcion": "Convertimos la estación meteorológica del huerto en una estación electrónica. Dentro de la caseta ponemos una micro:bit con sensores (la temperatura que ya lleva la propia placa y un sensor de temperatura y humedad del aire; si el kit lo tiene, también uno de humedad de la tierra) y la programamos para que haga de termómetro de máximas y mínimas: va guardando el valor más alto y el más bajo del día. Para consultarla, usamos los botones: si pulsamos A una vez, nos enseña en los ledes la temperatura de ahora; dos veces, la mínima; tres veces, la máxima. Con B, lo mismo con la humedad. Además, la micro:bit puede apuntar sola los datos cada cierto tiempo, también de noche y los fines de semana, y luego los vemos en el ordenador en una gráfica. Comparamos lo que mide la micro:bit con lo que marcan los aparatos de siempre: ¿quién mide mejor?",
+    "objetivos": [
+      "Construir un aparato de medida programable y entender sus partes: sensores (miden), placa (guarda y decide) y pantalla de ledes (comunica).",
+      "Programar con bloques un algoritmo con variables, bucles y condiciones: guardar la máxima y la mínima y responder a los botones según cuántas veces se pulsen.",
+      "Calibrar un sensor comparándolo con un termómetro de verdad y entender que todo aparato de medida tiene un error.",
+      "Registrar datos de forma automática y analizarlos con gráficas.",
+      "Usar los datos para decidir en el huerto (heladas, riego) y comparar la estación electrónica con la tradicional.",
+      "Probar, encontrar errores y mejorar el prototipo trabajando en equipo."
+    ],
+    "materiales": [
+      "Una micro:bit V2 (la V2 puede guardar datos y tiene micrófono; la V1 también sirve para mostrar la temperatura, pero no guarda los datos), con su cable USB.",
+      "Alimentación para varios días: un portapilas con pilas nuevas o, mejor, una batería externa USB o un cargador si hay enchufe cerca.",
+      "Un sensor de temperatura y humedad del aire (por ejemplo, un DHT11 o un BME280, de los que traen muchos kits de micro:bit) y, si lo tiene el kit de agricultura, el sensor de humedad del suelo. Una placa de expansión para conectarlos.",
+      "Un ordenador o tableta con MakeCode (makecode.microbit.org) y las extensiones del sensor y de registro de datos («datalogger»).",
+      "La caseta meteorológica de «Nuestra estación meteorológica» (o una caja de madera pintada de blanco con agujeros), y una caja de plástico con tapa para proteger la placa y las pilas del agua.",
+      "El termómetro de máximas y mínimas de la estación, para comparar.",
+      "Bridas, cinta, un cuaderno de registro y fichas para el alumnado con el «manual de uso» de los botones."
+    ],
+    "desarrollo": [
+      "Plantear el reto. Partimos de la estación tradicional: ¿qué pasa de noche o el fin de semana, cuando no hay nadie para leerla? ¿Podríamos tener una estación que mida sola y nos lo enseñe cuando queramos? Pensamos qué queremos que haga y cómo la consultaremos.",
+      "Diseñar el «manual de uso». Decidimos entre todos qué hará cada botón. Una propuesta: A una vez, temperatura de ahora; A dos veces, mínima; A tres veces, máxima; B una, dos y tres veces, lo mismo con la humedad del aire; A y B a la vez, empezar un día nuevo (borrar la máxima y la mínima, como cuando ponemos a cero el termómetro de la caseta). Antes de cada número, la micro:bit enseña un dibujo: una flecha hacia abajo para la mínima, hacia arriba para la máxima. Lo apuntamos en una ficha que irá pegada en la caseta.",
+      "Primer programa: el termómetro. En MakeCode hacemos que, al pulsar A, la micro:bit muestre la temperatura (el bloque «temperatura» de la propia placa). Lo probamos en clase, en la ventana, en la nevera del comedor… ¿Cambia? ¿Cuánto tarda?",
+      "Calibrar. Ponemos la micro:bit al lado del termómetro de la caseta durante un rato y comparamos. La temperatura de la placa suele marcar uno o dos grados de más, porque mide el calor del propio chip. Calculamos la diferencia y la restamos en el programa. Hacemos lo mismo con el sensor de temperatura y humedad.",
+      "Guardar la máxima y la mínima. Creamos dos variables, «máxima» y «mínima». En un bucle que se repite siempre, cada pocos segundos medimos la temperatura: si es mayor que la máxima, pasa a ser la nueva máxima; si es menor que la mínima, la nueva mínima. Pensamos con qué valores deben empezar (la mínima, muy alta; la máxima, muy baja; o las dos, con la primera medida).",
+      "Contar las pulsaciones. Cada vez que se pulsa A, sumamos uno a una variable «pulsaciones» y apuntamos el momento. En el bucle, si ha pasado un segundo desde la última pulsación, miramos cuántas ha habido: 1, 2 o 3, enseñamos el dato que toca y volvemos a poner «pulsaciones» a cero. Lo mismo con B. Lo probamos mucho: ¿qué pasa si pulsamos cuatro veces?, ¿y si pulsamos muy despacio?",
+      "Registrar los datos. Con la extensión de registro de datos, hacemos que cada 15 o 30 minutos la micro:bit guarde una fila con la temperatura y la humedad. Al conectarla al ordenador, abrimos el fichero MY_DATA.HTM que aparece en ella: se ve una tabla y una gráfica, y se pueden descargar los datos para la hoja de cálculo. Como la micro:bit no tiene reloj, apuntamos el día y la hora en que la encendemos.",
+      "Montar en la caseta. Metemos la micro:bit y las pilas en la caja de plástico, dentro de la caseta, con el sensor fuera de la caja (pero dentro de la caseta, a la sombra) para que mida el aire y no el interior de la caja. Pegamos el «manual de uso» en la puerta.",
+      "Usarla cada día. Al leer la estación por la mañana, el equipo de meteorólogos consulta también la micro:bit (A tres veces, la máxima; A dos veces, la mínima…), apunta los dos valores en el diario y pulsa A y B para empezar un día nuevo. Una vez por semana descargamos los datos guardados.",
+      "Comparar y mejorar. Ponemos en una misma gráfica los datos de la micro:bit y los del termómetro de siempre: ¿se parecen?, ¿cuándo fallan más? Buscamos en la gráfica de la micro:bit a qué hora hace más frío de noche, algo que no podíamos saber antes. Pensamos mejoras: un aviso en los ledes si ha helado, la humedad de la tierra para saber si regar (como en «Riego automático del semillero con micro:bit»), enviar los datos por radio a otra micro:bit que esté en la clase…"
+    ],
+    "notas": [
+      "Que no se moje: la micro:bit, la placa de expansión y las pilas, siempre dentro de una caja cerrada y en la caseta. El sensor de humedad del aire necesita aire, así que va fuera de la caja, pero a cubierto de la lluvia y del sol.",
+      "Al sol, cualquier sensor marca de más: todo dentro de la caseta y a la sombra, como el termómetro de siempre.",
+      "La temperatura de la propia micro:bit es la del chip, no la del aire: sirve para empezar, pero hay que calibrarla y, para medir bien, es mejor un sensor externo.",
+      "Las pilas duran pocos días y el frío las gasta antes. Para dejarla funcionando mucho tiempo, mejor una batería externa o un cargador. Para ahorrar, la pantalla solo se enciende cuando se pulsan los botones.",
+      "Si la micro:bit se queda sin pilas o se reinicia, se pierden la máxima y la mínima del día (los datos guardados con la extensión de registro, no). Por eso conviene seguir apuntando cada día el termómetro de siempre.",
+      "La micro:bit no sabe la hora: los datos guardados llevan el tiempo desde que se encendió. Hay que apuntar cuándo se encendió para saber a qué hora es cada medida.",
+      "Cada sensor necesita su extensión de MakeCode y unos pines que cambian según el kit: hay que seguir la guía del fabricante. La parte de «Riego automático» que depende del kit de agricultura también está pendiente de concretar.",
+      "Esta actividad es la continuación de «Nuestra estación meteorológica»: para Infantil y el primer ciclo es mejor la estación tradicional, y que vean funcionar la micro:bit como curiosidad.",
+      "Fuentes: la idea de los botones (A una, dos o tres veces: temperatura de ahora, mínima y máxima; B, otro sensor) es del profesorado del colegio; documentación de MakeCode para micro:bit, https://makecode.microbit.org (bloques de temperatura, botones y variables); Micro:bit Educational Foundation, guía del registro de datos, https://microbit.org/get-started/user-guide/data-logging/; el currículo de Aragón (Orden ECD/1112/2022, anexo de Ciencias de la Naturaleza), que propone construir una estación meteorológica y representar los datos gráficamente."
+    ],
+    "duracion": "4 o 5 sesiones: reto y diseño del «manual de uso»; primer programa y calibración; máxima, mínima y botones; registro de datos y montaje en la caseta; comparación y mejoras. Después, unos minutos al día con la lectura de la estación.",
+    "estaciones": [
+      "Otoño",
+      "Invierno",
+      "Primavera",
+      "Verano"
+    ],
+    "epoca": "Todo el curso, una vez montada la estación tradicional. El invierno es un buen momento para empezar: las mínimas de la noche y las heladas son lo que más cuesta medir sin ella.",
+    "etapas": [
+      {
+        "etapa": "Primaria · 2.º ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.3): El calor y temperatura. Cambios de estado.",
+          "Ciencias de la Naturaleza (A.4): Los fenómenos atmosféricos. Toma y registro de datos meteorológicos y su representación gráfica y visual",
+          "Ciencias de la Naturaleza (B.2): Fases de los proyectos de diseño: diseño, construcción de modelos y prototipos, prueba y comunicación.",
+          "Ciencias de la Naturaleza (B.2): Iniciación a la programación a través de recursos analógicos (actividades desenchufadas) o digitales (plataformas digitales de iniciación a la programación, aplicaciones de programación por bloques, robótica educativa...).",
+          "Matemáticas (D.3): Estrategias para la interpretación y modificación de algoritmos sencillos (reglas de juegos, instrucciones secuenciales, bucles, patrones repetitivos, programación por bloques, robótica educativa...).",
+          "Matemáticas (E.1): Gráficos estadísticos sencillos (diagrama de barras y pictogramas) para representar datos seleccionando el más conveniente, mediante recursos tradicionales y aplicaciones informáticas sencillas."
+        ],
+        "adaptacion": "Antes de programar, hacen una actividad desenchufada: un compañero hace de micro:bit, con dos tarjetas («máxima» y «mínima») que cambia cada vez que le dicen una temperatura, y responde según cuántas palmadas le den. Después parten de un programa ya hecho por la persona docente: lo interpretan, lo prueban y lo modifican (la corrección de la calibración, los dibujos, qué hace cada botón). Leen la micro:bit cada día y comparan sus números con el termómetro de la caseta en una gráfica de barras."
+      },
+      {
+        "etapa": "Primaria · 3.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Instrumentos y dispositivos apropiados para realizar observaciones y mediciones precisas de acuerdo con las necesidades de la investigación.",
+          "Ciencias de la Naturaleza (A.4): Fenómenos atmosféricos",
+          "Ciencias de la Naturaleza (B.2): Fases de los proyectos de diseño: identificación de necesidades, diseño, creación de un prototipo, prueba, evaluación y comunicación.",
+          "Ciencias de la Naturaleza (B.2): Fases del pensamiento computacional (descomposición de una tarea en partes más sencillas, reconocimiento de patrones y creación de algoritmos sencillos para la resolución del problema...).",
+          "Ciencias de la Naturaleza (B.2): Materiales, herramientas, objetos, dispositivos y recursos digitales (programación por bloques, sensores, motores, simuladores, impresoras 3D, ...) seguros y adecuados a la consecución del proyecto.",
+          "Matemáticas (D.3): Estrategias para la interpretación, modificación y creación de algoritmos sencillos (secuencias de paso ordenados, esquemas, simulaciones, patrones repetitivos, bucles, instrucciones anidadas y condicionales, representaciones computacionales, programación por bloques, robótica educativa...).",
+          "Matemáticas (E.1): Conjuntos de datos y gráficos estadísticos de la vida cotidiana: descripción, interpretación y análisis crítico."
+        ],
+        "adaptacion": "Hacen el proyecto completo: diseñan el «manual de uso», descomponen el problema (medir, guardar máxima y mínima, contar pulsaciones, mostrar, registrar) y crean el programa desde cero por partes, probando cada una. Calibran los sensores calculando la diferencia media con el termómetro. Descargan los datos registrados, los pasan a la hoja de cálculo y analizan la gráfica de un día entero (¿a qué hora es la mínima?, ¿cuánto baja la humedad al mediodía?) y comparan críticamente la estación electrónica con la tradicional. Presentan la estación y su manual a las otras clases."
+      }
+    ],
+    "imagenes": []
+  }
+]
