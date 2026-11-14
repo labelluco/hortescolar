@@ -294,9 +294,10 @@ th[aria-sort="descending"] .orden-flecha::after { content: "↓"; opacity: 1; }
 
 .volver { text-decoration: none; }
 
+/* Los datos se reparten el ancho de la fila; los de texto largo (datos-ancho), una fila entera */
 .datos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 16px 24px;
   margin: 1rem 0;
   padding: 20px 24px;
@@ -304,7 +305,8 @@ th[aria-sort="descending"] .orden-flecha::after { content: "↓"; opacity: 1; }
 
 .datos dt { color: var(--color-texto-secundario); font-size: 0.85rem; }
 .datos dd { margin: 0; }
-.datos-ancho { grid-column: 1 / -1; }
+.datos > div { flex: 1 1 180px; }
+.datos > .datos-ancho { flex-basis: 100%; }
 
 .seccion { padding: 20px 24px; margin-bottom: 16px; }
 .seccion p, .seccion ul, .seccion ol { margin: 0; }

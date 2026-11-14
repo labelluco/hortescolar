@@ -57,7 +57,7 @@ function pintar(actividad) {
     <dl class="datos tarjeta">
       <div><dt>Recurso</dt><dd>${escaparHtml(actividad.recurso)}</dd></div>
       <div><dt>Etapas</dt><dd>${actividad.nombresEtapas.map((e) => `<span class="etiqueta">${escaparHtml(e)}</span>`).join(' ')}</dd></div>
-      ${actividad.duracion ? `<div><dt>Duración</dt><dd>${escaparHtml(actividad.duracion)}</dd></div>` : ''}
+      ${actividad.duracion ? `<div class="datos-ancho"><dt>Duración</dt><dd>${escaparHtml(actividad.duracion)}</dd></div>` : ''}
       ${actividad.estaciones.length || actividad.epoca ? `<div class="datos-ancho"><dt>Época</dt><dd>
         ${actividad.estaciones.length ? `${estacionesHtml(actividad.estaciones)} <span class="estaciones-texto">${escaparHtml(actividad.estacionesEnTexto)}</span>` : ''}
         ${actividad.epoca ? `<div class="nota-epoca">${escaparHtml(actividad.epoca)}</div>` : ''}
