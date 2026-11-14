@@ -2,6 +2,7 @@
 
 Una línea por decisión, la más reciente arriba: fecha — decisión — por qué.
 
+- 2026-11-14 — Nueva categoría «Lengua y tradición» (`lengua`, marrón) — para actividades de lengua y saberes populares, como el refranero del huerto.
 - 2026-11-13 — Service worker (`sw.js`) que hace revalidar siempre los ficheros de la web — GitHub Pages deja 10 min de caché y el navegador mezclaba versiones después de publicar (la ficha se quedaba en «Cargando…»).
 - 2026-11-13 — Las direcciones web de los textos de la ficha se muestran como enlaces (`textoConEnlaces`) — para poder enlazar guías de referencia.
 - 2026-11-13 — No se reproducen fotos de guías de terceros; se enlazan y se ponen fotos propias — no tienen licencia que lo permita.

@@ -18,6 +18,7 @@ export const CATEGORIAS = [
   { id: 'sostenibilidad', nombre: 'Sostenibilidad' },
   { id: 'arte', nombre: 'Arte y creatividad' },
   { id: 'cocina', nombre: 'Alimentación y cocina' },
+  { id: 'lengua', nombre: 'Lengua y tradición' },
 ];
 
 /** La categoría con ese id, o null si no existe. */
