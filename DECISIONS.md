@@ -2,6 +2,7 @@
 
 Una línea por decisión, la más reciente arriba: fecha — decisión — por qué.
 
+- 2026-11-14 — Aspecto de la web de L'Abelluco: paleta de su `nucli.css` (verde pino, fondo de piedra caliza, ocre en los enlaces), barra clara con la abeja, títulos en negrita y botones redondeados — que se reconozca como un proyecto de L'Abelluco. Los colores de las categorías no cambian (son aptos para daltonismo).
 - 2026-11-14 — Código AGPL-3.0 y actividades CC BY-SA 4.0; pie con el logo de L'Abelluco y forma de citar en la ficha — libre, pero que las versiones modificadas sigan siendo libres y citen el origen (difusión de L'Abelluco).
 - 2026-11-14 — `sw.js` devuelve los ficheros con `Cache-Control: no-cache` — con F5 Chrome reutilizaba módulos viejos de la memoria de la pestaña sin pasar por el service worker (con Ctrl+Mayús+R sí salían los nuevos).
 - 2026-11-14 — Nueva categoría «Lengua y tradición» (`lengua`, marrón) — para actividades de lengua y saberes populares, como el refranero del huerto.
