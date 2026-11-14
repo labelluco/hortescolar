@@ -71,10 +71,25 @@ function pintar(actividad) {
     ${seccion('Notas y precauciones', actividad.notas.length && listaHtml(actividad.notas))}
     ${seccion('Imágenes', imagenes && `<div class="galeria">${imagenes}</div>`)}
     ${usuario ? htmlAutoria(actividad) : ''}
+    ${htmlCita(actividad)}
   `;
 
   document.getElementById('botonAprobar')?.addEventListener('click', () => aprobar(actividad));
   pintarImagenes(actividad);
+}
+
+/**
+ * Cómo usar y citar la actividad (licencia CC BY-SA 4.0, ver LICENCIA-CONTENIDOS.md).
+ * Quien la reutilice debe citar el origen y compartir su versión con la misma licencia.
+ */
+function htmlCita(actividad) {
+  return `
+    <p class="cita">
+      Puedes usar, copiar y adaptar esta actividad. Si la compartes, cita su origen
+      («${escaparHtml(actividad.titulo)}», Huerto escolar de <a href="https://labelluco.github.io/abelluco/">L'Abelluco</a>,
+      ${escaparHtml(location.href)}) y comparte tu versión con la misma licencia,
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" rel="license">CC BY-SA 4.0</a>.
+    </p>`;
 }
 
 /** Aviso de actividad pendiente, con el botón de aprobar para los revisores. */

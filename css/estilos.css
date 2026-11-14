@@ -691,3 +691,41 @@ a.leyenda-boton { text-decoration: none; color: inherit; }
 
 .autoria ul { margin: 0 0 4px; padding-left: 1.2em; }
 .autoria p { margin: 0; font-style: italic; }
+
+/* ---------- Pie de página: autoría y licencias ---------- */
+
+/* El pie queda abajo del todo aunque la página tenga poco contenido */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body > main { flex: 1 0 auto; width: 100%; }
+
+.pie {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 20px;
+  padding: 20px 16px 28px;
+  border-top: 1px solid var(--color-borde);
+  font-size: 0.8rem;
+  color: var(--color-texto-secundario);
+}
+
+.pie p { margin: 0; }
+.pie a { color: inherit; }
+.pie a:hover { color: var(--color-principal); }
+.pie-marca img { display: block; height: 30px; width: auto; }
+
+/* Cómo citar una actividad (ficha) */
+.cita {
+  margin: 24px 0 0;
+  padding: 12px 16px;
+  border-left: 3px solid var(--color-principal);
+  background: var(--color-principal-suave);
+  border-radius: 0 var(--radio) var(--radio) 0;
+  font-size: 0.85rem;
+}

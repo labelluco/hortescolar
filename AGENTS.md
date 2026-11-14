@@ -21,7 +21,8 @@ léelo antes de tocar nada.**
 - Código sencillo, legible y hecho "a mano". Sin frameworks, sin npm, sin bundler. Sin dependencias nuevas sin preguntar.
 - Todo en **castellano**: código, interfaz y documentación interna (AGENTS.md, DECISIONS.md, LEEME.md).
 - Si cambia `firestore.rules`, cambiar también `js/modelo/permisos.js` (y al revés).
-- Web pública pero no indexada: cada página nueva lleva `<meta name="robots" content="noindex, nofollow">` y `<script src="js/registrarServiceWorker.js" defer></script>`.
+- Web pública pero no indexada: cada página nueva lleva `<meta name="robots" content="noindex, nofollow">`, `<script src="js/registrarServiceWorker.js" defer></script>` y el pie común (`<footer class="pie">`).
+- Licencias: código AGPL-3.0; actividades CC BY-SA 4.0 (ver `LICENCIA-CONTENIDOS.md`).
 - No toques ficheros fuera de los que pide la tarea.
 - Nunca escribas claves, contraseñas ni tokens en ningún fichero.
 - Ningún cambio se fusiona a main sin el OK de Mario.

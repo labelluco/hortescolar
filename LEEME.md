@@ -53,3 +53,7 @@ Las cuentas se crean en la consola de Firebase: **Authentication → Users → A
 ## Reglas de seguridad
 
 `firestore.rules`: las actividades publicadas las lee cualquiera; las pendientes, solo el profesorado; quién puede escribir qué está explicado al principio del fichero y es lo mismo que `js/modelo/permisos.js`. Si se cambian, hay que copiarlas a mano en la consola (**Firestore Database → Reglas → Publicar**).
+
+## Licencias
+
+Un proyecto de [L'Abelluco](https://labelluco.github.io/abelluco/). Código: [AGPL-3.0](LICENSE). Actividades (textos y fotos): [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.es). Detalles y forma de citar en [LICENCIA-CONTENIDOS.md](LICENCIA-CONTENIDOS.md).
