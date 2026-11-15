@@ -665,34 +665,44 @@ th[aria-sort="descending"] .orden-flecha::after { content: "↓"; opacity: 1; }
 
 .inicial { color: var(--color-acento); }
 
-.accesos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-  margin: 24px 0;
+/* Portada: la foto de cabecera y, encima, el título y el botón a la tabla */
+.portada {
+  position: relative;
+  margin: 0 0 24px;
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  background: var(--color-principal-oscuro);
 }
 
-.acceso-rapido {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+.portada-imagen {
+  display: block;
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  object-position: 30% 40%;
+}
+
+/* El texto va en un recuadro claro sobre la foto, a la derecha (donde la foto está desenfocada) */
+.portada-texto {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  max-width: 460px;
   padding: 20px 24px;
-  text-decoration: none;
-  color: var(--color-texto);
-  border-left: 4px solid var(--color-principal);
-  border-radius: 4px var(--radio) var(--radio) 4px;
+  background: rgb(255 255 255 / 0.92);
+  border-radius: var(--radio);
 }
 
-.acceso-rapido:hover { background: var(--color-fila-encima); }
+.portada-texto .subtitulo { color: var(--color-texto); }
 
-.acceso-numero {
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: var(--color-principal);
-  line-height: 1.1;
+@media (max-width: 640px) {
+  .portada-imagen { height: 200px; }
+  .portada-texto { position: static; max-width: none; border-radius: 0; background: var(--color-superficie); }
 }
 
-a.leyenda-boton { text-decoration: none; color: inherit; }
+/* Página de actividades: atajos «Todas» y «Esta estación», con cuántas hay */
+.atajos { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 12px; }
 .cuantas { color: var(--color-texto-secundario); font-size: 0.8rem; }
 
 .ayuda p, .ayuda ul { margin: 0 0 10px; }

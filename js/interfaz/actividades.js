@@ -9,7 +9,11 @@
  * también las pendientes de revisión (con un aviso) y hay un filtro de estado.
  *
  * Cada fila lleva el color de su categoría. La leyenda de categorías es
- * también un filtro: al pulsar una, solo se ven las de esa categoría.
+ * también un filtro: al pulsar una, solo se ven las de esa categoría. Cada
+ * categoría dice cuántas actividades tiene.
+ *
+ * Encima del buscador hay dos atajos: «Todas» (quita la búsqueda y los
+ * filtros) y «Esta estación» (solo las que se pueden hacer ahora).
  *
  * Para no saturar la tabla, la columna de saberes muestra solo las áreas
  * (Ciencias de la Naturaleza, Matemáticas…). Si se busca un texto, debajo
@@ -58,11 +62,17 @@ campoEstacion.innerHTML = '<option value="">Cualquier época</option>'
 let lista = null;
 let categoriaElegida = null; // id, o null para todas
 
-/** La leyenda: un botón por categoría, que filtra al pulsarlo (y quita el filtro si ya estaba). */
+/**
+ * La leyenda: un botón por categoría, con cuántas actividades tiene, que
+ * filtra al pulsarlo (y quita el filtro si ya estaba).
+ */
 function pintarLeyenda() {
-  leyenda.innerHTML = CATEGORIAS.map((categoria) => `
+  leyenda.innerHTML = CATEGORIAS.map((categoria) => {
+    const cuantas = lista.actividades.filter((a) => a.categoria === categoria.id).length;
+    return `
     <button type="button" class="leyenda-boton" data-categoria="${categoria.id}"
-            aria-pressed="${categoria.id === categoriaElegida}">${categoriaHtml(categoria.id)}</button>`).join('');
+            aria-pressed="${categoria.id === categoriaElegida}">${categoriaHtml(categoria.id)} <span class="cuantas">${cuantas}</span></button>`;
+  }).join('');
   leyenda.classList.toggle('con-filtro', Boolean(categoriaElegida));
 }
 
@@ -73,6 +83,39 @@ leyenda.addEventListener('click', (evento) => {
   pintarLeyenda();
   pintar();
 });
+
+// Atajos
+document.getElementById('atajoEstacion').firstChild.textContent = `Esta estación (${estacionDeHoy.toLowerCase()}) `;
+
+/** Quita la búsqueda y todos los filtros. */
+function quitarFiltros() {
+  campoBusqueda.value = '';
+  campoBuscarEn.value = 'todo';
+  campoEtapa.value = '';
+  campoEstacion.value = '';
+  campoEstado.value = '';
+  categoriaElegida = null;
+  pintarLeyenda();
+}
+
+document.getElementById('atajoTodas').addEventListener('click', () => {
+  if (!lista) return; // todavía no se han cargado
+  quitarFiltros();
+  pintar();
+});
+
+document.getElementById('atajoEstacion').addEventListener('click', () => {
+  if (!lista) return; // todavía no se han cargado
+  quitarFiltros();
+  campoEstacion.value = estacionDeHoy;
+  pintar();
+});
+
+/** Cuántas hay en total y cuántas en esta estación, en los atajos. */
+function pintarAtajos() {
+  document.getElementById('cuantasTodas').textContent = lista.total;
+  document.getElementById('cuantasEstacion').textContent = lista.actividades.filter((a) => a.esDeEstacion(estacionDeHoy)).length;
+}
 
 const orden = new OrdenTabla(document.getElementById('tabla'), {
   recurso: (a) => a.recurso,
@@ -199,6 +242,7 @@ campoEstado.addEventListener('change', pintar);
 try {
   lista = await ListaActividades.cargar(BaseDatos.preparar(), !usuario);
   leerDeDireccion();
+  pintarAtajos();
   pintarLeyenda();
   pintar();
 } catch (error) {

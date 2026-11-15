@@ -42,8 +42,8 @@ Web para que el profesorado del colegio (unas 6 personas) organice actividades d
 
 ## Páginas
 
-1. `index.html`: inicio, con ayuda de uso y accesos rápidos (todas, esta estación, por categoría). Redirige los enlaces antiguos con búsqueda a `actividades.html`.
-2. `actividades.html`: tabla Recurso · Actividad · Áreas/Saberes · Etapa · Época, con buscador, filtros (etapa, época, categoría y, con sesión, estado) y orden por columnas. La búsqueda queda en la dirección.
+1. `index.html`: inicio, con foto de cabecera (`img/cabecera.jpg`), botón a la tabla y ayuda de uso. Redirige los enlaces antiguos con búsqueda a `actividades.html`.
+2. `actividades.html`: tabla Recurso · Actividad · Áreas/Saberes · Etapa · Época, con atajos «Todas» y «Esta estación» (con cuántas hay), buscador, filtros (etapa, época, categoría y, con sesión, estado) y orden por columnas. La búsqueda queda en la dirección.
 3. `actividad.html?id=…`: ficha con galería; con sesión, autoría, «Editar» (según permisos) y, si está pendiente, aviso y «Aprobar y publicar» para revisores.
 4. `acceso.html`: acceso del profesorado (`?volver=` para regresar).
 5. `editar.html` / `editar.html?id=…`: crear, modificar y borrar, con un bloque por etapa (saberes y adaptación), época, categoría y editor de imágenes (máx. 10, ordenar, pie de foto).
