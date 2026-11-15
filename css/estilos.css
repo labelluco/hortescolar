@@ -663,20 +663,20 @@ th[aria-sort="descending"] .orden-flecha::after { content: "↓"; opacity: 1; }
   color: var(--color-acento);
 }
 
-/* Portada: la foto de cabecera, recortada para que se vean la flor y la araña de arriba */
+/* Portada: la foto de cabecera, bajo el título, recortada para que se vean enteras la flor de arriba y la araña */
 .portada {
   display: block;
   width: 100%;
-  height: 340px;
-  margin: 0 0 24px;
+  height: 380px;
+  margin: 8px 0 24px;
   object-fit: cover;
-  object-position: 30% 8%;
+  object-position: 30% 20%;
   border-radius: var(--radio);
   box-shadow: var(--sombra);
 }
 
 @media (max-width: 640px) {
-  .portada { height: 200px; }
+  .portada { height: 220px; }
 }
 
 /* Página de actividades: atajos «Todas» y «Esta estación», con cuántas hay */
