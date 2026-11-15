@@ -38,7 +38,9 @@
       "Los sensores de humedad que tienen dos patas metálicas se corroen si están siempre encendidos. Si el kit lo permite, se alimenta el sensor solo cuando se mide, o se saca del sustrato cuando no se usa.",
       "Los números del sensor cambian según el sustrato y el sensor: siempre hay que calibrar con nuestro propio semillero.",
       "Un límite de riegos por día en el programa evita que, si el sensor falla, la bomba vacíe el depósito y encharque la bandeja.",
-      "La conexión de la bomba y los pines cambian según el kit (por ejemplo, unos usan relé y otros un controlador de motor): hay que seguir la guía del fabricante de nuestro kit."
+      "La conexión de la bomba y los pines cambian según el kit (por ejemplo, unos usan relé y otros un controlador de motor): hay que seguir la guía del fabricante de nuestro kit.",
+      "Se puede combinar con «Estación meteorológica con micro:bit» (la misma placa y el mismo kit) y con «Nuestra estación meteorológica» (decidir cuándo regar según la lluvia y la temperatura).",
+      "Fuentes: MakeCode, proyecto «Plant watering», https://makecode.microbit.org/projects/plant-watering; ELECFREAKS, Smart Agriculture Kit para micro:bit, caso 01 (sensor de humedad y bomba), https://wiki.elecfreaks.com/microbit/wisdom-life/microbit-smart-agriculture-kit/microbit-Smart-Agriculture-Kit-case-01; la guía del fabricante de nuestro kit."
     ],
     "duracion": "3 o 4 sesiones: problema y diseño; montaje y calibración; programación y pruebas; registro durante unos días y mejoras.",
     "estaciones": [
