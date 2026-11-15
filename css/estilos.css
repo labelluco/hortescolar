@@ -653,7 +653,7 @@ th[aria-sort="descending"] .orden-flecha::after { content: "↓"; opacity: 1; }
 
 /* ---------- Página de inicio ---------- */
 
-/* «Huerto escolar» encima del título, y las iniciales de ERA en ocre */
+/* «Huerto escolar» encima del título */
 .antetitulo {
   margin: 0 0 4px;
   font-size: 0.8rem;
@@ -663,42 +663,20 @@ th[aria-sort="descending"] .orden-flecha::after { content: "↓"; opacity: 1; }
   color: var(--color-acento);
 }
 
-.inicial { color: var(--color-acento); }
-
-/* Portada: la foto de cabecera y, encima, el título y el botón a la tabla */
+/* Portada: la foto de cabecera, recortada para que se vean la flor y la araña de arriba */
 .portada {
-  position: relative;
-  margin: 0 0 24px;
-  border-radius: var(--radio);
-  overflow: hidden;
-  box-shadow: var(--sombra);
-  background: var(--color-principal-oscuro);
-}
-
-.portada-imagen {
   display: block;
   width: 100%;
   height: 340px;
+  margin: 0 0 24px;
   object-fit: cover;
-  object-position: 30% 40%;
-}
-
-/* El texto va en un recuadro claro sobre la foto, a la derecha (donde la foto está desenfocada) */
-.portada-texto {
-  position: absolute;
-  right: 24px;
-  bottom: 24px;
-  max-width: 460px;
-  padding: 20px 24px;
-  background: rgb(255 255 255 / 0.92);
+  object-position: 30% 8%;
   border-radius: var(--radio);
+  box-shadow: var(--sombra);
 }
-
-.portada-texto .subtitulo { color: var(--color-texto); }
 
 @media (max-width: 640px) {
-  .portada-imagen { height: 200px; }
-  .portada-texto { position: static; max-width: none; border-radius: 0; background: var(--color-superficie); }
+  .portada { height: 200px; }
 }
 
 /* Página de actividades: atajos «Todas» y «Esta estación», con cuántas hay */
