@@ -1,0 +1,98 @@
+[
+  {
+    "id": "te-de-compost",
+    "recurso": "Compost",
+    "titulo": "Elaboramos té de compost oxigenado",
+    "categoria": "experimentacion",
+    "descripcion": "Preparamos un abono líquido con compost maduro, agua sin cloro y una bomba de peces (de acuario) que le mete aire durante uno o dos días. El compost lleva muchísimos microorganismos (bacterias, hongos, protozoos) y nutrientes; en el agua, con aire y alimento, los microorganismos que necesitan oxígeno se multiplican y los nutrientes se disuelven. El resultado, el «té de compost», es un líquido marrón que huele a tierra y que, diluido, regamos al pie de las plantas: abona y lleva a la tierra microorganismos vivos. ¿Por qué hacerlo? Porque se parece al biodigestor, pero al revés: allí los microorganismos trabajan sin aire (proceso anaerobio) durante semanas; aquí, con aire (proceso aerobio), en un día o dos. Comparar los dos procesos ayuda a entender que hay seres vivos que necesitan oxígeno y otros que no, y que el olor nos dice cuáles están trabajando. Además, aprovechamos el compost del huerto y, con un poco, abonamos mucha superficie.",
+    "objetivos": [
+      "Comprobar que el compost está lleno de seres vivos que no vemos y que, con aire y alimento, se multiplican.",
+      "Diferenciar un proceso aerobio (con oxígeno) de uno anaerobio (sin oxígeno) y relacionarlos con el olor y el aspecto del líquido.",
+      "Montar un aparato sencillo (cubo, bomba de aire, tubo y difusor) y entender para qué sirve cada parte.",
+      "Hacer un experimento comparando un cubo con aire y otro sin aire, y registrar lo que observamos.",
+      "Preparar diluciones a partir de una proporción y usar el té en el huerto.",
+      "Aprovechar los recursos del propio huerto (el compost) en vez de comprar abonos."
+    ],
+    "materiales": [
+      "Un cubo de unos 20 L, limpio y que no haya contenido productos tóxicos (mejor dos, para el experimento con y sin aire).",
+      "Una bomba de aire de acuario con su tubo y una piedra difusora (o dos, o un repartidor en T, para que el aire llegue a todo el cubo). Un alargador, si hace falta, protegido de la lluvia.",
+      "Agua sin cloro: de lluvia, de pozo o del grifo reposada 24 horas en un recipiente abierto (o con la bomba funcionando unas horas antes de añadir el compost).",
+      "Compost maduro y de buena calidad (oscuro, que huela a tierra de bosque y donde ya no se reconozcan los restos): unos 1-1,5 L para 15 L de agua.",
+      "Una bolsa de malla para meter el compost: una media vieja, un saco de malla de frutas o una tela fina. Así el líquido sale limpio y no atasca la regadera.",
+      "Un palo para remover, una jarra medidora, regaderas, un colador, guantes y agua y jabón.",
+      "Lupas (y, si hay, un microscopio), un termómetro, cuaderno de registro y cámara."
+    ],
+    "desarrollo": [
+      "Mirar el compost. Antes de empezar, observamos un puñado con lupa: ¿qué vemos?, ¿cómo huele?, ¿hay bichos? Hablamos de lo que no se ve: en una cucharadita de buen compost hay millones de bacterias y kilómetros de hilos de hongos.",
+      "Preparar el agua. Llenamos el cubo con unos 15 L de agua sin cloro (dejamos espacio para la espuma). Si es del grifo, la dejamos reposar un día antes o ponemos la bomba a burbujear unas horas: el cloro se va al aire y ya no matará a los microorganismos.",
+      "Montar el aireador. Ponemos la piedra difusora en el fondo del cubo, conectamos el tubo a la bomba y la enchufamos. La bomba se coloca más alta que el cubo (o con una válvula antirretorno) para que, si se apaga, el agua no vuelva por el tubo hacia ella. Comprobamos que sale un buen burbujeo que mueve toda el agua.",
+      "Añadir el compost. Metemos el compost en la bolsa de malla, la atamos y la colgamos dentro del cubo, sumergida y cerca de las burbujas. Removemos y apretamos la bolsa un par de veces para que se suelte el compost.",
+      "Predecir. Antes de esperar, cada grupo apunta qué cree que pasará: ¿cambiará el color?, ¿saldrá espuma?, ¿cómo olerá mañana?, ¿y en el cubo que no tiene aire?",
+      "El experimento: con aire y sin aire. Si tenemos dos cubos, preparamos el segundo igual, pero sin bomba. Lo tapamos con una tela y lo dejamos al lado.",
+      "Dejar burbujear. Tapamos el cubo con una tela (no hermético) y lo dejamos a la sombra, sin que se caliente demasiado ni se enfríe mucho, de 24 a 36 horas, con la bomba siempre funcionando. De vez en cuando removemos y apretamos la bolsa.",
+      "Observar y comparar. Al día siguiente miramos los dos cubos: color, espuma, temperatura y olor (con la mano, acercando el aire hacia la nariz, sin meter la cara). El té oxigenado huele a tierra o a bosque; el cubo sin aire empieza a oler agrio o a podrido, como el biodigestor: ahí trabajan otros microorganismos, los que no necesitan oxígeno. Ponemos una gota de cada uno en el microscopio, si lo tenemos.",
+      "Usarlo enseguida. Sacamos la bolsa (el compost escurrido vuelve al compostador o se reparte por los bancales) y, si hace falta, colamos el líquido. El té se usa en las 4 horas siguientes: sin aire, los microorganismos se ahogan y el té se estropea.",
+      "Diluir y regar. Echamos el té al pie de las plantas, diluido 1 parte de té por 5 a 10 de agua sin cloro (por ejemplo, 1 L de té en una regadera de 10 L). Mejor a primera hora o al final de la tarde, con la tierra un poco húmeda. Probamos en unas pocas plantas o en un bancal y dejamos otro igual sin té para comparar en las semanas siguientes.",
+      "Recoger y limpiar. Lavamos bien el cubo, el difusor y el tubo con agua (si queda una capa pegajosa, los microorganismos sin aire la aprovecharían la próxima vez). El líquido del cubo sin aire no se usa: va al compostador. Al acabar, lavarse bien las manos."
+    ],
+    "notas": [
+      "La clave es el aire. Si la bomba se para o es demasiado pequeña para el cubo, el té se vuelve anaerobio: huele mal y ya no sirve. Si huele a podrido, no se usa: se echa al compostador y se lava todo.",
+      "El compost tiene que estar bien hecho. Un compost a medio hacer, o con estiércol fresco, puede llevar microorganismos que causan enfermedades (como algunas bacterias del tipo E. coli o Salmonella) y el té los multiplicaría. Guantes para manipularlo y lavarse bien las manos.",
+      "No añadimos melaza ni azúcar. Muchas recetas lo hacen para que los microorganismos crezcan más, pero varios estudios han visto que así también se multiplican mejor las bacterias que causan enfermedades. Para el colegio, solo compost y agua.",
+      "En las hortalizas que se comen crudas (lechugas, rábanos, acelgas…), el té se echa al suelo, nunca sobre las hojas, y no se usa en las últimas semanas antes de cosechar. Lo mismo que con el biol del biodigestor.",
+      "Hay muchas recetas y no coinciden en las cantidades: de 1 parte de compost por 5 de agua hasta 1 por 40, y de 12 horas a 3 días. Lo importante es que el compost sea maduro, el agua no tenga cloro, haya mucho aire y se use enseguida.",
+      "Lo que dicen los estudios: el té de compost aporta algo de nutrientes y microorganismos, pero no es un abono muy concentrado ni un remedio milagroso. Su efecto contra las plagas y las enfermedades de las plantas es muy variable y en muchos ensayos no se ha notado. Por eso conviene plantearlo como un experimento: comparar plantas o bancales con y sin té, y no prometer resultados.",
+      "Se puede combinar con «El biodigestor» (el mismo tipo de abono líquido, pero sin aire: comparar los dos procesos, el olor y el tiempo que tardan), con «Trampas de microorganismos» (otra manera de llevar la vida del suelo al huerto) y con «Cromatografías de la tierra» y «Plantas bioindicadoras», para ver si la tierra necesita abono y cómo cambia después.",
+      "Fuentes: propuesta del profesorado del colegio; Portal Frutícola, «Elaboración y uso del té de compost» (2021), https://www.portalfruticola.com/noticias/2021/03/05/elaboracion-y-uso-del-te-de-compost, y «Guía para hacer un té de compost de calidad» (2023), https://www.portalfruticola.com/noticias/2023/07/20/guia-para-hacer-un-te-de-compost-de-calidad; Universidad de Connecticut, laboratorio de suelos, «Compost Tea», https://soiltesting.cahnr.uconn.edu/?p=697 (advierte de que la melaza puede favorecer E. coli y Salmonella); Piedmont Master Gardeners, «The truth about compost tea», https://piedmontmastergardeners.org/article/the-truth-about-compost-tea-making-it-using-it-and-what-to-expect-from-it/; L. Chalker-Scott (Universidad del Estado de Washington), «The Myth of Compost Tea», sobre los ensayos en que no se notó efecto contra las enfermedades."
+    ],
+    "duracion": "1 sesión para montar el cubo, una observación corta al día siguiente y 1 sesión para comparar, diluir y regar (las dos últimas pueden ir juntas). Seguimiento corto de las plantas en las semanas siguientes.",
+    "estaciones": [
+      "Otoño",
+      "Primavera"
+    ],
+    "epoca": "Mejor con temperaturas suaves (entre 15 y 25 °C): con frío los microorganismos casi no crecen y con mucho calor el agua retiene poco oxígeno. Se puede hacer varias veces al año, cuando las plantas están creciendo: al plantar en otoño y en primavera.",
+    "etapas": [
+      {
+        "etapa": "Infantil",
+        "saberes": [
+          "Descubrimiento y Exploración del Entorno (B): Estrategias y técnicas de investigación: ensayo-error, observación, experimentación, formulación y comprobación de hipótesis, realización de preguntas, manejo y búsqueda en distintas fuentes de información.",
+          "Descubrimiento y Exploración del Entorno (C): Elementos naturales (agua, tierra, aire). Características y comportamiento (longitud, superficie, masa, capacidad, volumen, mezclas o transvases).",
+          "Descubrimiento y Exploración del Entorno (C): Respeto y empatía por los seres vivos y por los recursos naturales."
+        ],
+        "adaptacion": "Se plantea como «hacer una sopa para la tierra con seres vivos tan pequeños que no los vemos». Miran el compost con lupa, llenan el cubo con jarras y ayudan a meter el compost en la media. Escuchan y miran las burbujas, y al día siguiente comparan el color y el olor de los dos cubos (el que tiene aire y el que no). La persona adulta diluye el té y los niños y niñas riegan con la regadera."
+      },
+      {
+        "etapa": "Primaria · 1.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Procedimientos adecuados a las necesidades de la investigación escolar (observación en el tiempo, identificación y clasificación, búsqueda de patrones...).",
+          "Ciencias de la Naturaleza (A.1): Estilos de vida sostenible e importancia del cuidado del planeta a través de acciones presentes en la vida cotidiana basadas en el conocimiento científico.",
+          "Ciencias de la Naturaleza (A.3): Las mezclas y sus componentes. Identificación de mezclas homogéneas y heterogéneas. Separación de mezclas heterogéneas y algunas homogéneas mediante distintos métodos físicos sencillos.",
+          "Matemáticas (B.1): Unidades convencionales (metro, kilo y litro) y no convencionales en situaciones de la vida cotidiana."
+        ],
+        "adaptacion": "Miden el agua y el compost con jarras (litros) y montan el cubo en grupos, con ayuda para la bomba. Predicen y dibujan qué pasará en el cubo con aire y en el que no tiene. Al día siguiente comparan color, espuma y olor, y separan el compost del líquido con la bolsa y el colador (separar una mezcla). Riegan con el té ya diluido y marcan las plantas regadas para observarlas."
+      },
+      {
+        "etapa": "Primaria · 2.º ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Procedimientos adecuados a las necesidades de la investigación escolar (observación en el tiempo, identificación y clasificación, búsqueda de patrones, creación de modelos, investigación a través de búsqueda de información, diseño y puesta en marcha de experimentos con control de variables...).",
+          "Ciencias de la Naturaleza (A.3): Los cambios que experimentan determinados materiales en situaciones de la vida cotidiana (físicos o químicos, reversibles o irreversibles…) para reconocer procesos y transformaciones observando la situación inicial y final.",
+          "Ciencias Sociales (B.4): Estilos de vida sostenible. El consumo responsable, el uso del agua y la energía, la movilidad sostenible y la gestión de los residuos.",
+          "Matemáticas (A.4): Razón entre magnitudes: introducción a su cálculo e interpretación.",
+          "Matemáticas (B.1): Unidades convencionales (km, m, cm, mm; kg, g; l y ml) y no convencionales en situaciones de la vida cotidiana."
+        ],
+        "adaptacion": "Montan el experimento con control de variables: dos cubos iguales en todo salvo en el aire. Registran en una tabla la temperatura, el color, la espuma y el olor al principio y al cabo de 24 horas, y explican la diferencia (con oxígeno y sin oxígeno trabajan microorganismos distintos). Preparan las diluciones a partir de la razón «1 de té por cada 5 de agua» y calculan cuánto té necesitan para la regadera. Si lo han hecho, lo comparan con el biodigestor."
+      },
+      {
+        "etapa": "Primaria · 3.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Prácticas científicas (observación, formulación de preguntas y predicciones, planificación y realización de experimentos, recogida y análisis de información y datos, comunicación de resultados y conclusiones...).",
+          "Ciencias de la Naturaleza (A.1): Instrumentos y dispositivos apropiados para realizar observaciones y mediciones precisas de acuerdo con las necesidades de la investigación.",
+          "Ciencias Sociales (B.4): Estilos de vida sostenible. El consumo responsable, el uso del agua y la energía, la movilidad sostenible y la gestión de los residuos.",
+          "Matemáticas (A.4): Situaciones proporcionales y no proporcionales en problemas de la vida cotidiana: identificación como relación multiplicativa entre magnitudes."
+        ],
+        "adaptacion": "Diseñan un ensayo en el huerto: plantas o bancales iguales, unos regados con té y otros solo con agua, y deciden qué medir (altura, número de hojas, color) y durante cuánto tiempo. Observan gotas del té al microscopio. Calculan las cantidades de la receta y de la dilución para distintos tamaños de cubo y de regadera. Buscan información sobre lo que dicen los estudios del té de compost y presentan sus conclusiones comparándolas con las suyas."
+      }
+    ],
+    "imagenes": []
+  }
+]
