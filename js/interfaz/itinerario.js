@@ -116,7 +116,7 @@ function htmlCasilla(sesion, numero) {
   const ayuda = [fechaLarga(sesion.fecha), titulo, sesion.nota, ...avisos].filter(Boolean).join('\n');
   return `
     <button type="button" class="casilla-sesion${sesion.actividadId ? '' : ' vacia'}"
-      data-sesion="${sesion.id}" data-actividad="${escaparHtml(sesion.actividadId)}"
+      data-sesion="${escaparHtml(sesion.id)}" data-actividad="${escaparHtml(sesion.actividadId)}"
       ${estiloCategoria(actividad)} title="${escaparHtml(ayuda)}">
       <span class="casilla-fecha">${fechaCorta(sesion.fecha)}
         ${numero && numero.total > 1 ? `<span class="casilla-numero">${numero.numero}/${numero.total}</span>` : ''}
@@ -231,12 +231,12 @@ function pintarSesiones() {
       : '';
     const sesionN = numero && numero.total > 1 ? `<span class="casilla-numero">${numero.numero}/${numero.total}</span>` : '';
     if (!editable) {
-      return `<tr data-sesion="${sesion.id}" ${estiloCategoria(actividad)} class="fila-sesion">
+      return `<tr data-sesion="${escaparHtml(sesion.id)}" ${estiloCategoria(actividad)} class="fila-sesion">
         <td>${fechaCorta(sesion.fecha)} <small>${mesCorto(sesion.fecha)}</small></td>
         <td>${enlace || '<span class="sin-dato">Sin actividad</span>'} ${sesionN}</td>
         <td>${escaparHtml(sesion.nota)}</td><td></td></tr>`;
     }
-    return `<tr data-sesion="${sesion.id}" ${estiloCategoria(actividad)} class="fila-sesion">
+    return `<tr data-sesion="${escaparHtml(sesion.id)}" ${estiloCategoria(actividad)} class="fila-sesion">
       <td>${fechaCorta(sesion.fecha)} <small>${mesCorto(sesion.fecha)}</small></td>
       <td><div class="sesion-actividad">${htmlSelector(sesion)} ${sesionN} ${enlace}</div></td>
       <td><input type="text" data-campo="nota" value="${escaparHtml(sesion.nota)}" placeholder="Qué se hace ese día…" aria-label="Nota del ${fechaCorta(sesion.fecha)}"></td>
