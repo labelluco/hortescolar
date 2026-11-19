@@ -219,5 +219,1353 @@
       "por": "profe",
       "el": "2026-11-13T10:00:00.000Z"
     }
+  },
+  {
+    "id": "biodigestor",
+    "recurso": "Estiércol",
+    "titulo": "El biodigestor: biogás y abono líquido",
+    "categoria": "experimentacion",
+    "descripcion": "Construimos un biodigestor con un bidón de plástico cerrado: dentro ponemos estiércol de vaca, agua, leche y azúcar (o melaza), y lo dejamos fermentar sin aire. Por un tubo que acaba sumergido en una botella con agua veremos salir burbujas: son los gases que producen los microorganismos al descomponer la mezcla (biogás). Cuando deja de burbujear, el líquido que queda (el «biol») es un abono que, bien diluido, usamos para fertilizar el huerto. ¿Por qué hacerlo? Porque aprovechamos un residuo (el estiércol) para hacer un abono: al fermentar sin aire, parte del nitrógeno del estiércol pasa a una forma (amonio) que las plantas absorben directamente, y como es líquido actúa más rápido que el estiércol fresco o el compost. Además, lo podemos ir preparando por tandas según tengamos estiércol y guardarlo unos meses.",
+    "objetivos": [
+      "Comprobar que los microorganismos descomponen la materia orgánica y que, sin aire, producen gases.",
+      "Diseñar y construir un montaje sencillo (bidón, tubo y sello de agua) y entender para qué sirve cada parte.",
+      "Observar y registrar durante semanas cómo cambia el proceso: burbujas, olor, color, temperatura.",
+      "Relacionar el biogás con las energías renovables y el biol con el aprovechamiento de residuos.",
+      "Entender por qué el biol es un buen abono: aprovecha un residuo y deja parte de los nutrientes en una forma que las plantas absorben con facilidad.",
+      "Preparar diluciones a partir de una proporción y usar el abono en el huerto."
+    ],
+    "materiales": [
+      "Un bidón de plástico con tapa que cierre bien (los azules de 200 L sirven; uno de 50-60 L o una garrafa de 25 L es más manejable). Que no haya contenido productos tóxicos.",
+      "Un tubo o manguera transparente de 1-1,5 m y un racor o pasamuros para la tapa, y silicona o masilla para sellar.",
+      "Una botella o un cubo con agua (el «sello de agua»).",
+      "Para 200 L: unos 50 kg de estiércol fresco de vaca, 1-2 L de leche (o suero), 1-2 L de melaza (o 1-2 kg de azúcar moreno disuelto en agua tibia) y agua sin cloro (de lluvia o reposada un día). Opcional: 1-2 kg de ceniza de madera tamizada.",
+      "Para un bidón más pequeño, las mismas proporciones: por cada 50 L, unos 12 kg de estiércol, 0,25-0,5 L de leche y 0,25-0,5 L de melaza.",
+      "Un palo largo para remover, embudo, cubos y una balanza.",
+      "Termómetro, cuaderno de registro y cámara.",
+      "Un colador o tela para filtrar y garrafas con tapón para guardar el biol.",
+      "Guantes, mascarilla y agua y jabón."
+    ],
+    "desarrollo": [
+      "Preparar la tapa. Hacemos un agujero del tamaño del tubo, colocamos el racor o metemos el tubo bien ajustado y sellamos alrededor con silicona o masilla por dentro y por fuera. Dejamos secar. El otro extremo del tubo irá sumergido unos centímetros en la botella o el cubo con agua: así los gases pueden salir, pero no entra aire.",
+      "Preparar la mezcla. En el bidón, deshacemos el estiércol en agua y removemos bien. Aparte, disolvemos el azúcar o la melaza en agua tibia y lo añadimos con la leche (y la ceniza, si la usamos). Completamos con agua hasta llenar unas tres cuartas partes del bidón: hay que dejar espacio para el gas.",
+      "Cerrar y colocar. Cerramos la tapa (comprobamos que no hay fugas) y ponemos el extremo del tubo en el agua. Dejamos el bidón en un lugar exterior, ventilado, soleado o templado y lejos de las ventanas de las aulas: la fermentación es más rápida con calor.",
+      "Predecir. Antes de esperar, cada grupo apunta qué cree que pasará: ¿saldrán burbujas?, ¿cuándo?, ¿olerá?, ¿qué gases serán?",
+      "Observar y registrar. Durante las semanas siguientes miramos la botella: al cabo de unos días empiezan a salir burbujas. Apuntamos en una tabla la fecha, la temperatura y cuántas burbujas salen en un minuto, y hacemos una gráfica. Las burbujas huelen mal (a huevo podrido): en el paso siguiente vemos por qué.",
+      "Hablar del biogás. Ese gas se llama biogás. Es una mezcla de metano (la parte que arde), dióxido de carbono, un poco de sulfuro de hidrógeno (el olor) y vapor de agua. En un biodigestor de granja, más o menos la mitad o dos tercios son metano; en nuestro bidón, sobre todo al principio, hay mucho dióxido de carbono, porque los primeros microorganismos en trabajar se comen el azúcar y la leche, y los que producen metano tardan más. El metano se puede usar para cocinar o calentar, como el gas de las bombonas, pero para aprovecharlo hace falta otro montaje (una bolsa para almacenarlo, un filtro para el olor y un quemador). Lo comentamos y buscamos ejemplos de granjas que lo usan, pero no lo quemamos con el alumnado.",
+      "Saber cuándo está listo. Cuando ya no salen burbujas (en tiempo cálido, unas 4-6 semanas; con frío, 2-3 meses o más), el biol está listo. Abrimos el bidón al aire libre: debe oler a fermentado, no a podrido.",
+      "Filtrar y guardar. Colamos el líquido con un colador o una tela y lo guardamos en garrafas bien cerradas, a la sombra y en un lugar fresco: así se conserva unos 4 meses. Los restos sólidos van al compostador. Si queremos tener biol durante todo el curso, podemos tener dos bidones y montar uno cuando el otro esté listo.",
+      "Abonar el huerto. El biol siempre se usa diluido en agua. Calculamos las proporciones: para regar al pie de las plantas, 1 parte de biol por 10 a 40 partes de agua (por ejemplo, como mucho 1 L de biol en una regadera de 10 L); sobre las hojas, más diluido (1 parte por 20 a 40 de agua). Probamos primero en unas pocas plantas y comparamos con otras sin abonar.",
+      "Recoger, lavar todo el material y lavarse bien las manos."
+    ],
+    "notas": [
+      "El estiércol lleva microorganismos que pueden causar enfermedades: guantes para manipularlo, nada de tocarse la cara y lavarse bien las manos al acabar. La mezcla la prepara o supervisa una persona adulta.",
+      "El biogás es inflamable (metano) y el sulfuro de hidrógeno es tóxico en cantidad: el bidón va siempre al aire libre, nada de fuego ni chispas cerca y no se respira el gas directamente de la botella. No quemamos el gas con el alumnado.",
+      "No abrimos el bidón mientras burbujea: entra aire, se para la fermentación anaerobia y sale el olor.",
+      "Si el bidón se hincha, el tubo está obstruido o doblado: hay que revisarlo enseguida.",
+      "En las hortalizas que se comen crudas (lechugas, rábanos…), el biol se echa al suelo, nunca sobre las hojas, y no se usa en las últimas semanas antes de cosechar.",
+      "El biol no es un abono completo ni dura para siempre: parte del nitrógeno queda en forma orgánica, que se libera más despacio, y guardado pierde calidad con el tiempo. Mejor preparar tandas pequeñas y usarlas en unos meses.",
+      "Las cantidades de la receta varían mucho entre unas guías y otras; las de esta ficha siguen la guía del INIA (Chile) para un bidón de 200 L. Lo importante es la proporción de estiércol y agua, dejar espacio para el gas y que no entre aire.",
+      "Si conseguimos estiércol de una granja cercana, la visita puede formar parte de la actividad.",
+      "Se puede combinar con «Trampas de microorganismos» (otros microorganismos que trabajan para el suelo) y con «Cromatografías de la tierra» y «Plantas bioindicadoras», para saber antes si la tierra necesita abono y ver después cómo cambia. También con «Cosechamos acelgas y hacemos empanadillas», cuyos restos de cocina pueden ir al biodigestor, y con «Elaboramos té de compost oxigenado», el mismo tipo de abono líquido pero hecho con aire (comparar los dos procesos).",
+      "Fuentes: G. Zegers, J. Cárcamo, K. Águila y C. Mc Leod (INIA, Chile), «Elaboración y usos del biol», reeditado por Portal Frutícola (2021), https://www.portalfruticola.com/noticias/2021/09/29/elaboracion-y-usos-del-biol-un-abono-natural-en-la-agricultura-sostenible (receta para un bidón de 200 L y dilución del 2,5 al 10 %); UNODC Bolivia, «Hagamos nuestro biol», https://www.unodc.org/documents/bolivia/DI_Hagamos_nuestro_biol.pdf; INIA Perú, guía de preparación del biol (Farfán y otros, 2019), https://repositorio.inia.gob.pe/bitstream/20.500.12955/2371/1/Farfan_et-al_2019_preparacion_biol.pdf."
+    ],
+    "duracion": "1 sesión para el montaje, observaciones cortas durante 1-3 meses y 1 sesión para filtrar y abonar.",
+    "estaciones": [
+      "Otoño",
+      "Primavera"
+    ],
+    "epoca": "Necesita calor: con frío casi no fermenta. Mejor montarlo en septiembre o a principios de octubre, o en abril, para tener el biol antes de las vacaciones.",
+    "etapas": [
+      {
+        "etapa": "Infantil",
+        "saberes": [
+          "Descubrimiento y Exploración del Entorno (B): Estrategias y técnicas de investigación: ensayo-error, observación, experimentación, formulación y comprobación de hipótesis, realización de preguntas, manejo y búsqueda en distintas fuentes de información.",
+          "Descubrimiento y Exploración del Entorno (C): Elementos naturales (agua, tierra, aire). Características y comportamiento (longitud, superficie, masa, capacidad, volumen, mezclas o transvases).",
+          "Descubrimiento y Exploración del Entorno (C): Sostenibilidad, energías limpias y naturales.",
+          "Descubrimiento y Exploración del Entorno (C): Influencia de las acciones de las personas en el medio físico y natural y en el cambio climático."
+        ],
+        "adaptacion": "La persona adulta prepara la mezcla y monta el bidón delante del grupo. Los niños y niñas miran las burbujas de la botella, las cuentan y las dibujan, comparan cómo huele y qué color tiene antes y después, y ayudan a regar con el biol ya diluido."
+      },
+      {
+        "etapa": "Primaria · 1.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Procedimientos adecuados a las necesidades de la investigación escolar (observación en el tiempo, identificación y clasificación, búsqueda de patrones...).",
+          "Ciencias de la Naturaleza (A.1): Estilos de vida sostenible e importancia del cuidado del planeta a través de acciones presentes en la vida cotidiana basadas en el conocimiento científico.",
+          "Ciencias de la Naturaleza (A.3): Otras formas de energía. Fuentes y uso en la vida cotidiana.",
+          "Ciencias de la Naturaleza (A.3): Las mezclas y sus componentes. Identificación de mezclas homogéneas y heterogéneas. Separación de mezclas heterogéneas y algunas homogéneas mediante distintos métodos físicos sencillos.",
+          "Ciencias Sociales (B.4): Estilos de vida sostenible. El uso responsable del agua, la movilidad segura, saludable y sostenible, y la prevención y gestión de los residuos.",
+          "Matemáticas (B.1): Unidades convencionales (metro, kilo y litro) y no convencionales en situaciones de la vida cotidiana."
+        ],
+        "adaptacion": "Ayudan a medir los ingredientes con jarras y cubos (litros) y una balanza (kilos), con guantes. Llevan un diario de observación con dibujos (hay burbujas o no, cuántas en un minuto). Al final, filtran el biol con un colador (separar una mezcla) y riegan con la dilución que prepara la persona adulta."
+      },
+      {
+        "etapa": "Primaria · 2.º ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Procedimientos adecuados a las necesidades de la investigación escolar (observación en el tiempo, identificación y clasificación, búsqueda de patrones, creación de modelos, investigación a través de búsqueda de información, diseño y puesta en marcha de experimentos con control de variables...).",
+          "Ciencias de la Naturaleza (A.3): Los cambios que experimentan determinados materiales en situaciones de la vida cotidiana (físicos o químicos, reversibles o irreversibles…) para reconocer procesos y transformaciones observando la situación inicial y final.",
+          "Ciencias Sociales (B.4): Estilos de vida sostenible. El consumo responsable, el uso del agua y la energía, la movilidad sostenible y la gestión de los residuos.",
+          "Matemáticas (A.4): Razón entre magnitudes: introducción a su cálculo e interpretación.",
+          "Matemáticas (B.1): Unidades convencionales (km, m, cm, mm; kg, g; l y ml) y no convencionales en situaciones de la vida cotidiana."
+        ],
+        "adaptacion": "Montan el biodigestor en grupos con ayuda (sellar el tubo, preparar el sello de agua) y explican para qué sirve cada parte. Registran en una tabla la temperatura y las burbujas por minuto y hacen una gráfica. Comparan la mezcla al principio y al final (cambio químico, irreversible). Preparan las diluciones del biol a partir de la razón «1 de biol por cada 10 de agua»."
+      },
+      {
+        "etapa": "Primaria · 3.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Prácticas científicas (observación, formulación de preguntas y predicciones, planificación y realización de experimentos, recogida y análisis de información y datos, comunicación de resultados y conclusiones...).",
+          "Ciencias de la Naturaleza (A.3): Las fuentes de energías renovables y no renovables y su influencia en la contribución al desarrollo sostenible de la sociedad.",
+          "Ciencias Sociales (B.4): Estilos de vida sostenible. El consumo responsable, el uso del agua y la energía, la movilidad sostenible y la gestión de los residuos.",
+          "Matemáticas (A.4): Situaciones proporcionales y no proporcionales en problemas de la vida cotidiana: identificación como relación multiplicativa entre magnitudes."
+        ],
+        "adaptacion": "Plantean un experimento con control de variables: dos biodigestores pequeños (garrafas de 5-8 L) iguales salvo en una cosa (uno al sol y otro a la sombra, o con y sin azúcar) y comparan cuántas burbujas producen. Investigan el biogás como energía renovable y su uso en granjas. Calculan las cantidades de la receta para el tamaño de su bidón y las diluciones, y comparan el crecimiento de plantas abonadas y sin abonar."
+      }
+    ],
+    "imagenes": [],
+    "estado": "publicada"
+  },
+  {
+    "id": "cebolla-tierna-y-de-guardar",
+    "recurso": "Cebollas",
+    "titulo": "Cebolla tierna y cebolla de guardar",
+    "categoria": "cultivo",
+    "descripcion": "En el huerto se cultivan dos cebollas distintas: la tierna, que se planta a finales de invierno y se come en primavera, y la de guardar, que se planta en primavera, se cosecha en otoño y dura hasta el año siguiente. Plantamos las dos a partir de plantel comprado, seguimos cuándo empieza a engordar cada una y descubrimos que la cebolla «sabe» en qué época está por las horas de luz del día. Después de cosecharlas, preguntamos a la gente mayor cómo se guardaban en las casas, las secamos y guardamos como nos cuenten (por ejemplo, extendidas en cañizos en un desván seco y aireado) y comprobamos cuál se conserva mejor.",
+    "objetivos": [
+      "Plantar cebollas a partir de plantel: cuándo, a qué profundidad y a qué distancia.",
+      "Distinguir la cebolla tierna de la de guardar: variedades, calendario y uso.",
+      "Relacionar la formación del bulbo con las horas de luz del día y con las estaciones.",
+      "Conocer, preguntando a la gente mayor, cómo se ha secado y guardado la cebolla en las casas, y comprobar cuál aguanta más.",
+      "Pesar, medir y registrar datos del cultivo y de la conservación."
+    ],
+    "materiales": [
+      "Plantel de cebolla tierna (en la zona se suele poner babosa o cebolla de Fuentes) y, en primavera, plantel de cebolla de guardar (pedir en el vivero una variedad de guardar, como las de tipo grano o valenciana tardía).",
+      "Cuerda y estacas para marcar las filas, un palo de 10-15 cm para medir la distancia entre cebollas y un plantador.",
+      "Regadera.",
+      "Etiquetas para cada fila (variedad y fecha de plantación).",
+      "Una balanza de cocina y una cinta métrica.",
+      "Un calendario o una tabla con la hora de salida y puesta del sol de cada mes (la estación meteorológica del huerto o cualquier calendario la da).",
+      "Cañizos, cajas de madera o rejillas para extender las cebollas, y un sitio seco, fresco, oscuro y aireado para guardarlas (un desván, un almacén…).",
+      "Cuaderno de campo."
+    ],
+    "desarrollo": [
+      "Antes de plantar: ¿por qué dos cebollas? Preguntamos en casa y a la gente mayor del pueblo qué cebollas se plantan, cuándo y para qué, y cómo se guardaban. Apuntamos lo que nos cuentan. Explicamos la idea principal: la cebolla tierna es más jugosa y dulce, pero se estropea pronto; la de guardar tiene más «carne» y menos agua, y aguanta meses.",
+      "Plantar la cebolla tierna (febrero, más o menos). Elegimos un día en que no se esperen heladas: hasta que el plantel echa raíces nuevas, una helada fuerte lo puede matar (lo comprobamos en la previsión o en nuestra estación meteorológica). Marcamos las filas a unos 25-30 cm y, con el palo, ponemos una cebolla cada 10-15 cm. Las plantamos poco hondas, que solo queden enterradas las raíces y la base blanca (unos 2-3 cm), apretamos un poco la tierra alrededor y regamos. Si las raíces o las hojas son muy largas, se pueden recortar un poco, como se hace tradicionalmente.",
+      "Observar y medir (lo intentamos). Marcamos con un palito unas cuantas cebollas de cada fila. Cada dos semanas medimos su grosor en la base, justo encima de la tierra (con una tira de papel que rodee la cebolla y luego medimos la tira, o con una regla), y lo apuntamos junto a las horas de luz de ese día (de la salida a la puesta del sol). ¿Cuándo empieza a engordar el bulbo? Si las medidas salen muy desiguales, basta con observar y apuntar: «todavía delgada», «empieza a engordar», «ya es una cebolla».",
+      "Plantar la cebolla de guardar (abril o mayo). Hacemos lo mismo en otro bancal o en otras filas, con su etiqueta. Seguimos midiendo las dos. Veremos que la de guardar tarda más en hacer el bulbo, aunque ya haga buen tiempo: necesita días todavía más largos.",
+      "Cuidar. Quitamos las hierbas a menudo (la cebolla tiene pocas hojas y se queda sin luz si las hierbas crecen) y regamos sin encharcar. A la cebolla de guardar se le deja de regar unas dos o tres semanas antes de cosecharla, para que se seque bien.",
+      "Cosechar la cebolla tierna (mayo y junio). Se puede ir arrancando para comer cuando tiene el tamaño que queremos. Pesamos la cosecha, la repartimos y, si se quiere, la cocinamos. Guardamos unas cuantas en el mismo sitio donde guardaremos las de guardar, para el experimento de la conservación.",
+      "Cosechar la cebolla de guardar (septiembre u octubre). Está a punto cuando las hojas se doblan y empiezan a secarse. La arrancamos un día seco, la dejamos unos días al sol en el huerto, dándole la vuelta, y después a la sombra y con aire hasta que la piel de fuera queda seca y la parte del cuello se cierra. Pesamos la cosecha.",
+      "Guardar como se hacía en casa. Antes de guardarlas, preguntamos a la gente mayor del pueblo cómo se secaban y guardaban las cebollas: ¿extendidas en el suelo o en cañizos, en el desván o las golfas?, ¿colgadas en ristras?, ¿cortaban las hojas? Lo hacemos como nos cuenten. Si no sabemos más, las extendemos en una sola capa, sin que se amontonen, sobre cañizos o rejillas en un sitio seco, fresco, oscuro y aireado, y les cortamos las hojas secas dejando un poco de cuello. Si alguien sabe hacer ristras, también se puede probar a guardar unas cuantas así y comparar.",
+      "El experimento de la conservación. Cada mes revisamos las cebollas tiernas guardadas en junio y las de guardar, y contamos cuántas de cada tipo están bien, cuántas han brotado y cuántas se han podrido o ablandado. Si se quiere, pesamos siempre las mismas cebollas: ¿pierden peso? Lo apuntamos en una tabla hasta la primavera y sacamos conclusiones: ¿qué cebolla se conserva mejor?, ¿por qué?"
+    ],
+    "notas": [
+      "La luz: la cebolla forma el bulbo cuando el día llega a un número de horas de luz que depende de la variedad. Las tempranas, como la babosa, son «de día corto» (les basta con unas 12 horas) y engordan en primavera; las de guardar son «de día largo» (necesitan unas 14 horas o más) y engordan en verano. En Olba, el día pasa de unas 10 horas en febrero a unas 15 a finales de junio. Por eso no basta con plantar más tarde una cebolla tierna para que sea de guardar: hay que elegir una variedad de guardar.",
+      "La conservación depende sobre todo de la variedad: las tempranas tienen más agua y menos materia seca y se estropean antes. La cebolla de Fuentes, por ejemplo, es una cebolla dulce para comer fresca y se conserva poco. También ayudan cosechar en otoño, cuando ya no hace calor, dejar de regar antes de la cosecha, secarla bien y guardarla en un sitio fresco, seco y aireado.",
+      "Las heladas: la cebolla aguanta bien el frío y las heladas suaves una vez arraigada, pero el plantel recién puesto es más delicado. Por eso, la cebolla tierna se planta en febrero en días en que no se esperen heladas fuertes.",
+      "El calendario encaja bien con el curso: la tierna se planta y se cosecha dentro del curso, y la de guardar se planta en primavera y se cosecha al empezar el curso siguiente. Durante el verano alguien tiene que regarla de vez en cuando (familias, el ayuntamiento o quien cuide el huerto).",
+      "Medir el grosor es una prueba: no sabemos si con pocas cebollas y medidas hechas a mano se verá bien cuándo empieza a engordar cada una. Si no sale, la observación sencilla (delgada, engordando, cebolla hecha) junto a las horas de luz ya permite ver la diferencia entre las dos. Después de probarlo, conviene apuntar aquí cómo ha ido.",
+      "Las fechas son orientativas para Olba: conviene contrastarlas cada año con lo que hace la gente del pueblo y con el tiempo que haga.",
+      "Se puede combinar con «Sembramos los ajos» (otro bulbo de invierno, con el mismo cálculo del marco de plantación), con «Nuestra estación meteorológica» (horas de luz y heladas) con «El refranero del huerto» (refranes de la cebolla y cómo la guardaba la gente mayor) y con «Cosechamos acelgas y hacemos empanadillas» (otra cosecha, que se hace poco a poco y no se puede guardar).",
+      "Fuentes: profesorado del colegio y gente del pueblo (Olba); CITA de Aragón, fichas sobre la cebolla de Fuentes de Ebro (https://citarea.cita-aragon.es/bitstream/10532/5314/1/GCP2016004100_FICHA.pdf, https://citarea.cita-aragon.es/bitstream/10532/884/1/10532-113_3.pdf); Infoagro, «El cultivo de la cebolla» (https://www.infoagro.com/hortalizas/cebolla.asp); CIREN, «Manual del cultivo de la cebolla» (https://mauleproductivo.ciren.cl/documents/104/download); Gobierno de Argentina, «Cultivo de cebolla en Santiago del Estero» (https://argentina.gob.ar/sites/default/files/2024/03/cultivo_de_cebolla_en_santiago_del_estero.pdf)."
+    ],
+    "duracion": "1 sesión para cada plantación, observaciones cortas cada dos semanas, 1 sesión para cada cosecha, 1 sesión para secarlas y guardarlas y revisiones mensuales de la conservación hasta la primavera.",
+    "estaciones": [
+      "Otoño",
+      "Invierno",
+      "Primavera"
+    ],
+    "epoca": "Cebolla tierna: se planta en febrero (días sin helada) y se cosecha en mayo y junio. Cebolla de guardar: se planta en abril o mayo y se cosecha en septiembre u octubre; se conserva hasta la primavera.",
+    "etapas": [
+      {
+        "etapa": "Infantil",
+        "saberes": [
+          "Descubrimiento y Exploración del Entorno (A): El tiempo y su organización: día-noche, estaciones, ciclos, calendario, antes, después, presente, pasado, futuro.",
+          "Descubrimiento y Exploración del Entorno (A): Cualidades o atributos de los objetos. Relaciones de orden, correspondencia, clasificación y comparación.",
+          "Descubrimiento y Exploración del Entorno (C): Fenómenos naturales: identificación y repercusión en la vida de las personas.",
+          "Descubrimiento y Exploración del Entorno (C): Respeto y empatía por los seres vivos y por los recursos naturales."
+        ],
+        "adaptacion": "Plantan con ayuda la cebolla tierna, midiendo la distancia con un palito, y la siguen con dibujos o fotos. Comparan una cebolla tierna y una de guardar (cuál es más grande, cuál pesa más, cuál tiene la piel seca) y las ordenan por tamaño. Hablan del frío y de por qué no se planta un día de helada. Ayudan a extender las cebollas para que se sequen y a mirar cada mes las cebollas guardadas."
+      },
+      {
+        "etapa": "Primaria · 1.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.2): Necesidades básicas de los seres vivos y la diferencia con los objetos inertes.",
+          "Ciencias de la Naturaleza (A.4): Movimientos y dinámicas relacionados con la Tierra y el universo y sus consecuencias en la vida diaria y en el entorno. Secuencias temporales y cambios estacionales.",
+          "Ciencias de la Naturaleza (A.4): La vida en la Tierra. Fenómenos atmosféricos y su repercusión en los ciclos biológicos y en la vida diaria. Observación y registro de datos atmosféricos",
+          "Matemáticas (B.1): Unidades convencionales (metro, kilo y litro) y no convencionales en situaciones de la vida cotidiana.",
+          "Ciencias Sociales (B.2): Recursos y medios analógicos y digitales. Las fuentes orales y la memoria colectiva. La historia local y la biografía familiar, hombres y mujeres como sujetos de la historia."
+        ],
+        "adaptacion": "Plantan las dos cebollas y ponen las etiquetas. Apuntan en un calendario de clase cuándo se planta y se cosecha cada una y comparan cuándo amanece y anochece en invierno y en primavera. Pesan la cosecha en kilos. Preguntan en casa cómo se guardaban las cebollas y lo cuentan en clase. En la conservación, cuentan cada mes las cebollas que están bien y las que se han estropeado."
+      },
+      {
+        "etapa": "Primaria · 2.º ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.2): Características propias de las plantas que permiten su clasificación en relación con su capacidad adaptativa al medio: obtención de energía, relación con el entorno y perpetuación de la especie.",
+          "Ciencias de la Naturaleza (A.1): Procedimientos adecuados a las necesidades de la investigación escolar (observación en el tiempo, identificación y clasificación, búsqueda de patrones, creación de modelos, investigación a través de búsqueda de información, diseño y puesta en marcha de experimentos con control de variables...).",
+          "Matemáticas (B.1): Unidades convencionales (km, m, cm, mm; kg, g; l y ml) y no convencionales en situaciones de la vida cotidiana.",
+          "Ciencias Sociales (A): Las fuentes históricas: clasificación y utilización de las distintas fuentes (orales, escritas, patrimoniales) como vía para el análisis de los cambios y permanencias en la localidad a lo largo de la historia. Las huellas de la historia en lugares, edificios, objetos, oficios o tradiciones de la localidad.",
+          "Ciencias Sociales (B.3): Las costumbres, tradiciones y manifestaciones etnoculturales del entorno. Respeto por la diversidad cultural, los derechos humanos y la cohesión social. La cultura de paz y no violencia."
+        ],
+        "adaptacion": "Miden el grosor de las cebollas en milímetros cada dos semanas y lo anotan junto a las horas de luz del día; buscan el momento en que empieza a engordar cada variedad. Pesan las cosechas en kilos y gramos. Entrevistan a la gente mayor sobre cómo se guardaban las cebollas y otros alimentos antes de las neveras, y guardan las cebollas como les cuenten. Llevan la tabla del experimento de conservación."
+      },
+      {
+        "etapa": "Primaria · 3.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Prácticas científicas (observación, formulación de preguntas y predicciones, planificación y realización de experimentos, recogida y análisis de información y datos, comunicación de resultados y conclusiones...).",
+          "Matemáticas (A.2): Estrategias de resolución de operaciones aritméticas (con números naturales, decimales y fracciones) con flexibilidad y sentido: mentalmente, de manera escrita o con calculadora; utilidad en situaciones contextualizadas y propiedades.",
+          "Matemáticas (B.1): Unidades convencionales del Sistema Métrico Decimal (longitud, masa, capacidad, volumen y superficie), tiempo y grado (ángulos) en contextos de la vida cotidiana: selección y uso de las unidades adecuadas.",
+          "Ciencias Sociales (B.2): El patrimonio natural y cultural material e inmaterial de Aragón y España como bien y recurso; su uso, cuidado y conservación. Las lenguas propias de Aragón (aragonés y catalán)."
+        ],
+        "adaptacion": "Calculan las horas de luz de cada mes a partir de la salida y la puesta del sol y hacen una gráfica con el grosor de las dos cebollas: ¿a partir de cuántas horas de luz engorda cada una? Antes del experimento de conservación escriben su predicción; cada mes calculan el porcentaje de cebollas sanas de cada tipo y la pérdida de peso, y al final presentan sus conclusiones. Recogen el vocabulario de la cebolla en el habla del pueblo (plantel, cañizo, golfas…) como parte del patrimonio inmaterial."
+      }
+    ],
+    "imagenes": [],
+    "estado": "publicada"
+  },
+  {
+    "id": "cortar-canas",
+    "recurso": "Cañas",
+    "titulo": "Cortamos las cañas",
+    "categoria": "sostenibilidad",
+    "descripcion": "En enero vamos al cañar a cortar las cañas que en primavera usaremos como tutores de las tomateras y de otros cultivos que trepan o necesitan apoyo, como las judías o los guisantes. Las cortamos de una medida que podamos transportar, les quitamos las hojas, las llevamos al colegio y las guardamos en un sitio protegido para que acaben de secarse y estén listas cuando las necesitemos. Se cortan en enero porque entonces ya han dejado de crecer y están secas. Además, seguimos un saber popular: se cortan en luna menguante, porque se dice que así duran más y no se carcomen. Las cañas que sobren o las más bonitas se pueden usar para hacer instrumentos, como flautas de caña (flabiols).",
+    "objetivos": [
+      "Conseguir en el entorno, sin comprar nada, los tutores que necesitará el huerto en primavera.",
+      "Conocer la caña: dónde crece, cómo es (nudos, entrenudos, hojas) y para qué se ha usado tradicionalmente.",
+      "Planificar con antelación: calcular cuántas cañas hacen falta según los cultivos que vamos a poner.",
+      "Valorar los saberes populares del huerto (cortar en enero y en luna menguante) y aprender de la gente mayor.",
+      "Trabajar en equipo y con seguridad en una salida al campo."
+    ],
+    "materiales": [
+      "Podaderas o tijeras de podar fuertes y un serrucho pequeño (solo para el profesorado o personas adultas).",
+      "Guantes de jardinería para todo el alumnado (las hojas y los cortes de la caña cortan).",
+      "Cinta métrica o una caña de muestra con la medida que queremos.",
+      "Cuerda para atar las cañas en haces.",
+      "Un calendario lunar.",
+      "Cuaderno de campo y lápiz."
+    ],
+    "desarrollo": [
+      "Planificar en clase. Repasamos qué cultivos pondremos en primavera y cuántas plantas de cada uno: una caña para cada tomatera, y para las judías y los guisantes, varias cañas por fila o cañas cruzadas. Sumamos y añadimos unas cuantas de reserva, porque algunas se rompen. Decidimos la medida: para las tomateras, unos 2 m (unos 30 cm quedan enterrados).",
+      "Elegir el día. En el calendario lunar buscamos los días de luna menguante de enero y elegimos uno lectivo. Preguntamos en casa y a la gente mayor del pueblo cuándo y cómo se cortaban las cañas y para qué se usaban, y lo apuntamos.",
+      "Pedir permiso. Antes de ir, hablamos con quien es dueño del cañar o con el ayuntamiento.",
+      "En el cañar. Observamos la caña: el tallo hueco, los nudos, las hojas, cómo crecen juntas formando un cañar. En enero las cañas ya han dejado de crecer y están secas: elegimos las más rectas y gruesas.",
+      "Cortar. El profesorado corta las cañas a ras de suelo, por encima de un nudo, con las podaderas o el serrucho. El alumnado, con guantes, les quita las hojas, las mide con la caña de muestra y las coloca en montones. Después se cortan a la medida, de manera que dos personas puedan llevar cada haz.",
+      "Llevarlas al colegio. Atamos las cañas en haces y las transportamos entre dos (por ejemplo, entre dos maestros o maestras).",
+      "Guardarlas. Las dejamos en un lugar cubierto y ventilado, protegidas de la lluvia, apoyadas de pie o tumbadas en alto para que no toquen el suelo húmedo. Allí acaban de secarse durante el invierno y estarán listas en primavera, cuando plantemos las tomateras."
+    ],
+    "notas": [
+      "Seguridad: solo cortan las personas adultas. El corte de una caña queda en punta y corta como un cuchillo: hay que llevar guantes, no correr con las cañas y llevarlas siempre por debajo de la altura de la cara. Los haces, mejor entre dos.",
+      "La luna: cortar la madera y la caña en luna menguante de enero es un saber transmitido por la gente que trabaja el campo; se dice que así la caña lleva menos savia, se seca mejor y no se carcome. Merece ser escuchado y, si se quiere, puesto a prueba: se cortan unas pocas cañas en luna creciente, se marcan, se guardan igual que las demás y al cabo de un tiempo se comparan (si se han agrietado, si tienen agujeros de insectos, cuánto duran en el huerto). Hay investigadores, como el suizo Ernst Zürcher, que han estudiado la madera cortada según la luna y han encontrado diferencias, pero otros estudios no las han podido repetir: otra razón para ponerlo a prueba.",
+      "La caña común (Arundo donax) es una especie llegada de Asia hace siglos que se extiende mucho por las riberas y desplaza a la vegetación de ribera propia y vuelve a brotar con fuerza después de cortarla, así que cortar unas cuantas no perjudica al cañar. Aun así, conviene no cortar en zonas protegidas y pedir permiso.",
+      "Para hacer flautas de caña (flabiols) se eligen cañas rectas, de grosor regular y con entrenudos largos, y se dejan secar bien: puede ser otra actividad, en primavera.",
+      "Después de usarlas como tutores, las cañas en buen estado se pueden guardar para el año siguiente.",
+      "Si el día de la luna menguante no es lectivo o hace mal tiempo, se va el día más cercano posible.",
+      "Se puede combinar con «Sembramos los ajos», que pone a prueba otro saber de la luna con un experimento parecido, y con «El refranero del huerto», para recoger lo que cuenta la gente mayor.",
+      "Fuentes: profesorado del colegio y gente del pueblo; Ministerio para la Transición Ecológica, ficha de Arundo donax del Catálogo Español de Especies Exóticas Invasoras (2013), https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/temas/conservacion-de-especies/arundo_donax_2013_tcm30-69809.pdf; E. Zürcher, «Lunar Rhythms in Forestry Traditions», Earth, Moon, and Planets 85 (1999)."
+    ],
+    "duracion": "1 sesión para planificar en clase, una salida de una mañana al cañar y un rato para guardar las cañas en el colegio.",
+    "estaciones": [
+      "Invierno"
+    ],
+    "epoca": "En enero, tradicionalmente en luna menguante (o el día lectivo más cercano).",
+    "etapas": [
+      {
+        "etapa": "Infantil",
+        "saberes": [
+          "Descubrimiento y Exploración del Entorno (A): El tiempo y su organización: día-noche, estaciones, ciclos, calendario, antes, después, presente, pasado, futuro.",
+          "Descubrimiento y Exploración del Entorno (A): Cualidades o atributos de los objetos. Relaciones de orden, correspondencia, clasificación y comparación.",
+          "Descubrimiento y Exploración del Entorno (A): Situaciones en que se hace necesario medir.",
+          "Descubrimiento y Exploración del Entorno (C): Respeto y empatía por los seres vivos y por los recursos naturales."
+        ],
+        "adaptacion": "Observan y tocan la caña: hueca, con nudos, dura, ligera. Comparan cañas (más larga, más corta, más gruesa) y las ordenan. Con guantes, ayudan a quitar hojas y a llevar cañas cortas o atadas en haces pequeños entre dos. Dibujan la luna del día de la salida y, en primavera, recuerdan de dónde salieron los palos de las tomateras."
+      },
+      {
+        "etapa": "Primaria · 1.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.2): Las relaciones entre los seres humanos, los animales y las plantas. Cuidado y respeto hacia los seres vivos y el entorno en el que viven.",
+          "Ciencias de la Naturaleza (A4): Movimientos y dinámicas relacionados con la Tierra y el universo y sus consecuencias en la vida diaria y en el entorno. Secuencias temporales y cambios estacionales.",
+          "Matemáticas (B.1): Procesos para medir mediante repetición de una unidad y mediante la utilización de instrumentos no convencionales.",
+          "Matemáticas (A.2): Estrategias de cálculo mental con números naturales iniciando el trabajo con centenas."
+        ],
+        "adaptacion": "Miden las cañas con la caña de muestra o con palmos y cuentan las que llevan en cada haz. Suman cuántas cañas hacen falta para las tomateras, las judías y los guisantes. Observan la luna durante unos días antes de la salida y la dibujan. Hablan de para qué usamos las plantas las personas."
+      },
+      {
+        "etapa": "Primaria · 2.º ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.2): Características propias de las plantas que permiten su clasificación en relación con su capacidad adaptativa al medio: obtención de energía, relación con el entorno y perpetuación de la especie.",
+          "Ciencias Sociales (A): Las fuentes históricas: clasificación y utilización de las distintas fuentes (orales, escritas, patrimoniales) como vía para el análisis de los cambios y permanencias en la localidad a lo largo de la historia. Las huellas de la historia en lugares, edificios, objetos, oficios o tradiciones de la localidad.",
+          "Matemáticas (B.1): Unidades convencionales (km, m, cm, mm; kg, g; l y ml) y no convencionales en situaciones de la vida cotidiana.",
+          "Ciencias de la Naturaleza (B.2): Técnicas cooperativas sencillas para el trabajo en equipo y estrategias para la gestión de conflictos y promoción de conductas empáticas e inclusivas."
+        ],
+        "adaptacion": "Miden las cañas en metros y centímetros y hacen el cálculo de cuántas hacen falta, con reserva. Estudian cómo es la planta (tallo hueco con nudos, crece formando cañares y vuelve a brotar de la raíz) y por qué crece junto al agua. Entrevistan a gente mayor sobre los usos tradicionales de la caña (tutores, cañizos, cestos, instrumentos) y lo ponen en común. Se organizan por equipos: quitar hojas, medir, atar y transportar."
+      },
+      {
+        "etapa": "Primaria · 3.er ciclo",
+        "saberes": [
+          "Ciencias Sociales (B.2): El patrimonio natural y cultural material e inmaterial de Aragón y España como bien y recurso; su uso, cuidado y conservación. Las lenguas propias de Aragón (aragonés y catalán).",
+          "Ciencias Sociales (B.4): Estilos de vida sostenible. El consumo responsable, el uso del agua y la energía, la movilidad sostenible y la gestión de los residuos.",
+          "Ciencias de la Naturaleza (A.1): Prácticas científicas (observación, formulación de preguntas y predicciones, planificación y realización de experimentos, recogida y análisis de información y datos, comunicación de resultados y conclusiones...).",
+          "Matemáticas (B.1): Unidades convencionales del Sistema Métrico Decimal (longitud, masa, capacidad, volumen y superficie), tiempo y grado (ángulos) en contextos de la vida cotidiana: selección y uso de las unidades adecuadas."
+        ],
+        "adaptacion": "Calculan las cañas necesarias a partir del plan del huerto. Pesan varias cañas recién cortadas, las marcan y vuelven a pesarlas cada pocas semanas para ver cuánta agua pierden al secarse. Si se quiere, ponen a prueba el saber de la luna con unas cañas cortadas en creciente. Comparan las cañas con los tutores de plástico o de metal (de dónde vienen, qué pasa con ellos al final) y recogen los nombres de la caña y de los objetos de caña en las lenguas de Aragón."
+      }
+    ],
+    "imagenes": [],
+    "estado": "publicada"
+  },
+  {
+    "id": "cosecha-acelgas",
+    "recurso": "Acelgas",
+    "titulo": "Cosechamos acelgas y hacemos empanadillas",
+    "categoria": "cocina",
+    "descripcion": "Cosechar parece fácil, pero cada cultivo tiene sus particularidades, y no todo lo que sale del huerto se cocina igual. En otoño e invierno las acelgas son muy abundantes. Aprendemos a cosecharlas para que la mata siga produciendo: solo las hojas grandes de fuera, solo las que vamos a cocinar (se mustian enseguida) y dejando sobre la tierra las hojas estropeadas. Con ellas hacemos empanadillas de acelga con pasas y huevo duro, como las de espinacas, o la misma receta en coca. Las empanadillas se pueden repartir entre quienes las han cocinado, compartir con el resto del alumnado o vender a la salida del colegio.",
+    "objetivos": [
+      "Cosechar acelgas sin dañar la planta, para que siga produciendo.",
+      "Entender por qué solo se cosecha lo que se va a cocinar: las acelgas se mustian enseguida.",
+      "Devolver a la tierra las hojas estropeadas como acolchado y materia orgánica.",
+      "Seguir una receta: medir, pesar, ordenar los pasos y trabajar con higiene y seguridad en la cocina.",
+      "Observar los cambios que sufren los alimentos al cosecharlos y cocinarlos, y distinguir los que tienen vuelta atrás de los que no.",
+      "Decidir qué hacer con lo cocinado (repartir, compartir o vender) y, si se vende, calcular costes y precios."
+    ],
+    "materiales": [
+      "Para cosechar: cuchillo pequeño o tijeras de podar (los maneja un adulto o el alumnado mayor con supervisión), cestas o cajas y un paño húmedo para tapar las hojas si hay que esperar.",
+      "Para las empanadillas (unas 20): 500 g de acelgas (sobre todo hojas; las pencas se pueden picar fino o guardar para otro plato), un puñado de pasas, 2 huevos duros, 1 cebolla (opcional), aceite de oliva, sal y un paquete de 20 obleas para empanadillas. Si se quiere, un poco de piñones.",
+      "Para la coca: masa de coca (harina, agua, aceite, sal y levadura) o masa comprada, y el mismo relleno.",
+      "Cazuela o sartén, escurridor, tabla, cuchillos, bandeja de horno, papel de horno, un tenedor para cerrar las empanadillas y balanza de cocina.",
+      "Horno o freidora de la cocina del colegio (o de una casa o de la asociación del pueblo).",
+      "Delantales, pañuelos para el pelo y jabón para lavarse las manos.",
+      "Si se venden: bolsas o servilletas de papel, cartel con el precio y caja para el cambio."
+    ],
+    "desarrollo": [
+      "Antes de ir al huerto: ¿se puede comer todo lo que cosechamos? Hablamos de cultivos que se cosechan de maneras distintas (de una vez, como la cebolla o la patata, o poco a poco, como la acelga o la lechuga de cortar) y de otros que no se cocinan, o no con las recetas más conocidas. Decidimos qué vamos a hacer con las acelgas y cuántas necesitamos para la receta.",
+      "Cosechar solo lo que se va a cocinar. Las acelgas se mustian muy rápido una vez cortadas, así que se cosechan el mismo día (o el anterior) y solo la cantidad que se va a usar. Si sobran, se pueden repartir para llevar a casa ese mismo día.",
+      "Cómo cosechar. De cada mata cogemos las hojas más grandes, las de fuera, y dejamos las jóvenes del centro, para que la planta no sufra y siga produciendo durante semanas. Cortamos cada hoja por abajo, cerca de la base, con cuidado de no cortar las que no vamos a cosechar. Las vamos dejando en la cesta, sin apretarlas.",
+      "Limpiar la mata. Las hojas amarillentas, muy comidas por los caracoles o medio secas las quitamos y las dejamos sobre la tierra del huerto: aportan materia orgánica y protegen la tierra del sol, del frío y de la lluvia. Observamos quién ha estado comiendo las hojas.",
+      "Pesar la cosecha. En el colegio pesamos las acelgas y lo apuntamos. Comparamos con lo que pide la receta.",
+      "Preparar el relleno. Nos lavamos las manos. Lavamos bien las acelgas, separamos las hojas de las pencas y las picamos. Las cocemos unos minutos (o las rehogamos con la cebolla picada y un poco de aceite) y las escurrimos muy bien, apretando, para que el relleno no quede aguado. Cocemos los huevos (unos 10 minutos), los pelamos y los picamos. Mezclamos las acelgas, el huevo, las pasas y una pizca de sal.",
+      "Montar las empanadillas. Ponemos una cucharada de relleno en el centro de cada oblea, la doblamos por la mitad y cerramos el borde apretando con un tenedor. Las pintamos con huevo batido o un poco de aceite y las horneamos (o las fríe un adulto). Para la coca, estiramos la masa en la bandeja, repartimos el relleno por encima o la cerramos con otra capa de masa, y la horneamos.",
+      "Observar los cambios. Al volver del huerto dejamos una hoja de acelga sobre la mesa, sin agua: en un rato se mustia, porque pierde agua. La ponemos en un vaso o un barreño con agua fría y, en una hora más o menos, vuelve a ponerse tiesa: es un cambio que tiene vuelta atrás (si la hoja no lleva demasiado tiempo mustia). Después, en la cocina: ¿cuánto abultaban las acelgas crudas y cuánto cocidas? ¿Cómo ha cambiado el huevo al cocerlo? ¿Y la masa en el horno? ¿Se puede volver atrás, como con la hoja mustia? La acelga cocida, el huevo duro y la masa cocida ya no vuelven a ser como antes.",
+      "Qué hacemos con ellas. Decidimos entre todos: repartirlas entre quienes las han cocinado, compartirlas con el resto del alumnado o venderlas a la salida del colegio. Si se venden, calculamos cuánto ha costado cada empanadilla (obleas, huevos, pasas, aceite), ponemos el precio, hacemos el cartel y decidimos para qué será el dinero (semillas, herramientas para el huerto…).",
+      "Los restos. Las pencas o las hojas que sobren, las cáscaras de huevo y los restos de la cocina vuelven al huerto, al compost o al biodigestor."
+    ],
+    "notas": [
+      "Las acelgas, sembradas o plantadas a finales de verano, dan hojas todo el otoño y el invierno si se cosechan bien (las de fuera, dejando el corazón, las hojas jóvenes del centro). Con el calor de la primavera suben a flor (se «espigan») y las hojas se vuelven duras y amargas: entonces se deja de cosechar.",
+      "Las pencas también se comen (rebozadas, con patata, en tortilla…): se pueden guardar para otro día o para llevar a casa.",
+      "Alergias e intolerancias: antes de cocinar, preguntar a las familias. La receta lleva gluten (obleas o masa) y huevo; hay obleas sin gluten. Las pasas y los piñones también pueden dar problemas.",
+      "Higiene y seguridad: manos limpias, pelo recogido y superficies limpias. El horno, el aceite caliente y los cuchillos grandes los maneja un adulto.",
+      "Vender comida hecha en el colegio: antes, consultar con la dirección del centro (y, si organiza la venta, con la asociación de familias) qué se puede vender y cómo. Si no se puede vender, se pueden repartir a cambio de la voluntad o compartirlas en un almuerzo.",
+      "La cosecha es una actividad sencilla que se repite con cada cultivo: esta ficha es un ejemplo que se puede reproducir con otros (lechugas, espinacas, coles, calabazas…), mirando en cada uno cómo se cosecha, cuánto aguanta una vez cosechado y qué receta le va bien.",
+      "Se puede combinar con «Cebolla tierna y cebolla de guardar» (otra cosecha, que se hace de una vez y se guarda meses, al contrario que la acelga) y con «El biodigestor», que aprovecha los restos de la cocina.",
+      "Fuentes: profesorado del colegio y gente del pueblo (Olba)."
+    ],
+    "duracion": "1 sesión para cosechar y preparar el relleno, 1 sesión para montar y cocer las empanadillas o la coca (se pueden juntar en una mañana) y, si se venden, un rato a la salida del colegio.",
+    "estaciones": [
+      "Otoño",
+      "Invierno"
+    ],
+    "epoca": "De octubre a febrero, más o menos, mientras las acelgas tengan hojas tiernas y no se espiguen.",
+    "etapas": [
+      {
+        "etapa": "Infantil",
+        "saberes": [
+          "Descubrimiento y Exploración del Entorno (A): Cualidades o atributos de los objetos. Relaciones de orden, correspondencia, clasificación y comparación.",
+          "Descubrimiento y Exploración del Entorno (A): Cuantificadores básicos contextualizados.",
+          "Descubrimiento y Exploración del Entorno (A): Funcionalidad de los números en la vida cotidiana.",
+          "Descubrimiento y Exploración del Entorno (C): Respeto y empatía por los seres vivos y por los recursos naturales."
+        ],
+        "adaptacion": "Cosechan con ayuda las hojas grandes de fuera y separan las buenas de las estropeadas, que dejan sobre la tierra. Comparan hojas grandes y pequeñas, ven cuánto abulta la cesta de acelgas antes y después de cocerlas, cuentan los huevos y las obleas y ponen una cucharada de relleno en cada una. Los adultos se encargan del fuego y del horno."
+      },
+      {
+        "etapa": "Primaria · 1.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.2): Necesidades básicas de los seres vivos y la diferencia con los objetos inertes.",
+          "Ciencias de la Naturaleza (A.2): Las relaciones entre los seres humanos, los animales y las plantas. Cuidado y respeto hacia los seres vivos y el entorno en el que viven.",
+          "Matemáticas (B.1): Unidades convencionales (metro, kilo y litro) y no convencionales en situaciones de la vida cotidiana.",
+          "Matemáticas (A.2): Estrategias de cálculo mental con números naturales iniciando el trabajo con centenas.",
+          "Ciencias Sociales (B.4): Estilos de vida sostenible. El uso responsable del agua, la movilidad segura, saludable y sostenible, y la prevención y gestión de los residuos."
+        ],
+        "adaptacion": "Cosechan las hojas de fuera explicando por qué se deja el corazón y quién se ha comido las hojas agujereadas. Pesan la cosecha en kilos con la balanza, cuentan cuántas obleas y cuántos huevos hacen falta y montan las empanadillas. Si se venden, ayudan a dar el cambio con cálculo mental. Llevan los restos al huerto o al compost."
+      },
+      {
+        "etapa": "Primaria · 2.º ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.2): Características propias de las plantas que permiten su clasificación en relación con su capacidad adaptativa al medio: obtención de energía, relación con el entorno y perpetuación de la especie.",
+          "Ciencias de la Naturaleza (A.3): Los cambios que experimentan determinados materiales en situaciones de la vida cotidiana (físicos o químicos, reversibles o irreversibles…) para reconocer procesos y transformaciones observando la situación inicial y final.",
+          "Matemáticas (B.1): Unidades convencionales (km, m, cm, mm; kg, g; l y ml) y no convencionales en situaciones de la vida cotidiana.",
+          "Matemáticas (A.2): Suma, resta, multiplicación y división de números naturales resueltas con flexibilidad y sentido: utilidad en situaciones contextualizadas, estrategias y herramientas de resolución y propiedades.",
+          "Ciencias Sociales (B.4): Estilos de vida sostenible. El consumo responsable, el uso del agua y la energía, la movilidad sostenible y la gestión de los residuos."
+        ],
+        "adaptacion": "Explican por qué la mata sigue produciendo si se le deja el corazón y por qué se espiga en primavera. Pesan en gramos las acelgas crudas y cocidas y comparan; comparan la hoja mustia que se recupera en agua (un cambio reversible) con los cambios de la cocina (acelga cocida, huevo duro, masa horneada), que son irreversibles. Calculan cuántas obleas, huevos y gramos de acelga hacen falta para el número de empanadillas que quieren hacer."
+      },
+      {
+        "etapa": "Primaria · 3.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Vocabulario científico básico relacionado con las diferentes investigaciones.",
+          "Matemáticas (A.4): Situaciones proporcionales y no proporcionales en problemas de la vida cotidiana: identificación como relación multiplicativa entre magnitudes.",
+          "Matemáticas (A.2): Estrategias de resolución de operaciones aritméticas (con números naturales, decimales y fracciones) con flexibilidad y sentido: mentalmente, de manera escrita o con calculadora; utilidad en situaciones contextualizadas y propiedades.",
+          "Ciencias Sociales (B.4): Estilos de vida sostenible. El consumo responsable, el uso del agua y la energía, la movilidad sostenible y la gestión de los residuos.",
+          "Ciencias Sociales (B.4): Responsabilidad ecosocial. Ecodependencia, interdependencia e interrelación entre personas, sociedades y medio natural."
+        ],
+        "adaptacion": "Adaptan la receta al número de empanadillas que quieren hacer (proporcionalidad) y calculan qué parte del peso pierden las acelgas al cocerlas. Si se venden, calculan el coste de cada empanadilla con decimales, proponen un precio y llevan las cuentas. Explican con vocabulario científico (materia orgánica, acolchado, descomponedores) por qué las hojas estropeadas se dejan en la tierra."
+      }
+    ],
+    "imagenes": [],
+    "estado": "publicada"
+  },
+  {
+    "id": "cromatografia",
+    "recurso": "Kit de cromatografía",
+    "titulo": "Cromatografías de la tierra",
+    "categoria": "experimentacion",
+    "descripcion": "Con un kit de cromatografía de suelos (como el que vende en su tienda la asociación l'Era) hacemos cromatografías de varias tierras: la del huerto del colegio, la del bosque y la del huerto de algún vecino, padre o madre. Una cromatografía es un círculo de papel de filtro en el que una gota de tierra disuelta va subiendo y dibuja anillos, colores y rayos. Por cómo son esos anillos podemos hacernos una idea de la vida y la materia orgánica que tiene cada tierra. Comparamos las cromatografías: ¿qué tierra es mejor para cultivar?, ¿cuál es más pobre?, ¿qué le falta? Además, las cromatografías son muy bonitas, casi obras de arte: una vez analizadas, las enmarcamos y las colgamos, o las guardamos clasificadas para compararlas con las que hagamos unos meses después y ver si la tierra de nuestro huerto ha mejorado.",
+    "objetivos": [
+      "Descubrir que la tierra no es solo «tierra»: es una mezcla de minerales, materia orgánica, aire, agua y seres vivos.",
+      "Comparar tierras de sitios distintos y relacionar lo que vemos con cómo se cuida cada una.",
+      "Seguir un procedimiento científico con cuidado y en orden, y trabajar con seguridad.",
+      "Hacerse preguntas sobre la tierra de nuestro huerto y pensar qué podemos hacer para mejorarla (compost, acolchado, abonos verdes…), y comprobarlo con el tiempo.",
+      "Apreciar la belleza de las formas y los colores que aparecen, y convertir las cromatografías en una exposición."
+    ],
+    "materiales": [
+      "Un kit de cromatografía de suelos, que suele traer el papel de filtro redondo, el nitrato de plata y el hidróxido de sodio (sosa) en la concentración adecuada. Seguir siempre las instrucciones del kit.",
+      "Muestras de tierra: del huerto del colegio, del bosque y del huerto de algún vecino o familia. Bolsas de papel o tarros y etiquetas.",
+      "Una pala pequeña, un tamiz o colador fino y un mortero para moler la tierra seca.",
+      "Una balanza de cocina que pese gramos y una jeringa o probeta para medir el líquido.",
+      "Tarros de cristal con tapa, uno por muestra, y una cuchara o palito para remover.",
+      "Placas Petri o platillos y tapas de tarro pequeñas para hacer correr la muestra; papel de filtro sobrante para hacer las mechas.",
+      "Guantes, gafas de protección y papel de periódico para cubrir las mesas.",
+      "Una caja o armario oscuro para secar los papeles.",
+      "Cuaderno de campo, cámara y, para la exposición, marcos sencillos, cartulinas o fundas."
+    ],
+    "desarrollo": [
+      "Preguntarnos. En clase hablamos de la tierra: ¿de qué está hecha?, ¿todas las tierras son iguales?, ¿por qué en unos sitios crecen mejor las plantas? Cada grupo apunta qué tierra cree que será la «más viva» y por qué.",
+      "Recoger las muestras. En el huerto del colegio, en el bosque y en el huerto de un vecino o familia, apartamos la capa de hojas o hierba y cogemos tierra de los primeros 10-15 cm, de varios puntos del mismo sitio, y la mezclamos. Apuntamos de dónde es cada muestra y cómo se cuida ese suelo (si se abona, con qué, si se labra, si se riega…). Etiquetamos las bolsas.",
+      "Secar y preparar la tierra. Extendemos cada muestra sobre papel a la sombra unos días, hasta que esté seca. Quitamos piedras, raíces y bichos, la molemos en el mortero y la pasamos por el tamiz para que quede como harina.",
+      "Preparar el papel (lo hace la persona adulta, con guantes y gafas). Siguiendo las instrucciones del kit, se impregna el centro del papel de filtro con nitrato de plata a través de una mecha de papel, hasta que el círculo mojado llega a la medida que indica el kit. Se deja secar a oscuras, porque la luz lo oscurece.",
+      "Preparar la muestra (la persona adulta pone la sosa). Pesamos la cantidad de tierra que dice el kit (suele ser 5 g en 50 ml de solución de sosa), la echamos en un tarro con su etiqueta y removemos. La dejamos reposar unas horas, removiendo de vez en cuando, como indique el kit.",
+      "Hacer correr la cromatografía. Ponemos un poco del líquido de arriba del tarro en una tapa pequeña dentro de una placa Petri, colocamos encima el papel con una mecha en el centro y dejamos que el líquido suba por la mecha y se extienda por el papel hasta la marca que indica el kit. Entonces quitamos el papel y lo dejamos secar.",
+      "Revelar. Dejamos el papel unos días a la luz indirecta (no al sol directo): poco a poco aparecen los colores y las formas. Lo fotografiamos cada día para ver cómo cambia.",
+      "Analizar. Comparamos las cromatografías una al lado de la otra y nos fijamos en: los anillos (de dentro afuera: zona central, interna, intermedia y externa), si se mezclan unos con otros o están separados por líneas marcadas, si hay rayos que salen del centro hacia fuera, si el borde termina en «dientes» o «nubes», y los colores. En general, en una tierra con mucha vida y materia orgánica los anillos se funden entre sí, hay rayos que llegan lejos, el borde es ancho y con dientes y los colores son cálidos (dorados, cremas, marrones). En una tierra pobre o cansada los anillos se ven separados, como círculos dibujados, casi no hay rayos y dominan los grises, negros o violetas.",
+      "Sacar conclusiones. Volvemos a lo que apuntamos al recoger las muestras: ¿qué tierra parece más viva?, ¿cuál más pobre?, ¿tiene que ver con cómo se cuida? ¿Qué le puede faltar a la tierra de nuestro huerto y qué podemos hacer: echar compost, acolchar, no dejarla desnuda, sembrar abonos verdes…? Lo apuntamos como plan para el huerto.",
+      "Exponer y guardar. Ponemos a cada cromatografía una ficha con de dónde es la tierra y la fecha. Las enmarcamos o las pegamos en cartulina y las colgamos en el pasillo o en la clase, con un pequeño texto que explique qué son. Guardamos una de cada tierra en una carpeta, a oscuras, para compararla con las que hagamos más adelante.",
+      "Repetir unos meses después. Volvemos a hacer la cromatografía de la tierra del huerto (de la misma zona y de la misma manera) y la ponemos al lado de la primera: ¿ha cambiado algo desde que la cuidamos de otra forma?"
+    ],
+    "notas": [
+      "Seguridad: el nitrato de plata mancha la piel y la ropa de negro (las manchas tardan días en irse) e irrita, y la sosa es corrosiva. Los reactivos los manipula siempre la persona adulta, con guantes y gafas, y se guardan fuera del alcance del alumnado. El alumnado puede recoger, secar, tamizar y pesar la tierra, remover con guantes y, ya secas, mirar y tocar las cromatografías. Los restos se tiran como indique el kit, nunca al huerto ni al compostador.",
+      "Para comparar de verdad, todas las muestras se preparan igual: misma cantidad de tierra, mismo tiempo de reposo, misma medida en el papel y mismos días de revelado. Por eso conviene hacerlas todas el mismo día.",
+      "La lectura de una cromatografía es cualitativa: nos da una idea general de la vida y la materia orgánica del suelo, pero no dice cuánto nitrógeno, fósforo o potasio tiene. Los propios estudios científicos señalan que cuesta relacionar el dibujo con un nivel exacto de fertilidad. Es una buena ocasión para hablar de qué puede decirnos una prueba y qué no.",
+      "Antes de coger tierra de un huerto ajeno o del bosque, pedimos permiso. Del bosque cogemos muy poca y tapamos el agujero.",
+      "La técnica la desarrolló Ehrenfried Pfeiffer a mediados del siglo XX y la han difundido en la agricultura ecológica, entre otros, Jairo Restrepo y Sebastião Pinheiro. Se puede combinar con «Trampas de microorganismos»: hacer una cromatografía de la tierra del huerto antes y otra unos meses después de enterrar el arroz.",
+      "También se puede combinar con «Plantas bioindicadoras» (hacer las dos pruebas en las mismas zonas y ver si coinciden las conclusiones) y con «El biodigestor» (comparar la tierra antes y después de abonar con biol).",
+      "Fuentes: las instrucciones del kit de cromatografía de suelos; asociación l'Era, https://www.associaciolera.org; J. Restrepo y S. Pinheiro, «Cromatografía: imágenes de vida y destrucción del suelo» (2011); artículos de divulgación sobre la cromatografía de Pfeiffer, como «Las cromatografías, herramienta de diagnóstico» (Engormix), https://www.engormix.com/agricultura/analisis-suelo/las-cromatografias-herramienta-diagnostico_a54572/."
+    ],
+    "duracion": "1 sesión para preguntarnos y recoger las muestras, 1 sesión para tamizarlas y prepararlas (la persona adulta prepara antes los papeles), 1 sesión para hacer correr las cromatografías, unos días de revelado y 1 sesión para analizarlas y montar la exposición. Unos meses después, 1 o 2 sesiones para repetir la del huerto y comparar.",
+    "estaciones": [
+      "Otoño",
+      "Primavera"
+    ],
+    "epoca": "Cualquier momento en que la tierra no esté helada ni encharcada. Una buena idea: la primera en otoño, al empezar el curso, y la segunda en primavera, para ver si la tierra del huerto ha cambiado.",
+    "etapas": [
+      {
+        "etapa": "Infantil",
+        "saberes": [
+          "Descubrimiento y Exploración del Entorno (A): Cualidades o atributos de los objetos. Relaciones de orden, correspondencia, clasificación y comparación.",
+          "Descubrimiento y Exploración del Entorno (B): Estrategias y técnicas de investigación: ensayo-error, observación, experimentación, formulación y comprobación de hipótesis, realización de preguntas, manejo y búsqueda en distintas fuentes de información.",
+          "Descubrimiento y Exploración del Entorno (C): Elementos naturales (agua, tierra, aire). Características y comportamiento (longitud, superficie, masa, capacidad, volumen, mezclas o transvases).",
+          "Comunicación y Representación de la Realidad (G): Materiales específicos e inespecíficos, elementos, técnicas y procedimientos plásticos."
+        ],
+        "adaptacion": "Recogen tierra de los distintos sitios, la tocan, la huelen y la comparan (color, si es suave o áspera, si tiene trocitos). Ayudan a secarla y a pasarla por el colador. La persona adulta hace las cromatografías y el alumnado mira cómo aparecen los colores día a día. Las comparan («¿cuál tiene más rayos?, ¿cuál es más oscura?»), las ordenan y, inspirándose en ellas, pintan sus propios círculos de colores para la exposición."
+      },
+      {
+        "etapa": "Primaria · 1.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Procedimientos adecuados a las necesidades de la investigación escolar (observación en el tiempo, identificación y clasificación, búsqueda de patrones...).",
+          "Ciencias de la Naturaleza (A.3): Las mezclas y sus componentes. Identificación de mezclas homogéneas y heterogéneas. Separación de mezclas heterogéneas y algunas homogéneas mediante distintos métodos físicos sencillos.",
+          "Matemáticas (B.1): Unidades convencionales (metro, kilo y litro) y no convencionales en situaciones de la vida cotidiana.",
+          "Educación Plástica y Visual: Medios, soportes y materiales de expresión plástica y visual. Técnicas bidimensionales y tridimensionales básicas en dibujos y modelados sencillos."
+        ],
+        "adaptacion": "Descubren que la tierra es una mezcla: la tamizan y separan piedras, raíces, arena y polvo. Pesan la tierra con la balanza. Observan las cromatografías con lupa, buscan los anillos y los rayos y las clasifican de «más viva» a «menos viva». Dibujan su cromatografía favorita y preparan las fichas de la exposición (de dónde es la tierra y la fecha)."
+      },
+      {
+        "etapa": "Primaria · 2.º ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Procedimientos adecuados a las necesidades de la investigación escolar (observación en el tiempo, identificación y clasificación, búsqueda de patrones, creación de modelos, investigación a través de búsqueda de información, diseño y puesta en marcha de experimentos con control de variables...).",
+          "Ciencias de la Naturaleza (A.2): Los ecosistemas como lugar donde intervienen factores bióticos y abióticos, manteniéndose un equilibrio entre los diferentes elementos y recursos. Sus interacciones y relación con otros sistemas.",
+          "Ciencias de la Naturaleza (A.3): Los cambios que experimentan determinados materiales en situaciones de la vida cotidiana (físicos o químicos, reversibles o irreversibles…) para reconocer procesos y transformaciones observando la situación inicial y final.",
+          "Educación Plástica y Visual: Medios, soportes y materiales de expresión plástica y visual. Técnicas bidimensionales y tridimensionales en dibujos y modelados sencillos."
+        ],
+        "adaptacion": "Entienden por qué todas las muestras se preparan igual (control de variables). Relacionan lo que ven en cada cromatografía con el ecosistema del que viene la tierra: hojas que se descomponen en el bosque, compost en el huerto, suelo desnudo… Fotografían el revelado día a día y comparan la situación inicial y la final. Hacen una tabla comparando anillos, rayos, borde y colores de cada tierra y proponen mejoras para el huerto."
+      },
+      {
+        "etapa": "Primaria · 3.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Prácticas científicas (observación, formulación de preguntas y predicciones, planificación y realización de experimentos, recogida y análisis de información y datos, comunicación de resultados y conclusiones...).",
+          "Ciencias de la Naturaleza (A.1): Instrumentos y dispositivos apropiados para realizar observaciones y mediciones precisas de acuerdo con las necesidades de la investigación.",
+          "Lengua Castellana y Literatura (B.5): Estrategias de comparación, organización y valoración de la información.",
+          "Educación Plástica y Visual: Medios, soportes y materiales de expresión plástica y visual. Técnicas bidimensionales y tridimensionales en dibujos y modelados."
+        ],
+        "adaptacion": "Formulan predicciones antes de empezar y planifican el muestreo (cuántos puntos, a qué profundidad, cómo etiquetar). Miden con precisión la tierra y la posición de las marcas en el papel. Buscan información sobre cómo se interpretan las cromatografías, comparan lo que dicen distintas fuentes y valoran qué puede y qué no puede decirnos esta prueba. Diseñan el plan de mejora del huerto, lo comprueban con la cromatografía de primavera y preparan los textos de la exposición."
+      }
+    ],
+    "imagenes": [],
+    "estado": "publicada"
+  },
+  {
+    "id": "estacion-meteorologica-microbit",
+    "recurso": "Estación meteorológica",
+    "titulo": "Estación meteorológica con micro:bit",
+    "categoria": "tecnologia",
+    "descripcion": "Convertimos la estación meteorológica del huerto en una estación electrónica. Dentro de la caseta ponemos una micro:bit con sensores (la temperatura que ya lleva la propia placa y un sensor de temperatura y humedad del aire; si el kit lo tiene, también uno de humedad de la tierra) y la programamos para que haga de termómetro de máximas y mínimas: va guardando el valor más alto y el más bajo del día. Para consultarla, usamos los botones: si pulsamos A una vez, nos enseña en los ledes la temperatura de ahora; dos veces, la mínima; tres veces, la máxima. Con B, lo mismo con la humedad. Además, la micro:bit puede apuntar sola los datos cada cierto tiempo, también de noche y los fines de semana, y luego los vemos en el ordenador en una gráfica. Comparamos lo que mide la micro:bit con lo que marcan los aparatos de siempre: ¿quién mide mejor? Como ampliación opcional y más avanzada, podemos hacer también una veleta y un anemómetro electrónicos: la brújula de una micro:bit dice hacia dónde apunta la veleta y, con un imán en el molinillo, otra micro:bit cuenta las vueltas para saber lo fuerte que sopla el viento.",
+    "objetivos": [
+      "Construir un aparato de medida programable y entender sus partes: sensores (miden), placa (guarda y decide) y pantalla de ledes (comunica).",
+      "Programar con bloques un algoritmo con variables, bucles y condiciones: guardar la máxima y la mínima y responder a los botones según cuántas veces se pulsen.",
+      "Calibrar un sensor comparándolo con un termómetro de verdad y entender que todo aparato de medida tiene un error.",
+      "Registrar datos de forma automática y analizarlos con gráficas.",
+      "Usar los datos para decidir en el huerto (heladas, riego) y comparar la estación electrónica con la tradicional.",
+      "Probar, encontrar errores y mejorar el prototipo trabajando en equipo."
+    ],
+    "materiales": [
+      "Una micro:bit V2 (la V2 puede guardar datos y tiene micrófono; la V1 también sirve para mostrar la temperatura, pero no guarda los datos), con su cable USB.",
+      "Alimentación para varios días: un portapilas con pilas nuevas o, mejor, una batería externa USB o un cargador si hay enchufe cerca.",
+      "Un sensor de temperatura y humedad del aire (por ejemplo, un DHT11 o un BME280, de los que traen muchos kits de micro:bit) y, si lo tiene el kit de agricultura, el sensor de humedad del suelo. Una placa de expansión para conectarlos.",
+      "Un ordenador o tableta con MakeCode (makecode.microbit.org) y las extensiones del sensor y de registro de datos («datalogger»).",
+      "La caseta meteorológica de «Nuestra estación meteorológica» (o una caja de madera pintada de blanco con agujeros), y una caja de plástico con tapa para proteger la placa y las pilas del agua.",
+      "El termómetro de máximas y mínimas de la estación, para comparar.",
+      "Bridas, cinta, un cuaderno de registro y fichas para el alumnado con el «manual de uso» de los botones.",
+      "Para la ampliación (opcional): una o dos micro:bit más con su portapilas; la veleta y el anemómetro caseros de la estación (o hechos para la ocasión con vasitos de plástico, cartón pluma y un eje que gire bien, por ejemplo una varilla dentro de un bolígrafo o con un rodamiento); un imán pequeño (de nevera o de neodimio); una bolsa o caja transparente para proteger la micro:bit que va en la veleta; y, para comparar, un anemómetro de mano si se puede conseguir. Otra opción es un kit comercial con veleta, anemómetro y pluviómetro preparados para micro:bit."
+    ],
+    "desarrollo": [
+      "Plantear el reto. Partimos de la estación tradicional: ¿qué pasa de noche o el fin de semana, cuando no hay nadie para leerla? ¿Podríamos tener una estación que mida sola y nos lo enseñe cuando queramos? Pensamos qué queremos que haga y cómo la consultaremos.",
+      "Diseñar el «manual de uso». Decidimos entre todos qué hará cada botón. Una propuesta: A una vez, temperatura de ahora; A dos veces, mínima; A tres veces, máxima; B una, dos y tres veces, lo mismo con la humedad del aire; A y B a la vez, empezar un día nuevo (borrar la máxima y la mínima, como cuando ponemos a cero el termómetro de la caseta). Antes de cada número, la micro:bit enseña un dibujo: una flecha hacia abajo para la mínima, hacia arriba para la máxima. Lo apuntamos en una ficha que irá pegada en la caseta.",
+      "Primer programa: el termómetro. En MakeCode hacemos que, al pulsar A, la micro:bit muestre la temperatura (el bloque «temperatura» de la propia placa). Lo probamos en clase, en la ventana, en la nevera del comedor… ¿Cambia? ¿Cuánto tarda?",
+      "Calibrar. Ponemos la micro:bit al lado del termómetro de la caseta durante un rato y comparamos. La temperatura de la placa suele marcar uno o dos grados de más, porque mide el calor del propio chip. Calculamos la diferencia y la restamos en el programa. Hacemos lo mismo con el sensor de temperatura y humedad.",
+      "Guardar la máxima y la mínima. Creamos dos variables, «máxima» y «mínima». En un bucle que se repite siempre, cada pocos segundos medimos la temperatura: si es mayor que la máxima, pasa a ser la nueva máxima; si es menor que la mínima, la nueva mínima. Pensamos con qué valores deben empezar (la mínima, muy alta; la máxima, muy baja; o las dos, con la primera medida).",
+      "Contar las pulsaciones. Cada vez que se pulsa A, sumamos uno a una variable «pulsaciones» y apuntamos el momento. En el bucle, si ha pasado un segundo desde la última pulsación, miramos cuántas ha habido: 1, 2 o 3, enseñamos el dato que toca y volvemos a poner «pulsaciones» a cero. Lo mismo con B. Lo probamos mucho: ¿qué pasa si pulsamos cuatro veces?, ¿y si pulsamos muy despacio?",
+      "Registrar los datos. Con la extensión de registro de datos, hacemos que cada 15 o 30 minutos la micro:bit guarde una fila con la temperatura y la humedad. Al conectarla al ordenador, abrimos el fichero MY_DATA.HTM que aparece en ella: se ve una tabla y una gráfica, y se pueden descargar los datos para la hoja de cálculo. Como la micro:bit no tiene reloj, apuntamos el día y la hora en que la encendemos.",
+      "Montar en la caseta. Metemos la micro:bit y las pilas en la caja de plástico, dentro de la caseta, con el sensor fuera de la caja (pero dentro de la caseta, a la sombra) para que mida el aire y no el interior de la caja. Pegamos el «manual de uso» en la puerta.",
+      "Usarla cada día. Al leer la estación por la mañana, el equipo de meteorólogos consulta también la micro:bit (A tres veces, la máxima; A dos veces, la mínima…), apunta los dos valores en el diario y pulsa A y B para empezar un día nuevo. Una vez por semana descargamos los datos guardados.",
+      "Comparar y mejorar. Ponemos en una misma gráfica los datos de la micro:bit y los del termómetro de siempre: ¿se parecen?, ¿cuándo fallan más? Buscamos en la gráfica de la micro:bit a qué hora hace más frío de noche, algo que no podíamos saber antes. Pensamos mejoras: un aviso en los ledes si ha helado, la humedad de la tierra para saber si regar (como en «Riego automático del semillero con micro:bit»), enviar los datos por radio a otra micro:bit que esté en la clase…",
+      "Ampliación (opcional, más avanzada): la veleta electrónica. Sujetamos una micro:bit con su portapilas, plana y bien protegida, en la veleta, de modo que gire con ella. La micro:bit tiene brújula (también la V1): después de calibrarla (es un pequeño juego de inclinarla hasta encender todos los ledes), el bloque «dirección de la brújula» da un número de 0 a 360 grados. Programamos que lo convierta en N, NE, E, SE, S, SO, O o NO (por ejemplo, de 23 a 67 grados es NE) y que lo envíe por radio a la micro:bit de la caseta, que lo muestra al pulsar un botón y lo guarda con los demás datos. Comprobamos con una brújula de verdad que dice lo mismo. Ojo: la veleta apunta hacia donde viene el viento, y la brújula de la micro:bit se confunde cerca de hierros e imanes.",
+      "Ampliación (opcional, más avanzada): el anemómetro electrónico. Pegamos un imán pequeño en uno de los brazos del molinillo de vasitos y ponemos una micro:bit fija justo debajo, sin que la toque. Cada vez que el imán pasa por encima, la fuerza magnética que mide la micro:bit (el bloque «fuerza magnética») sube de golpe: primero miramos en la pantalla cuánto marca con el imán cerca y lejos, y elegimos un límite. Después programamos que cuente cuántas veces pasa el límite en 10 segundos y calcule las vueltas por minuto. Para pasar de vueltas a velocidad, calibramos: comparamos con un anemómetro de mano o con los datos de viento de la estación de AEMET más cercana en varios días de viento distinto, y hacemos una tabla o una gráfica que relacione vueltas y kilómetros por hora. También podemos usar la escala de Beaufort (calma, brisa, viento fuerte…) en vez de números. Si el imán va muy rápido y la micro:bit no lo cuenta todo, se puede cambiar por un sensor de efecto Hall o un interruptor magnético (reed) conectado a un pin, que cuenta los pulsos mejor."
+    ],
+    "notas": [
+      "Que no se moje: la micro:bit, la placa de expansión y las pilas, siempre dentro de una caja cerrada y en la caseta. El sensor de humedad del aire necesita aire, así que va fuera de la caja, pero a cubierto de la lluvia y del sol.",
+      "Al sol, cualquier sensor marca de más: todo dentro de la caseta y a la sombra, como el termómetro de siempre.",
+      "La temperatura de la propia micro:bit es la del chip, no la del aire: sirve para empezar, pero hay que calibrarla y, para medir bien, es mejor un sensor externo.",
+      "Las pilas duran pocos días y el frío las gasta antes. Para dejarla funcionando mucho tiempo, mejor una batería externa o un cargador. Para ahorrar, la pantalla solo se enciende cuando se pulsan los botones.",
+      "Si la micro:bit se queda sin pilas o se reinicia, se pierden la máxima y la mínima del día (los datos guardados con la extensión de registro, no). Por eso conviene seguir apuntando cada día el termómetro de siempre.",
+      "La micro:bit no sabe la hora: los datos guardados llevan el tiempo desde que se encendió. Hay que apuntar cuándo se encendió para saber a qué hora es cada medida.",
+      "Cada sensor necesita su extensión de MakeCode y unos pines que cambian según el kit: hay que seguir la guía del fabricante. La parte de «Riego automático» que depende del kit de agricultura también está pendiente de concretar.",
+      "La veleta y el anemómetro se ponen en alto y al viento: los sube y los sujeta bien la persona adulta, y se revisan después de cada temporal. La micro:bit que va en la veleta lleva sus pilas y tiene que estar muy bien protegida de la lluvia; si se moja o se cae, es la primera que se estropea. Si no se quiere arriesgar, la veleta electrónica puede quedarse como experimento de un día.",
+      "La brújula y la fuerza magnética solo están en la micro:bit, sin piezas extra, pero son sensibles: hay que calibrar la brújula cada vez que se carga un programa nuevo y alejar la micro:bit de tornillos, alambres e imanes que no sean el del anemómetro.",
+      "Esta actividad es la continuación de «Nuestra estación meteorológica»: para Infantil y el primer ciclo es mejor la estación tradicional, y que vean funcionar la micro:bit como curiosidad.",
+      "Fuentes: la idea de los botones (A una, dos o tres veces: temperatura de ahora, mínima y máxima; B, otro sensor) es del profesorado del colegio; documentación de MakeCode para micro:bit, https://makecode.microbit.org (bloques de temperatura, botones y variables); Micro:bit Educational Foundation, guía del registro de datos, https://microbit.org/get-started/user-guide/data-logging/; el currículo de Aragón (Orden ECD/1112/2022, anexo de Ciencias de la Naturaleza), que propone construir una estación meteorológica y representar los datos gráficamente."
+    ],
+    "duracion": "4 o 5 sesiones: reto y diseño del «manual de uso»; primer programa y calibración; máxima, mínima y botones; registro de datos y montaje en la caseta; comparación y mejoras. Después, unos minutos al día con la lectura de la estación. La ampliación de la veleta y el anemómetro, 2 o 3 sesiones más (construcción, programación y calibración).",
+    "estaciones": [
+      "Otoño",
+      "Invierno",
+      "Primavera",
+      "Verano"
+    ],
+    "epoca": "Todo el curso, una vez montada la estación tradicional. El invierno es un buen momento para empezar: las mínimas de la noche y las heladas son lo que más cuesta medir sin ella.",
+    "etapas": [
+      {
+        "etapa": "Primaria · 2.º ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.3): El calor y temperatura. Cambios de estado.",
+          "Ciencias de la Naturaleza (A.4): Los fenómenos atmosféricos. Toma y registro de datos meteorológicos y su representación gráfica y visual",
+          "Ciencias de la Naturaleza (B.2): Fases de los proyectos de diseño: diseño, construcción de modelos y prototipos, prueba y comunicación.",
+          "Ciencias de la Naturaleza (B.2): Iniciación a la programación a través de recursos analógicos (actividades desenchufadas) o digitales (plataformas digitales de iniciación a la programación, aplicaciones de programación por bloques, robótica educativa...).",
+          "Matemáticas (D.3): Estrategias para la interpretación y modificación de algoritmos sencillos (reglas de juegos, instrucciones secuenciales, bucles, patrones repetitivos, programación por bloques, robótica educativa...).",
+          "Matemáticas (E.1): Gráficos estadísticos sencillos (diagrama de barras y pictogramas) para representar datos seleccionando el más conveniente, mediante recursos tradicionales y aplicaciones informáticas sencillas."
+        ],
+        "adaptacion": "Antes de programar, hacen una actividad desenchufada: un compañero hace de micro:bit, con dos tarjetas («máxima» y «mínima») que cambia cada vez que le dicen una temperatura, y responde según cuántas palmadas le den. Después parten de un programa ya hecho por la persona docente: lo interpretan, lo prueban y lo modifican (la corrección de la calibración, los dibujos, qué hace cada botón). Leen la micro:bit cada día y comparan sus números con el termómetro de la caseta en una gráfica de barras."
+      },
+      {
+        "etapa": "Primaria · 3.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Instrumentos y dispositivos apropiados para realizar observaciones y mediciones precisas de acuerdo con las necesidades de la investigación.",
+          "Ciencias de la Naturaleza (A.4): Fenómenos atmosféricos",
+          "Ciencias de la Naturaleza (B.2): Fases de los proyectos de diseño: identificación de necesidades, diseño, creación de un prototipo, prueba, evaluación y comunicación.",
+          "Ciencias de la Naturaleza (B.2): Fases del pensamiento computacional (descomposición de una tarea en partes más sencillas, reconocimiento de patrones y creación de algoritmos sencillos para la resolución del problema...).",
+          "Ciencias de la Naturaleza (B.2): Materiales, herramientas, objetos, dispositivos y recursos digitales (programación por bloques, sensores, motores, simuladores, impresoras 3D, ...) seguros y adecuados a la consecución del proyecto.",
+          "Matemáticas (D.3): Estrategias para la interpretación, modificación y creación de algoritmos sencillos (secuencias de paso ordenados, esquemas, simulaciones, patrones repetitivos, bucles, instrucciones anidadas y condicionales, representaciones computacionales, programación por bloques, robótica educativa...).",
+          "Matemáticas (E.1): Conjuntos de datos y gráficos estadísticos de la vida cotidiana: descripción, interpretación y análisis crítico."
+        ],
+        "adaptacion": "Hacen el proyecto completo: diseñan el «manual de uso», descomponen el problema (medir, guardar máxima y mínima, contar pulsaciones, mostrar, registrar) y crean el programa desde cero por partes, probando cada una. Calibran los sensores calculando la diferencia media con el termómetro. Descargan los datos registrados, los pasan a la hoja de cálculo y analizan la gráfica de un día entero (¿a qué hora es la mínima?, ¿cuánto baja la humedad al mediodía?) y comparan críticamente la estación electrónica con la tradicional. Presentan la estación y su manual a las otras clases. Los grupos que van más deprisa hacen la ampliación: la veleta con la brújula y el anemómetro que cuenta vueltas, con su tabla de calibración para pasar de vueltas por minuto a velocidad del viento."
+      }
+    ],
+    "imagenes": [],
+    "estado": "publicada"
+  },
+  {
+    "id": "estacion-meteorologica",
+    "recurso": "Estación meteorológica",
+    "titulo": "Nuestra estación meteorológica",
+    "categoria": "experimentacion",
+    "descripcion": "Ponemos en el huerto una estación meteorológica sencilla: una caseta de madera pintada de blanco con un termómetro de máximas y mínimas, un pluviómetro, una veleta y, si podemos, un anemómetro y un higrómetro. Cada mañana, a la misma hora, un equipo de «meteorólogos» de la clase lee los aparatos y apunta los datos en el diario del tiempo. Con los datos hacemos gráficas y, sobre todo, los usamos para decidir en el huerto: ¿ha pasado ya el peligro de heladas para plantar los tomates?, ¿ha llovido bastante esta semana o hay que regar?, ¿hace demasiado viento para tratar o sembrar? Al cabo de unos meses tenemos nuestra propia historia del tiempo del huerto, que podemos comparar con la de otros años, con la de la estación de AEMET más cercana y con lo que dicen los refranes.",
+    "objetivos": [
+      "Conocer los principales fenómenos atmosféricos (temperatura, lluvia, viento, humedad, nubes, heladas) y cómo influyen en las plantas y en la vida diaria.",
+      "Usar instrumentos de medida (termómetro, pluviómetro, veleta, anemómetro) y leerlos con cuidado, siempre de la misma manera.",
+      "Tomar datos con constancia, organizarlos en tablas y representarlos en gráficas.",
+      "Usar los datos para tomar decisiones en el huerto: cuándo sembrar o plantar, cuándo regar, cuándo proteger los cultivos.",
+      "Comparar nuestros datos con los de otras estaciones y con los saberes populares (refranes, cabañuelas), y valorar qué pueden decirnos y qué no.",
+      "Repartir responsabilidades y trabajar en equipo para mantener la estación todo el curso."
+    ],
+    "materiales": [
+      "Una caseta o garita meteorológica: una caja de madera pintada de blanco por fuera, con las paredes de lamas (o con agujeros) para que pase el aire, sin que le dé el sol ni le entre la lluvia, sobre un poste a 1,5 m del suelo y con la puerta mirando al norte.",
+      "Un termómetro de máximas y mínimas (de los de tubo en forma de U o uno digital que guarde la máxima y la mínima), dentro de la caseta.",
+      "Un pluviómetro graduado en milímetros (litros por metro cuadrado), en un sitio despejado, lejos de árboles y paredes, con la boca a un metro del suelo más o menos. Se puede hacer uno con una botella de plástico de paredes rectas.",
+      "Una veleta con la rosa de los vientos (norte, sur, este, oeste) bien orientada con una brújula.",
+      "Si es posible: un anemómetro (casero, con vasitos de plástico que giran, contando vueltas en 30 segundos, o uno de mano), un higrómetro dentro de la caseta y un termómetro de suelo para saber a qué temperatura está la tierra.",
+      "Un diario del tiempo: una tabla en cuaderno o cartulina con fecha, hora, temperatura máxima, mínima y actual, lluvia, viento, cielo (con símbolos) y observaciones (heladas, rocío, granizo, niebla…).",
+      "Papel cuadriculado, lápices de colores y, para los mayores, una hoja de cálculo.",
+      "Una brújula, cinta métrica y un cuaderno de campo."
+    ],
+    "desarrollo": [
+      "Preguntarnos. ¿Por qué un día se nos helaron las lechugas? ¿Cómo sabemos si hay que regar? ¿Cómo saben en la tele el tiempo que hará? Hablamos de qué podemos medir del tiempo y con qué aparatos.",
+      "Conocer los aparatos. Vemos cada instrumento y para qué sirve: el termómetro de máximas y mínimas guarda la temperatura más alta y la más baja desde la última vez que lo pusimos a cero; el pluviómetro recoge la lluvia, y cada milímetro es un litro de agua por cada metro cuadrado de huerto; la veleta dice de dónde viene el viento; el anemómetro, lo fuerte que sopla. Los mayores pueden construir algunos (pluviómetro, veleta, anemómetro) en lugar de comprarlos.",
+      "Elegir el sitio y montar la estación. Buscamos un rincón despejado del huerto, lejos de paredes, árboles y asfalto, porque dan sombra, frenan el viento o desprenden calor y cambiarían las medidas. Clavamos el poste, colocamos la caseta con la puerta al norte, metemos el termómetro, ponemos el pluviómetro en un sitio abierto y orientamos la veleta con la brújula. Hacemos un plano de la estación.",
+      "Aprender a leer. Practicamos la lectura de cada aparato: los ojos a la altura del líquido, apuntar el número sin redondear, vaciar el pluviómetro después de leerlo y poner a cero el termómetro de máximas y mínimas. Hacemos una ficha con los pasos, siempre en el mismo orden.",
+      "Leer cada día. Cada semana hay un equipo responsable. Cada mañana, a la misma hora (por ejemplo, al entrar), leen los aparatos, lo apuntan en el diario del tiempo y lo cuentan en la asamblea o en el «parte meteorológico» de la clase. Los lunes, la máxima y la mínima y la lluvia son las de todo el fin de semana: lo anotamos.",
+      "Hacer gráficas. Al final de cada semana o de cada mes pasamos los datos a gráficas: líneas para las temperaturas máximas y mínimas, barras para la lluvia, una rosa de los vientos con los días que ha soplado de cada dirección y un calendario con los símbolos del cielo. Las colgamos en el pasillo junto al huerto.",
+      "Decidir en el huerto. Usamos los datos para trabajar: si las mínimas aún bajan de 0 °C, esperamos para plantar tomates y pimientos o los protegemos; si en la semana ha llovido poco y hace calor, regamos; si ha llovido mucho, no; si la tierra sigue fría, esperamos para sembrar. Apuntamos en el cuaderno del huerto qué decidimos y por qué.",
+      "Comparar. Comparamos nuestros datos con los de la estación de AEMET más cercana: ¿se parecen?, ¿por qué no son iguales? Comparamos este mes con el del año pasado, si ya tenemos datos, y ponemos a prueba los refranes del tiempo («Hasta el cuarenta de mayo no te quites el sayo», «Por san Blas, la cigüeña verás»…).",
+      "Contar lo que hemos aprendido. Al final del trimestre o del curso, cada clase presenta un resumen: el día más frío, el más caluroso, cuánto ha llovido, qué decisiones tomamos gracias a la estación. Dejamos los datos guardados para los cursos siguientes: con los años, el huerto tendrá su propia historia del clima."
+    ],
+    "notas": [
+      "Para que los datos sirvan, hay que medir siempre igual: a la misma hora, en el mismo sitio y de la misma manera. Si un día no se puede leer, se deja la casilla en blanco; no se inventa el dato.",
+      "El termómetro nunca al sol: dentro de la caseta y a la sombra. Al sol marca la temperatura de lo que calienta el sol, no la del aire, y puede dar varios grados de más.",
+      "Las heladas más fuertes se notan a ras de suelo, donde están las plantas pequeñas, y pueden ser más frías que lo que marca el termómetro a 1,5 m. Si podemos, ponemos también un termómetro de mínimas cerca del suelo.",
+      "Los termómetros de máximas y mínimas antiguos pueden llevar mercurio: si se rompe uno, que lo recoja la persona adulta y no lo toque el alumnado. Mejor comprar uno de alcohol o digital.",
+      "El pluviómetro hay que vaciarlo después de cada lectura y mirar que no tenga hojas ni bichos. En invierno, si nieva o hiela, el agua puede helarse dentro: se lleva a clase, se deja derretir y se mide. Cuidado con los de cristal.",
+      "Fines de semana y vacaciones: el termómetro de máximas y mínimas y el pluviómetro acumulan, así que el primer día de vuelta se apunta el total. Se puede completar con los datos de AEMET para esos días.",
+      "Los refranes y las cabañuelas son saberes de la gente del pueblo que vale la pena recoger y respetar; los ponemos a prueba con nuestros datos, como en «El refranero del huerto», sin burlarnos de ellos.",
+      "Se combina con «Riego automático del semillero con micro:bit» y con «Estación meteorológica con micro:bit», que convierte esta estación en una estación electrónica que también mide y guarda los datos sola.",
+      "Fuentes: el currículo de Aragón (Orden ECD/1112/2022, anexo de Ciencias de la Naturaleza), que propone construir una estación meteorológica y registrar datos con termómetro y pluviómetro durante periodos largos; la Agencia Estatal de Meteorología (AEMET), https://www.aemet.es, sus datos de observación y su red de observadores colaboradores; S. García Barros y C. Martínez Losada, «Inmersos en el aire miramos al cielo. Los fenómenos atmosféricos y astronómicos» (Graó, 2013)."
+    ],
+    "duracion": "2 o 3 sesiones para preguntarnos, conocer los aparatos y montar la estación; después, unos 10 minutos cada día para leer y apuntar, y 1 sesión al mes para hacer las gráficas y tomar decisiones.",
+    "estaciones": [
+      "Otoño",
+      "Invierno",
+      "Primavera",
+      "Verano"
+    ],
+    "epoca": "Todo el curso. Mejor montarla en otoño, al empezar, para tener datos de todo el año; en invierno y primavera es cuando más decisiones ayuda a tomar (heladas, siembras y plantaciones, riego).",
+    "etapas": [
+      {
+        "etapa": "Infantil",
+        "saberes": [
+          "Descubrimiento y Exploración del Entorno (A): El tiempo y su organización: día-noche, estaciones, ciclos, calendario, antes, después, presente, pasado, futuro.",
+          "Descubrimiento y Exploración del Entorno (A): Situaciones en que se hace necesario medir.",
+          "Descubrimiento y Exploración del Entorno (B): Estrategias y técnicas de investigación: ensayo-error, observación, experimentación, formulación y comprobación de hipótesis, realización de preguntas, manejo y búsqueda en distintas fuentes de información.",
+          "Descubrimiento y Exploración del Entorno (C): Fenómenos naturales: identificación y repercusión en la vida de las personas."
+        ],
+        "adaptacion": "Cada día, en la asamblea, el «meteorólogo» del día sale al huerto con la persona adulta, mira el cielo, nota el frío o el calor y mira si la veleta se mueve o si hay agua en el pluviómetro. En la clase pone el símbolo del tiempo en un calendario grande (sol, nubes, lluvia, viento, helada) y la persona adulta marca la temperatura en un termómetro grande de cartulina. A final de mes cuentan cuántos días de cada tipo ha habido y hacen una gráfica con gomets. Hablan de qué ropa llevamos y de qué les pasa a las plantas cuando hiela o llueve."
+      },
+      {
+        "etapa": "Primaria · 1.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Instrumentos y dispositivos apropiados para realizar observaciones y mediciones de acuerdo a las necesidades de las diferentes investigaciones escolares.",
+          "Ciencias de la Naturaleza (A.4): Movimientos y dinámicas relacionados con la Tierra y el universo y sus consecuencias en la vida diaria y en el entorno. Secuencias temporales y cambios estacionales.",
+          "Ciencias de la Naturaleza (A.4): La vida en la Tierra. Fenómenos atmosféricos y su repercusión en los ciclos biológicos y en la vida diaria. Observación y registro de datos atmosféricos",
+          "Matemáticas (B.1): Unidades convencionales (metro, kilo y litro) y no convencionales en situaciones de la vida cotidiana.",
+          "Matemáticas (E.1): Estrategias sencillas para la recogida, clasificación y recuento de datos cualitativos y cuantitativos en muestras pequeñas.",
+          "Matemáticas (E.1): Representación de datos obtenidos a través de recuentos mediante gráficos estadísticos sencillos, recursos tradicionales y tecnológicos."
+        ],
+        "adaptacion": "Leen el termómetro (la temperatura actual y, con ayuda, la máxima y la mínima) y el pluviómetro, y apuntan el cielo con símbolos. Comparan días: «hoy hace más frío que ayer». Cuentan los días de lluvia, de sol y de helada de cada mes y hacen gráficas de barras o pictogramas. Relacionan el tiempo con lo que pasa en el huerto (las plantas que se hielan, las que crecen cuando llueve) y con las estaciones. Construyen una veleta sencilla."
+      },
+      {
+        "etapa": "Primaria · 2.º ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Procedimientos adecuados a las necesidades de la investigación escolar (observación en el tiempo, identificación y clasificación, búsqueda de patrones, creación de modelos, investigación a través de búsqueda de información, diseño y puesta en marcha de experimentos con control de variables...).",
+          "Ciencias de la Naturaleza (A.3): El calor y temperatura. Cambios de estado.",
+          "Ciencias de la Naturaleza (A.4): Los fenómenos atmosféricos. Toma y registro de datos meteorológicos y su representación gráfica y visual",
+          "Matemáticas (B.1): Unidades convencionales (km, m, cm, mm; kg, g; l y ml) y no convencionales en situaciones de la vida cotidiana.",
+          "Matemáticas (E.1): Estrategias sencillas para la recogida, clasificación y organización de datos cualitativos o cuantitativos discretos en muestras pequeñas mediante calculadora y aplicaciones informáticas sencillas. Frecuencia absoluta: interpretación.",
+          "Matemáticas (E.1): Gráficos estadísticos sencillos (diagrama de barras y pictogramas) para representar datos seleccionando el más conveniente, mediante recursos tradicionales y aplicaciones informáticas sencillas."
+        ],
+        "adaptacion": "Construyen el pluviómetro y el anemómetro caseros y comprueban si miden bien. Se encargan de las lecturas diarias por equipos y del parte meteorológico. Hacen las gráficas mensuales (barras de lluvia, temperaturas) y deciden qué gráfica va mejor para cada dato. Relacionan la temperatura con los cambios de estado (heladas, escarcha, rocío, granizo) y calculan cuántos litros de agua han caído en todo el huerto multiplicando los litros por metro cuadrado por la superficie de los bancales."
+      },
+      {
+        "etapa": "Primaria · 3.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Prácticas científicas (observación, formulación de preguntas y predicciones, planificación y realización de experimentos, recogida y análisis de información y datos, comunicación de resultados y conclusiones...).",
+          "Ciencias de la Naturaleza (A.1): Instrumentos y dispositivos apropiados para realizar observaciones y mediciones precisas de acuerdo con las necesidades de la investigación.",
+          "Ciencias de la Naturaleza (A.4): Fenómenos atmosféricos",
+          "Ciencias Sociales (B.1): El clima y el planeta. Introducción a la dinámica atmosférica y a las grandes áreas climáticas del mundo. Los principales ecosistemas y sus paisajes.",
+          "Matemáticas (E.1): Estrategias para la realización de un estudio estadístico sencillo: formulación de preguntas, recogida, registro y organización de datos cualitativos y cuantitativos procedentes de diferentes experimentos (encuestas, mediciones, observaciones…). Tablas de frecuencias absolutas y relativas: interpretación.",
+          "Matemáticas (E.1): Medidas de centralización (media, mediana y moda): interpretación, cálculo y aplicación."
+        ],
+        "adaptacion": "Diseñan y construyen la caseta y deciden dónde ponerla (y por qué). Pasan los datos a una hoja de cálculo, calculan la temperatura media de cada mes, la lluvia total y la dirección del viento más frecuente (moda), y hacen un climograma del huerto. Comparan sus datos con los de AEMET y con el clima de otros lugares. Preparan un informe para el profesorado con recomendaciones de siembra y riego basadas en los datos, y ponen a prueba un refrán del tiempo."
+      }
+    ],
+    "imagenes": [],
+    "estado": "publicada"
+  },
+  {
+    "id": "plantas-bioindicadoras",
+    "recurso": "Plantas espontáneas del huerto",
+    "titulo": "Plantas bioindicadoras: lo que nos dicen las hierbas",
+    "categoria": "naturaleza",
+    "descripcion": "En el huerto siempre crecen plantas que no hemos sembrado nosotros: son las plantas espontáneas. No son «malas hierbas»: las hierbas no son buenas ni malas, son hierbas. Y además nos hablan, porque cada una nace donde la tierra le va bien: unas en tierras pobres, con poca materia orgánica; otras en tierras con mucho nitrógeno; otras en tierra pisada y apelmazada. Por eso las llamamos bioindicadoras. Como siempre hay plantas espontáneas, esta actividad se puede hacer en cualquier momento del curso: hacemos un inventario de las que hay en cada zona del huerto, averiguamos qué nos dicen de la tierra, lo comparamos con lo que vimos en las cromatografías y decidimos qué hacer (echar materia orgánica, no echar estiércol, no pisar, acolchar…). También decidimos qué plantas espontáneas quitamos, porque compiten con nuestros cultivos, y cuáles dejamos, porque nos ayudan, como el trébol.",
+    "objetivos": [
+      "Cambiar la mirada sobre las «malas hierbas»: reconocerlas como plantas espontáneas, con un papel en el huerto, y aprender a nombrarlas.",
+      "Observar, identificar y contar las plantas espontáneas de distintas zonas del huerto.",
+      "Relacionar las plantas que crecen en un sitio con cómo es la tierra de ese sitio y con cómo la cuidamos.",
+      "Contrastar el diagnóstico de las plantas con el de la cromatografía y con lo que sabemos del huerto, y darnos cuenta de que una sola prueba no basta.",
+      "Decidir con argumentos cómo cuidar la tierra y qué plantas espontáneas quitar o dejar."
+    ],
+    "materiales": [
+      "Cuatro estacas y una cuerda de 4 m (o cuatro listones de 1 m) para marcar cuadrados de 1 × 1 m.",
+      "Lupas, cámara o tableta, cuaderno de campo y una ficha de inventario por grupo (planta, foto o dibujo, cuántas hay).",
+      "Guías de flora del huerto o de la zona (por ejemplo, «La cara amable de las malas hierbas», del CITA de Aragón) y, si se quiere, una aplicación de identificación de plantas, comprobando siempre lo que dice.",
+      "Una tabla sencilla de plantas bioindicadoras preparada por el profesorado (ver notas), con foto de cada planta.",
+      "Guantes, una pala pequeña o una azada de mano, y agua y jabón para lavarse las manos.",
+      "Un plano del huerto en grande para apuntar el diagnóstico de cada zona.",
+      "Las cromatografías de la tierra del huerto, si ya se han hecho (actividad «Cromatografías de la tierra»)."
+    ],
+    "desarrollo": [
+      "¿Malas hierbas? Preguntamos: ¿qué son las malas hierbas?, ¿por qué las llamamos así?, ¿quién decide si una hierba es mala? Llegamos a la idea de que las hierbas no son buenas ni malas: son hierbas. Las llamamos espontáneas porque nacen solas, sin que las plantemos. A veces hay que quitarlas porque compiten con nuestros cultivos por la luz, el agua o los nutrientes; otras veces nos ayudan. Les preguntamos también a la gente mayor del pueblo cómo se llaman y para qué se usaban.",
+      "Dividir el huerto en zonas. Recorremos el huerto y buscamos zonas que sean distintas: un bancal que regamos y abonamos, un camino que pisamos mucho, un borde que no tocamos, el sitio junto al compostador, un rincón húmedo… Las dibujamos en el plano. Cada grupo se encarga de una zona.",
+      "Marcar el cuadrado. En el centro de cada zona marcamos un cuadrado de 1 × 1 m con las estacas y la cuerda. Así todos los grupos miran la misma superficie y los resultados se pueden comparar.",
+      "Hacer el inventario. Sin arrancar nada, miramos con la lupa las plantas del cuadrado, las separamos por tipos (hojas, flores, cómo crecen) y fotografiamos o dibujamos cada una. Para cada planta apuntamos cuánto hay con una escala sencilla: 1, alguna suelta; 2, bastantes; 3, muchas; 4, cubre casi todo el cuadrado.",
+      "Ponerles nombre. Con las guías, la aplicación y lo que nos han contado las personas mayores, intentamos saber cómo se llama cada planta. Si no estamos seguros, lo apuntamos así: mejor «no lo sabemos» que un nombre equivocado, porque una planta mal identificada nos lleva a un diagnóstico equivocado.",
+      "Averiguar qué nos dicen. Buscamos en la tabla de plantas bioindicadoras las que tienen abundancia 3 o 4. Las que salen sueltas casi no nos dicen nada. Apuntamos lo que indican y miramos si varias plantas de la misma zona dicen lo mismo: cuantas más coincidan, más nos podemos fiar. Escribimos el diagnóstico de cada zona en el plano («mucho nitrógeno», «tierra pisada y sin aire», «tierra equilibrada»…).",
+      "Contrastar. Comparamos el diagnóstico con lo que sabemos de cada zona (¿echamos ahí estiércol o compost?, ¿la pisamos?, ¿la regamos mucho?) y, si las hemos hecho, con las cromatografías de la tierra del huerto. ¿Coinciden las conclusiones o no? Si no coinciden, pensamos por qué: puede que nos hayamos equivocado de planta, que la planta indique cómo estaba la tierra cuando germinó y no cómo está ahora, o que cada prueba mire una cosa distinta.",
+      "Decidir y actuar. Según lo que nos digan las plantas y la cromatografía, decidimos qué hacer en cada zona: si la tierra es pobre, echar compost maduro y acolcharla; si tiene demasiado nitrógeno, no echar estiércol y poner un cultivo que coma mucho; si está pisada y sin aire, no pisarla, airearla con la horca sin voltearla y marcar bien los caminos. Decidimos también qué espontáneas quitamos (las que tapan el sol o ahogan a los cultivos) y cuáles dejamos (como el trébol, que cubre la tierra y aporta nitrógeno). Lo que quitamos va al compostador, salvo las semillas maduras y las plantas tóxicas.",
+      "Volver a mirar. Repetimos el inventario en los mismos cuadrados en otra estación o al curso siguiente. Las plantas espontáneas cambian con la época del año y también cuando cambiamos la forma de cuidar la tierra: ¿han cambiado?, ¿la tierra está mejor?"
+    ],
+    "notas": [
+      "Tabla para empezar (lo que suelen indicar cuando son abundantes; las fuentes no siempre coinciden). Cenizo (Chenopodium album): mucho nitrógeno, por estiércol o compost poco hecho, o tierra labrada estando muy mojada. Bledos (Amaranthus): exceso de nitrógeno y potasio. Ortiga (Urtica dioica): mucha materia orgánica que cuesta descomponerse. Amor de hortelano o lapa (Galium aparine): exceso de nitrógeno y de materia orgánica. Correhuela (Convolvulus arvensis): tierra apelmazada, con poco aire y sin cubrir. Grama (Cynodon dactylon): tierra compactada, que pierde humus o con riegos irregulares. Artemisa (Artemisia vulgaris): tierra asfixiada por compactación o por exceso de riego. Milenrama (Achillea millefolium): tierra erosionada que pierde nutrientes. Llantén menor (Plantago lanceolata) y mielga o trébol manchado (Medicago arabica): tierra equilibrada, buena noticia. Pamplina o hierba gallinera (Stellaria media): tierra viva y fértil; si lo cubre todo, quizá demasiado nitrógeno. Diente de león (Taraxacum): unas fuentes dicen tierra rica y otras tierra compactada. Estramonio (Datura stramonium): tierra traída de fuera o alterada; es muy tóxica.",
+      "Cómo interpretar (la parte más importante). Según Gérard Ducerf, el botánico francés que ha estudiado durante décadas este método, en la tierra hay muchísimas semillas esperando, y cada una solo germina cuando se dan sus condiciones. Por eso una planta nos habla de la tierra que ocupa, no de todo el huerto, y de cómo estaba cuando germinó. Solo cuentan las plantas abundantes y, mejor, varias que digan lo mismo. Las fuentes no coinciden en algunas plantas (por ejemplo, el diente de león o la pamplina): es una buena ocasión para hablar de hechos y opiniones y de comparar fuentes.",
+      "¿Funciona? Hay pocos estudios científicos que lo comprueben. Un trabajo de la Universidad Autónoma de Barcelona aplicó el método de Ducerf en dos huertos ecológicos y lo comparó con análisis de laboratorio: algunas cosas coincidían (mucha materia orgánica, mucho nitrato, compactación) y otras no (las plantas indicaban una tierra algo ácida y el laboratorio dio un pH neutro). Las autoras concluyen que hacen falta más estudios. Con el alumnado lo planteamos como la cromatografía: el diagnóstico de las plantas es una hipótesis que contrastamos con otras pruebas, no un análisis exacto.",
+      "El trébol (y otras leguminosas, como la mielga o la alfalfa) vive junto con unas bacterias que forman bultitos en sus raíces, los nódulos, y que cogen el nitrógeno del aire y lo dejan en la tierra. Si arrancamos con cuidado un trébol y lavamos las raíces, podemos ver los nódulos con la lupa. Además, como es bajito, cubre y protege la tierra sin quitar el sol a los cultivos: es un acolchado vivo. En verano, en un clima seco como el nuestro, también bebe agua: si vemos que compite con los cultivos, lo segamos en lugar de arrancarlo.",
+      "Seguridad: no nos llevamos ninguna planta a la boca aunque nos digan que es comestible, y nos lavamos las manos al acabar. La ortiga pica: la tocamos con guantes. El estramonio (hojas grandes dentadas, flor blanca en trompeta y fruto con pinchos) es muy tóxico: si aparece, se enseña sin tocarlo y lo quita la persona adulta con guantes; no va al compostador.",
+      "Se puede combinar con «Cromatografías de la tierra» (hacer las dos en las mismas zonas y comparar las conclusiones), con «Trampas de microorganismos» y con «El refranero del huerto» (refranes y nombres populares de las hierbas).",
+      "Fuentes: propuesta del profesorado del colegio; G. Ducerf, «Las plantas bioindicadoras. Diagnóstico del suelo a partir de lo que indica la flora arvense» (L'Era, Manresa, 2022), https://www.associaciolera.org, y «L'encyclopédie des plantes bio-indicatrices, alimentaires et médicinales» (Promonature, 2010); Diputación de Lugo, Hortos urbanos, dossier «Plantas bioindicadoras» (2024), https://hortosurbanos.deputacionlugo.org/wp-content/uploads/2024/10/dossier_plantas_bioindicadoras.pdf; Escola Agrària de l'Empordà, jornada «Introducció a les plantes bioindicadores» (2020), https://agora.xtec.cat/eaemporda/wp-content/uploads/usu1941/2020/04/Bioindicadores.pdf; L. Mas y P. Puy, «Anàlisi de la biodiversitat i la fertilitat del sòl a l'hort demostratiu de Can Moragues», TFG, Universitat Autònoma de Barcelona (2018), https://ddd.uab.cat/pub/tfg/2018/194417/TFG_Lauramas_Paulapuy.pdf; Jardiner Malin, «Plantes bio-indicatrices», https://www.jardiner-malin.fr/fiche/plantes-bioindicatrices-sol.html; CDAMAZ, Ayuntamiento de Zaragoza, bibliografía «Plantas bioindicadoras», https://www.zaragoza.es/contenidos/medioambiente/cda/plantas-bioindicadoras.pdf; A. Cirujeda, «La cara amable de las malas hierbas» (CITA de Aragón, 2021)."
+    ],
+    "duracion": "1 sesión para hablar de por qué no decimos «malas hierbas» y dividir el huerto en zonas, 1 o 2 sesiones para hacer el inventario y ponerles nombre, y 1 sesión para interpretar, contrastar y decidir qué hacer. Se puede repetir en otras estaciones (1 o 2 sesiones cada vez).",
+    "estaciones": [
+      "Otoño",
+      "Invierno",
+      "Primavera",
+      "Verano"
+    ],
+    "epoca": "En cualquier momento: en el huerto siempre hay plantas espontáneas. Es más fácil identificarlas en primavera y a principios de otoño, cuando hay más y muchas están en flor. Conviene repetir el inventario en otra estación, porque las plantas cambian a lo largo del año.",
+    "etapas": [
+      {
+        "etapa": "Infantil",
+        "saberes": [
+          "Descubrimiento y Exploración del Entorno (A): Cualidades o atributos de los objetos. Relaciones de orden, correspondencia, clasificación y comparación.",
+          "Descubrimiento y Exploración del Entorno (B): Estrategias y técnicas de investigación: ensayo-error, observación, experimentación, formulación y comprobación de hipótesis, realización de preguntas, manejo y búsqueda en distintas fuentes de información.",
+          "Descubrimiento y Exploración del Entorno (C): Respeto y empatía por los seres vivos y por los recursos naturales."
+        ],
+        "adaptacion": "Buscan plantas «que nadie ha plantado» en el huerto y las miran con la lupa. Las clasifican por cómo son (hojas grandes o pequeñas, con flor o sin flor, de qué color) y buscan dos iguales. Aprenden el nombre de unas pocas fáciles (ortiga, trébol, diente de león, llantén) y por qué no decimos «malas hierbas». Buscan los nódulos en las raíces de un trébol que arranca la persona adulta. Hacen un mural del huerto con las plantas espontáneas dibujadas o fotografiadas."
+      },
+      {
+        "etapa": "Primaria · 1.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Procedimientos adecuados a las necesidades de la investigación escolar (observación en el tiempo, identificación y clasificación, búsqueda de patrones...).",
+          "Ciencias de la Naturaleza (A.2): Clasificación e identificación de los seres vivos de acuerdo con sus características observables.",
+          "Ciencias de la Naturaleza (A.2): Las relaciones entre los seres humanos, los animales y las plantas. Cuidado y respeto hacia los seres vivos y el entorno en el que viven.",
+          "Matemáticas (E.1): Estrategias sencillas para la recogida, clasificación y recuento de datos cualitativos y cuantitativos en muestras pequeñas."
+        ],
+        "adaptacion": "Hacen el inventario de un cuadrado con ayuda: separan las plantas por tipos, cuentan cuántas hay de cada una y lo apuntan con dibujos y palotes. Comparan el camino pisado con el bancal: ¿salen las mismas plantas? Con la tabla buscan qué nos dicen las más abundantes. Preguntan a sus familias cómo se llaman las plantas en el pueblo. Hablan de qué plantas hay que quitar y cuáles dejar, y por qué."
+      },
+      {
+        "etapa": "Primaria · 2.º ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Procedimientos adecuados a las necesidades de la investigación escolar (observación en el tiempo, identificación y clasificación, búsqueda de patrones, creación de modelos, investigación a través de búsqueda de información, diseño y puesta en marcha de experimentos con control de variables...).",
+          "Ciencias de la Naturaleza (A.2): Los ecosistemas como lugar donde intervienen factores bióticos y abióticos, manteniéndose un equilibrio entre los diferentes elementos y recursos. Sus interacciones y relación con otros sistemas.",
+          "Lengua Castellana y Literatura (B.5): Estrategias básicas para la búsqueda guiada de información en fuentes documentales variadas y con distintos soportes y formatos con criterios de fiabilidad. Hechos y opiniones.",
+          "Matemáticas (E.1): Estrategias sencillas para la recogida, clasificación y organización de datos cualitativos o cuantitativos discretos en muestras pequeñas mediante calculadora y aplicaciones informáticas sencillas. Frecuencia absoluta: interpretación."
+        ],
+        "adaptacion": "Cada grupo inventaría una zona con la escala de abundancia y hace una tabla de frecuencias. Relacionan las plantas con la tierra, el agua, la luz y lo que hacemos las personas en cada zona. Buscan en dos o tres fuentes qué indica una planta y comparan lo que dicen: ¿coinciden?, ¿cuál nos parece más fiable y por qué? Comparan su diagnóstico con la cromatografía y buscan los nódulos del trébol con la lupa."
+      },
+      {
+        "etapa": "Primaria · 3.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Prácticas científicas (observación, formulación de preguntas y predicciones, planificación y realización de experimentos, recogida y análisis de información y datos, comunicación de resultados y conclusiones...).",
+          "Ciencias de la Naturaleza (A.1): Vocabulario científico básico relacionado con las diferentes investigaciones.",
+          "Ciencias Sociales (B.4): Responsabilidad ecosocial. Ecodependencia, interdependencia e interrelación entre personas, sociedades y medio natural.",
+          "Matemáticas (E.1): Estrategias para la realización de un estudio estadístico sencillo: formulación de preguntas, recogida, registro y organización de datos cualitativos y cuantitativos procedentes de diferentes experimentos (encuestas, mediciones, observaciones…). Tablas de frecuencias absolutas y relativas: interpretación.",
+          "Lengua Castellana y Literatura (B.5): Estrategias de comparación, organización y valoración de la información."
+        ],
+        "adaptacion": "Antes de mirar, predicen qué plantas saldrán en cada zona y qué dirán de la tierra. Planifican el muestreo (zonas, cuadrados, escala de abundancia) y calculan qué parte del cuadrado ocupa cada planta. Hacen el diagnóstico de cada zona contando cuántas plantas abundantes apuntan a lo mismo, lo contrastan con la cromatografía y con lo que sabemos del huerto, y valoran qué puede y qué no puede decirnos el método (leen cómo lo comprobó el estudio de la Universidad Autónoma de Barcelona). Usan con propiedad el vocabulario de la investigación (bioindicador, espontánea, abundancia, muestra, hipótesis, nódulo) y reflexionan sobre cómo dependemos de la tierra y cómo la cambiamos con lo que hacemos en el huerto. Proponen un plan de cuidado para cada zona y lo presentan al resto del colegio con el plano del huerto."
+      }
+    ],
+    "imagenes": [],
+    "estado": "publicada"
+  },
+  {
+    "id": "refranero-del-huerto",
+    "recurso": "Refranes",
+    "titulo": "El refranero del huerto",
+    "categoria": "lengua",
+    "descripcion": "Recogemos, estudiamos y explicamos los refranes populares relacionados con el huerto, el campo y el tiempo. Los buscamos preguntando a la gente mayor del pueblo y en casa, y también en libros. De cada refrán averiguamos qué significa, qué consejo da para el huerto y si tiene razón. Por ejemplo: «Cada día de enero, un ajo menos en el granero». Quiere decir que los ajos se siembran en invierno, pero no tarde: si nos pasamos y los sembramos en enero o más tarde, cada día de retraso nos dará una cosecha más pequeña. Con todos los refranes hacemos el refranero del huerto de la escuela.",
+    "objetivos": [
+      "Conocer y valorar los refranes del huerto como parte del patrimonio cultural del pueblo, transmitido de palabra de generación en generación.",
+      "Hablar con las personas mayores del entorno: preparar preguntas, escuchar con atención y tomar nota de lo que cuentan.",
+      "Comprender el sentido figurado de los refranes y explicarlos con nuestras propias palabras.",
+      "Relacionar cada refrán con el trabajo del huerto y la época del año, y comprobar si su consejo se cumple.",
+      "Hacer entre todos un refranero del huerto, escrito e ilustrado, para usarlo y ampliarlo cada curso."
+    ],
+    "materiales": [
+      "Cuaderno de campo o fichas para apuntar los refranes (refrán, quién lo ha dicho, de dónde es, qué significa).",
+      "Si se quiere, una grabadora o tableta para grabar las entrevistas, siempre con el permiso de la persona entrevistada.",
+      "Un calendario grande del curso para colocar cada refrán en su mes.",
+      "Cartulinas, lápices de colores y rotuladores para ilustrar los refranes.",
+      "Libros de refranes de la biblioteca."
+    ],
+    "desarrollo": [
+      "Presentar un refrán. Escribimos en la pizarra «Cada día de enero, un ajo menos en el granero» y preguntamos: ¿qué es un refrán?, ¿qué querrá decir este?, ¿por qué habla de enero y de ajos? Escuchamos las ideas de todos antes de explicarlo.",
+      "Descubrir su significado. Entre todos llegamos a la idea: los ajos se siembran en invierno, pero cuanto más esperamos para sembrarlos (en enero o más tarde), menos tiempo tienen para crecer y más pequeña es la cosecha. El refrán es un consejo de la gente que ha trabajado el huerto durante muchos años, dicho de forma corta, con ritmo y con rima para que se recuerde fácilmente.",
+      "Preparar la entrevista. Cada uno pregunta en casa y a una persona mayor del pueblo (abuelos, vecinos, gente que tiene o tenía huerto) qué refranes conoce del huerto, del campo o del tiempo. Antes, preparamos juntos unas preguntas: ¿qué refranes del huerto conoce?, ¿quién se los enseñó?, ¿qué quieren decir?, ¿los sigue usted?, ¿se cumplen? Si alguien conoce refranes en aragonés o en catalán, también los recogemos.",
+      "Hacer la entrevista. Apuntamos cada refrán tal y como nos lo dicen, quién nos lo ha contado y lo que nos explica. Si se puede, invitamos a una o varias personas mayores a la escuela o al huerto para que nos cuenten sus refranes y cómo trabajaban la tierra.",
+      "Poner en común. En clase leemos los refranes recogidos y los agrupamos: de siembra y cosecha, del tiempo (lluvia, heladas, calor), de los meses y los santos, de los animales del huerto… Vemos si hay refranes repetidos o que dicen lo mismo con otras palabras, y si hay alguno que dice lo contrario que otro.",
+      "Analizar cada refrán. Para cada uno buscamos: qué dice al pie de la letra, qué significa de verdad (el sentido figurado), qué consejo da para el huerto y en qué época del año. Comparamos lo que nos han contado con lo que encontramos en libros o en internet.",
+      "Comprobar si tienen razón. Elegimos algunos refranes y los ponemos a prueba con lo que pasa en nuestro huerto: anotamos el tiempo, las fechas de siembra y lo que cosechamos. Algunos se pueden comprobar con un experimento, como el de la siembra de los ajos según la luna (actividad «Sembramos los ajos»).",
+      "Hacer el refranero del huerto. Cada refrán va en una ficha o cartulina con el refrán, su significado, una ilustración y el nombre de quién lo ha aportado. Los colocamos en el calendario del curso, en el mes que corresponde, o los juntamos en un libro. Cada curso se puede ampliar con refranes nuevos.",
+      "Compartirlos. La mejor forma de mantener viva la tradición popular es seguir utilizando los refranes de nuestra zona."
+    ],
+    "notas": [
+      "Algunos refranes del huerto y del tiempo para empezar o comparar: «En abril, aguas mil». «Agua de mayo, pan para todo el año». «Hasta el cuarenta de mayo, no te quites el sayo». «Año de nieves, año de bienes». «Cuando marzo mayea, mayo marcea». «Por San Martín, siembra el ruin» (San Martín es el 11 de noviembre: quien siembra tan tarde es el perezoso). Es mejor dar prioridad a los que recoja el alumnado en el pueblo, aunque sean variantes de estos.",
+      "Un mismo refrán cambia de un pueblo a otro, y a veces hay dos que dicen cosas contrarias. Es normal: cada uno nace del clima y de la experiencia de un lugar. Por eso conviene apuntar siempre de dónde es el refrán y quién lo ha contado.",
+      "Los refranes no siempre aciertan: algunos vienen de otra época o de otro clima. Por ejemplo, «Por Santa Lucía, mengua la noche y crece el día» (13 de diciembre) se refería al calendario antiguo; hoy los días empiezan a crecer a partir del 21 o 22 de diciembre. Descubrir por qué un refrán ya no se cumple también es aprender.",
+      "La gente mayor del pueblo guarda un saber muy valioso sobre el huerto. Esta actividad es una buena ocasión para invitarla a la escuela y para que el alumnado la escuche y la reconozca.",
+      "Para grabar o fotografiar a las personas entrevistadas, y para poner su nombre en el refranero, hay que pedirles permiso antes.",
+      "Combina bien con «Sembramos los ajos» (el refrán de enero explica por qué conviene sembrarlos antes), con «Nuestra estación meteorológica» (comprobar los refranes del tiempo con nuestros datos), con «Cortamos las cañas» y con «Plantas bioindicadoras» (los nombres populares de las hierbas).",
+      "En otros pueblos el refrán de los ajos tiene variantes, como «Día que pase de enero, ajo que pierde el ajero» o «Tantos ajos que siembres después de enero, tantos ajos pierdes en el ajero» (recogidos en Guadalajara): el ajero es donde se guardan los ajos.",
+      "Fuentes: la gente mayor del pueblo y el profesorado del colegio; P. García Mouton, «Refranes meteorológicos en el Atlas Lingüístico (y Etnográfico) de Castilla-La Mancha», https://www.divulgameteo.es/archivos/articulos/meteoroteca/Refranes-Atlas-CMancha.pdf; Centro Virtual Cervantes, Refranero multilingüe, https://cvc.cervantes.es/lengua/refranero/; Universitat de Barcelona, ParemioRom, refranes meteorológicos de las lenguas románicas, https://stel.ub.edu/paremio-rom/."
+    ],
+    "duracion": "1 sesión para presentar los refranes y preparar la entrevista, unos días para recogerlos en casa y en el pueblo, y 2 o 3 sesiones para ponerlos en común, analizarlos y hacer el refranero. Se puede ampliar durante todo el curso.",
+    "estaciones": [
+      "Otoño",
+      "Invierno",
+      "Primavera"
+    ],
+    "epoca": "En cualquier momento del curso. Para el refrán de los ajos, mejor en otoño o a principios de invierno, antes de sembrarlos. El refranero se puede ir ampliando mes a mes con los refranes de cada época.",
+    "etapas": [
+      {
+        "etapa": "Infantil",
+        "saberes": [
+          "Comunicación y Representación de la Realidad (B): La realidad lingüística del entorno. Fórmulas o expresiones que responden a sus necesidades o intereses.",
+          "Comunicación y Representación de la Realidad (C): El lenguaje oral en situaciones cotidianas: conversaciones, juegos de interacción social y expresión de vivencias.",
+          "Comunicación y Representación de la Realidad (E): Vínculos afectivos y lúdicos con los textos literarios.",
+          "Descubrimiento y Exploración del Entorno (C): Fenómenos naturales: identificación y repercusión en la vida de las personas.",
+          "Descubrimiento y Exploración del Entorno (A): El tiempo y su organización: día-noche, estaciones, ciclos, calendario, antes, después, presente, pasado, futuro."
+        ],
+        "adaptacion": "Trabajan pocos refranes, cortos y con rima, sobre todo el de los ajos. Los aprenden de memoria y los recitan jugando con el ritmo, como una retahíla. Preguntan en casa con una nota para la familia y traen un refrán, que la maestra o el maestro escribe y la familia les ha ayudado a entender. Lo dibujan y lo colocan en el calendario de la clase, en su mes. Si es posible, una persona mayor visita el aula para contarles sus refranes."
+      },
+      {
+        "etapa": "Primaria · 1.er ciclo",
+        "saberes": [
+          "Lengua Castellana y Literatura (B.1): Elementos básicos de contenido (tema, fórmulas fijas, léxico) y forma (estructura, formato, imágenes).",
+          "Lengua Castellana y Literatura (B.2): Construcción y comunicación de conocimiento mediante la planificación y producción acompañada de textos orales y multimodales sencillos.",
+          "Lengua Castellana y Literatura (D): Procedimientos elementales de adquisición de vocabulario. Reflexión contextualizada sobre la relación de significado entre unas palabras y otras.",
+          "Ciencias Sociales (B.2): El ciclo vital y las relaciones intergeneracionales.",
+          "Ciencias Sociales (B.2): Recursos y medios analógicos y digitales. Las fuentes orales y la memoria colectiva. La historia local y la biografía familiar, hombres y mujeres como sujetos de la historia."
+        ],
+        "adaptacion": "Recogen uno o dos refranes en casa o con una persona mayor, con una ficha sencilla (refrán, quién lo dice, qué significa). Los aprenden y los recitan con buena entonación. Explican con sus palabras qué quieren decir y aprenden las palabras que no conocen (granero, sayo, ruin…). Ilustran los refranes y los colocan en el calendario del curso."
+      },
+      {
+        "etapa": "Primaria · 2.º ciclo",
+        "saberes": [
+          "Lengua Castellana y Literatura (A): La diversidad etno-cultural y lingüística como riqueza y herramienta de reflexión interlingüística. La realidad trilingüe de Aragón.",
+          "Lengua Castellana y Literatura (B.2): Construcción, valoración y comunicación de conocimiento mediante la planificación y producción acompañada de textos orales y multimodales sencillos.",
+          "Lengua Castellana y Literatura (B.5): Estrategias básicas para la búsqueda guiada de información en fuentes documentales variadas y con distintos soportes y formatos con criterios de fiabilidad. Hechos y opiniones.",
+          "Ciencias Sociales (A): Las fuentes históricas: clasificación y utilización de las distintas fuentes (orales, escritas, patrimoniales) como vía para el análisis de los cambios y permanencias en la localidad a lo largo de la historia. Las huellas de la historia en lugares, edificios, objetos, oficios o tradiciones de la localidad.",
+          "Ciencias Sociales (B.3): Las costumbres, tradiciones y manifestaciones etnoculturales del entorno. Respeto por la diversidad cultural, los derechos humanos y la cohesión social. La cultura de paz y no violencia."
+        ],
+        "adaptacion": "Preparan las preguntas de la entrevista, la hacen a una persona mayor y toman nota de lo que cuenta. Agrupan los refranes por temas y explican el significado literal y el figurado de cada uno. Comparan lo que les han contado con lo que encuentran en libros, y buscan si hay refranes parecidos en aragonés o en catalán. Hacen las fichas del refranero, con el nombre de quién aportó cada refrán."
+      },
+      {
+        "etapa": "Primaria · 3.er ciclo",
+        "saberes": [
+          "Lengua Castellana y Literatura (B.2): Estrategias de identificación e interpretación del sentido global, la información relevante, la integración de la información explícita y la realización de inferencias para superar el sentido literal de textos sociales orales y multimodales.",
+          "Lengua Castellana y Literatura (B.2): Construcción, comunicación y valoración crítica de conocimiento mediante la planificación y producción relativamente autónoma de textos orales y multimodales.",
+          "Lengua Castellana y Literatura (B.5): Estrategias de comparación, organización y valoración de la información.",
+          "Ciencias Sociales (A): Las fuentes históricas: clasificación y utilización de fuentes de distinta naturaleza (orales, escritas, materiales, iconográficas, etc).",
+          "Ciencias Sociales (B.2): El patrimonio natural y cultural material e inmaterial de Aragón y España como bien y recurso; su uso, cuidado y conservación. Las lenguas propias de Aragón (aragonés y catalán)."
+        ],
+        "adaptacion": "Planifican y graban (con permiso) las entrevistas y las transcriben. Analizan cada refrán: sentido literal, sentido figurado, consejo para el huerto, época del año y recursos que lo hacen fácil de recordar (rima, ritmo). Comparan variantes de distintos pueblos y refranes que se contradicen, y valoran si se cumplen con datos del huerto (fechas de siembra, tiempo, cosecha) o si vienen de otra época, como el de Santa Lucía. Presentan el refranero a otros cursos o a las familias."
+      }
+    ],
+    "imagenes": [],
+    "estado": "publicada"
+  },
+  {
+    "id": "riego-automatico-microbit",
+    "recurso": "Semilleros",
+    "titulo": "Riego automático del semillero con micro:bit",
+    "categoria": "tecnologia",
+    "descripcion": "Los semilleros están dentro de una bandeja con agua para que no se sequen, pero hay que estar pendientes de rellenarla, y un fin de semana o un puente sin regar puede echar a perder las plantas. Con la micro:bit y el kit de agricultura construimos un sistema de riego automático: un sensor de humedad clavado en el sustrato del semillero mide si está seco y, cuando lo está, la micro:bit pone en marcha una bomba que echa un poco de agua de un depósito en la bandeja. El semillero absorbe el agua desde abajo, como hasta ahora, pero sin que tengamos que acordarnos.",
+    "objetivos": [
+      "Identificar una necesidad real del huerto y diseñar una solución tecnológica para ella.",
+      "Conocer las partes de un sistema automático: sensor (mide), placa (decide) y actuador (actúa).",
+      "Programar con bloques un algoritmo con una condición («si el sustrato está seco, regar») y un bucle que se repite.",
+      "Calibrar un sensor: relacionar sus números con lo que observamos (seco o húmedo).",
+      "Probar, encontrar errores y mejorar el prototipo.",
+      "Relacionar el riego con las necesidades de las plantas y con el uso responsable del agua."
+    ],
+    "materiales": [
+      "Una micro:bit con su cable USB y portapilas (o un cargador USB / batería externa para dejarla funcionando varios días).",
+      "Del kit de agricultura: placa de expansión, sensor de humedad del suelo, bomba de agua sumergible con su tubo y, si el kit lo trae, relé o módulo para la bomba.",
+      "El semillero dentro de su bandeja, y un depósito de agua (una garrafa o cubeta) donde va sumergida la bomba.",
+      "Un ordenador o tableta con MakeCode (makecode.microbit.org) para programar.",
+      "Una caja de plástico o un soporte para dejar la micro:bit y la placa elevadas y protegidas del agua.",
+      "Bridas o cinta para sujetar el tubo, una regla y un cuaderno de registro."
+    ],
+    "desarrollo": [
+      "Plantear el problema. Hablamos de lo que pasa con los semilleros: ¿por qué se secan?, ¿cuánta agua necesitan?, ¿qué pasa los fines de semana? Pensamos ideas para que no nos pase y llegamos a la del riego automático.",
+      "Conocer el kit. Vemos cada pieza y para qué sirve: el sensor mide la humedad del sustrato (es como el «sentido» del sistema), la micro:bit decide qué hacer (el «cerebro») y la bomba mueve el agua (el «músculo»). Miramos en la guía de nuestro kit a qué pines se conectan el sensor y la bomba, porque cambia de un kit a otro.",
+      "Diseñar y montar. Dibujamos el montaje antes de hacerlo. La bomba va sumergida en el depósito y el tubo llega hasta la bandeja (sujeto para que no se mueva). El sensor se clava en el sustrato de una celda del semillero, no en el agua de la bandeja: lo que queremos saber es si la tierra de las plantas está seca. La micro:bit y la placa quedan en alto, dentro de una caja y lejos del agua.",
+      "Calibrar el sensor. Hacemos un programa que solo muestre en la pantalla el número que da el sensor. Lo apuntamos con el sustrato seco y con el sustrato recién mojado. Elegimos un número intermedio como límite (umbral) para decidir cuándo regar. Ojo: en unos sensores el número sube con la humedad y en otros baja.",
+      "Programar. En MakeCode, con bloques, hacemos un bucle que se repite siempre: leer la humedad; si está por debajo del umbral (seco), encender la bomba unos pocos segundos y apagarla; y esperar un buen rato (10-15 minutos) antes de volver a medir, porque el agua tarda en subir por el sustrato. Podemos añadir caritas en la pantalla: contenta si está húmedo, triste si está seco.",
+      "Probar y ajustar. Medimos cuántos segundos de bomba hacen falta para que el agua suba más o menos 1 cm en la bandeja, y ajustamos el tiempo para que no desborde. Probamos qué pasa si el umbral está demasiado alto o demasiado bajo. Si algo falla, buscamos el error: ¿conexión?, ¿pin?, ¿umbral?, ¿la bomba está sumergida?",
+      "Dejarlo funcionar y registrar. Lo dejamos en marcha varios días (también un fin de semana), con el depósito lleno. Apuntamos cada día el nivel del depósito, las lecturas y cómo están las plantas, y lo comparamos con un semillero sin el sistema.",
+      "Mejorar y comunicar. Pensamos mejoras (un máximo de riegos al día por seguridad, avisar cuando el depósito se vacía, guardar las lecturas para hacer una gráfica…) y explicamos el proyecto al resto del colegio."
+    ],
+    "notas": [
+      "La micro:bit y la placa no pueden mojarse: siempre en alto, en una caja y lejos de la bandeja y del depósito. Funcionan con poca tensión (pilas o USB), así que no hay peligro eléctrico, pero el agua las estropea.",
+      "La bomba debe estar siempre sumergida: si funciona en seco se estropea. Hay que vigilar que el depósito tenga agua, sobre todo antes de un fin de semana.",
+      "Las pilas pueden agotarse en pocos días: para dejarlo funcionando mucho tiempo, mejor un cargador USB o una batería externa.",
+      "Los sensores de humedad que tienen dos patas metálicas se corroen si están siempre encendidos. Si el kit lo permite, se alimenta el sensor solo cuando se mide, o se saca del sustrato cuando no se usa.",
+      "Los números del sensor cambian según el sustrato y el sensor: siempre hay que calibrar con nuestro propio semillero.",
+      "Un límite de riegos por día en el programa evita que, si el sensor falla, la bomba vacíe el depósito y encharque la bandeja.",
+      "La conexión de la bomba y los pines cambian según el kit (por ejemplo, unos usan relé y otros un controlador de motor): hay que seguir la guía del fabricante de nuestro kit.",
+      "Se puede combinar con «Estación meteorológica con micro:bit» (la misma placa y el mismo kit) y con «Nuestra estación meteorológica» (decidir cuándo regar según la lluvia y la temperatura).",
+      "Fuentes: MakeCode, proyecto «Plant watering», https://makecode.microbit.org/projects/plant-watering; ELECFREAKS, Smart Agriculture Kit para micro:bit, caso 01 (sensor de humedad y bomba), https://wiki.elecfreaks.com/microbit/wisdom-life/microbit-smart-agriculture-kit/microbit-Smart-Agriculture-Kit-case-01; la guía del fabricante de nuestro kit."
+    ],
+    "duracion": "3 o 4 sesiones: problema y diseño; montaje y calibración; programación y pruebas; registro durante unos días y mejoras.",
+    "estaciones": [
+      "Invierno",
+      "Primavera"
+    ],
+    "epoca": "Cuando tenemos semilleros: sobre todo de finales de invierno a primavera. También en otoño, si se hacen semilleros de cultivos de invierno.",
+    "etapas": [
+      {
+        "etapa": "Primaria · 1.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.2): Necesidades básicas de los seres vivos y la diferencia con los objetos inertes.",
+          "Ciencias de la Naturaleza (B.2): Fases de los proyectos de diseño: de modelos analógicos y prototipos, prueba y comunicación.",
+          "Ciencias de la Naturaleza (B.2): Iniciación a la programación a través de recursos analógicos o digitales adaptados al nivel lector del alumnado (actividades desenchufadas, plataformas digitales de iniciación a la programación, robótica educativa...).",
+          "Matemáticas (D.3): Estrategias para la interpretación de algoritmos sencillos (rutinas, instrucciones con pasos ordenados…)."
+        ],
+        "adaptacion": "La persona docente monta y programa el sistema. El alumnado parte de las necesidades de las plantas (agua) y hace actividades desenchufadas: ordenar tarjetas con los pasos del algoritmo («mirar la tierra → si está seca, regar → esperar → volver a mirar») o representarlo con el cuerpo, haciendo unos de sensor y otros de bomba. Después lo ven funcionar, observan las caritas de la pantalla y registran con dibujos cómo están las plantas."
+      },
+      {
+        "etapa": "Primaria · 2.º ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.2): Características propias de las plantas que permiten su clasificación en relación con su capacidad adaptativa al medio: obtención de energía, relación con el entorno y perpetuación de la especie.",
+          "Ciencias de la Naturaleza (B.2): Fases de los proyectos de diseño: diseño, construcción de modelos y prototipos, prueba y comunicación.",
+          "Ciencias de la Naturaleza (B.2): Iniciación a la programación a través de recursos analógicos (actividades desenchufadas) o digitales (plataformas digitales de iniciación a la programación, aplicaciones de programación por bloques, robótica educativa...).",
+          "Ciencias de la Naturaleza (B.2): Técnicas cooperativas sencillas para el trabajo en equipo y estrategias para la gestión de conflictos y promoción de conductas empáticas e inclusivas.",
+          "Matemáticas (D.3): Estrategias para la interpretación y modificación de algoritmos sencillos (reglas de juegos, instrucciones secuenciales, bucles, patrones repetitivos, programación por bloques, robótica educativa...)."
+        ],
+        "adaptacion": "En grupos con roles (montaje, programación, registro), montan el sistema siguiendo un esquema y parten de un programa de bloques ya hecho: lo interpretan y lo modifican (cambiar el umbral, los segundos de bomba, las caritas). Calibran el sensor anotando los números en una tabla."
+      },
+      {
+        "etapa": "Primaria · 3.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Instrumentos y dispositivos apropiados para realizar observaciones y mediciones precisas de acuerdo con las necesidades de la investigación.",
+          "Ciencias de la Naturaleza (B.2): Fases de los proyectos de diseño: identificación de necesidades, diseño, creación de un prototipo, prueba, evaluación y comunicación.",
+          "Ciencias de la Naturaleza (B.2): Fases del pensamiento computacional (descomposición de una tarea en partes más sencillas, reconocimiento de patrones y creación de algoritmos sencillos para la resolución del problema...).",
+          "Ciencias de la Naturaleza (B.2): Materiales, herramientas, objetos, dispositivos y recursos digitales (programación por bloques, sensores, motores, simuladores, impresoras 3D, ...) seguros y adecuados a la consecución del proyecto.",
+          "Ciencias de la Naturaleza (B.2): Estrategias en situaciones de incertidumbre: adaptación y cambio de estrategia cuando sea necesario, valoración del error propio y el de los demás como oportunidad de aprendizaje.",
+          "Matemáticas (D.3): Estrategias para la interpretación, modificación y creación de algoritmos sencillos (secuencias de paso ordenados, esquemas, simulaciones, patrones repetitivos, bucles, instrucciones anidadas y condicionales, representaciones computacionales, programación por bloques, robótica educativa...)."
+        ],
+        "adaptacion": "Hacen el proyecto completo: identifican la necesidad, descomponen el problema (medir, decidir, actuar, esperar), diseñan y montan el prototipo, calibran el sensor y crean el programa desde cero. Añaden mejoras: un contador de riegos al día, un aviso de depósito vacío o el registro de las lecturas para hacer una gráfica (con la micro:bit V2). Evalúan el sistema comparándolo con un semillero sin riego automático y lo presentan."
+      }
+    ],
+    "imagenes": [],
+    "estado": "publicada"
+  },
+  {
+    "id": "sembrar-ajos",
+    "recurso": "Ajos",
+    "titulo": "Sembramos los ajos",
+    "categoria": "cultivo",
+    "descripcion": "Sembramos ajos en un bancal del huerto a partir de dientes de ajo. Antes, hacemos las cuentas: con el espacio que tenemos y el marco de plantación (la distancia entre ajos y entre filas), ¿cuántos dientes caben?, y si cada cabeza tiene unos cuantos dientes, ¿cuántas cabezas necesitamos? Además, atendemos a un saber popular del huerto: tradicionalmente, los ajos se siembran en la última luna menguante de diciembre, porque se dice que en otra luna las raíces empujan el diente hacia arriba y el ajo «se sale» de la tierra. Lo ponemos a prueba: sembramos unos ajos en luna menguante y otros en luna creciente, y comparamos.",
+    "objetivos": [
+      "Sembrar ajos correctamente: diente sano y grande, con la punta hacia arriba, a la profundidad y distancia adecuadas.",
+      "Usar las matemáticas para planificar un cultivo: medir el bancal, calcular cuántos ajos caben y cuántas cabezas hay que comprar.",
+      "Conocer cómo se reproduce el ajo: cada diente da una cabeza nueva.",
+      "Valorar los saberes populares del huerto (la siembra según la luna) y ponerlos a prueba con un experimento.",
+      "Cuidar el cultivo hasta la cosecha."
+    ],
+    "materiales": [
+      "Cabezas de ajo para sembrar, mejor de semilla certificada o de un huerto conocido (los del supermercado a veces están tratados para que no broten).",
+      "Cinta métrica, cuerda y estacas para marcar las filas, y un listón o palo de 15 cm (o el que corresponda) para medir la distancia entre ajos.",
+      "Plantador o palo para hacer los agujeros, y rastrillo.",
+      "Regadera.",
+      "Cuaderno de campo, lápiz y, si se quiere, calculadora.",
+      "Un calendario lunar."
+    ],
+    "desarrollo": [
+      "Conocer el ajo. Abrimos una cabeza: contamos sus dientes y vemos que cada uno tiene una base plana (de donde saldrán las raíces) y una punta (de donde saldrá la planta). Cada diente que sembremos dará una cabeza nueva.",
+      "Medir el bancal. Medimos el largo y el ancho y calculamos la superficie. Ejemplo: un bancal de 2 m × 2 m tiene 4 m².",
+      "Decidir el marco de plantación. Para un huerto, unos 30 cm entre filas y unos 15 cm entre ajos de la misma fila (hay quien deja 10 cm o 20 cm; cuanto más espacio, cabezas más grandes).",
+      "Calcular cuántos dientes caben. Filas: 200 cm ÷ 30 cm ≈ 6 filas. Ajos por fila: 200 cm ÷ 15 cm ≈ 13 ajos. Total: 6 × 13 = 78 dientes. (Otra forma: cada ajo ocupa 0,30 m × 0,15 m = 0,045 m²; 4 m² ÷ 0,045 m² ≈ 89 ajos. Sale algo más porque no tiene en cuenta los bordes del bancal: ¿por qué?)",
+      "Calcular cuántas cabezas hacen falta. Contamos los dientes de varias cabezas: suelen tener entre 8 y 12, pero los pequeños del centro no se siembran. Si aprovechamos unos 8 por cabeza: 78 ÷ 8 ≈ 9,75, así que necesitamos 10 cabezas (y alguna más de reserva).",
+      "Elegir los días. En el calendario lunar buscamos la última luna menguante de diciembre (si ese día no hay clase, el día lectivo más cercano posible): ese día sembramos la mitad del bancal. La otra mitad la sembramos en luna creciente, la fase contraria (una o dos semanas antes o después). Preguntamos en casa y a la gente mayor del pueblo qué saben de sembrar según la luna y apuntamos lo que nos cuentan.",
+      "Preparar la tierra. Quitamos las hierbas, aflojamos la tierra con el rastrillo y marcamos las filas con la cuerda y las estacas.",
+      "Sembrar. Separamos los dientes justo antes de sembrar, sin pelarlos. Con el palo de 15 cm marcamos la distancia y enterramos cada diente con la punta hacia arriba, a unos 3-5 cm de profundidad (que la punta quede tapada por 2-3 cm de tierra). Tapamos sin apretar mucho y regamos un poco.",
+      "El experimento de la luna. Para que la única diferencia entre las dos mitades sea la luna, las sembramos igual: dientes de tamaño parecido, a la misma profundidad, con el mismo marco y en el mismo bancal (por ejemplo, unas filas cada vez, o la mitad del bancal cada vez). Ponemos un cartel en cada parte con la fase de la luna y la fecha. Antes de empezar, cada grupo apunta su predicción. Durante las semanas siguientes contamos en cada parte cuántos ajos han brotado y cuántos se han salido de la tierra, y lo apuntamos en una tabla. En la cosecha, pesamos o medimos las cabezas de cada parte y comparamos.",
+      "Cuidar y cosechar. Regamos solo si no llueve (al ajo no le gusta el encharcamiento) y quitamos las hierbas, igual en las dos partes del bancal. Si algún ajo se sale, lo apuntamos antes de volver a enterrarlo. Se cosechan a principios de verano, cuando la mayoría de las hojas se han puesto amarillas: contamos las cabezas de cada parte y comparamos con los dientes sembrados."
+    ],
+    "notas": [
+      "La luna: sembrar según la luna es un saber transmitido durante generaciones por la gente que trabaja la tierra, y merece ser escuchado y puesto a prueba. Por lo que hemos encontrado, no hay estudios científicos que lo hayan confirmado ni descartado del todo para el ajo, así que nuestro experimento tiene sentido. Al comparar, conviene tener en cuenta otras cosas que también pueden hacer que un ajo se salga (enterrarlo poco, una tierra muy apelmazada, las heladas o los pájaros) y procurar que sean iguales en las dos partes del bancal. Con pocos ajos, una diferencia pequeña puede ser casualidad: si se repite el experimento varios años, las conclusiones serán más fiables.",
+      "Época: en muchos sitios los ajos se siembran entre noviembre y enero. En las zonas más frías de Teruel, se pueden sembrar también a finales de invierno, cuando pasan las heladas más fuertes.",
+      "Los dientes más grandes, de la parte de fuera de la cabeza, dan las mejores cabezas. Los pequeños del centro se pueden comer o sembrar muy juntos para cosechar ajetes.",
+      "Las cuentas cambian si el bancal tiene otra medida o si se elige otro marco: es buena idea que cada grupo calcule con sus propias medidas y compare.",
+      "Si el día de la luna menguante cae en vacaciones (es habitual a finales de diciembre), se siembra el día lectivo más cercano; para el experimento basta con que una parte se siembre en menguante y la otra en creciente.",
+      "Se puede combinar con «El refranero del huerto» («Cada día de enero, un ajo menos en el granero»), con «Cortamos las cañas» (otro saber de la luna puesto a prueba) y con «Cebolla tierna y cebolla de guardar».",
+      "Fuentes: profesorado del colegio y gente del pueblo; Infoagro, «El cultivo del ajo», https://www.infoagro.com/hortalizas/ajo.htm; INTA (Argentina), hoja de divulgación «Cultivo de ajo» (2023), https://repositorio.inta.gob.ar/bitstream/handle/20.500.12123/14454/INTA_CRCatamarca-LaRioja_EEACatamarca_Alemannno_G_Hoja_Divulgacion_Cultivo_Ajo_2023.pdf (las plantaciones tardías dan cabezas más pequeñas)."
+    ],
+    "duracion": "1 sesión para las cuentas en clase, 1 sesión para sembrar y observaciones cortas hasta la cosecha (a principios de verano).",
+    "estaciones": [
+      "Otoño",
+      "Invierno"
+    ],
+    "epoca": "Tradicionalmente, en la última luna menguante de diciembre (o el día lectivo más cercano). En general, de noviembre a enero; en las zonas más frías, también a finales de invierno.",
+    "etapas": [
+      {
+        "etapa": "Infantil",
+        "saberes": [
+          "Descubrimiento y Exploración del Entorno (A): Cuantificadores básicos contextualizados.",
+          "Descubrimiento y Exploración del Entorno (A): Funcionalidad de los números en la vida cotidiana.",
+          "Descubrimiento y Exploración del Entorno (A): Situaciones en que se hace necesario medir.",
+          "Descubrimiento y Exploración del Entorno (A): El tiempo y su organización: día-noche, estaciones, ciclos, calendario, antes, después, presente, pasado, futuro."
+        ],
+        "adaptacion": "Abren una cabeza de ajo y cuentan los dientes (muchos, pocos, cuántos). Miden la distancia entre ajos con un palito de la medida justa y siembran con ayuda «con la punta mirando al cielo». Observan y dibujan la luna los días de siembra y ponen en cada parte del bancal un cartel con el dibujo de su luna. Siguen el crecimiento con fotos o dibujos."
+      },
+      {
+        "etapa": "Primaria · 1.er ciclo",
+        "saberes": [
+          "Matemáticas (A.2): Estrategias de cálculo mental con números naturales iniciando el trabajo con centenas.",
+          "Matemáticas (B.1): Procesos para medir mediante repetición de una unidad y mediante la utilización de instrumentos no convencionales.",
+          "Ciencias de la Naturaleza (A.2): Necesidades básicas de los seres vivos y la diferencia con los objetos inertes.",
+          "Ciencias de la Naturaleza (A4): Movimientos y dinámicas relacionados con la Tierra y el universo y sus consecuencias en la vida diaria y en el entorno. Secuencias temporales y cambios estacionales."
+        ],
+        "adaptacion": "Cuentan los dientes de varias cabezas y los suman. Miden el bancal con pasos y la distancia entre ajos con un palo, y cuentan cuántos ajos caben en una fila. Observan la luna durante unas semanas y la dibujan, siembran una parte en luna menguante y otra en creciente, y cuentan en cada parte los ajos que brotan y los que se salen."
+      },
+      {
+        "etapa": "Primaria · 2.º ciclo",
+        "saberes": [
+          "Matemáticas (A.2): Estrategias de reconocimiento de qué operaciones simples (suma, resta, multiplicación, división) son útiles para resolver situaciones contextualizadas.",
+          "Matemáticas (A.2): Suma, resta, multiplicación y división de números naturales resueltas con flexibilidad y sentido: utilidad en situaciones contextualizadas, estrategias y herramientas de resolución y propiedades.",
+          "Matemáticas (B.1): Atributos mensurables de los objetos (longitud, masa, capacidad, superficie, volumen y amplitud del ángulo).",
+          "Ciencias de la Naturaleza (A.2): Características propias de las plantas que permiten su clasificación en relación con su capacidad adaptativa al medio: obtención de energía, relación con el entorno y perpetuación de la especie."
+        ],
+        "adaptacion": "Hacen el cálculo completo con números naturales y en centímetros: filas, ajos por fila (multiplicación) y cabezas necesarias (división, redondeando hacia arriba). Calculan la superficie del bancal. Relacionan el diente con la reproducción de la planta (cada diente da una planta igual). Llevan el experimento de la luna y anotan los resultados de cada parte en una tabla."
+      },
+      {
+        "etapa": "Primaria · 3.er ciclo",
+        "saberes": [
+          "Matemáticas (A.2): Estrategias de resolución de operaciones aritméticas (con números naturales, decimales y fracciones) con flexibilidad y sentido: mentalmente, de manera escrita o con calculadora; utilidad en situaciones contextualizadas y propiedades.",
+          "Matemáticas (A.4): Situaciones proporcionales y no proporcionales en problemas de la vida cotidiana: identificación como relación multiplicativa entre magnitudes.",
+          "Matemáticas (B.1): Unidades convencionales del Sistema Métrico Decimal (longitud, masa, capacidad, volumen y superficie), tiempo y grado (ángulos) en contextos de la vida cotidiana: selección y uso de las unidades adecuadas.",
+          "Ciencias de la Naturaleza (A.1): Prácticas científicas (observación, formulación de preguntas y predicciones, planificación y realización de experimentos, recogida y análisis de información y datos, comunicación de resultados y conclusiones...)."
+        ],
+        "adaptacion": "Calculan con decimales y en metros: la superficie que ocupa cada ajo (0,045 m²) y cuántos caben en el bancal, y explican por qué no coincide con el cálculo por filas (los bordes). Comparan marcos de plantación (10, 15 y 20 cm) y su efecto en el número de ajos. Diseñan el experimento de la luna controlando las demás variables (tamaño del diente, profundidad, riego), recogen los datos hasta la cosecha y presentan sus conclusiones, valorando si la diferencia es suficiente para sacar conclusiones o habría que repetirlo."
+      }
+    ],
+    "imagenes": [],
+    "estado": "publicada"
+  },
+  {
+    "id": "te-de-compost",
+    "recurso": "Compost",
+    "titulo": "Elaboramos té de compost oxigenado",
+    "categoria": "experimentacion",
+    "descripcion": "Preparamos un abono líquido con compost maduro, agua sin cloro y una bomba de peces (de acuario) que le mete aire durante uno o dos días. El compost lleva muchísimos microorganismos (bacterias, hongos, protozoos) y nutrientes; en el agua, con aire y alimento, los microorganismos que necesitan oxígeno se multiplican y los nutrientes se disuelven. El resultado, el «té de compost», es un líquido marrón que huele a tierra y que, diluido, regamos al pie de las plantas: abona y lleva a la tierra microorganismos vivos. ¿Por qué hacerlo? Porque se parece al biodigestor, pero al revés: allí los microorganismos trabajan sin aire (proceso anaerobio) durante semanas; aquí, con aire (proceso aerobio), en un día o dos. Comparar los dos procesos ayuda a entender que hay seres vivos que necesitan oxígeno y otros que no, y que el olor nos dice cuáles están trabajando. Además, aprovechamos el compost del huerto y, con un poco, abonamos mucha superficie.",
+    "objetivos": [
+      "Comprobar que el compost está lleno de seres vivos que no vemos y que, con aire y alimento, se multiplican.",
+      "Diferenciar un proceso aerobio (con oxígeno) de uno anaerobio (sin oxígeno) y relacionarlos con el olor y el aspecto del líquido.",
+      "Montar un aparato sencillo (cubo, bomba de aire, tubo y difusor) y entender para qué sirve cada parte.",
+      "Hacer un experimento comparando un cubo con aire y otro sin aire, y registrar lo que observamos.",
+      "Preparar diluciones a partir de una proporción y usar el té en el huerto.",
+      "Aprovechar los recursos del propio huerto (el compost) en vez de comprar abonos."
+    ],
+    "materiales": [
+      "Un cubo de unos 20 L, limpio y que no haya contenido productos tóxicos (mejor dos, para el experimento con y sin aire).",
+      "Una bomba de aire de acuario con su tubo y una piedra difusora (o dos, o un repartidor en T, para que el aire llegue a todo el cubo). Un alargador, si hace falta, protegido de la lluvia.",
+      "Agua sin cloro: de lluvia, de pozo o del grifo reposada 24 horas en un recipiente abierto (o con la bomba funcionando unas horas antes de añadir el compost).",
+      "Compost maduro y de buena calidad (oscuro, que huela a tierra de bosque y donde ya no se reconozcan los restos): unos 1-1,5 L para 15 L de agua.",
+      "Una bolsa de malla para meter el compost: una media vieja, un saco de malla de frutas o una tela fina. Así el líquido sale limpio y no atasca la regadera.",
+      "Un palo para remover, una jarra medidora, regaderas, un colador, guantes y agua y jabón.",
+      "Lupas (y, si hay, un microscopio), un termómetro, cuaderno de registro y cámara."
+    ],
+    "desarrollo": [
+      "Mirar el compost. Antes de empezar, observamos un puñado con lupa: ¿qué vemos?, ¿cómo huele?, ¿hay bichos? Hablamos de lo que no se ve: en una cucharadita de buen compost hay millones de bacterias y kilómetros de hilos de hongos.",
+      "Preparar el agua. Llenamos el cubo con unos 15 L de agua sin cloro (dejamos espacio para la espuma). Si es del grifo, la dejamos reposar un día antes o ponemos la bomba a burbujear unas horas: el cloro se va al aire y ya no matará a los microorganismos.",
+      "Montar el aireador. Ponemos la piedra difusora en el fondo del cubo, conectamos el tubo a la bomba y la enchufamos. La bomba se coloca más alta que el cubo (o con una válvula antirretorno) para que, si se apaga, el agua no vuelva por el tubo hacia ella. Comprobamos que sale un buen burbujeo que mueve toda el agua.",
+      "Añadir el compost. Metemos el compost en la bolsa de malla, la atamos y la colgamos dentro del cubo, sumergida y cerca de las burbujas. Removemos y apretamos la bolsa un par de veces para que se suelte el compost.",
+      "Predecir. Antes de esperar, cada grupo apunta qué cree que pasará: ¿cambiará el color?, ¿saldrá espuma?, ¿cómo olerá mañana?, ¿y en el cubo que no tiene aire?",
+      "El experimento: con aire y sin aire. Si tenemos dos cubos, preparamos el segundo igual, pero sin bomba. Lo tapamos con una tela y lo dejamos al lado.",
+      "Dejar burbujear. Tapamos el cubo con una tela (no hermético) y lo dejamos a la sombra, sin que se caliente demasiado ni se enfríe mucho, de 24 a 36 horas, con la bomba siempre funcionando. De vez en cuando removemos y apretamos la bolsa.",
+      "Observar y comparar. Al día siguiente miramos los dos cubos: color, espuma, temperatura y olor (con la mano, acercando el aire hacia la nariz, sin meter la cara). El té oxigenado huele a tierra o a bosque; el cubo sin aire empieza a oler agrio o a podrido, como el biodigestor: ahí trabajan otros microorganismos, los que no necesitan oxígeno. Ponemos una gota de cada uno en el microscopio, si lo tenemos.",
+      "Usarlo enseguida. Sacamos la bolsa (el compost escurrido vuelve al compostador o se reparte por los bancales) y, si hace falta, colamos el líquido. El té se usa en las 4 horas siguientes: sin aire, los microorganismos se ahogan y el té se estropea.",
+      "Diluir y regar. Echamos el té al pie de las plantas, diluido 1 parte de té por 5 a 10 de agua sin cloro (por ejemplo, 1 L de té en una regadera de 10 L). Mejor a primera hora o al final de la tarde, con la tierra un poco húmeda. Probamos en unas pocas plantas o en un bancal y dejamos otro igual sin té para comparar en las semanas siguientes.",
+      "Recoger y limpiar. Lavamos bien el cubo, el difusor y el tubo con agua (si queda una capa pegajosa, los microorganismos sin aire la aprovecharían la próxima vez). El líquido del cubo sin aire no se usa: va al compostador. Al acabar, lavarse bien las manos."
+    ],
+    "notas": [
+      "La clave es el aire. Si la bomba se para o es demasiado pequeña para el cubo, el té se vuelve anaerobio: huele mal y ya no sirve. Si huele a podrido, no se usa: se echa al compostador y se lava todo.",
+      "El compost tiene que estar bien hecho. Un compost a medio hacer, o con estiércol fresco, puede llevar microorganismos que causan enfermedades (como algunas bacterias del tipo E. coli o Salmonella) y el té los multiplicaría. Guantes para manipularlo y lavarse bien las manos.",
+      "No añadimos melaza ni azúcar. Muchas recetas lo hacen para que los microorganismos crezcan más, pero varios estudios han visto que así también se multiplican mejor las bacterias que causan enfermedades. Para el colegio, solo compost y agua.",
+      "En las hortalizas que se comen crudas (lechugas, rábanos, acelgas…), el té se echa al suelo, nunca sobre las hojas, y no se usa en las últimas semanas antes de cosechar. Lo mismo que con el biol del biodigestor.",
+      "Hay muchas recetas y no coinciden en las cantidades: de 1 parte de compost por 5 de agua hasta 1 por 40, y de 12 horas a 3 días. Lo importante es que el compost sea maduro, el agua no tenga cloro, haya mucho aire y se use enseguida.",
+      "Lo que dicen los estudios: el té de compost aporta algo de nutrientes y microorganismos, pero no es un abono muy concentrado ni un remedio milagroso. Su efecto contra las plagas y las enfermedades de las plantas es muy variable y en muchos ensayos no se ha notado. Por eso conviene plantearlo como un experimento: comparar plantas o bancales con y sin té, y no prometer resultados.",
+      "Se puede combinar con «El biodigestor» (el mismo tipo de abono líquido, pero sin aire: comparar los dos procesos, el olor y el tiempo que tardan), con «Trampas de microorganismos» (otra manera de llevar la vida del suelo al huerto) y con «Cromatografías de la tierra» y «Plantas bioindicadoras», para ver si la tierra necesita abono y cómo cambia después.",
+      "Fuentes: propuesta del profesorado del colegio; Portal Frutícola, «Elaboración y uso del té de compost» (2021), https://www.portalfruticola.com/noticias/2021/03/05/elaboracion-y-uso-del-te-de-compost, y «Guía para hacer un té de compost de calidad» (2023), https://www.portalfruticola.com/noticias/2023/07/20/guia-para-hacer-un-te-de-compost-de-calidad; Universidad de Connecticut, laboratorio de suelos, «Compost Tea», https://soiltesting.cahnr.uconn.edu/?p=697 (advierte de que la melaza puede favorecer E. coli y Salmonella); Piedmont Master Gardeners, «The truth about compost tea», https://piedmontmastergardeners.org/article/the-truth-about-compost-tea-making-it-using-it-and-what-to-expect-from-it/; L. Chalker-Scott (Universidad del Estado de Washington), «The Myth of Compost Tea», sobre los ensayos en que no se notó efecto contra las enfermedades."
+    ],
+    "duracion": "1 sesión para montar el cubo, una observación corta al día siguiente y 1 sesión para comparar, diluir y regar (las dos últimas pueden ir juntas). Seguimiento corto de las plantas en las semanas siguientes.",
+    "estaciones": [
+      "Otoño",
+      "Primavera"
+    ],
+    "epoca": "Mejor con temperaturas suaves (entre 15 y 25 °C): con frío los microorganismos casi no crecen y con mucho calor el agua retiene poco oxígeno. Se puede hacer varias veces al año, cuando las plantas están creciendo: al plantar en otoño y en primavera.",
+    "etapas": [
+      {
+        "etapa": "Infantil",
+        "saberes": [
+          "Descubrimiento y Exploración del Entorno (B): Estrategias y técnicas de investigación: ensayo-error, observación, experimentación, formulación y comprobación de hipótesis, realización de preguntas, manejo y búsqueda en distintas fuentes de información.",
+          "Descubrimiento y Exploración del Entorno (C): Elementos naturales (agua, tierra, aire). Características y comportamiento (longitud, superficie, masa, capacidad, volumen, mezclas o transvases).",
+          "Descubrimiento y Exploración del Entorno (C): Respeto y empatía por los seres vivos y por los recursos naturales."
+        ],
+        "adaptacion": "Se plantea como «hacer una sopa para la tierra con seres vivos tan pequeños que no los vemos». Miran el compost con lupa, llenan el cubo con jarras y ayudan a meter el compost en la media. Escuchan y miran las burbujas, y al día siguiente comparan el color y el olor de los dos cubos (el que tiene aire y el que no). La persona adulta diluye el té y los niños y niñas riegan con la regadera."
+      },
+      {
+        "etapa": "Primaria · 1.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Procedimientos adecuados a las necesidades de la investigación escolar (observación en el tiempo, identificación y clasificación, búsqueda de patrones...).",
+          "Ciencias de la Naturaleza (A.1): Estilos de vida sostenible e importancia del cuidado del planeta a través de acciones presentes en la vida cotidiana basadas en el conocimiento científico.",
+          "Ciencias de la Naturaleza (A.3): Las mezclas y sus componentes. Identificación de mezclas homogéneas y heterogéneas. Separación de mezclas heterogéneas y algunas homogéneas mediante distintos métodos físicos sencillos.",
+          "Matemáticas (B.1): Unidades convencionales (metro, kilo y litro) y no convencionales en situaciones de la vida cotidiana."
+        ],
+        "adaptacion": "Miden el agua y el compost con jarras (litros) y montan el cubo en grupos, con ayuda para la bomba. Predicen y dibujan qué pasará en el cubo con aire y en el que no tiene. Al día siguiente comparan color, espuma y olor, y separan el compost del líquido con la bolsa y el colador (separar una mezcla). Riegan con el té ya diluido y marcan las plantas regadas para observarlas."
+      },
+      {
+        "etapa": "Primaria · 2.º ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Procedimientos adecuados a las necesidades de la investigación escolar (observación en el tiempo, identificación y clasificación, búsqueda de patrones, creación de modelos, investigación a través de búsqueda de información, diseño y puesta en marcha de experimentos con control de variables...).",
+          "Ciencias de la Naturaleza (A.3): Los cambios que experimentan determinados materiales en situaciones de la vida cotidiana (físicos o químicos, reversibles o irreversibles…) para reconocer procesos y transformaciones observando la situación inicial y final.",
+          "Ciencias Sociales (B.4): Estilos de vida sostenible. El consumo responsable, el uso del agua y la energía, la movilidad sostenible y la gestión de los residuos.",
+          "Matemáticas (A.4): Razón entre magnitudes: introducción a su cálculo e interpretación.",
+          "Matemáticas (B.1): Unidades convencionales (km, m, cm, mm; kg, g; l y ml) y no convencionales en situaciones de la vida cotidiana."
+        ],
+        "adaptacion": "Montan el experimento con control de variables: dos cubos iguales en todo salvo en el aire. Registran en una tabla la temperatura, el color, la espuma y el olor al principio y al cabo de 24 horas, y explican la diferencia (con oxígeno y sin oxígeno trabajan microorganismos distintos). Preparan las diluciones a partir de la razón «1 de té por cada 5 de agua» y calculan cuánto té necesitan para la regadera. Si lo han hecho, lo comparan con el biodigestor."
+      },
+      {
+        "etapa": "Primaria · 3.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Prácticas científicas (observación, formulación de preguntas y predicciones, planificación y realización de experimentos, recogida y análisis de información y datos, comunicación de resultados y conclusiones...).",
+          "Ciencias de la Naturaleza (A.1): Instrumentos y dispositivos apropiados para realizar observaciones y mediciones precisas de acuerdo con las necesidades de la investigación.",
+          "Ciencias Sociales (B.4): Estilos de vida sostenible. El consumo responsable, el uso del agua y la energía, la movilidad sostenible y la gestión de los residuos.",
+          "Matemáticas (A.4): Situaciones proporcionales y no proporcionales en problemas de la vida cotidiana: identificación como relación multiplicativa entre magnitudes."
+        ],
+        "adaptacion": "Diseñan un ensayo en el huerto: plantas o bancales iguales, unos regados con té y otros solo con agua, y deciden qué medir (altura, número de hojas, color) y durante cuánto tiempo. Observan gotas del té al microscopio. Calculan las cantidades de la receta y de la dilución para distintos tamaños de cubo y de regadera. Buscan información sobre lo que dicen los estudios del té de compost y presentan sus conclusiones comparándolas con las suyas."
+      }
+    ],
+    "imagenes": [],
+    "estado": "publicada"
+  },
+  {
+    "id": "trampas-de-huellas",
+    "recurso": "Huellas de animales",
+    "titulo": "Trampas de huellas",
+    "categoria": "naturaleza",
+    "descripcion": "Preparamos zonas de tierra o arena húmeda donde los animales que visitan el huerto dejen sus huellas (a veces no hace falta: la propia tierra del huerto ya las «atrapa»). Jugamos a ser detectives: a partir de las huellas imaginamos qué ha pasado en el huerto durante las horas anteriores, intentamos averiguar qué animal ha sido y por qué ha venido. Después hacemos una réplica de escayola de las mejores huellas, que podemos pintar y etiquetar con el nombre del animal.",
+    "objetivos": [
+      "Observar con atención el suelo del huerto y descubrir rastros de animales.",
+      "Formular hipótesis sobre qué animales han pasado y qué hacían, y contrastarlas con guías de huellas y otras señales.",
+      "Relacionar a cada animal con sus necesidades (alimento, agua, refugio) y con el huerto y el monte que lo rodea.",
+      "Conocer y practicar la técnica del molde de escayola: negativo y positivo.",
+      "Desarrollar actitudes de respeto y cuidado hacia los animales silvestres y su hábitat."
+    ],
+    "materiales": [
+      "Para las trampas: arena fina o tierra tamizada, agua (regadera), una tabla o llana para alisar y estacas o piedras para señalarlas.",
+      "Para observar y registrar: regla o cinta métrica, cámara o tableta, cuaderno de campo o ficha de registro y lápiz.",
+      "Guías o láminas de huellas de los animales de la zona.",
+      "Para los moldes: escayola, agua, un recipiente de plástico y un palo o cuchara para remover.",
+      "Tiras de cartulina o cartón de unos 4 cm de alto (o anillos cortados de botellas de plástico) y clips.",
+      "Film transparente de cocina y aceite (o vaselina) como desmoldeante, y un pincel o cepillo blando.",
+      "Para acabar: pintura (témperas o acrílicas), pinceles y rotulador permanente.",
+      "Guantes, y agua y jabón para lavarse las manos."
+    ],
+    "desarrollo": [
+      "Preparar las trampas (la tarde anterior). Elegimos zonas de paso: bordes del huerto, junto a la valla o los agujeros por donde entran los animales, cerca del agua. Quitamos piedras y hojas, extendemos 2-3 cm de arena fina o tierra tamizada, la humedecemos y la alisamos. Las señalamos para no pisarlas. No ponemos comida como cebo. Si se ha regado o ha llovido, revisamos también la tierra del huerto: muchas veces ya guarda las huellas.",
+      "Revisar el huerto a primera hora. Buscamos huellas en las trampas y en el resto del huerto sin pisarlas, y las fotografiamos con una regla al lado.",
+      "Jugar a detectives. Antes de mirar las guías, imaginamos qué ha pasado durante la noche: ¿cuántos animales han venido?, ¿por dónde han entrado y hacia dónde iban?, ¿caminaban o corrían?, ¿hay huellas grandes y pequeñas juntas? (puede ser una madre con su cría, pero también las patas de delante y de detrás del mismo animal, que a menudo son diferentes). Seguimos el rastro y buscamos otras señales: excrementos, plantas mordidas, tierra removida, plumas.",
+      "Identificar al animal. Contamos los dedos, miramos si se marcan las uñas, medimos el largo y el ancho de la huella y la distancia entre huellas, y lo comparamos con las guías. Apuntamos en el cuaderno de campo los datos y las hipótesis.",
+      "Pensar en sus necesidades. ¿Qué buscaba en el huerto: comida, agua, refugio? ¿Qué come? ¿Por qué entra en el huerto y no se queda en el monte? ¿Nos ayuda o nos causa problemas? ¿Cómo podemos convivir con él?",
+      "Hacer el negativo. Limpiamos la huella soplando suavemente, sin tocarla, y la rodeamos con un anillo de cartulina hundido un poco en la tierra. Preparamos la escayola echando el polvo sobre el agua, poco a poco, hasta que asome por encima; removemos sin hacer burbujas hasta que tenga textura de yogur líquido y la vertemos despacio por un lado hasta cubrir la huella unos 2 cm. Esperamos a que fragüe (unos 30 minutos, según la escayola; se nota que se calienta) y la levantamos con cuidado. Este molde reproduce la pata del animal en relieve: es el negativo de la huella.",
+      "Hacer el positivo (la réplica de la huella). Limpiamos el negativo con un pincel, lo cubrimos con film transparente untado de aceite, le ponemos otro anillo de cartulina y vertemos escayola encima. Cuando fragüe, separamos las dos piezas: tenemos la huella tal como la encontramos en el suelo.",
+      "Acabar y exponer. Con las réplicas bien secas (mejor de un día para otro), las pintamos si queremos y escribimos el nombre del animal (si lo hemos averiguado), la fecha y el lugar. Podemos montar un «museo de huellas del huerto».",
+      "Recoger y lavarse bien las manos."
+    ],
+    "notas": [
+      "No ponemos comida para atraer a los animales: los acostumbra a depender de nosotros y puede atraer a especies que dañan el huerto.",
+      "Huellas grandes y pequeñas juntas no siempre son una madre con su cría: en muchos animales las patas delanteras y traseras dejan huellas de distinto tamaño (en el conejo, las traseras son mucho más largas). Es una buena pregunta para investigar, no una conclusión.",
+      "La escayola la manipula o supervisa siempre una persona adulta: el polvo no se debe respirar (mezclar al aire libre y sin levantar polvo) y al fraguar se calienta; nunca se cubren las manos ni otras partes del cuerpo con escayola.",
+      "Los restos de escayola no se tiran por el fregadero: se dejan endurecer y se tiran a la basura.",
+      "Los excrementos y rastros se observan sin tocarlos, y al acabar nos lavamos bien las manos.",
+      "Si no aparecen huellas, se puede repetir otro día o probar la técnica con huellas hechas por el alumnado (de su mano o de un animal doméstico).",
+      "Se puede combinar con «Plantas bioindicadoras» y «Trampas de microorganismos»: otras formas de descubrir quién vive en el huerto y qué nos cuenta.",
+      "Fuentes: guía «Huellas de animales» (Tundra), con las huellas de la fauna ibérica; S. Osácar, «Guía de campo del rastreador» (Gobierno de Aragón), https://www.aragon.es/actualidad/presentada-la-gu%C3%ADa-de-campo-del-rastreador-de-santiago-os%C3%A1car; SECEM, fichas de indicios de los mamíferos ibéricos, https://secem.es; Universidad de Murcia, práctica de recogida de huellas y moldes de escayola, https://digitum.um.es/digitum/bitstream/10201/27130/1/Practica%20restos%20actividadalu.pdf."
+    ],
+    "duracion": "2 o 3 sesiones: preparar las trampas; revisión, detectives y negativos; positivos y acabado (más el tiempo de secado).",
+    "estaciones": [
+      "Otoño",
+      "Invierno",
+      "Primavera",
+      "Verano"
+    ],
+    "epoca": "Mejor con la tierra húmeda, después de regar o de llover, y revisando a primera hora de la mañana.",
+    "etapas": [
+      {
+        "etapa": "Infantil",
+        "saberes": [
+          "Descubrimiento y Exploración del Entorno (A): Cualidades o atributos de los objetos. Relaciones de orden, correspondencia, clasificación y comparación.",
+          "Descubrimiento y Exploración del Entorno (A): Situaciones en que se hace necesario medir.",
+          "Descubrimiento y Exploración del Entorno (A): El tiempo y su organización: día-noche, estaciones, ciclos, calendario, antes, después, presente, pasado, futuro.",
+          "Descubrimiento y Exploración del Entorno (B): Estrategias y técnicas de investigación: ensayo-error, observación, experimentación, formulación y comprobación de hipótesis, realización de preguntas, manejo y búsqueda en distintas fuentes de información.",
+          "Descubrimiento y Exploración del Entorno (C): Respeto y empatía por los seres vivos y por los recursos naturales.",
+          "Comunicación y Representación de la Realidad (G): Materiales específicos e inespecíficos, elementos, técnicas y procedimientos plásticos."
+        ],
+        "adaptacion": "En gran grupo y como un juego o un cuento: «¿quién ha venido esta noche al huerto?». Comparan huellas grandes y pequeñas, cuentan los dedos y las comparan con su mano o su pie. Una persona adulta prepara y vierte la escayola; los niños y niñas colocan el anillo, tocan cómo se calienta y se endurece y pintan la réplica."
+      },
+      {
+        "etapa": "Primaria · 1.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Procedimientos adecuados a las necesidades de la investigación escolar (observación en el tiempo, identificación y clasificación, búsqueda de patrones...).",
+          "Ciencias de la Naturaleza (A.2): Las adaptaciones de los seres vivos a su hábitat, concebido como el lugar en el que cubren sus necesidades.",
+          "Ciencias de la Naturaleza (A.2): Clasificación e identificación de los seres vivos de acuerdo con sus características observables.",
+          "Ciencias de la Naturaleza (A.2): Las relaciones entre los seres humanos, los animales y las plantas. Cuidado y respeto hacia los seres vivos y el entorno en el que viven.",
+          "Matemáticas (B.1): Procesos para medir mediante repetición de una unidad y mediante la utilización de instrumentos no convencionales.",
+          "Educación Plástica y Visual: Medios, soportes y materiales de expresión plástica y visual. Técnicas bidimensionales y tridimensionales básicas en dibujos y modelados sencillos."
+        ],
+        "adaptacion": "La parte de detectives se guía con preguntas. Clasifican las huellas por el número de dedos y el tamaño, las miden con palmos, dedos o palitos y las dibujan en el cuaderno de campo. Preparan la escayola en pequeños grupos con ayuda de una persona adulta."
+      },
+      {
+        "etapa": "Primaria · 2.º ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Procedimientos adecuados a las necesidades de la investigación escolar (observación en el tiempo, identificación y clasificación, búsqueda de patrones, creación de modelos, investigación a través de búsqueda de información, diseño y puesta en marcha de experimentos con control de variables...).",
+          "Ciencias de la Naturaleza (A.2): Características propias de los animales que permiten su clasificación y diferenciación en subgrupos relacionados con su capacidad adaptativa al medio: obtención de energía, relación con el entorno y perpetuación de la especie.",
+          "Ciencias de la Naturaleza (A.2): Los ecosistemas como lugar donde intervienen factores bióticos y abióticos, manteniéndose un equilibrio entre los diferentes elementos y recursos. Sus interacciones y relación con otros sistemas.",
+          "Ciencias de la Naturaleza (A.3): Los cambios que experimentan determinados materiales en situaciones de la vida cotidiana (físicos o químicos, reversibles o irreversibles…) para reconocer procesos y transformaciones observando la situación inicial y final.",
+          "Ciencias Sociales (B.4): La transformación y la degradación de los ecosistemas naturales por acción humana. Conservación y protección de la naturaleza. El maltrato animal y su prevención.",
+          "Matemáticas (B.1): Unidades convencionales (km, m, cm, mm; kg, g; l y ml) y no convencionales en situaciones de la vida cotidiana.",
+          "Educación Plástica y Visual: Medios, soportes y materiales de expresión plástica y visual. Técnicas bidimensionales y tridimensionales en dibujos y modelados sencillos."
+        ],
+        "adaptacion": "Identifican el animal con guías o claves sencillas y miden en centímetros el largo y el ancho de la huella y la distancia entre huellas, que anotan en una tabla. Relacionan el animal con lo que come y con el resto del ecosistema del huerto. Preparan ellos mismos la escayola midiendo las cantidades y observan el cambio: de líquido a sólido, desprende calor y no se puede volver atrás."
+      },
+      {
+        "etapa": "Primaria · 3.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Prácticas científicas (observación, formulación de preguntas y predicciones, planificación y realización de experimentos, recogida y análisis de información y datos, comunicación de resultados y conclusiones...).",
+          "Ciencias de la Naturaleza (A.1): Instrumentos y dispositivos apropiados para realizar observaciones y mediciones precisas de acuerdo con las necesidades de la investigación.",
+          "Matemáticas (B.1): Instrumentos (analógico o digital) y unidades adecuadas para medir longitudes, objetos, ángulos y tiempos: selección y uso.",
+          "Educación Plástica y Visual: Medios, soportes y materiales de expresión plástica y visual. Técnicas bidimensionales y tridimensionales en dibujos y modelados."
+        ],
+        "adaptacion": "Plantean la investigación ellos mismos: formulan preguntas e hipótesis, colocan varias trampas en sitios distintos y las revisan durante varios días, registran los datos y los representan en gráficas. Presentan sus conclusiones al resto del colegio y pueden compartir sus observaciones en un proyecto de ciencia ciudadana."
+      }
+    ],
+    "imagenes": [],
+    "estado": "publicada"
+  },
+  {
+    "id": "trampas-de-microorganismos",
+    "recurso": "Mantillo del bosque",
+    "titulo": "Trampas de microorganismos",
+    "categoria": "naturaleza",
+    "descripcion": "En el mantillo del bosque (la capa de hojas medio descompuestas que cubre el suelo) viven muchísimos hongos y bacterias que descomponen la materia orgánica y hacen el suelo fértil. Los «cazamos» con una trampa muy sencilla: un recipiente con arroz cocido, tapado con una tela o papel que deja pasar el aire, que dejamos unos días enterrado a medias bajo el mantillo. Los microorganismos colonizan el arroz y lo cubren de una capa algodonosa, sobre todo blanca. Después llevamos ese arroz al huerto y lo enterramos en distintos sitios para llevar al suelo del huerto parte de la vida del suelo del bosque, y observamos qué pasa.",
+    "objetivos": [
+      "Descubrir que en el suelo hay seres vivos que no vemos a simple vista: hongos y bacterias.",
+      "Entender su papel en la naturaleza: descomponen los restos y hacen el suelo fértil.",
+      "Observar y registrar cambios durante varios días, y comparar trampas puestas en sitios diferentes.",
+      "Relacionar el suelo del bosque con el del huerto y cuidar la vida del suelo.",
+      "Trabajar con seguridad y con respeto por el bosque."
+    ],
+    "materiales": [
+      "Arroz blanco cocido sin sal, más bien seco (que no quede caldoso), ya frío.",
+      "Recipientes abiertos: de madera (mejor) o de plástico, de unos 20-30 cm. Uno por trampa.",
+      "Para tapar: una media, una tela fina o papel de cocina, y gomas elásticas.",
+      "Un trozo de malla metálica (para que no se coman el arroz los animales), unas piedras para sujetarla y, si dan lluvia, un plástico para hacer de tejadillo.",
+      "Una pala pequeña, etiquetas y un rotulador para marcar dónde está cada trampa.",
+      "Lupas (y, si hay, un microscopio o una lupa binocular).",
+      "Guantes, mascarillas y agua y jabón.",
+      "Cuaderno de campo y cámara."
+    ],
+    "desarrollo": [
+      "Preparar las trampas. Cocemos arroz sin sal y lo dejamos enfriar. En cada recipiente ponemos unos 3-5 cm de arroz, sin apretarlo. Lo tapamos con la media, la tela o el papel de cocina, sujeto con gomas, dejando un par de centímetros de aire entre el arroz y la tela (que no lo toque). La tela deja pasar el aire y las esporas de los microorganismos, pero no las hojas ni los bichos.",
+      "Elegir los sitios. En el bosque buscamos lugares a la sombra, con un buen mantillo de hojas, bajo árboles grandes y lejos de caminos. Si ponemos trampas en sitios diferentes (bajo pinos, bajo encinas o robles, cerca de un arroyo…) luego podremos compararlas.",
+      "Colocar las trampas. Apartamos un poco las hojas del suelo, enterramos el recipiente unos 5 cm (que quede en contacto con el mantillo) y ponemos encima la malla metálica, para que los animales no se coman el arroz. Si dan lluvia, encima de la malla ponemos un plástico como un tejadillo: un poco más grande que el recipiente, sujeto con piedras y sin envolver ni cerrar la trampa; si no dan lluvia, mejor no ponerlo, así entra más aire. Por encima volvemos a echar las hojas que habíamos apartado. Marcamos el lugar y lo apuntamos (o lo guardamos en el mapa del móvil).",
+      "Predecir. Antes de irnos, cada grupo apunta qué cree que encontrará: ¿cambiará el arroz?, ¿de qué color?, ¿olerá?, ¿será igual en todas las trampas?",
+      "Esperar. Dejamos las trampas sin tocar de 4 a 7 días: con calor bastan 3-4 días; si hace fresco, puede tardar una semana o más.",
+      "Recoger y observar. Volvemos, destapamos con cuidado al aire libre y miramos sin acercar la nariz. Lo que buscamos es una capa algodonosa blanca que cubre el arroz: son hongos (su micelio) y bacterias del mantillo. A veces aparecen también manchas de colores (verdes, negras, naranjas, rosas): son otros mohos. Las fotografiamos, las dibujamos y las observamos con lupa. Comparamos las trampas de los diferentes sitios.",
+      "Seleccionar. Nos quedamos con el arroz de las trampas que estén sobre todo blancas. Si una trampa está casi toda de colores, se ha mojado o huele a podrido, no la usamos: se echa al compostador.",
+      "Llevarlos al huerto. Enterramos el arroz colonizado en trozos pequeños, a unos 10 cm de profundidad, en distintos sitios del huerto: junto a algunas plantas, en un bancal que queremos mejorar, en el compostador… Marcamos dónde lo hemos puesto y dejamos otros sitios parecidos sin nada para comparar.",
+      "Seguir y comparar. En las semanas siguientes miramos esos sitios: ¿aparecen hilos blancos de hongos en la tierra?, ¿se descompone antes la hoja que dejamos encima?, ¿crecen distinto las plantas? Lo apuntamos en el cuaderno de campo.",
+      "Recoger el material, tapar el hueco donde estaba cada trampa y volver a extender por encima las hojas del mantillo, para dejar el sitio como lo encontramos. Al acabar, lavarse bien las manos."
+    ],
+    "notas": [
+      "Buscamos sobre todo moho blanco. Según la guía de la Universidad de Hawái, los colores distintos del blanco indican otros hongos menos útiles; si la trampa está casi toda de colores o le ha entrado agua de lluvia, se desecha y se repite.",
+      "Los mohos sueltan esporas que pueden dar alergia o molestar a quien tiene asma: las trampas se abren al aire libre, sin olerlas de cerca y sin remover mucho. El alumnado con alergias o asma, con mascarilla o mirando desde un poco más lejos. Guantes y lavarse las manos al acabar. El arroz con moho, por supuesto, no se come.",
+      "Mejor en días sin lluvia: con mucha humedad crecen sobre todo los mohos de colores. El plástico solo hace falta si dan lluvia, y hace de tejadillo sin cerrar la trampa: los microorganismos llegan sobre todo por el aire (esporas) y desde el mantillo que la rodea.",
+      "En el bosque: pedimos permiso si es un terreno privado o un espacio protegido, movemos el mínimo de hojarasca y la dejamos como estaba. No dejamos nada olvidado: apuntamos bien dónde está cada trampa.",
+      "Esta técnica viene de la agricultura natural coreana («microorganismos indígenas») y en Latinoamérica se conoce como «captura de microorganismos de montaña». Se usa mucho en agricultura ecológica, pero hay pocos estudios científicos que midan sus beneficios. Por eso es buena idea plantearlo como un experimento: comparar sitios con y sin microorganismos.",
+      "Ampliación: en la versión completa de la técnica, el arroz colonizado se mezcla con el mismo peso de azúcar moreno, se deja fermentar una semana y se usa muy diluido en agua (1 parte en 500) para regar. Para el colegio basta con enterrarlo o echarlo al compostador.",
+      "Fotos del montaje paso a paso (en inglés): guía «How to Cultivate Indigenous Microorganisms» de la Universidad de Hawái, https://www3.ctahr.hawaii.edu/oc/freepubs/pdf/BIO-9.pdf (fotos 1-6, la trampa; foto 7, el arroz cubierto de moho blanco). No copiamos sus fotos aquí porque no son nuestras: cuando hagamos la actividad, añadimos las nuestras.",
+      "Se puede combinar con «Cromatografías de la tierra» (una cromatografía antes y otra unos meses después de enterrar el arroz), con «Plantas bioindicadoras» y con «El biodigestor» y «Elaboramos té de compost oxigenado», donde también trabajan los microorganismos.",
+      "Fuentes: H. Park y M. W. DuPonte, «How to Cultivate Indigenous Microorganisms» (Universidad de Hawái, CTAHR, BIO-9, 2008), https://www3.ctahr.hawaii.edu/oc/freepubs/pdf/BIO-9.pdf, que advierte de que sus beneficios no se han comprobado con experimentos controlados; JICA, proyecto PROPA-Oriente (El Salvador), ficha sobre microorganismos de montaña, https://www.jica.go.jp/project/elsalvador/0603028/pdf/production/vegetable_04.pdf."
+    ],
+    "duracion": "1 sesión para preparar y colocar las trampas (salida al bosque), 1 sesión para recogerlas y observarlas a los 4-7 días, 1 sesión para enterrarlas en el huerto y observaciones cortas las semanas siguientes.",
+    "estaciones": [
+      "Otoño",
+      "Primavera"
+    ],
+    "epoca": "Mejor en días templados y secos: a principios de otoño o en primavera. Con frío tarda más, y en épocas de muchas lluvias salen sobre todo mohos de colores.",
+    "etapas": [
+      {
+        "etapa": "Infantil",
+        "saberes": [
+          "Descubrimiento y Exploración del Entorno (B): Estrategias y técnicas de investigación: ensayo-error, observación, experimentación, formulación y comprobación de hipótesis, realización de preguntas, manejo y búsqueda en distintas fuentes de información.",
+          "Descubrimiento y Exploración del Entorno (C): Elementos naturales (agua, tierra, aire). Características y comportamiento (longitud, superficie, masa, capacidad, volumen, mezclas o transvases).",
+          "Descubrimiento y Exploración del Entorno (C): Respeto y empatía por los seres vivos y por los recursos naturales."
+        ],
+        "adaptacion": "Se plantea como un juego: «vamos a dejar comida para los seres vivos tan pequeños que no los vemos». En la salida al bosque tocan y huelen el mantillo, buscan hojas medio deshechas y bichos, y ayudan a tapar las trampas con hojas. Al volver, miran el arroz desde un poco lejos y con lupa, comparan los colores y lo dibujan. La persona adulta abre y manipula las trampas."
+      },
+      {
+        "etapa": "Primaria · 1.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Procedimientos adecuados a las necesidades de la investigación escolar (observación en el tiempo, identificación y clasificación, búsqueda de patrones...).",
+          "Ciencias de la Naturaleza (A.1): Instrumentos y dispositivos apropiados para realizar observaciones y mediciones de acuerdo a las necesidades de las diferentes investigaciones escolares.",
+          "Ciencias de la Naturaleza (A.2): Necesidades básicas de los seres vivos y la diferencia con los objetos inertes.",
+          "Ciencias de la Naturaleza (A.2): Las relaciones entre los seres humanos, los animales y las plantas. Cuidado y respeto hacia los seres vivos y el entorno en el que viven."
+        ],
+        "adaptacion": "Preparan las trampas en grupos con ayuda. Se preguntan si lo que crece en el arroz está vivo (come, crece) y por qué ha aparecido. Observan con lupa, cuentan y dibujan los colores de cada trampa y comparan las de dos sitios diferentes. En el huerto, entierran el arroz y marcan los sitios con un cartel."
+      },
+      {
+        "etapa": "Primaria · 2.º ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Procedimientos adecuados a las necesidades de la investigación escolar (observación en el tiempo, identificación y clasificación, búsqueda de patrones, creación de modelos, investigación a través de búsqueda de información, diseño y puesta en marcha de experimentos con control de variables...).",
+          "Ciencias de la Naturaleza (A.2): Los reinos de la naturaleza desde una perspectiva general e integrada a partir del estudio y análisis de las características de diferentes ecosistemas.",
+          "Ciencias de la Naturaleza (A.2): Los ecosistemas como lugar donde intervienen factores bióticos y abióticos, manteniéndose un equilibrio entre los diferentes elementos y recursos. Sus interacciones y relación con otros sistemas."
+        ],
+        "adaptacion": "Relacionan lo que crece en el arroz con los reinos de los hongos y de las bacterias, y con su papel de descomponedores en el ecosistema del bosque. Ponen trampas en sitios con condiciones diferentes (sombra y sol, pinar y encinar, seco y húmedo) y comparan los resultados en una tabla. En el huerto, entierran el arroz en unos sitios y dejan otros iguales sin nada para comparar."
+      },
+      {
+        "etapa": "Primaria · 3.er ciclo",
+        "saberes": [
+          "Ciencias de la Naturaleza (A.1): Prácticas científicas (observación, formulación de preguntas y predicciones, planificación y realización de experimentos, recogida y análisis de información y datos, comunicación de resultados y conclusiones...).",
+          "Ciencias de la Naturaleza (A.1): Instrumentos y dispositivos apropiados para realizar observaciones y mediciones precisas de acuerdo con las necesidades de la investigación.",
+          "Ciencias de la Naturaleza (A.1): La curiosidad, la iniciativa, la constancia y el sentido de la responsabilidad como actitudes en la realización de las diferentes investigaciones."
+        ],
+        "adaptacion": "Diseñan el experimento: qué quieren comparar (lugar, tipo de árbol, días de espera…), cuántas trampas ponen y cómo lo registran. Observan las muestras con microscopio o lupa binocular. En el huerto, planifican un ensayo con zonas con y sin microorganismos (por ejemplo, la velocidad a la que se descomponen unas hojas o unos trozos de cartón enterrados) y presentan sus conclusiones, también sobre lo que dicen y no dicen los estudios científicos de esta técnica."
+      }
+    ],
+    "imagenes": [],
+    "estado": "publicada"
   }
 ]

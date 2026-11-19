@@ -48,3 +48,13 @@ Web para que el profesorado del colegio (unas 6 personas) organice actividades d
 4. `acceso.html`: acceso del profesorado (`?volver=` para regresar).
 5. `editar.html` / `editar.html?id=…`: crear, modificar y borrar, con un bloque por etapa (saberes y adaptación), época, categoría y editor de imágenes (máx. 10, ordenar, pie de foto).
 6. `importar.html`: subir actividades desde ficheros JSON (sustituye por id, conserva las imágenes y la autoría; el estado lo pone el rol de quien sube).
+7. `itinerarios.html`: con sesión, mis itinerarios y los compartidos (fechas y sesiones con actividad) y «+ Nuevo itinerario».
+8. `itinerario.html?id=…`: calendario por meses (cada sesión con el color de su categoría y «2/3» si la actividad ocupa varias), equilibrio (sesiones por categoría y por área, avisos de época y etapa) y lista de sesiones. Quien lo creó añade fechas (una o periódicas), elige la actividad de cada día (solo de la etapa) y lo edita; cualquiera que lo vea lo puede copiar.
+
+## Itinerarios
+
+- Programación del huerto de una etapa (`js/modelo/Itinerario.js`): `nombre`, `etapa`, `curso` («2026-27»), `descripcion`, `compartido`, `propietario` y `sesiones[]` (`{ id, fecha: 'AAAA-MM-DD', actividadId, nota }`; `actividadId` vacío si aún no tiene). Puede ser de un mes, un trimestre o todo el curso. Fechas en `js/modelo/fechas.js`.
+- Una actividad puede ocupar varias sesiones, seguidas o no: se numeran solas por orden de fecha (1/3, 2/3…).
+- Privados por defecto; con `compartido` los ve el resto del profesorado, pero solo los edita quien los creó (`puedeVerItinerario`, `puedeEditarItinerario` en `permisos.js`). Sin sesión no se ven, ni los compartidos (decidido: no pasan revisión y llevan horarios de grupos). Se leen con dos consultas (`propietario == yo` y `compartido == true`), que es lo que pedirá Firestore.
+- Copiar a otro curso mueve las fechas semanas enteras (mismo día de la semana); hay que revisar los festivos.
+- Reglas de `itinerarios` en `firestore.rules`: leer, con sesión y si es propio o compartido; crear, a su nombre; editar y borrar, solo el propietario (sin poder cambiar de quién es). Para probar en local: `datos/itinerarios.json` (y `datos/actividades.json` lleva también una copia de las propuestas).

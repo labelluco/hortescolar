@@ -19,6 +19,9 @@
 //   - Revisores: crean, editan, aprueban y borran cualquier actividad.
 //   - Imágenes: las lee cualquiera; las sube el profesorado a su nombre; las
 //     cambia o borra quien las subió o un revisor.
+//   - Itinerarios: solo para el profesorado. Cada persona lee los suyos y los
+//     compartidos; los crea a su nombre y solo edita o borra los suyos
+//     (aunque sean revisores). Nadie puede cambiar de quién es uno.
 
 rules_version = '2';
 
@@ -69,6 +72,24 @@ service cloud.firestore {
       allow create: if conSesion() && request.resource.data.subidaPor == correo();
       allow update, delete: if esRevisor()
         || (conSesion() && resource.data.subidaPor == correo());
+    }
+
+    match /itinerarios/{id} {
+      allow read: if conSesion()
+        && (resource.data.compartido == true || resource.data.propietario == correo());
+
+      allow create: if conSesion()
+        && request.resource.data.propietario == correo()
+        && request.resource.data.creada.por == correo()
+        && request.resource.data.compartido is bool;
+
+      allow update: if conSesion()
+        && resource.data.propietario == correo()
+        && request.resource.data.propietario == resource.data.propietario
+        && request.resource.data.creada == resource.data.creada
+        && request.resource.data.compartido is bool;
+
+      allow delete: if conSesion() && resource.data.propietario == correo();
     }
   }
 }

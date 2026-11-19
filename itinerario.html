@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Itinerario · ERA</title>
+  <link rel="icon" href="img/abella.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/registrarServiceWorker.js" defer></script>
+</head>
+<body>
+  <header class="barra">
+    <a class="barra-titulo" href="index.html"><img src="img/abella.svg" alt="" width="32" height="32"><span class="barra-nombre" title="Espacio de Recursos y Actividades">ERA</span><span class="barra-lema">Huerto escolar</span></a>
+    <nav class="barra-enlaces" id="barraEnlaces"></nav>
+  </header>
+
+  <main class="contenido">
+    <p class="ficha-cabecera">
+      <a class="volver" href="itinerarios.html">← Volver a los itinerarios</a>
+      <span class="acciones">
+        <button type="button" class="boton" id="botonDatos" hidden>Editar datos</button>
+        <button type="button" class="boton" id="botonCopiar" hidden>Hacer una copia</button>
+      </span>
+    </p>
+
+    <div id="cabecera"><p class="resultado">Cargando…</p></div>
+
+    <section class="tarjeta seccion" id="seccionCalendario" hidden>
+      <h2>Calendario</h2>
+      <p class="consejo" id="consejoCalendario"></p>
+      <div id="calendario"></div>
+    </section>
+
+    <section class="tarjeta seccion" id="seccionEquilibrio" hidden>
+      <h2>Equilibrio</h2>
+      <p id="resumen"></p>
+      <div class="equilibrio">
+        <div>
+          <h3>Por categoría</h3>
+          <div id="barrasCategorias"></div>
+        </div>
+        <div>
+          <h3>Por área <small>(sesiones que trabajan saberes del área)</small></h3>
+          <div id="barrasAreas"></div>
+        </div>
+      </div>
+      <div id="avisos"></div>
+    </section>
+
+    <section class="tarjeta seccion" id="seccionSesiones" hidden>
+      <h2>Sesiones</h2>
+      <div id="anadirFechas" hidden>
+        <form class="anadir-fechas" id="formularioFecha">
+          <label class="campo"><span>Una fecha</span><input type="date" name="fecha" required></label>
+          <button type="submit" class="boton">Añadir</button>
+        </form>
+        <form class="anadir-fechas" id="formularioPeriodicas">
+          <label class="campo"><span>Desde</span><input type="date" name="desde" required></label>
+          <label class="campo"><span>Hasta</span><input type="date" name="hasta" required></label>
+          <fieldset class="campo dias-semana">
+            <legend>Los días</legend>
+            <label><input type="checkbox" name="dia" value="1"> L</label>
+            <label><input type="checkbox" name="dia" value="2"> M</label>
+            <label><input type="checkbox" name="dia" value="3"> X</label>
+            <label><input type="checkbox" name="dia" value="4"> J</label>
+            <label><input type="checkbox" name="dia" value="5"> V</label>
+          </fieldset>
+          <button type="submit" class="boton">Añadir fechas periódicas</button>
+        </form>
+        <p class="consejo">Después, quita con × los días que no hay clase (festivos, excursiones…).</p>
+      </div>
+      <div class="tabla-contenedor">
+        <table class="tabla tabla-sesiones">
+          <thead><tr><th>Fecha</th><th>Actividad</th><th>Nota</th><th><span class="oculto">Quitar</span></th></tr></thead>
+          <tbody id="sesiones"></tbody>
+        </table>
+      </div>
+      <p class="estado-guardado" id="estadoGuardado" role="status"></p>
+    </section>
+
+    <p id="zonaBorrar" hidden>
+      <button type="button" class="boton boton-peligro" id="botonBorrar">Borrar el itinerario</button>
+    </p>
+  </main>
+
+  <footer class="pie">
+    <a class="pie-marca" href="https://labelluco.net/">
+      <img src="img/abelluco.svg" alt="L'Abelluco" width="80" height="30">
+    </a>
+    <p>
+      ERA es un proyecto de <a href="https://labelluco.net/">L'Abelluco</a>, libre para usar, adaptar y compartir.<br>
+      Actividades: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" rel="license">CC BY-SA 4.0</a> ·
+      Código: <a href="https://github.com/labelluco/hortescolar">AGPL-3.0</a> ·
+      <a href="documentos/ERA-presentacion.pdf">Presentación (PDF)</a>
+    </p>
+  </footer>
+
+  <!-- Datos del itinerario (nombre, etapa, curso…) y copia: el mismo diálogo -->
+  <dialog class="dialogo" id="dialogo">
+    <form method="dialog" id="formularioDialogo">
+      <h2 id="tituloDialogo"></h2>
+      <label class="campo"><span>Nombre *</span><input type="text" name="nombre" required></label>
+      <div class="campos-en-linea">
+        <label class="campo"><span>Etapa *</span><select name="etapa" id="etapaDialogo" required></select></label>
+        <label class="campo"><span>Curso *</span><input type="text" name="curso" required pattern="\d{4}-\d{2}" placeholder="2026-27"></label>
+      </div>
+      <label class="campo" id="campoDescripcion"><span>Descripción</span>
+        <textarea name="descripcion" rows="3" placeholder="Horario, grupo, objetivos del trimestre…"></textarea>
+      </label>
+      <label class="casilla" id="campoCompartido"><input type="checkbox" name="compartido">
+        Compartirlo con el resto del profesorado (lo verán y podrán copiarlo, pero solo tú lo editas)</label>
+      <p class="consejo" id="consejoDialogo"></p>
+      <p class="error" id="errorDialogo" role="alert"></p>
+      <div class="acciones">
+        <button type="submit" class="boton boton-principal" value="aceptar">Guardar</button>
+        <button type="submit" class="boton" value="cancelar" formnovalidate>Cancelar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script type="module" src="js/interfaz/itinerario.js"></script>
+</body>
+</html>

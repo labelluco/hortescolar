@@ -38,3 +38,17 @@ export function puedeAprobar(usuario, actividad) {
 export function estadoAlGuardar(usuario) {
   return usuario?.revisor ? PUBLICADA : PENDIENTE;
 }
+
+/*
+ * Itinerarios (ver modelo/Itinerario.js): solo para el profesorado con
+ * sesión. Cada persona ve los suyos y los compartidos, y solo edita o borra
+ * los suyos (aunque sean revisores). Cualquiera puede copiar uno que vea.
+ */
+
+export function puedeVerItinerario(usuario, itinerario) {
+  return Boolean(usuario) && (itinerario.compartido || itinerario.esDe(usuario.correo));
+}
+
+export function puedeEditarItinerario(usuario, itinerario) {
+  return Boolean(usuario) && itinerario.esDe(usuario.correo);
+}

@@ -760,3 +760,165 @@ body > main { flex: 1 0 auto; width: 100%; }
   border-radius: 0 var(--radio) var(--radio) 0;
   font-size: 0.85rem;
 }
+
+/* ---------- Itinerarios ---------- */
+
+.itinerario-datos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 12px;
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+}
+
+.marca-privado, .marca-compartido {
+  padding: 1px 8px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  background: var(--color-fondo);
+  color: var(--color-texto-secundario);
+}
+.marca-compartido { background: var(--color-principal-suave); color: var(--color-principal-oscuro); }
+
+/* Lista de itinerarios: una tarjeta por itinerario */
+.nuevo-itinerario { padding: 12px 16px; margin-bottom: 16px; }
+.nuevo-itinerario summary { list-style: none; width: fit-content; }
+.nuevo-itinerario summary::-webkit-details-marker { display: none; }
+.nuevo-itinerario[open] summary { margin-bottom: 16px; }
+
+.lista-itinerarios {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.tarjeta-itinerario {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px;
+  color: var(--color-texto);
+  text-decoration: none;
+}
+.tarjeta-itinerario:hover { outline: 2px solid var(--color-principal-suave); }
+.tarjeta-itinerario strong { color: var(--color-principal-oscuro); font-size: 1.05rem; }
+.tarjeta-itinerario .itinerario-datos { margin: 0; }
+.tarjeta-itinerario > .sin-dato { font-size: 0.8rem; }
+
+/* Calendario: las sesiones por meses */
+.mes { margin-bottom: 16px; }
+.mes-nombre {
+  margin: 0 0 6px;
+  font-size: 0.85rem;
+  color: var(--color-texto-secundario);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.mes-sesiones {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 8px;
+}
+
+.casilla-sesion {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-height: 78px;
+  padding: 6px 8px 6px 12px;
+  font: inherit;
+  text-align: left;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  /* Franja del color de la categoría y fondo muy suave del mismo color */
+  background: linear-gradient(90deg, var(--color-categoria) 0 5px, transparent 5px),
+    color-mix(in srgb, var(--color-categoria) 10%, var(--color-superficie));
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.15s;
+}
+.casilla-sesion.vacia { border-style: dashed; background: var(--color-superficie); color: var(--color-texto-secundario); }
+.casilla-fecha { display: flex; align-items: center; gap: 6px; font-size: 0.75rem; color: var(--color-texto-secundario); font-weight: 600; }
+.casilla-titulo { font-size: 0.85rem; font-weight: 600; line-height: 1.25; }
+.casilla-nota { font-size: 0.75rem; color: var(--color-texto-secundario); line-height: 1.25; }
+.casilla-numero {
+  padding: 0 6px;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: var(--color-categoria, var(--color-borde));
+  color: #fff;
+}
+.casilla-aviso { color: #b07400; margin-left: auto; }
+
+/* Al pasar por encima, se resaltan las sesiones de la misma actividad */
+.con-resalte .casilla-sesion:not(.resaltada) { opacity: 0.35; }
+.con-resalte .casilla-sesion.resaltada { transform: translateY(-2px); box-shadow: var(--sombra); }
+
+/* Equilibrio: barras por categoría y por área */
+.equilibrio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 8px 32px;
+  margin-bottom: 8px;
+}
+.equilibrio h3 { font-size: 0.95rem; margin: 8px 0; }
+.grafica { list-style: none; margin: 0; padding: 0; }
+.grafica li {
+  display: grid;
+  grid-template-columns: minmax(120px, 40%) 1fr 2em;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  margin: 0 0 4px;
+}
+.grafica-pista { height: 12px; background: var(--color-fondo); border-radius: 6px; overflow: hidden; }
+.grafica-relleno { display: block; height: 100%; border-radius: 6px; }
+.grafica-cuantas { text-align: right; font-weight: 700; }
+.grafica-cero { color: var(--color-texto-secundario); }
+
+/* Sesiones: añadir fechas y la tabla */
+.anadir-fechas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0 12px;
+  padding-bottom: 8px;
+}
+.anadir-fechas .campo { margin-bottom: 8px; }
+.anadir-fechas .boton { margin-bottom: 8px; }
+.dias-semana { flex-direction: row; gap: 10px; border: none; padding: 0; }
+.dias-semana legend { font-weight: 600; font-size: 0.9rem; padding: 0; margin-bottom: 4px; }
+.dias-semana label { display: flex; align-items: center; gap: 4px; padding: 10px 0; cursor: pointer; }
+.dias-semana input { width: auto; }
+
+.tabla-sesiones td { vertical-align: middle; }
+.tabla-sesiones tr.fila-sesion td:first-child {
+  box-shadow: inset 4px 0 0 var(--color-categoria, transparent);
+  white-space: nowrap;
+}
+.tabla-sesiones select, .tabla-sesiones input {
+  font: inherit;
+  padding: 6px 8px;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  background: var(--color-superficie);
+  width: 100%;
+}
+.sesion-actividad { display: flex; align-items: center; gap: 8px; }
+.sesion-actividad select { flex: 1; min-width: 180px; }
+.sesion-actividad a { white-space: nowrap; font-size: 0.85rem; }
+.estado-guardado { min-height: 1.5em; margin: 8px 0 0; color: var(--color-texto-secundario); font-size: 0.9rem; }
+
+/* Diálogo de datos y copia del itinerario */
+.dialogo {
+  width: min(560px, calc(100% - 32px));
+  border: none;
+  border-radius: var(--radio);
+  padding: 20px 24px;
+  box-shadow: var(--sombra);
+}
+.dialogo::backdrop { background: rgba(0, 0, 0, 0.4); }
+.casilla { display: flex; gap: 8px; align-items: flex-start; margin-bottom: 12px; cursor: pointer; }
+.casilla[hidden], .campo[hidden] { display: none; }

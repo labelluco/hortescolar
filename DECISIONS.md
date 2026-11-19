@@ -2,6 +2,11 @@
 
 Una línea por decisión, la más reciente arriba: fecha — decisión — por qué.
 
+- 2026-11-19 — Los itinerarios compartidos solo los ve el profesorado con sesión, nunca la web pública — no pasan revisión, llevan días y horarios de grupos concretos y pueden incluir actividades pendientes. Si algún día se quieren difundir, sería con un estado «publicado» aprobado por un revisor y sin fechas exactas.
+
+- 2026-11-19 — Itinerarios (en pruebas, modo local): una etapa, un curso y una lista de sesiones con fecha y actividad; privados por defecto, compartibles (solo los edita quien los creó) y copiables a otro curso; sin revisión — cada docente programa lo suyo y puede aprovechar lo de los demás; solo combinan actividades ya revisadas.
+- 2026-11-19 — Una actividad de varias sesiones se repite en el itinerario y se numera sola (1/3, 2/3…) — las sesiones no tienen por qué ser seguidas (el biodigestor necesita tiempo entre una y otra).
+
 - 2026-11-14 — La web se llama ERA (Espacio de Recursos y Actividades), con «Huerto escolar» de subtítulo — un nombre corto y del campo (la era de trillar) que se pueda difundir; el subtítulo dice de qué va.
 - 2026-11-14 — Cada actividad nueva cita sus principales fuentes en la última nota («Fuentes: …») — que se pueda comprobar y ampliar lo que dice.
 - 2026-11-14 — Aspecto de la web de L'Abelluco: paleta de su `nucli.css` (verde pino, fondo de piedra caliza, ocre en los enlaces), barra clara con la abeja, títulos en negrita y botones redondeados — que se reconozca como un proyecto de L'Abelluco. Los colores de las categorías no cambian (son aptos para daltonismo).

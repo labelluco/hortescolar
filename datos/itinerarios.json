@@ -1,0 +1,127 @@
+[
+  {
+    "id": "it-001",
+    "nombre": "Primer trimestre",
+    "etapa": "Primaria · 2.º ciclo",
+    "curso": "2026-27",
+    "descripcion": "EJEMPLO. Los martes de 11:30 a 12:20. No hay clase el 13 de octubre (puente del Pilar) ni el 8 de diciembre.",
+    "compartido": true,
+    "propietario": "admin",
+    "sesiones": [
+      {
+        "id": "s01",
+        "fecha": "2026-09-15",
+        "actividadId": "estacion-meteorologica",
+        "nota": "Preguntarnos y conocer los aparatos"
+      },
+      {
+        "id": "s02",
+        "fecha": "2026-09-22",
+        "actividadId": "estacion-meteorologica",
+        "nota": "Montar la estación"
+      },
+      {
+        "id": "s03",
+        "fecha": "2026-09-29",
+        "actividadId": "biodigestor",
+        "nota": "Montaje"
+      },
+      {
+        "id": "s04",
+        "fecha": "2026-10-06",
+        "actividadId": "sembrar-ajos",
+        "nota": "Cuentas en clase"
+      },
+      {
+        "id": "s05",
+        "fecha": "2026-10-20",
+        "actividadId": "sembrar-ajos",
+        "nota": "Siembra"
+      },
+      {
+        "id": "s06",
+        "fecha": "2026-10-27",
+        "actividadId": "cromatografia",
+        "nota": "Preguntas y muestras"
+      },
+      {
+        "id": "s07",
+        "fecha": "2026-11-03",
+        "actividadId": "cromatografia",
+        "nota": "Tamizar y preparar"
+      },
+      {
+        "id": "s08",
+        "fecha": "2026-11-10",
+        "actividadId": "biodigestor",
+        "nota": "Observación y medida del gas"
+      },
+      {
+        "id": "s09",
+        "fecha": "2026-11-17",
+        "actividadId": "cromatografia",
+        "nota": "Correr las cromatografías"
+      },
+      {
+        "id": "s10",
+        "fecha": "2026-11-24",
+        "actividadId": "refranero-del-huerto",
+        "nota": "Presentar los refranes y preparar la entrevista"
+      },
+      {
+        "id": "s11",
+        "fecha": "2026-12-01",
+        "actividadId": "",
+        "nota": ""
+      },
+      {
+        "id": "s13",
+        "fecha": "2026-12-15",
+        "actividadId": "cortar-canas",
+        "nota": "Planificar en clase (la salida, en enero)"
+      }
+    ],
+    "creada": {
+      "por": "admin",
+      "el": "2026-09-01T10:00:00.000Z"
+    },
+    "modificada": {
+      "por": "admin",
+      "el": "2026-11-10T10:00:00.000Z"
+    }
+  },
+  {
+    "id": "it-002",
+    "nombre": "Huerto de primavera",
+    "etapa": "Infantil",
+    "curso": "2026-27",
+    "descripcion": "EJEMPLO privado de profe.",
+    "compartido": false,
+    "propietario": "profe",
+    "sesiones": [
+      {
+        "id": "p1",
+        "fecha": "2027-03-04",
+        "actividadId": "act-001",
+        "nota": ""
+      },
+      {
+        "id": "p2",
+        "fecha": "2027-03-11",
+        "actividadId": "trampas-de-huellas",
+        "nota": "Preparar las trampas"
+      },
+      {
+        "id": "p3",
+        "fecha": "2027-03-18",
+        "actividadId": "",
+        "nota": ""
+      }
+    ],
+    "creada": {
+      "por": "profe",
+      "el": "2026-11-01T10:00:00.000Z"
+    },
+    "modificada": null
+  }
+]
