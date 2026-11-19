@@ -2,9 +2,8 @@
  * itinerarios.js
  * --------------
  * Lista de itinerarios (itinerarios.html), solo para el profesorado con
- * sesión: los propios y los que ha compartido el resto. Cada uno con una
- * tira de colores, una raya por sesión con el color de la categoría de su
- * actividad, para ver de un vistazo cómo está repartido.
+ * sesión: los propios y los que ha compartido el resto, con sus fechas y
+ * cuántas sesiones tienen ya actividad.
  *
  * Desde aquí se crea un itinerario nuevo (nombre, etapa y curso); las
  * fechas y las actividades se ponen en su página (itinerario.html).
@@ -12,9 +11,7 @@
 
 import { BaseDatos } from '../datos/BaseDatos.js';
 import { ETAPAS } from '../modelo/Actividad.js';
-import { ListaActividades } from '../modelo/ListaActividades.js';
 import { Itinerario } from '../modelo/Itinerario.js';
-import { categoriaPorId } from '../modelo/categorias.js';
 import { cursoDe, fechaMedia, textoFecha } from '../modelo/fechas.js';
 import { Sesion } from './Sesion.js';
 import { Barra } from './Barra.js';
@@ -27,16 +24,8 @@ await Sesion.proteger();
 const usuario = await Barra.pintar();
 
 let itinerarios = [];
-let lista = null;
 
 function htmlItinerario(itinerario) {
-  const categoriaDe = (sesion) =>
-    categoriaPorId(lista.actividades.find((a) => a.id === sesion.actividadId)?.categoria);
-  const tira = itinerario.sesiones.map((sesion) => {
-    const categoria = categoriaDe(sesion);
-    return `<span class="tira-sesion" style="background: ${categoria ? `var(--cat-${categoria.id})` : 'var(--color-borde)'}"
-      title="${fechaMedia(sesion.fecha)}"></span>`;
-  }).join('');
   const fechas = itinerario.primeraFecha
     ? `${fechaMedia(itinerario.primeraFecha)} – ${fechaMedia(itinerario.ultimaFecha)}`
     : 'Sin fechas';
@@ -50,7 +39,6 @@ function htmlItinerario(itinerario) {
           ? `<span class="${itinerario.compartido ? 'marca-compartido' : 'marca-privado'}">${itinerario.compartido ? 'Compartido' : 'Privado'}</span>`
           : `<span class="sin-dato">${escaparHtml(itinerario.propietario)}</span>`}
       </span>
-      <span class="tira" aria-hidden="true">${tira}</span>
       <span class="sin-dato">${escaparHtml(fechas)} · ${itinerario.sesiones.length} sesiones, ${itinerario.sesionesConActividad} con actividad</span>
     </a>`;
 }
@@ -100,10 +88,7 @@ $('filtroEtapa').addEventListener('change', pintar);
 $('formularioNuevo').curso.value = cursoDe(textoFecha(new Date()));
 
 try {
-  [itinerarios, lista] = await Promise.all([
-    Itinerario.cargarVisibles(baseDatos, usuario),
-    ListaActividades.cargar(baseDatos, false),
-  ]);
+  itinerarios = await Itinerario.cargarVisibles(baseDatos, usuario);
   pintar();
 } catch (error) {
   console.error(error);

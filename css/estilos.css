@@ -807,10 +807,6 @@ body > main { flex: 1 0 auto; width: 100%; }
 .tarjeta-itinerario .itinerario-datos { margin: 0; }
 .tarjeta-itinerario > .sin-dato { font-size: 0.8rem; }
 
-/* Tira de colores: una raya por sesión */
-.tira { display: flex; gap: 2px; height: 14px; }
-.tira-sesion { flex: 1; border-radius: 2px; max-width: 24px; }
-
 /* Calendario: las sesiones por meses */
 .mes { margin-bottom: 16px; }
 .mes-nombre {
