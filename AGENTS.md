@@ -12,7 +12,7 @@ del currículo de Aragón por etapa y un sistema de revisión. **El detalle (dat
 léelo antes de tocar nada.**
 
 ## Estructura
-- Una página HTML por pantalla (`index.html`, `actividades.html`, `actividad.html`, `acceso.html`, `editar.html`, `importar.html`)
+- Una página HTML por pantalla (`index.html`, `actividades.html`, `actividad.html`, `acceso.html`, `editar.html`, `importar.html`, `itinerarios.html`, `itinerario.html`)
 - `js/datos/` (`BaseDatos` es la única puerta al almacenamiento; `ALMACEN` en `configuracion.js`: `'firebase'` o `'local'`),
   `js/modelo/`, `js/interfaz/`, `css/`
 - `firestore.rules` (se copian a mano a la consola), `datos/` (ejemplos para el modo local), `propuestas/` (borradores JSON)

@@ -5,7 +5,7 @@
  * tiene en su HTML un <nav id="barraEnlaces"></nav> y llama a Barra.pintar().
  *
  *   sin sesión → «Inicio» · «Actividades» · «Acceso profesorado»
- *   con sesión → «Inicio» · «Actividades ▾» · correo · «Salir»
+ *   con sesión → «Inicio» · «Actividades ▾» · «Itinerarios» · correo · «Salir»
  *                donde «Actividades» es un menú con: Ver actividades,
  *                + Nueva actividad, Importar y (si es revisor) Pendientes.
  *
@@ -48,6 +48,7 @@ export class Barra {
           ${usuario.revisor ? '<a href="actividades.html?estado=pendiente">Pendientes de revisión</a>' : ''}
         </div>
       </details>
+      <a href="itinerarios.html">Itinerarios</a>
       <span class="barra-usuario">${escaparHtml(usuario.correo)}${usuario.revisor ? ' · revisor' : ''}</span>
       <button type="button" id="botonSalir">Salir</button>`;
 
