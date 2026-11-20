@@ -18,7 +18,8 @@
 //     las suyas mientras están pendientes (siguen pendientes).
 //   - Revisores: crean, editan, aprueban y borran cualquier actividad.
 //   - Imágenes: las lee cualquiera; las sube el profesorado a su nombre; las
-//     cambia o borra quien las subió o un revisor.
+//     cambia o borra quien las subió o un revisor. Los recursos (ficheros
+//     para descargar), igual.
 //   - Itinerarios: solo para el profesorado. Cada persona lee los suyos y los
 //     compartidos; los crea a su nombre y solo edita o borra los suyos
 //     (aunque sean revisores). Nadie puede cambiar de quién es uno.
@@ -68,6 +69,14 @@ service cloud.firestore {
     }
 
     match /imagenes/{id} {
+      allow read: if true;
+      allow create: if conSesion() && request.resource.data.subidaPor == correo();
+      allow update, delete: if esRevisor()
+        || (conSesion() && resource.data.subidaPor == correo());
+    }
+
+    // Los recursos (fichas, infografías…), igual que las imágenes
+    match /recursos/{id} {
       allow read: if true;
       allow create: if conSesion() && request.resource.data.subidaPor == correo();
       allow update, delete: if esRevisor()

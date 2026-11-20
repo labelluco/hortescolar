@@ -8,9 +8,9 @@ Publicada en GitHub Pages (rama `main`, carpeta raíz): https://labelluco.github
 
 - **Inicio** (`index.html`): explica cómo usar la web, con accesos rápidos (todas, las de esta estación y por categoría).
 - **Actividades** (`actividades.html`): tabla con las columnas *Recurso*, *Actividad*, *Saberes básicos* y *Etapa*. Se puede buscar en todas las columnas o solo en una (selector «en»), y ordenar haciendo clic en la cabecera. Al pulsar una fila se abre la ficha de la actividad.
-- **Ficha** (`actividad.html?id=…`): todos los detalles de la actividad e imágenes (se amplían al hacer clic).
-- **Acceso profesorado** (`acceso.html`) y **edición** (`editar.html`, `editar.html?id=…`): con sesión iniciada se pueden crear, modificar y borrar actividades y subir hasta 10 imágenes por actividad. Consultar no necesita sesión.
-- **Importar** (`importar.html`): con sesión, sube de una vez actividades preparadas en ficheros JSON (los borradores están en `propuestas/`). Si la actividad ya existe, se sustituye conservando sus imágenes.
+- **Ficha** (`actividad.html?id=…`): todos los detalles de la actividad, imágenes (se amplían al hacer clic) y recursos para descargar (fichas, infografías…).
+- **Acceso profesorado** (`acceso.html`) y **edición** (`editar.html`, `editar.html?id=…`): con sesión iniciada se pueden crear, modificar y borrar actividades y subir hasta 10 imágenes y 5 recursos (PDF, imágenes o documentos de oficina, de 700 KB como mucho) por actividad. Consultar no necesita sesión.
+- **Importar** (`importar.html`): con sesión, sube de una vez actividades preparadas en ficheros JSON (los borradores están en `propuestas/`). Si la actividad ya existe, se sustituye conservando sus imágenes y recursos.
 
 Cada actividad tiene una **categoría** principal (Cultivo, Experimentación, Naturaleza y biodiversidad, Sostenibilidad, Arte y creatividad, Alimentación y cocina), con un color que se ve en la tabla. La leyenda de colores de la tabla también filtra. Para añadir categorías: `js/modelo/categorias.js` y su color `--cat-{id}` en `css/estilos.css`.
 
@@ -37,8 +37,9 @@ y abrir http://localhost:8000. También sirve la extensión Live Server de VS Co
 
 Colecciones de Firestore:
 
-- `actividades`: `recurso`, `titulo`, `categoria` (id de `js/modelo/categorias.js`), `etapas[]` (cada una `{ etapa, saberes[], adaptacion }`, con `etapa` = `Infantil`, `Primaria · 1.er ciclo`, `Primaria · 2.º ciclo` o `Primaria · 3.er ciclo`), `descripcion`, `objetivos[]`, `materiales[]`, `desarrollo[]` (pasos), `notas[]` (notas y precauciones), `duracion`, `estaciones[]` (`Otoño`, `Invierno`, `Primavera`, `Verano`: cuándo se puede hacer), `epoca` (nota libre con el momento exacto, por ejemplo «sembrar en la luna menguante de diciembre»), `imagenes[]` (máx. 10, cada una `{ id, texto }`) y `modificada` (`{ por, el }`).
+- `actividades`: `recurso`, `titulo`, `categoria` (id de `js/modelo/categorias.js`), `etapas[]` (cada una `{ etapa, saberes[], adaptacion }`, con `etapa` = `Infantil`, `Primaria · 1.er ciclo`, `Primaria · 2.º ciclo` o `Primaria · 3.er ciclo`), `descripcion`, `objetivos[]`, `materiales[]`, `desarrollo[]` (pasos), `notas[]` (notas y precauciones), `duracion`, `estaciones[]` (`Otoño`, `Invierno`, `Primavera`, `Verano`: cuándo se puede hacer), `epoca` (nota libre con el momento exacto, por ejemplo «sembrar en la luna menguante de diciembre»), `imagenes[]` (máx. 10, cada una `{ id, texto }`), `recursos[]` (máx. 5, cada uno `{ id, nombre, tamano, texto }`) y `modificada` (`{ por, el }`).
 - `imagenes`: una por imagen, `{ actividadId, datos }`, con la imagen ya reducida en el navegador (máx. 1280 px, JPEG, menos de 1 MB) como texto `data:image/jpeg;base64,…`. Así no hace falta Firebase Storage ni el plan de pago.
+- `recursos`: uno por fichero de recursos, `{ actividadId, datos, subidaPor }`, con el fichero como texto `data:…;base64,…` (máx. 700 KB, para no pasar de 1 MB por documento).
 
 ## Profesorado y revisión
 

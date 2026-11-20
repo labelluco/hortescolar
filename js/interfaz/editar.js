@@ -2,12 +2,13 @@
  * editar.js
  * ---------
  * Formulario para crear (editar.html) o modificar (editar.html?id=…) una
- * actividad, con sus imágenes. Solo para el profesorado con sesión.
+ * actividad, con sus imágenes y recursos. Solo para el profesorado con sesión.
  *
  * Las imágenes nuevas se reducen en el propio navegador (reducirImagen.js)
- * y se guardan en la colección 'imagenes', una por documento. Al guardar,
- * la actividad, las imágenes nuevas y las quitadas se escriben de una vez:
- * o se guarda todo o nada.
+ * y se guardan en la colección 'imagenes', una por documento. Los recursos
+ * (fichas, infografías…) van igual en la colección 'recursos' (ver
+ * ficherosRecursos.js). Al guardar, la actividad y las imágenes y recursos
+ * nuevos y quitados se escriben de una vez: o se guarda todo o nada.
  *
  * Revisión (ver modelo/permisos.js): lo que guarda un revisor queda
  * publicado; lo que guarda un usuario normal queda pendiente de revisión.
@@ -24,6 +25,8 @@ import { Sesion } from './Sesion.js';
 import { Barra } from './Barra.js';
 import { escaparHtml } from './ayudas.js';
 import { reducirImagen } from './reducirImagen.js';
+import { prepararRecurso } from './ficherosRecursos.js';
+import { EXTENSIONES_ADMITIDAS, MAXIMO_RECURSOS, TAMANO_MAXIMO_RECURSO, extension, tamanoEnTexto } from '../modelo/recursos.js';
 
 const usuario = await Sesion.proteger();
 Barra.pintar();
@@ -32,6 +35,10 @@ const baseDatos = BaseDatos.preparar();
 const formulario = document.getElementById('formulario');
 const textoError = document.getElementById('error');
 const contenedorImagenes = document.getElementById('imagenes');
+const contenedorRecursos = document.getElementById('recursos');
+
+// Firestore no admite guardar más de 10 MB de una vez
+const CARACTERES_MAXIMOS_AL_GUARDAR = 9_000_000;
 
 // Campos de texto que en la actividad son listas (una línea = un elemento)
 const CAMPOS_LISTA = ['objetivos', 'materiales', 'desarrollo', 'notas'];
@@ -47,6 +54,9 @@ let actividad = new Actividad();
 //   { id | ruta, texto, src, datos? }   (datos solo en las nuevas)
 let imagenes = [];
 const idsImagenesQuitadas = [];
+// Recursos, en orden: { id | ruta, nombre, tamano, texto, datos? }   (datos solo en los nuevos)
+let recursos = [];
+const idsRecursosQuitados = [];
 let hayCambios = false;
 
 /* ---------- Cargar ---------- */
@@ -75,11 +85,13 @@ async function cargar() {
       ...imagen,
       src: await baseDatos.direccionImagen(imagen),
     })));
+    recursos = actividad.recursos.map((recurso) => ({ ...recurso, texto: recurso.texto ?? '' }));
   }
   pintarEtapas();
   pintarEstaciones();
   await rellenarSugerencias();
   pintarImagenes();
+  pintarRecursos();
   document.getElementById('avisoRevision').hidden = usuario.revisor;
   formulario.hidden = false;
 }
@@ -233,6 +245,73 @@ document.getElementById('ficheroImagenes').addEventListener('change', async (eve
   textoError.textContent = '';
 });
 
+/* ---------- Recursos ---------- */
+
+document.getElementById('ficheroRecursos').accept = EXTENSIONES_ADMITIDAS;
+document.getElementById('tamanoMaximoRecurso').textContent = tamanoEnTexto(TAMANO_MAXIMO_RECURSO);
+
+function pintarRecursos() {
+  contenedorRecursos.innerHTML = recursos.map((recurso, posicion) => `
+    <div class="editor-recurso">
+      <span class="recurso-tipo">${escaparHtml(extension(recurso.nombre).toUpperCase())}</span>
+      <div class="editor-recurso-datos">
+        <span class="recurso-nombre">${escaparHtml(recurso.nombre)} <small>${tamanoEnTexto(recurso.tamano)}</small></span>
+        <input type="text" data-posicion="${posicion}" value="${escaparHtml(recurso.texto)}" placeholder="Descripción (opcional): qué es, de quién es…">
+      </div>
+      <div class="editor-imagen-botones">
+        <button type="button" class="boton-icono" data-mover="-1" data-posicion="${posicion}" title="Mover antes" ${posicion === 0 ? 'disabled' : ''}>↑</button>
+        <button type="button" class="boton-icono" data-mover="1" data-posicion="${posicion}" title="Mover después" ${posicion === recursos.length - 1 ? 'disabled' : ''}>↓</button>
+        <button type="button" class="boton-icono" data-quitar data-posicion="${posicion}" title="Quitar recurso">×</button>
+      </div>
+    </div>`).join('');
+  document.getElementById('contadorRecursos').textContent = `(${recursos.length} de ${MAXIMO_RECURSOS})`;
+  document.getElementById('botonAnadirRecursos').hidden = recursos.length >= MAXIMO_RECURSOS;
+}
+
+contenedorRecursos.addEventListener('input', (evento) => {
+  const posicion = evento.target.dataset.posicion;
+  if (posicion !== undefined) {
+    recursos[posicion].texto = evento.target.value;
+    hayCambios = true;
+  }
+});
+
+contenedorRecursos.addEventListener('click', (evento) => {
+  const boton = evento.target.closest('button');
+  if (!boton) return;
+  const posicion = Number(boton.dataset.posicion);
+  if (boton.dataset.mover) {
+    const destino = posicion + Number(boton.dataset.mover);
+    [recursos[posicion], recursos[destino]] = [recursos[destino], recursos[posicion]];
+  } else if (boton.hasAttribute('data-quitar')) {
+    const [quitado] = recursos.splice(posicion, 1);
+    if (quitado.id && !quitado.datos) {
+      idsRecursosQuitados.push(quitado.id); // ya estaba guardado: se borrará
+    }
+  }
+  hayCambios = true;
+  pintarRecursos();
+});
+
+document.getElementById('ficheroRecursos').addEventListener('change', async (evento) => {
+  const ficheros = [...evento.target.files].slice(0, MAXIMO_RECURSOS - recursos.length);
+  evento.target.value = '';
+  textoError.textContent = ficheros.length ? 'Preparando recursos…' : '';
+  const problemas = [];
+  for (const fichero of ficheros) {
+    try {
+      const { nombre, tamano, datos } = await prepararRecurso(fichero);
+      recursos.push({ id: baseDatos.nuevoId(), nombre, tamano, texto: '', datos });
+      hayCambios = true;
+      pintarRecursos();
+    } catch (error) {
+      console.error(error);
+      problemas.push(error.message);
+    }
+  }
+  textoError.textContent = problemas.join(' ');
+});
+
 /* ---------- Guardar y borrar ---------- */
 
 function leerFormulario() {
@@ -246,6 +325,9 @@ function leerFormulario() {
   nueva.etapas = leerEtapas();
   nueva.estaciones = leerEstaciones();
   nueva.imagenes = imagenes.map(({ id, ruta, texto }) => (ruta ? { ruta, texto } : { id, texto }));
+  nueva.recursos = recursos.map(({ id, ruta, nombre, tamano, texto }) => (
+    ruta ? { ruta, nombre, tamano, texto: texto.trim() } : { id, nombre, tamano, texto: texto.trim() }
+  ));
   const ahora = new Date().toISOString();
   nueva.modificada = { por: usuario.correo, el: ahora };
   nueva.creada = actividad.creada ?? { por: usuario.correo, el: ahora };
@@ -274,18 +356,31 @@ formulario.addEventListener('submit', async (evento) => {
       datos: { actividadId: nueva.id, datos: imagen.datos, subidaPor: usuario.correo },
     })),
     ...idsImagenesQuitadas.map((id) => ({ tipo: 'borrar', coleccion: 'imagenes', id })),
+    ...recursos.filter((recurso) => recurso.datos).map((recurso) => ({
+      tipo: 'guardar', coleccion: 'recursos', id: recurso.id,
+      datos: { actividadId: nueva.id, datos: recurso.datos, subidaPor: usuario.correo },
+    })),
+    ...idsRecursosQuitados.map((id) => ({ tipo: 'borrar', coleccion: 'recursos', id })),
     { tipo: 'guardar', coleccion: 'actividades', id: nueva.id, datos: nueva.aDocumento() },
   ];
+  const caracteres = [...imagenes, ...recursos].reduce((suma, fichero) => suma + (fichero.datos?.length ?? 0), 0);
+  if (caracteres > CARACTERES_MAXIMOS_AL_GUARDAR) {
+    textoError.textContent = 'Hay demasiados ficheros nuevos para guardarlos de una vez. '
+      + 'Quita algunos, guarda y vuelve a editar la actividad para añadirlos.';
+    return;
+  }
   await guardar(operaciones, `actividad.html?id=${encodeURIComponent(nueva.id)}`);
 });
 
 document.getElementById('botonBorrar').addEventListener('click', async () => {
-  if (!confirm(`¿Borrar la actividad «${actividad.titulo}» y sus imágenes? No se puede deshacer.`)) {
+  if (!confirm(`¿Borrar la actividad «${actividad.titulo}», sus imágenes y sus recursos? No se puede deshacer.`)) {
     return;
   }
   const operaciones = [
     ...actividad.imagenes.filter((imagen) => imagen.id)
       .map((imagen) => ({ tipo: 'borrar', coleccion: 'imagenes', id: imagen.id })),
+    ...actividad.recursos.filter((recurso) => recurso.id)
+      .map((recurso) => ({ tipo: 'borrar', coleccion: 'recursos', id: recurso.id })),
     { tipo: 'borrar', coleccion: 'actividades', id: actividad.id },
   ];
   await guardar(operaciones, 'actividades.html');

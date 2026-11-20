@@ -99,8 +99,18 @@
         <small>Se reducen automáticamente antes de guardarlas.</small>
       </section>
 
+      <section class="tarjeta seccion">
+        <h2>Recursos <small id="contadorRecursos"></small></h2>
+        <p><small>Fichas, infografías, plantillas… para descargar desde la ficha. PDF, imágenes o documentos de oficina, de <span id="tamanoMaximoRecurso"></span> como mucho cada uno.</small></p>
+        <div class="editor-recursos" id="recursos"></div>
+        <label class="boton" id="botonAnadirRecursos">
+          + Añadir recursos
+          <input type="file" id="ficheroRecursos" multiple hidden>
+        </label>
+      </section>
+
       <p class="aviso aviso-revision" id="avisoRevision" hidden>Al guardar, la actividad quedará <strong>pendiente de revisión</strong>: el resto del profesorado la verá, pero no se publicará hasta que una persona revisora la apruebe. Mientras tanto, podrás seguir editándola.</p>
-      <p class="consejo">Al guardar, aceptas que el texto y las fotos se publiquen con licencia libre <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a>, como el resto de actividades: cualquiera podrá usarlos y adaptarlos citando el origen. Sube solo fotos propias o con permiso.</p>
+      <p class="consejo">Al guardar, aceptas que el texto y las fotos se publiquen con licencia libre <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a>, como el resto de actividades: cualquiera podrá usarlos y adaptarlos citando el origen. Sube solo fotos y recursos propios o con permiso (si no son tuyos, indica en su descripción de quién son y su licencia).</p>
       <p class="error" id="error" role="alert"></p>
 
       <div class="acciones">

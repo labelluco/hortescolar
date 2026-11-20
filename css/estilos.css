@@ -490,6 +490,61 @@ th[aria-sort="descending"] .orden-flecha::after { content: "↓"; opacity: 1; }
 .editor-imagen-botones { display: flex; gap: 4px; }
 .editor-imagen-botones [data-quitar] { margin-left: auto; color: var(--color-error); }
 
+/* Recursos: editor (editar.html) y lista para descargar (actividad.html) */
+.editor-recursos { display: flex; flex-direction: column; gap: 12px; margin-bottom: 12px; }
+
+.editor-recurso,
+.lista-recursos li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.editor-recurso-datos,
+.lista-recursos li > div { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+
+.editor-recurso input {
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 6px 8px;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+}
+
+.editor-recurso input:focus { outline: 2px solid var(--color-principal); outline-offset: -1px; }
+
+.recurso-tipo {
+  flex: none;
+  width: 48px;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-principal-oscuro);
+  background: var(--color-principal-suave);
+  border-radius: var(--radio);
+}
+
+.recurso-nombre { overflow-wrap: anywhere; }
+.lista-recursos small,
+.editor-recurso small { color: var(--color-texto-secundario); }
+
+.lista-recursos { list-style: none; padding: 0; }
+.lista-recursos li + li { margin-top: 12px; }
+.lista-recursos p { font-size: 0.9rem; }
+
+/* Botón que parece un enlace */
+.enlace {
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  text-align: left;
+  color: var(--color-acento);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 /* ---------- Etapas ---------- */
 
 /* Saberes en la tabla de la portada: cada uno, como mucho en dos líneas */

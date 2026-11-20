@@ -21,6 +21,8 @@
  *   epoca       nota sobre la época (texto libre: "sembrar en la luna menguante de diciembre")
  *   imagenes    hasta 10, en orden: { id, texto } (colección 'imagenes')
  *               o { ruta, texto } (fichero en datos/, solo los ejemplos)
+ *   recursos    hasta 5 ficheros para descargar (fichas, infografías…):
+ *                 { id, nombre, tamano, texto } (ver recursos.js)
  *   estado      'publicada' (la ve todo el mundo) o 'pendiente' (de revisión:
  *               solo la ve el profesorado con sesión)
  *   creada      { por: correo, el: fecha ISO }: quién la creó
@@ -33,6 +35,7 @@
 import { areaCorta, partirSaber } from './saber.js';
 import { categoriaPorId, posicionCategoria } from './categorias.js';
 import { ESTACIONES, estacionesDeMeses, posicionEstacion, textoEstaciones } from './estaciones.js';
+import { MAXIMO_RECURSOS } from './recursos.js';
 
 export const MAXIMO_IMAGENES = 10;
 
@@ -64,6 +67,7 @@ export class Actividad {
     this.estaciones = Actividad.leerEstaciones(datos);
     this.epoca = datos.epoca ?? '';
     this.imagenes = datos.imagenes ?? [];
+    this.recursos = datos.recursos ?? [];
     // Las actividades de antes de haber revisión no tienen estado: estaban publicadas
     this.estado = datos.estado === PENDIENTE ? PENDIENTE : PUBLICADA;
     this.creada = datos.creada ?? null;
@@ -135,6 +139,7 @@ export class Actividad {
       estaciones: this.estaciones,
       epoca: this.epoca,
       imagenes: this.imagenes,
+      recursos: this.recursos,
       estado: this.estado,
       creada: this.creada,
       modificada: this.modificada,
@@ -150,6 +155,7 @@ export class Actividad {
     if (!categoriaPorId(this.categoria)) errores.push('Falta la categoría.');
     if (this.etapas.length === 0) errores.push('Marca al menos una etapa.');
     if (this.imagenes.length > MAXIMO_IMAGENES) errores.push(`Como mucho, ${MAXIMO_IMAGENES} imágenes.`);
+    if (this.recursos.length > MAXIMO_RECURSOS) errores.push(`Como mucho, ${MAXIMO_RECURSOS} recursos.`);
     return errores;
   }
 

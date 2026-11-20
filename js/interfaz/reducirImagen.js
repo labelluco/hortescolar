@@ -4,7 +4,8 @@
  * Reduce una foto elegida en el formulario (por ejemplo, una del móvil de
  * 4000 px y 5 MB) a una imagen JPEG de como mucho 1280 px de lado, y la
  * devuelve como texto "data:image/jpeg;base64,…" para guardarla en la base
- * de datos.
+ * de datos. Se puede pedir otro lado máximo (las infografías de los
+ * recursos necesitan más resolución para que se lean).
  *
  * Firestore no admite documentos de más de 1 MB, así que si aún ocupa
  * demasiado, se baja la calidad y, si hace falta, el tamaño.
@@ -13,9 +14,9 @@
 const LADO_MAXIMO = 1280;
 const CARACTERES_MAXIMOS = 900_000; // margen por debajo de 1 MB
 
-export async function reducirImagen(fichero) {
+export async function reducirImagen(fichero, ladoMaximo = LADO_MAXIMO) {
   const imagen = await createImageBitmap(fichero);
-  let lado = LADO_MAXIMO;
+  let lado = ladoMaximo;
   let calidad = 0.82;
 
   for (let intento = 0; intento < 8; intento++) {

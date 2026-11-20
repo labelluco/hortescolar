@@ -2,8 +2,8 @@
  * actividad.js
  * ------------
  * Ficha de una actividad (actividad.html?id=…): recurso, etapa, saberes,
- * descripción, objetivos, materiales, desarrollo e imágenes (con ampliación
- * al hacer clic).
+ * descripción, objetivos, materiales, desarrollo, imágenes (con ampliación
+ * al hacer clic) y recursos para descargar.
  *
  * Con sesión, además: quién la creó, modificó y revisó, el botón «Editar»
  * (si se tiene permiso, ver modelo/permisos.js) y, si está pendiente de
@@ -18,6 +18,8 @@ import { Barra } from './Barra.js';
 import { estacionesHtml } from './estacionesHtml.js';
 import { categoriaHtml } from './categoriaHtml.js';
 import { escaparHtml, listaHtml, textoConEnlaces } from './ayudas.js';
+import { abrirRecurso } from './ficherosRecursos.js';
+import { extension, tamanoEnTexto } from '../modelo/recursos.js';
 
 const ficha = document.getElementById('ficha');
 const baseDatos = BaseDatos.preparar();
@@ -70,12 +72,47 @@ function pintar(actividad) {
     ${seccion('Por etapas: adaptaciones y saberes básicos', htmlEtapas(actividad))}
     ${seccion('Notas y precauciones', actividad.notas.length && listaHtml(actividad.notas))}
     ${seccion('Imágenes', imagenes && `<div class="galeria">${imagenes}</div>`)}
+    ${seccion('Recursos', htmlRecursos(actividad))}
     ${usuario ? htmlAutoria(actividad) : ''}
     ${htmlCita(actividad)}
   `;
 
   document.getElementById('botonAprobar')?.addEventListener('click', () => aprobar(actividad));
   pintarImagenes(actividad);
+  ficha.querySelector('.lista-recursos')?.addEventListener('click', (evento) => abrir(evento, actividad));
+}
+
+/**
+ * Lista de recursos para descargar: el nombre abre el fichero (los PDF y las
+ * imágenes, en otra pestaña; el resto se descarga) y «Descargar» lo descarga.
+ * Los ficheros no se leen hasta que se piden.
+ */
+function htmlRecursos(actividad) {
+  return actividad.recursos.length ? `<ul class="lista-recursos">${actividad.recursos.map((recurso, posicion) => `
+    <li>
+      <span class="recurso-tipo">${escaparHtml(extension(recurso.nombre).toUpperCase())}</span>
+      <div>
+        <button type="button" class="enlace recurso-nombre" data-posicion="${posicion}">${escaparHtml(recurso.nombre)}</button>
+        <small>${tamanoEnTexto(recurso.tamano)}</small>
+        ${recurso.texto ? `<p>${textoConEnlaces(recurso.texto)}</p>` : ''}
+      </div>
+      <button type="button" class="boton" data-posicion="${posicion}" data-descargar>Descargar</button>
+    </li>`).join('')}</ul>
+    <p class="error" id="errorRecursos" role="alert"></p>` : '';
+}
+
+async function abrir(evento, actividad) {
+  const boton = evento.target.closest('button[data-posicion]');
+  if (!boton) return;
+  const recurso = actividad.recursos[boton.dataset.posicion];
+  const textoError = document.getElementById('errorRecursos');
+  textoError.textContent = '';
+  try {
+    await abrirRecurso(() => baseDatos.direccionRecurso(recurso), recurso.nombre, boton.hasAttribute('data-descargar'));
+  } catch (error) {
+    console.error(error);
+    textoError.textContent = `No se ha podido abrir «${recurso.nombre}». Vuelve a probar.`;
+  }
 }
 
 /**

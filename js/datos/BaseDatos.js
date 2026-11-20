@@ -12,6 +12,8 @@
  *   actividades  una por actividad (ver modelo/Actividad.js)
  *   imagenes     una por imagen: { actividadId, datos } con la imagen ya
  *                reducida, como texto "data:image/jpeg;base64,…"
+ *   recursos     uno por fichero de recursos (fichas, infografías…):
+ *                { actividadId, datos } con el fichero como "data:…;base64,…"
  *
  * Uso:
  *   const baseDatos = BaseDatos.preparar();
@@ -72,6 +74,19 @@ export class BaseDatos {
       return `datos/${imagen.ruta}`;
     }
     const documento = await this.leerDocumento('imagenes', imagen.id);
+    return documento?.datos ?? '';
+  }
+
+  /**
+   * Dirección para descargar un recurso de una actividad (ver modelo/recursos.js):
+   *   { id }   → fichero guardado en la colección 'recursos'
+   *   { ruta } → fichero dentro de datos/ (las actividades de ejemplo)
+   */
+  async direccionRecurso(recurso) {
+    if (recurso.ruta) {
+      return `datos/${recurso.ruta}`;
+    }
+    const documento = await this.leerDocumento('recursos', recurso.id);
     return documento?.datos ?? '';
   }
 }

@@ -7,7 +7,7 @@
  * Cada fichero es un array de actividades con el mismo formato que la
  * colección 'actividades' más su "id". Antes de subir se enseña qué se va a
  * hacer con cada una (nueva o sustituye) y si le falta algo. Si una
- * actividad ya existe y tiene imágenes, se conservan.
+ * actividad ya existe y tiene imágenes o recursos, se conservan.
  *
  * Revisión (ver modelo/permisos.js): lo que sube un revisor queda publicado;
  * lo que sube un usuario normal, pendiente de revisión. Un usuario normal no
@@ -67,6 +67,9 @@ document.getElementById('ficheros').addEventListener('change', async (evento) =>
       }
       if (existente && actividad.imagenes.length === 0) {
         actividad.imagenes = existente.imagenes; // se conservan sus imágenes
+      }
+      if (existente && actividad.recursos.length === 0) {
+        actividad.recursos = existente.recursos; // y sus recursos
       }
       // Estado y autoría: los decide quién sube, no el fichero
       actividad.estado = estadoAlGuardar(usuario);

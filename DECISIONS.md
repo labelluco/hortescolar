@@ -2,6 +2,8 @@
 
 Una línea por decisión, la más reciente arriba: fecha — decisión — por qué.
 
+- 2026-11-20 — Recursos para descargar en cada actividad (máx. 5, 700 KB cada uno), guardados como las imágenes en Firestore (colección `recursos`, un documento por fichero) — seguir en el plan Spark sin Storage; 700 KB es lo que cabe en un documento de 1 MB en base64. Si se queda corto, se puede partir cada fichero en varios documentos. Solo PDF, imágenes y documentos de oficina, con el tipo según la extensión — un HTML o SVG abierto desde la web podría ejecutar código con la sesión del profesorado.
+
 - 2026-11-19 — Los itinerarios compartidos solo los ve el profesorado con sesión, nunca la web pública — no pasan revisión, llevan días y horarios de grupos concretos y pueden incluir actividades pendientes. Si algún día se quieren difundir, sería con un estado «publicado» aprobado por un revisor y sin fechas exactas.
 
 - 2026-11-19 — Itinerarios (en pruebas, modo local): una etapa, un curso y una lista de sesiones con fecha y actividad; privados por defecto, compartibles (solo los edita quien los creó) y copiables a otro curso; sin revisión — cada docente programa lo suyo y puede aprovechar lo de los demás; solo combinan actividades ya revisadas.
