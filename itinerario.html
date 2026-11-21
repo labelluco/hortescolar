@@ -72,7 +72,7 @@
       </div>
       <div class="tabla-contenedor">
         <table class="tabla tabla-sesiones">
-          <thead><tr><th>Fecha</th><th>Actividad</th><th>Nota</th><th><span class="oculto">Quitar</span></th></tr></thead>
+          <thead><tr><th>Fecha</th><th>Actividad</th><th>Nota <small>(qué se hace ese día)</small></th><th><span class="oculto">Quitar</span></th></tr></thead>
           <tbody id="sesiones"></tbody>
         </table>
       </div>
@@ -108,8 +108,19 @@
       <label class="campo" id="campoDescripcion"><span>Descripción</span>
         <textarea name="descripcion" rows="3" placeholder="Horario, grupo, objetivos del trimestre…"></textarea>
       </label>
-      <label class="casilla" id="campoCompartido"><input type="checkbox" name="compartido">
-        Compartirlo con el resto del profesorado (lo verán y podrán copiarlo, pero solo tú lo editas)</label>
+      <fieldset class="campo compartir" id="campoCompartido">
+        <legend>¿Quién lo ve?</legend>
+        <label class="casilla"><input type="radio" name="conQuien" value="nadie"> Solo yo</label>
+        <label class="casilla"><input type="radio" name="conQuien" value="todos"> Todo el profesorado</label>
+        <label class="casilla"><input type="radio" name="conQuien" value="algunos"> Solo algunas personas</label>
+        <div class="compartir-personas" id="personasCompartir" hidden>
+          <div id="listaPersonas"></div>
+          <label class="campo"><span>Otros correos</span>
+            <input type="text" name="otrosCorreos" placeholder="nombre@colegio.es, otra@colegio.es">
+          </label>
+        </div>
+        <p class="consejo">Lo podrán ver y copiar, pero solo tú lo editas.</p>
+      </fieldset>
       <p class="consejo" id="consejoDialogo"></p>
       <p class="error" id="errorDialogo" role="alert"></p>
       <div class="acciones">

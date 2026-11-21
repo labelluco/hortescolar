@@ -10,9 +10,12 @@
  *   etapa       una de ETAPAS (ver Actividad.js): solo se eligen actividades de esa etapa
  *   curso       curso escolar, «2026-27»
  *   descripcion texto libre (opcional)
- *   compartido  false: solo lo ve quien lo creó; true: lo ve todo el profesorado
- *               (pero solo lo edita quien lo creó)
+ *   compartido  true: lo ve todo el profesorado
+ *   compartidoCon  [correos]: si no es de todos, las personas que lo ven.
+ *               Con compartido false y la lista vacía, solo lo ve quien lo
+ *               creó. En todos los casos, solo lo edita quien lo creó.
  *   sesiones    [{ id, fecha: 'AAAA-MM-DD', actividadId (o '' si aún no tiene), nota }]
+ *               La nota puede ser larga, con párrafos: qué se hace ese día.
  *               Una actividad puede ocupar varias sesiones, seguidas o no
  *               (el biodigestor: montaje, observaciones, filtrar y abonar).
  *   creada      { por: correo, el: fecha ISO }: quién lo creó (su propietario)
@@ -29,6 +32,7 @@ export class Itinerario {
     this.curso = datos.curso ?? '';
     this.descripcion = datos.descripcion ?? '';
     this.compartido = Boolean(datos.compartido);
+    this.compartidoCon = this.compartido ? [] : (datos.compartidoCon ?? []);
     this.sesiones = (datos.sesiones ?? []).map((s) => ({
       id: s.id ?? Itinerario.nuevoIdSesion(),
       fecha: s.fecha,
@@ -51,16 +55,18 @@ export class Itinerario {
   }
 
   /**
-   * Los itinerarios que puede ver esa persona: los suyos y los compartidos,
-   * ordenados por curso (el más reciente primero) y nombre. Se piden en dos
-   * consultas porque Firestore rechaza las que podrían devolver algo prohibido.
+   * Los itinerarios que puede ver esa persona: los suyos, los compartidos
+   * con todos y los compartidos con ella, ordenados por curso (el más
+   * reciente primero) y nombre. Se piden en tres consultas porque Firestore
+   * rechaza las que podrían devolver algo prohibido.
    */
   static async cargarVisibles(baseDatos, usuario) {
-    const [mios, compartidos] = await Promise.all([
+    const listas = await Promise.all([
       baseDatos.leerColeccion('itinerarios', { campo: 'propietario', valor: usuario.correo }),
       baseDatos.leerColeccion('itinerarios', { campo: 'compartido', valor: true }),
+      baseDatos.leerColeccion('itinerarios', { campo: 'compartidoCon', contiene: usuario.correo }),
     ]);
-    const porId = new Map([...mios, ...compartidos].map((d) => [d.id, new Itinerario(d)]));
+    const porId = new Map(listas.flat().map((d) => [d.id, new Itinerario(d)]));
     return [...porId.values()].sort((a, b) =>
       b.curso.localeCompare(a.curso) || a.nombre.localeCompare(b.nombre, 'es'));
   }
@@ -72,6 +78,27 @@ export class Itinerario {
 
   esDe(correo) {
     return Boolean(correo) && this.propietario === correo;
+  }
+
+  /** Con quién se comparte: 'nadie', 'todos' o 'algunos' (los de compartidoCon). */
+  get conQuien() {
+    if (this.compartido) return 'todos';
+    return this.compartidoCon.length ? 'algunos' : 'nadie';
+  }
+
+  /** Cambia con quién se comparte; los correos solo cuentan con 'algunos'. */
+  compartirCon(conQuien, correos = []) {
+    this.compartido = conQuien === 'todos';
+    this.compartidoCon = conQuien === 'algunos'
+      ? [...new Set(correos.map((c) => c.trim().toLowerCase()).filter(Boolean))]
+        .filter((c) => c !== this.propietario)
+      : [];
+  }
+
+  /** ¿Lo puede ver esa persona? (quien lo creó, o si está compartido con ella) */
+  loVe(correo) {
+    return Boolean(correo)
+      && (this.compartido || this.esDe(correo) || this.compartidoCon.includes(correo));
   }
 
   ordenarSesiones() {
@@ -138,6 +165,7 @@ export class Itinerario {
       curso,
       descripcion: this.descripcion,
       compartido: false,
+      compartidoCon: [],
       sesiones: this.sesiones.map((s) => ({ ...s, id: null, fecha: sumarDias(s.fecha, semanas * 7) })),
     });
   }
@@ -150,6 +178,7 @@ export class Itinerario {
       curso: this.curso,
       descripcion: this.descripcion,
       compartido: this.compartido,
+      compartidoCon: this.compartidoCon,
       // El propietario va aparte para poder buscar «mis itinerarios»
       propietario: this.propietario,
       sesiones: this.sesiones,
@@ -164,6 +193,11 @@ export class Itinerario {
     if (!this.nombre) errores.push('Falta el nombre del itinerario.');
     if (!this.etapa) errores.push('Falta la etapa.');
     if (!/^\d{4}-\d{2}$/.test(this.curso)) errores.push('El curso se escribe así: 2026-27.');
+    if (this.conQuien === 'algunos' && this.compartidoCon.length > 50) {
+      errores.push('Se puede compartir con 50 personas como mucho.');
+    }
+    const malos = this.compartidoCon.filter((c) => !/^[^\s@,;]+(@[^\s@,;]+)?$/.test(c));
+    if (malos.length) errores.push(`Correos que no se entienden: ${malos.join(', ')}.`);
     return errores;
   }
 }

@@ -41,12 +41,13 @@ export function estadoAlGuardar(usuario) {
 
 /*
  * Itinerarios (ver modelo/Itinerario.js): solo para el profesorado con
- * sesión. Cada persona ve los suyos y los compartidos, y solo edita o borra
- * los suyos (aunque sean revisores). Cualquiera puede copiar uno que vea.
+ * sesión. Cada persona ve los suyos, los compartidos con todos y los
+ * compartidos con ella (compartidoCon), y solo edita o borra los suyos
+ * (aunque sean revisores). Cualquiera puede copiar uno que vea.
  */
 
 export function puedeVerItinerario(usuario, itinerario) {
-  return Boolean(usuario) && (itinerario.compartido || itinerario.esDe(usuario.correo));
+  return Boolean(usuario) && itinerario.loVe(usuario.correo);
 }
 
 export function puedeEditarItinerario(usuario, itinerario) {

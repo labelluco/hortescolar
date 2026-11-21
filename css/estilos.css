@@ -896,7 +896,16 @@ body > main { flex: 1 0 auto; width: 100%; }
 .casilla-sesion.vacia { border-style: dashed; background: var(--color-superficie); color: var(--color-texto-secundario); }
 .casilla-fecha { display: flex; align-items: center; gap: 6px; font-size: 0.75rem; color: var(--color-texto-secundario); font-weight: 600; }
 .casilla-titulo { font-size: 0.85rem; font-weight: 600; line-height: 1.25; }
-.casilla-nota { font-size: 0.75rem; color: var(--color-texto-secundario); line-height: 1.25; }
+.casilla-nota {
+  font-size: 0.75rem;
+  color: var(--color-texto-secundario);
+  line-height: 1.25;
+  /* Las notas largas se cortan a tres líneas: entera, al pasar por encima y en la lista */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 .casilla-numero {
   padding: 0 6px;
   border-radius: 8px;
@@ -948,12 +957,20 @@ body > main { flex: 1 0 auto; width: 100%; }
 .dias-semana label { display: flex; align-items: center; gap: 4px; padding: 10px 0; cursor: pointer; }
 .dias-semana input { width: auto; }
 
-.tabla-sesiones td { vertical-align: middle; }
+.tabla-sesiones td { vertical-align: top; }
 .tabla-sesiones tr.fila-sesion td:first-child {
   box-shadow: inset 4px 0 0 var(--color-categoria, transparent);
   white-space: nowrap;
 }
-.tabla-sesiones select, .tabla-sesiones input {
+.tabla-sesiones th:nth-child(3) { width: 45%; }
+.tabla-sesiones .nota-sesion { white-space: pre-line; }
+.tabla-sesiones textarea {
+  resize: vertical;
+  min-height: 3.2em;
+  field-sizing: content; /* crece con el texto (en los navegadores que lo saben hacer) */
+  max-height: 20em;
+}
+.tabla-sesiones select, .tabla-sesiones input, .tabla-sesiones textarea {
   font: inherit;
   padding: 6px 8px;
   border: 1px solid var(--color-borde);
@@ -977,3 +994,16 @@ body > main { flex: 1 0 auto; width: 100%; }
 .dialogo::backdrop { background: rgba(0, 0, 0, 0.4); }
 .casilla { display: flex; gap: 8px; align-items: flex-start; margin-bottom: 12px; cursor: pointer; }
 .casilla[hidden], .campo[hidden] { display: none; }
+
+/* ¿Quién ve el itinerario?: nadie, todos o algunas personas */
+.compartir { border: none; padding: 0; margin: 0 0 12px; }
+.compartir legend { font-weight: 600; font-size: 0.9rem; padding: 0; margin-bottom: 6px; }
+.compartir .casilla { margin-bottom: 6px; }
+.compartir .casilla input { width: auto; }
+.compartir-personas {
+  margin: 4px 0 8px 24px;
+  padding: 8px 12px;
+  border-left: 3px solid var(--color-principal-suave);
+}
+.compartir-personas[hidden] { display: none; }
+.compartir .consejo { margin: 4px 0 0; }

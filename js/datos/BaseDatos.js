@@ -41,7 +41,9 @@ export class BaseDatos {
 
   /**
    * Todos los documentos de una colección (un array de objetos), o solo los
-   * que cumplen un filtro sencillo: { campo: 'estado', valor: 'publicada' }.
+   * que cumplen un filtro sencillo: { campo: 'estado', valor: 'publicada' }
+   * (el campo vale eso) o { campo: 'compartidoCon', contiene: correo } (el
+   * campo es una lista que lo contiene).
    */
   leerColeccion(nombre, filtro = null) {
     return this.almacen.leerColeccion(nombre, filtro);

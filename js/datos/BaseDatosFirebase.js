@@ -18,7 +18,10 @@ export class BaseDatosFirebase {
     const { bd, firestore } = await obtenerFirebase();
     let consulta = firestore.collection(bd, nombre);
     if (filtro) {
-      consulta = firestore.query(consulta, firestore.where(filtro.campo, '==', filtro.valor));
+      const condicion = 'contiene' in filtro
+        ? firestore.where(filtro.campo, 'array-contains', filtro.contiene)
+        : firestore.where(filtro.campo, '==', filtro.valor);
+      consulta = firestore.query(consulta, condicion);
     }
     const resultado = await firestore.getDocs(consulta);
     return resultado.docs.map((documento) => ({ id: documento.id, ...documento.data() }));

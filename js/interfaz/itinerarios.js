@@ -2,7 +2,8 @@
  * itinerarios.js
  * --------------
  * Lista de itinerarios (itinerarios.html), solo para el profesorado con
- * sesión: los propios y los que ha compartido el resto, con sus fechas y
+ * sesión: los propios y los que ha compartido el resto (con todos o con
+ * quien mira), con sus fechas y
  * cuántas sesiones tienen ya actividad.
  *
  * Desde aquí se crea un itinerario nuevo (nombre, etapa y curso); las
@@ -25,6 +26,8 @@ const usuario = await Barra.pintar();
 
 let itinerarios = [];
 
+const TEXTO_COMPARTIDO = { nadie: 'Privado', todos: 'Compartido con todos', algunos: 'Compartido con algunos' };
+
 function htmlItinerario(itinerario) {
   const fechas = itinerario.primeraFecha
     ? `${fechaMedia(itinerario.primeraFecha)} – ${fechaMedia(itinerario.ultimaFecha)}`
@@ -36,7 +39,7 @@ function htmlItinerario(itinerario) {
         <span class="etiqueta">${escaparHtml(itinerario.etapa)}</span>
         <span>${escaparHtml(itinerario.curso)}</span>
         ${itinerario.esDe(usuario.correo)
-          ? `<span class="${itinerario.compartido ? 'marca-compartido' : 'marca-privado'}">${itinerario.compartido ? 'Compartido' : 'Privado'}</span>`
+          ? `<span class="${itinerario.conQuien === 'nadie' ? 'marca-privado' : 'marca-compartido'}">${TEXTO_COMPARTIDO[itinerario.conQuien]}</span>`
           : `<span class="sin-dato">${escaparHtml(itinerario.propietario)}</span>`}
       </span>
       <span class="sin-dato">${escaparHtml(fechas)} · ${itinerario.sesiones.length} sesiones, ${itinerario.sesionesConActividad} con actividad</span>

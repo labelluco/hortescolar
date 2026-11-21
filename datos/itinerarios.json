@@ -123,5 +123,40 @@
       "el": "2026-11-01T10:00:00.000Z"
     },
     "modificada": null
+  },
+  {
+    "id": "it-003",
+    "nombre": "El biodigestor con 3.º B",
+    "etapa": "Primaria · 2.º ciclo",
+    "curso": "2026-27",
+    "descripcion": "EJEMPLO. Programado por admin para el tutor de 3.º B, compartido solo con él.",
+    "compartido": false,
+    "compartidoCon": ["profe"],
+    "propietario": "admin",
+    "sesiones": [
+      {
+        "id": "b01",
+        "fecha": "2026-11-24",
+        "actividadId": "biodigestor",
+        "nota": "Montaje del biodigestor.\n\nAntes de bajar al huerto, en clase: qué pasa con los restos de comida si no les llega el aire (10 minutos). Llevad la garrafa, el globo y los restos de fruta que hayan traído de casa.\n\nEn el huerto, grupos de cuatro: uno corta, otro llena, otro cierra y otro apunta en la libreta la fecha y lo que se ha puesto."
+      },
+      {
+        "id": "b02",
+        "fecha": "2026-12-01",
+        "actividadId": "biodigestor",
+        "nota": "Primera observación: ¿se ha hinchado el globo? Medimos su contorno con una cinta y lo apuntamos."
+      },
+      {
+        "id": "b03",
+        "fecha": "2026-12-15",
+        "actividadId": "biodigestor",
+        "nota": "Filtramos el líquido y abonamos las acelgas."
+      }
+    ],
+    "creada": {
+      "por": "admin",
+      "el": "2026-11-21T10:00:00.000Z"
+    },
+    "modificada": null
   }
 ]

@@ -22,7 +22,11 @@ export class BaseDatosLocal {
       this.colecciones.set(nombre, this.descargar(nombre));
     }
     const documentos = await this.colecciones.get(nombre);
-    return filtro ? documentos.filter((d) => d[filtro.campo] === filtro.valor) : documentos;
+    if (!filtro) return documentos;
+    if ('contiene' in filtro) {
+      return documentos.filter((d) => (d[filtro.campo] ?? []).includes(filtro.contiene));
+    }
+    return documentos.filter((d) => d[filtro.campo] === filtro.valor);
   }
 
   async leerDocumento(coleccion, id) {

@@ -20,8 +20,8 @@
 //   - Imágenes: las lee cualquiera; las sube el profesorado a su nombre; las
 //     cambia o borra quien las subió o un revisor. Los recursos (ficheros
 //     para descargar), igual.
-//   - Itinerarios: solo para el profesorado. Cada persona lee los suyos y los
-//     compartidos; los crea a su nombre y solo edita o borra los suyos
+//   - Itinerarios: solo para el profesorado. Cada persona lee los suyos, los
+//     compartidos con todos y los compartidos con ella (lista compartidoCon); los crea a su nombre y solo edita o borra los suyos
 //     (aunque sean revisores). Nadie puede cambiar de quién es uno.
 
 rules_version = '2';
@@ -84,19 +84,32 @@ service cloud.firestore {
     }
 
     match /itinerarios/{id} {
+      // La lista de correos con quien se comparte (puede faltar en los antiguos)
+      function compartidoConValido() {
+        return request.resource.data.get('compartidoCon', []) is list
+          && request.resource.data.get('compartidoCon', []).size() <= 50;
+      }
+
       allow read: if conSesion()
-        && (resource.data.compartido == true || resource.data.propietario == correo());
+        && (resource.data.compartido == true
+            || resource.data.propietario == correo()
+            // Se lee el campo tal cual (sin get) para que Firestore acepte la
+            // consulta array-contains; en los antiguos sin el campo, da error
+            // y no cuenta, pero valen las otras dos condiciones.
+            || correo() in resource.data.compartidoCon);
 
       allow create: if conSesion()
         && request.resource.data.propietario == correo()
         && request.resource.data.creada.por == correo()
-        && request.resource.data.compartido is bool;
+        && request.resource.data.compartido is bool
+        && compartidoConValido();
 
       allow update: if conSesion()
         && resource.data.propietario == correo()
         && request.resource.data.propietario == resource.data.propietario
         && request.resource.data.creada == resource.data.creada
-        && request.resource.data.compartido is bool;
+        && request.resource.data.compartido is bool
+        && compartidoConValido();
 
       allow delete: if conSesion() && resource.data.propietario == correo();
     }

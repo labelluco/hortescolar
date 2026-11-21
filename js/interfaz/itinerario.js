@@ -9,11 +9,13 @@
  *               si la actividad ocupa varias sesiones, cuál es (2/3).
  *   Equilibrio  cuántas sesiones hay de cada categoría y de cada área, y
  *               avisos: actividades fuera de su época o de otra etapa.
- *   Sesiones    la lista de fechas con su actividad y una nota.
+ *   Sesiones    la lista de fechas con su actividad y una nota (puede ser
+ *               larga, con párrafos: qué se hace ese día).
  *
  * Quien lo creó, además, puede añadir fechas (una o periódicas), elegir la
  * actividad de cada día (solo las de la etapa del itinerario), quitar
- * fechas, cambiar los datos y borrarlo. Cada cambio se guarda en el acto.
+ * fechas, cambiar los datos (y con quién lo comparte: nadie, todo el
+ * profesorado o algunas personas) y borrarlo. Cada cambio se guarda en el acto.
  * Cualquiera que lo vea puede hacer una copia para sí.
  */
 
@@ -69,6 +71,17 @@ function avisosDe(sesion) {
   return avisos;
 }
 
+/** Texto de con quién se comparte: «Privado», «Compartido con todos»… */
+function textoCompartido() {
+  const cuantas = itinerario.compartidoCon.length;
+  const textos = {
+    nadie: 'Privado',
+    todos: 'Compartido con todos',
+    algunos: `Compartido con ${cuantas === 1 ? '1 persona' : `${cuantas} personas`}`,
+  };
+  return textos[itinerario.conQuien];
+}
+
 // ---------- Cabecera ----------
 
 function pintarCabecera() {
@@ -81,7 +94,8 @@ function pintarCabecera() {
     <p class="itinerario-datos">
       <span class="etiqueta">${escaparHtml(itinerario.etapa)}</span>
       <span>Curso ${escaparHtml(itinerario.curso)}</span>
-      <span class="${itinerario.compartido ? 'marca-compartido' : 'marca-privado'}">${itinerario.compartido ? 'Compartido' : 'Privado'}</span>
+      <span class="${itinerario.conQuien === 'nadie' ? 'marca-privado' : 'marca-compartido'}"
+        title="${escaparHtml(itinerario.compartidoCon.join(', '))}">${textoCompartido()}</span>
       <span class="sin-dato">${editable ? 'Tuyo' : `De ${escaparHtml(itinerario.propietario)}`} · ${fechas}</span>
     </p>
     ${itinerario.descripcion ? `<p>${escaparHtml(itinerario.descripcion)}</p>` : ''}`;
@@ -234,12 +248,12 @@ function pintarSesiones() {
       return `<tr data-sesion="${escaparHtml(sesion.id)}" ${estiloCategoria(actividad)} class="fila-sesion">
         <td>${fechaCorta(sesion.fecha)} <small>${mesCorto(sesion.fecha)}</small></td>
         <td>${enlace || '<span class="sin-dato">Sin actividad</span>'} ${sesionN}</td>
-        <td>${escaparHtml(sesion.nota)}</td><td></td></tr>`;
+        <td class="nota-sesion">${escaparHtml(sesion.nota)}</td><td></td></tr>`;
     }
     return `<tr data-sesion="${escaparHtml(sesion.id)}" ${estiloCategoria(actividad)} class="fila-sesion">
       <td>${fechaCorta(sesion.fecha)} <small>${mesCorto(sesion.fecha)}</small></td>
       <td><div class="sesion-actividad">${htmlSelector(sesion)} ${sesionN} ${enlace}</div></td>
-      <td><input type="text" data-campo="nota" value="${escaparHtml(sesion.nota)}" placeholder="Qué se hace ese día…" aria-label="Nota del ${fechaCorta(sesion.fecha)}"></td>
+      <td><textarea data-campo="nota" rows="2" placeholder="Qué se hace ese día…" aria-label="Nota del ${fechaCorta(sesion.fecha)}">${escaparHtml(sesion.nota)}</textarea></td>
       <td><button type="button" class="boton-icono" data-quitar title="Quitar esta fecha" aria-label="Quitar el ${fechaCorta(sesion.fecha)}">×</button></td>
     </tr>`;
   }).join('') || '<tr><td colspan="4" class="vacio">Sin sesiones.</td></tr>';
@@ -331,7 +345,9 @@ function abrirDialogo(modo) {
   formulario.etapa.disabled = copia; // la copia es de la misma etapa
   formulario.curso.value = itinerario.curso;
   formulario.descripcion.value = itinerario.descripcion;
-  formulario.compartido.checked = itinerario.compartido;
+  formulario.conQuien.value = itinerario.conQuien;
+  pintarPersonas();
+  formulario.otrosCorreos.value = '';
   $('campoDescripcion').hidden = copia;
   $('campoCompartido').hidden = copia;
   $('consejoDialogo').textContent = copia
@@ -357,8 +373,15 @@ $('formularioDialogo').addEventListener('submit', async (evento) => {
   Object.assign(itinerario, datos, {
     etapa: formulario.etapa.value,
     descripcion: formulario.descripcion.value.trim(),
-    compartido: formulario.compartido.checked,
   });
+  const marcados = [...formulario.querySelectorAll('[name=persona]:checked')].map((c) => c.value);
+  const otros = formulario.otrosCorreos.value.split(/[\s,;]+/);
+  itinerario.compartirCon(formulario.conQuien.value, [...marcados, ...otros]);
+  if (itinerario.conQuien === 'nadie' && formulario.conQuien.value === 'algunos') {
+    Object.assign(itinerario, antes);
+    $('errorDialogo').textContent = 'Marca al menos una persona o escribe su correo.';
+    return;
+  }
   const errores = itinerario.errores();
   if (errores.length) {
     Object.assign(itinerario, antes);
@@ -389,6 +412,37 @@ async function copiar({ nombre, curso }) {
     $('errorDialogo').textContent = 'No se ha podido hacer la copia. Vuelve a probar.';
   }
 }
+
+/**
+ * Las personas que se pueden marcar para compartir: las que ya lo ven y
+ * todo el profesorado que ha creado, cambiado o revisado alguna actividad.
+ * Si falta alguien, se escribe su correo en «Otros correos».
+ */
+function personasConocidas() {
+  const correos = new Set(itinerario.compartidoCon);
+  for (const actividad of lista.actividades) {
+    for (const autoria of [actividad.creada, actividad.modificada, actividad.revisada]) {
+      if (autoria?.por) correos.add(autoria.por.toLowerCase());
+    }
+  }
+  correos.delete(usuario.correo);
+  return [...correos].sort(compararTextos);
+}
+
+function pintarPersonas() {
+  const formulario = $('formularioDialogo');
+  $('personasCompartir').hidden = formulario.conQuien.value !== 'algunos';
+  $('listaPersonas').innerHTML = personasConocidas().map((correo) => `
+    <label class="casilla"><input type="checkbox" name="persona" value="${escaparHtml(correo)}"
+      ${itinerario.compartidoCon.includes(correo) ? 'checked' : ''}> ${escaparHtml(correo)}</label>`).join('');
+}
+
+// Al elegir «Solo algunas personas» aparece la lista
+$('campoCompartido').addEventListener('change', (evento) => {
+  if (evento.target.name === 'conQuien') {
+    $('personasCompartir').hidden = evento.target.value !== 'algunos';
+  }
+});
 
 $('botonDatos').addEventListener('click', () => abrirDialogo('datos'));
 $('botonCopiar').addEventListener('click', () => abrirDialogo('copia'));
