@@ -10,7 +10,7 @@
  *                             descarga con su nombre
  */
 
-import { TAMANO_MAXIMO_RECURSO, sePuedeVer, tamanoEnTexto, tipoRecurso } from '../modelo/recursos.js';
+import { sePuedeVer, tamanoEnTexto, tipoRecurso } from '../modelo/recursos.js';
 import { reducirImagen } from './reducirImagen.js';
 
 // Las infografías se reducen menos que las fotos, para que se lean bien
@@ -18,15 +18,16 @@ const LADO_MAXIMO_INFOGRAFIA = 2400;
 
 /**
  * Devuelve { nombre, tamano, datos } o lanza un error con un texto para
- * enseñar. Las imágenes que pasan del máximo se reducen (y pasan a JPEG);
- * el resto de ficheros que pasan del máximo no se admiten.
+ * enseñar. Las imágenes que pasan del máximo (en bytes, depende del rol:
+ * ver tamanoMaximoRecurso) se reducen y pasan a JPEG; el resto de ficheros
+ * que pasan del máximo no se admiten.
  */
-export async function prepararRecurso(fichero) {
+export async function prepararRecurso(fichero, tamanoMaximo) {
   const tipo = tipoRecurso(fichero.name);
   if (!tipo) {
     throw new Error(`«${fichero.name}»: ese tipo de fichero no se admite. Sirven PDF, imágenes y documentos de oficina.`);
   }
-  if (fichero.size <= TAMANO_MAXIMO_RECURSO) {
+  if (fichero.size <= tamanoMaximo) {
     return { nombre: fichero.name, tamano: fichero.size, datos: await leerComoTexto(fichero, tipo) };
   }
   if (tipo.startsWith('image/')) {
@@ -34,7 +35,7 @@ export async function prepararRecurso(fichero) {
     const nombre = fichero.name.replace(/\.[^.]+$/, '') + '.jpg';
     return { nombre, tamano: bytesDeDatos(datos), datos };
   }
-  throw new Error(`«${fichero.name}» ocupa ${tamanoEnTexto(fichero.size)} y el máximo es ${tamanoEnTexto(TAMANO_MAXIMO_RECURSO)}. `
+  throw new Error(`«${fichero.name}» ocupa ${tamanoEnTexto(fichero.size)} y el máximo es ${tamanoEnTexto(tamanoMaximo)}. `
     + 'Prueba a exportarlo otra vez con menos calidad de imagen o a comprimirlo.');
 }
 

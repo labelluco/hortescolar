@@ -12,8 +12,9 @@
  *   actividades  una por actividad (ver modelo/Actividad.js)
  *   imagenes     una por imagen: { actividadId, datos } con la imagen ya
  *                reducida, como texto "data:image/jpeg;base64,…"
- *   recursos     uno por fichero de recursos (fichas, infografías…):
- *                { actividadId, datos } con el fichero como "data:…;base64,…"
+ *   recursos     ficheros de recursos (fichas, infografías…): { actividadId,
+ *                datos } con el fichero como "data:…;base64,…"; los grandes,
+ *                partidos en varios documentos (ver modelo/recursos.js)
  *
  * Uso:
  *   const baseDatos = BaseDatos.preparar();
@@ -23,6 +24,7 @@
 import { ALMACEN } from './configuracion.js';
 import { BaseDatosLocal } from './BaseDatosLocal.js';
 import { BaseDatosFirebase } from './BaseDatosFirebase.js';
+import { idsDePartes } from '../modelo/recursos.js';
 
 export class BaseDatos {
   constructor(almacen) {
@@ -86,7 +88,11 @@ export class BaseDatos {
     if (recurso.ruta) {
       return `datos/${recurso.ruta}`;
     }
-    const documento = await this.leerDocumento('recursos', recurso.id);
-    return documento?.datos ?? '';
+    // Los ficheros grandes están partidos en varios documentos: se juntan
+    const documentos = await Promise.all(idsDePartes(recurso).map((id) => this.leerDocumento('recursos', id)));
+    if (documentos.some((documento) => !documento)) {
+      return '';
+    }
+    return documentos.map((documento) => documento.datos).join('');
   }
 }

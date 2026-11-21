@@ -26,7 +26,9 @@ import { Barra } from './Barra.js';
 import { escaparHtml } from './ayudas.js';
 import { reducirImagen } from './reducirImagen.js';
 import { prepararRecurso } from './ficherosRecursos.js';
-import { EXTENSIONES_ADMITIDAS, MAXIMO_RECURSOS, TAMANO_MAXIMO_RECURSO, extension, tamanoEnTexto } from '../modelo/recursos.js';
+import {
+  EXTENSIONES_ADMITIDAS, MAXIMO_RECURSOS, extension, idsDePartes, partirDatos, tamanoEnTexto, tamanoMaximoRecurso,
+} from '../modelo/recursos.js';
 
 const usuario = await Sesion.proteger();
 Barra.pintar();
@@ -56,7 +58,7 @@ let imagenes = [];
 const idsImagenesQuitadas = [];
 // Recursos, en orden: { id | ruta, nombre, tamano, texto, datos? }   (datos solo en los nuevos)
 let recursos = [];
-const idsRecursosQuitados = [];
+const idsRecursosQuitados = []; // ids de todos sus documentos (ver idsDePartes)
 let hayCambios = false;
 
 /* ---------- Cargar ---------- */
@@ -248,7 +250,9 @@ document.getElementById('ficheroImagenes').addEventListener('change', async (eve
 /* ---------- Recursos ---------- */
 
 document.getElementById('ficheroRecursos').accept = EXTENSIONES_ADMITIDAS;
-document.getElementById('tamanoMaximoRecurso').textContent = tamanoEnTexto(TAMANO_MAXIMO_RECURSO);
+// Los revisores pueden subir ficheros más grandes (ver modelo/recursos.js)
+const tamanoMaximo = tamanoMaximoRecurso(usuario);
+document.getElementById('tamanoMaximoRecurso').textContent = tamanoEnTexto(tamanoMaximo);
 
 function pintarRecursos() {
   contenedorRecursos.innerHTML = recursos.map((recurso, posicion) => `
@@ -286,7 +290,7 @@ contenedorRecursos.addEventListener('click', (evento) => {
   } else if (boton.hasAttribute('data-quitar')) {
     const [quitado] = recursos.splice(posicion, 1);
     if (quitado.id && !quitado.datos) {
-      idsRecursosQuitados.push(quitado.id); // ya estaba guardado: se borrará
+      idsRecursosQuitados.push(...idsDePartes(quitado)); // ya estaba guardado: se borrará
     }
   }
   hayCambios = true;
@@ -300,8 +304,8 @@ document.getElementById('ficheroRecursos').addEventListener('change', async (eve
   const problemas = [];
   for (const fichero of ficheros) {
     try {
-      const { nombre, tamano, datos } = await prepararRecurso(fichero);
-      recursos.push({ id: baseDatos.nuevoId(), nombre, tamano, texto: '', datos });
+      const { nombre, tamano, datos } = await prepararRecurso(fichero, tamanoMaximo);
+      recursos.push({ id: baseDatos.nuevoId(), nombre, tamano, texto: '', datos, partes: partirDatos(datos).length });
       hayCambios = true;
       pintarRecursos();
     } catch (error) {
@@ -325,8 +329,8 @@ function leerFormulario() {
   nueva.etapas = leerEtapas();
   nueva.estaciones = leerEstaciones();
   nueva.imagenes = imagenes.map(({ id, ruta, texto }) => (ruta ? { ruta, texto } : { id, texto }));
-  nueva.recursos = recursos.map(({ id, ruta, nombre, tamano, texto }) => (
-    ruta ? { ruta, nombre, tamano, texto: texto.trim() } : { id, nombre, tamano, texto: texto.trim() }
+  nueva.recursos = recursos.map(({ id, ruta, nombre, tamano, texto, partes }) => (
+    ruta ? { ruta, nombre, tamano, texto: texto.trim() } : { id, nombre, tamano, texto: texto.trim(), partes: partes ?? 1 }
   ));
   const ahora = new Date().toISOString();
   nueva.modificada = { por: usuario.correo, el: ahora };
@@ -356,10 +360,14 @@ formulario.addEventListener('submit', async (evento) => {
       datos: { actividadId: nueva.id, datos: imagen.datos, subidaPor: usuario.correo },
     })),
     ...idsImagenesQuitadas.map((id) => ({ tipo: 'borrar', coleccion: 'imagenes', id })),
-    ...recursos.filter((recurso) => recurso.datos).map((recurso) => ({
-      tipo: 'guardar', coleccion: 'recursos', id: recurso.id,
-      datos: { actividadId: nueva.id, datos: recurso.datos, subidaPor: usuario.correo },
-    })),
+    // Cada recurso nuevo, en uno o varios documentos
+    ...recursos.filter((recurso) => recurso.datos).flatMap((recurso) => {
+      const ids = idsDePartes(recurso);
+      return partirDatos(recurso.datos).map((parte, i) => ({
+        tipo: 'guardar', coleccion: 'recursos', id: ids[i],
+        datos: { actividadId: nueva.id, datos: parte, subidaPor: usuario.correo },
+      }));
+    }),
     ...idsRecursosQuitados.map((id) => ({ tipo: 'borrar', coleccion: 'recursos', id })),
     { tipo: 'guardar', coleccion: 'actividades', id: nueva.id, datos: nueva.aDocumento() },
   ];
@@ -380,7 +388,7 @@ document.getElementById('botonBorrar').addEventListener('click', async () => {
     ...actividad.imagenes.filter((imagen) => imagen.id)
       .map((imagen) => ({ tipo: 'borrar', coleccion: 'imagenes', id: imagen.id })),
     ...actividad.recursos.filter((recurso) => recurso.id)
-      .map((recurso) => ({ tipo: 'borrar', coleccion: 'recursos', id: recurso.id })),
+      .flatMap((recurso) => idsDePartes(recurso).map((id) => ({ tipo: 'borrar', coleccion: 'recursos', id }))),
     { tipo: 'borrar', coleccion: 'actividades', id: actividad.id },
   ];
   await guardar(operaciones, 'actividades.html');

@@ -2,6 +2,8 @@
 
 Una línea por decisión, la más reciente arriba: fecha — decisión — por qué.
 
+- 2026-11-21 — Los revisores pueden subir recursos de hasta 6 MB (el resto, 700 KB), partidos en varios documentos de Firestore — los revisores necesitan subir PDF grandes; 6 MB porque Firestore no deja guardar más de 10 MB de una vez y el base64 ocupa un tercio más. Las reglas no miran el tamaño: el límite del profesorado lo pone la web.
+
 - 2026-11-20 — Recursos para descargar en cada actividad (máx. 5, 700 KB cada uno), guardados como las imágenes en Firestore (colección `recursos`, un documento por fichero) — seguir en el plan Spark sin Storage; 700 KB es lo que cabe en un documento de 1 MB en base64. Si se queda corto, se puede partir cada fichero en varios documentos. Solo PDF, imágenes y documentos de oficina, con el tipo según la extensión — un HTML o SVG abierto desde la web podría ejecutar código con la sesión del profesorado.
 
 - 2026-11-19 — Los itinerarios compartidos solo los ve el profesorado con sesión, nunca la web pública — no pasan revisión, llevan días y horarios de grupos concretos y pueden incluir actividades pendientes. Si algún día se quieren difundir, sería con un estado «publicado» aprobado por un revisor y sin fechas exactas.
