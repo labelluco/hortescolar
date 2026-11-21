@@ -2,6 +2,8 @@
 
 Una línea por decisión, la más reciente arriba: fecha — decisión — por qué.
 
+- 2026-11-21 — Las actividades describen fases o momentos (con una orientación de sesiones), no sesiones; el reparto por días va en las notas del itinerario — las actividades son abiertas y sirven para edades, horarios y grupos distintos; cada docente decide cuántas sesiones y qué hace o deja fuera. Se aplica a las nuevas; las revisadas, cuando se revisen de nuevo.
+
 - 2026-11-21 — Itinerarios: se comparten con todos o solo con algunas personas (lista de correos `compartidoCon`), y la nota de cada sesión admite párrafos — quien programa para otro docente le explica qué se hace cada día y lo comparte solo con él. Las personas se eligen de entre quien ha tocado alguna actividad o escribiendo su correo, porque no hay lista del profesorado en Firestore (las cuentas se crean en la consola).
 
 - 2026-11-21 — Los revisores pueden subir recursos de hasta 6 MB (el resto, 700 KB), partidos en varios documentos de Firestore — los revisores necesitan subir PDF grandes; 6 MB porque Firestore no deja guardar más de 10 MB de una vez y el base64 ocupa un tercio más. Las reglas no miran el tamaño: el límite del profesorado lo pone la web.
